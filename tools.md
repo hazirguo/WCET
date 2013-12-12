@@ -19,6 +19,21 @@ tools | company | download? | checked? |
 
 
 ### research tools and prototypes
+tools |  institution | download? | checked? |
+:-----:|:-----------:|:---------:|:--------:|
+[CALC_WCET][calc] | Vienna University of Technology |  |   |
+[Chronos][chronos] | National University of Singapore  |  |   |
+[Otawa][otawa] |  Traces Research group on Architectures and Compilers for Embedded Systems  |   |   |
+[SWEET][sweet] |  Mälardalen Real-Time research Centre |    |   |
+[TuBound][TuBound] | Vienna Univeristy of Technology |  |   |
+
+
+
+[calc]:http://www.wcet.at/
+[chronos]:http://www.comp.nus.edu.sg/~rpembed/chronos/
+[otawa]:http://www.otawa.fr/
+[sweet]:http://www.mrtc.mdh.se/projects/wcet/
+[TuBound]:http://costa.tuwien.ac.at/
 
 
 
