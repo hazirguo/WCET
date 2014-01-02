@@ -19,8 +19,8 @@
 
 我们利用 [SimpleScalar](http://www.simplescalar.com/) 工具集来编译和仿真程序，用 SimpleScalar *sim-outorder* 仿真器建立一个简单的处理器模型。假设需要分析的源码名为 <benchmark>.c ，我们工具工作如下：
 
-1. 首先，<benchmark>.c 用 SimpleScalar 自带的 GCC 编译成二进制代码 <benchmark> 。这个 GCC 版本编译出的代码是 MIPS 指令集的。
-2. 我们的工具读入二进制代码，为 <benchmark> 中函数重建程序控制流图（CFG）。CFG 会和源程序在同一个目录下保存名为 <benchmark>。程序流路径可以表示成线性的限制，我们称为"流限制"（Flow Constraints）。另外，我们工具允许用户通过一个图形化的接口输入一些限制，如循环的上界和一些其它的流事实（Flow Facts），这些限制成为"用户限制"(User Constraints)。这一步对应的是之前介绍的程序路径分析（ 图中 "PA" 表示的是 Path Analysis）。
-3. 基于处理器模型，这个可以由用户通过图形化界面配置出来，我们工具可以对微处理器架构建模，(1) 根据执行上下文得到基本块的时间信息；(2) 执行上下文出现的限制（指令cache 的状态、分支预测信息等）。结合流限制和用户限制，我们工具就构造了一个完整的整数线性规划（Integer Linear Programming, ILP）问题，对应的输出文件为 <benchmark>.lp。
+1. 首先，\<benchmark\>.c 用 SimpleScalar 自带的 GCC 编译成二进制代码 \<benchmark\> 。这个 GCC 版本编译出的代码是 MIPS 指令集的。
+2. 我们的工具读入二进制代码，为 \<benchmark\> 中函数重建程序控制流图（CFG）。CFG 会和源程序在同一个目录下保存名为 \<benchmark\>。程序流路径可以表示成线性的限制，我们称为"流限制"（Flow Constraints）。另外，我们工具允许用户通过一个图形化的接口输入一些限制，如循环的上界和一些其它的流事实（Flow Facts），这些限制成为"用户限制"(User Constraints)。这一步对应的是之前介绍的程序路径分析（图中 "PA" 表示的是 Path Analysis）。
+3. 基于处理器模型，这个可以由用户通过图形化界面配置出来，我们工具可以对微处理器架构建模，(1) 根据执行上下文得到基本块的时间信息；(2) 执行上下文出现的限制（指令cache 的状态、分支预测信息等）。结合流限制和用户限制，我们工具就构造了一个完整的整数线性规划（Integer Linear Programming, ILP）问题，对应的输出文件为 \<benchmark\>.lp。
 4. 工具再触发一个高性能商业 ILP 解决器 CPLEX，或者一个自由的 ILP 解决器 lp_solve 来解 ILP 问题，得到结果就是评测的 WCET（**estimated WCET**)。
 5. 使用与评测相同的处理器配置，除了得到评测的WCET，通过 SimpleScalar 工具集中的 simoutdoor 仿真器还可以得到观察的WCET（**observed WCET**）。
