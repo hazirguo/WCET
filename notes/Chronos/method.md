@@ -24,3 +24,4 @@
 3. 基于处理器模型，这个可以由用户通过图形化界面配置出来，我们工具可以对微处理器架构建模，(1) 根据执行上下文得到基本块的时间信息；(2) 执行上下文出现的限制（指令cache 的状态、分支预测信息等）。结合流限制和用户限制，我们工具就构造了一个完整的整数线性规划（Integer Linear Programming, ILP）问题，对应的输出文件为 <benchmark>.lp。
 4. 工具再触发一个高性能商业 ILP 解决器 CPLEX，或者一个自由的 ILP 解决器 lp_solve 来解 ILP 问题，得到结果就是评测的 WCET（**estimated WCET**)。
 5. 使用与评测相同的处理器配置，除了得到评测的WCET，通过 SimpleScalar 工具集中的 simoutdoor 仿真器还可以得到观察的WCET（**observed WCET**）。
+
