@@ -1,0 +1,7 @@
+gcc -g -DMEM_FREE   -c -o scp_analysis.o scp_analysis.c
+gcc -g -DMEM_FREE   -c -o scp_address.o scp_address.c
+gcc -g -DMEM_FREE main.o common.o isa.o readfile.o cfg.o tcfg.o loops.o options.o scp_analysis.o pipeline.o exegraph.o estimate.o cache.o bpred.o ilp.o scp_address.o infeasible.o reg.o symexec.o conflicts.o infdump.o address.o unicache.o ss/eval.o ss/loader.o ss/machine.o ss/misc.o ss/my_opt.o ss/options.o ss/ss_exegraph.o ss/ss_isa.o ss/ss_machine.o ss/ss_readfile.o ss/symbol.o -o est
+scp_analysis.o(.text+0x4bc): In function `genAccessAddress':
+/home/huynhbac/chronos_dev/chronos-4.1/scp_analysis.c:667: undefined reference to `printMemScpSet'
+collect2: ld returned 1 exit status
+make: *** [all] Error 1

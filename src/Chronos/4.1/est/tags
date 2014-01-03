@@ -1,0 +1,2100 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.7	//
+ACCESS	cache.h	/^enum ACCESS {$/;"	g
+ACCESS_T	cache.h	/^typedef enum ACCESS ACCESS_T;$/;"	t	typeref:enum:ACCESS
+ADD_ASSIGN	symexec.c	396;"	d	file:
+ADD_ASSIGN	symexec.cp.c	396;"	d	file:
+ALL_HIT	cache.h	/^	ALL_HIT = 0,$/;"	e	enum:ACCESS
+ALL_MISS	cache.h	/^	ALL_MISS,$/;"	e	enum:ACCESS
+ALL_X	cache.h	/^	ALL_X, \/* Not accessed *\/	$/;"	e	enum:ACCESS
+ANALYSIS	cache.h	/^enum ANALYSIS {$/;"	g
+ANALYSIS_T	cache.h	/^typedef enum ANALYSIS ANALYSIS_T;$/;"	t	typeref:enum:ANALYSIS
+ANSI_SYMCAT	ss/host.h	72;"	d
+ANSI_SYMCAT	ss/host.h	78;"	d
+B	unicache.c	/^int X,Y,B,l1,l2;$/;"	v
+BAD_RANGE	common.h	32;"	d
+BA_conflict_list	infeasible.h	/^  BA_conflict_t *BA_conflict_list;$/;"	m	struct:branch_t
+BA_conflict_t	infeasible.h	/^} BA_conflict_t;$/;"	t	typeref:struct:__anon9
+BB_conflict_list	infeasible.h	/^  BB_conflict_t *BB_conflict_list;$/;"	m	struct:branch_t
+BB_conflict_t	infeasible.h	/^} BB_conflict_t;$/;"	t	typeref:struct:__anon10
+BCODE	ss/machine.h	326;"	d
+BETWEEN	common.h	49;"	d
+BHR	bpred.c	/^int		    BHR, BHR_PWR, BHR_MSK;$/;"	v
+BHR_MSK	bpred.c	/^int		    BHR, BHR_PWR, BHR_MSK;$/;"	v
+BHR_PWR	bpred.c	/^int		    BHR, BHR_PWR, BHR_MSK;$/;"	v
+BHT	bpred.c	/^int		    BHT_SIZE, BHT, BHT_MSK;$/;"	v
+BHT_MSK	bpred.c	/^int		    BHT_SIZE, BHT, BHT_MSK;$/;"	v
+BHT_SIZE	bpred.c	/^int		    BHT_SIZE, BHT, BHT_MSK;$/;"	v
+BI_DELAY	exegraph.h	/^enum { BI_DELAY, UNI_DELAY, NO_DELAY };$/;"	e	enum:__anon20
+BMP	ilp.c	83;"	d	file:
+BODY_CODE	pipeline.h	28;"	d
+BOTH_BRANCHES	cfg.h	32;"	d
+BPRED_H	bpred.h	27;"	d
+BP_CPRED	bpred.h	33;"	d
+BP_MPRED	bpred.h	34;"	d
+BP_NONE	bpred.h	32;"	d
+BP_UNCLEAR	bpred.h	35;"	d
+BS	ss/machine.h	332;"	d
+CACHE_H	cache.h	23;"	d
+CACHE_LINE	cache.h	34;"	d
+CACHE_SET_SIZE	cache.h	120;"	d
+CC	Makefile	/^CC=gcc$/;"	m
+CFG_H	cfg.h	23;"	d
+CFLAGS	Makefile	/^CFLAGS=-g -D_DEBUG$/;"	m
+CHECK_MEM	common.h	41;"	d
+CLEAR_LSB	cache.h	42;"	d
+COMMON_H	common.h	23;"	d
+CONNECT	ss/machine.c	115;"	d	file:
+CONNECT	ss/machine.c	72;"	d	file:
+CONNECT	ss/machine.c	81;"	d	file:
+CONNECT	ss/machine.c	90;"	d	file:
+CONNECT	ss/machine.h	236;"	d
+CONNECT	ss/ss_isa.c	49;"	d	file:
+CONNECT	ss/ss_isa.c	60;"	d	file:
+CONST	infeasible.h	42;"	d
+CPU_MHZ	main.c	56;"	d	file:
+CTRL_CALL	cfg.h	/^typedef enum {CTRL_SEQ, CTRL_COND, CTRL_UNCOND, CTRL_CALL, CTRL_RET} bb_type_t;$/;"	e	enum:__anon14
+CTRL_COND	cfg.h	/^typedef enum {CTRL_SEQ, CTRL_COND, CTRL_UNCOND, CTRL_CALL, CTRL_RET} bb_type_t;$/;"	e	enum:__anon14
+CTRL_RET	cfg.h	/^typedef enum {CTRL_SEQ, CTRL_COND, CTRL_UNCOND, CTRL_CALL, CTRL_RET} bb_type_t;$/;"	e	enum:__anon14
+CTRL_SEQ	cfg.h	/^typedef enum {CTRL_SEQ, CTRL_COND, CTRL_UNCOND, CTRL_CALL, CTRL_RET} bb_type_t;$/;"	e	enum:__anon14
+CTRL_UNCOND	cfg.h	/^typedef enum {CTRL_SEQ, CTRL_COND, CTRL_UNCOND, CTRL_CALL, CTRL_RET} bb_type_t;$/;"	e	enum:__anon14
+DATA	bs.c	/^struct DATA {$/;"	s	file:
+DATA_MISS_PENALTY	cache.h	123;"	d
+DBG_PS_UPDATE	unicache.c	664;"	d	file:
+DEBUG_INFEAS	main.c	/^char DEBUG_INFEAS = 0;$/;"	v
+DECODE_CFG_H	ss/decode_cfg.h	24;"	d
+DEFINST	ss/machine.c	113;"	d	file:
+DEFINST	ss/machine.c	565;"	d	file:
+DEFINST	ss/machine.c	70;"	d	file:
+DEFINST	ss/machine.c	79;"	d	file:
+DEFINST	ss/machine.c	88;"	d	file:
+DEFINST	ss/machine.h	234;"	d
+DEFINST	ss/ss_isa.c	192;"	d	file:
+DEFINST	ss/ss_isa.c	198;"	d	file:
+DEFINST	ss/ss_isa.c	47;"	d	file:
+DEFINST	ss/ss_isa.c	58;"	d	file:
+DEFLINK	ss/machine.c	114;"	d	file:
+DEFLINK	ss/machine.c	71;"	d	file:
+DEFLINK	ss/machine.c	80;"	d	file:
+DEFLINK	ss/machine.c	89;"	d	file:
+DEFLINK	ss/machine.h	235;"	d
+DEFLINK	ss/ss_isa.c	48;"	d	file:
+DEFLINK	ss/ss_isa.c	59;"	d	file:
+DEF_DERI	infeasible.h	45;"	d
+DEF_VAL	infeasible.h	44;"	d
+DERI_LEN	infeasible.h	49;"	d
+DFCC	ss/decode_cfg.h	47;"	d
+DFCC	ss/ss_isa.h	45;"	d
+DFPCR	ss/decode_cfg.h	59;"	d
+DFPCR	ss/ss_isa.h	57;"	d
+DFPR	ss/decode_cfg.h	56;"	d
+DFPR	ss/ss_isa.h	54;"	d
+DFPR_D	ss/decode_cfg.h	42;"	d
+DFPR_D	ss/ss_isa.h	40;"	d
+DFPR_F	ss/decode_cfg.h	41;"	d
+DFPR_F	ss/ss_isa.h	39;"	d
+DFPR_L	ss/decode_cfg.h	40;"	d
+DFPR_L	ss/ss_isa.h	38;"	d
+DGPR	ss/decode_cfg.h	36;"	d
+DGPR	ss/decode_cfg.h	53;"	d
+DGPR	ss/ss_isa.h	34;"	d
+DGPR	ss/ss_isa.h	51;"	d
+DGPR_D	ss/decode_cfg.h	37;"	d
+DGPR_D	ss/ss_isa.h	35;"	d
+DHI	ss/decode_cfg.h	45;"	d
+DHI	ss/ss_isa.h	43;"	d
+DLO	ss/decode_cfg.h	46;"	d
+DLO	ss/ss_isa.h	44;"	d
+DNA	ss/decode_cfg.h	31;"	d
+DNA	ss/ss_isa.h	31;"	d
+DOTSEEN	ss/misc.c	448;"	d	file:
+DTMP	ss/decode_cfg.h	48;"	d
+DTMP	ss/decode_cfg.h	61;"	d
+DTMP	ss/ss_isa.h	46;"	d
+DTMP	ss/ss_isa.h	59;"	d
+DUNIQ	ss/decode_cfg.h	60;"	d
+DUNIQ	ss/ss_isa.h	58;"	d
+Difference	unicache.c	/^static acs_p Difference(acs_p acs, mem_blk_set_t* mem_blk)$/;"	f	file:
+EARLY	estimate.c	30;"	d	file:
+ECOFF_EB_MAGIC	ss/ecoff.h	104;"	d
+ECOFF_EL_MAGIC	ss/ecoff.h	105;"	d
+ECOFF_H	ss/ecoff.h	102;"	d
+ECOFF_R_SN_BSS	ss/ecoff.h	238;"	d
+ECOFF_R_SN_DATA	ss/ecoff.h	235;"	d
+ECOFF_R_SN_RDATA	ss/ecoff.h	234;"	d
+ECOFF_R_SN_SBSS	ss/ecoff.h	237;"	d
+ECOFF_R_SN_SDATA	ss/ecoff.h	236;"	d
+ECOFF_R_SN_TEXT	ss/ecoff.h	233;"	d
+ECOFF_STYP_BSS	ss/ecoff.h	245;"	d
+ECOFF_STYP_DATA	ss/ecoff.h	242;"	d
+ECOFF_STYP_RDATA	ss/ecoff.h	241;"	d
+ECOFF_STYP_SBSS	ss/ecoff.h	244;"	d
+ECOFF_STYP_SDATA	ss/ecoff.h	243;"	d
+ECOFF_STYP_TEXT	ss/ecoff.h	240;"	d
+ECOFF_magicSym	ss/ecoff.h	173;"	d
+ECOFF_stBlock	ss/ecoff.h	254;"	d
+ECOFF_stConstant	ss/ecoff.h	262;"	d
+ECOFF_stEnd	ss/ecoff.h	255;"	d
+ECOFF_stFile	ss/ecoff.h	258;"	d
+ECOFF_stForward	ss/ecoff.h	260;"	d
+ECOFF_stGlobal	ss/ecoff.h	248;"	d
+ECOFF_stLabel	ss/ecoff.h	252;"	d
+ECOFF_stLocal	ss/ecoff.h	251;"	d
+ECOFF_stMember	ss/ecoff.h	256;"	d
+ECOFF_stNil	ss/ecoff.h	247;"	d
+ECOFF_stParam	ss/ecoff.h	250;"	d
+ECOFF_stProc	ss/ecoff.h	253;"	d
+ECOFF_stRegReloc	ss/ecoff.h	259;"	d
+ECOFF_stStatic	ss/ecoff.h	249;"	d
+ECOFF_stStaticProc	ss/ecoff.h	261;"	d
+ECOFF_stTypedef	ss/ecoff.h	257;"	d
+EG_COND_EDGE	exegraph.h	/^enum { EG_NORM_EDGE, EG_COND_EDGE };$/;"	e	enum:__anon19
+EG_DEP_COND	exegraph.h	/^enum { EG_DEP_NONE, EG_DEP_NORM, EG_DEP_COND };$/;"	e	enum:__anon21
+EG_DEP_NONE	exegraph.h	/^enum { EG_DEP_NONE, EG_DEP_NORM, EG_DEP_COND };$/;"	e	enum:__anon21
+EG_DEP_NORM	exegraph.h	/^enum { EG_DEP_NONE, EG_DEP_NORM, EG_DEP_COND };$/;"	e	enum:__anon21
+EG_NORM_EDGE	exegraph.h	/^enum { EG_NORM_EDGE, EG_COND_EDGE };$/;"	e	enum:__anon19
+ELOG_CODE	pipeline.h	30;"	d
+END_BBB_ID	bpred.h	38;"	d
+EPILOG_SIZE	ss/my_opt.c	/^int	    PROLOG_SIZE, EPILOG_SIZE;$/;"	v
+EQ	infeasible.h	67;"	d
+EQUAL	address.c	1397;"	d	file:
+ERR_BADCONST	ss/eval.h	/^  ERR_BADCONST,			\/* badly formed constant *\/$/;"	e	enum:eval_err_t
+ERR_BADEXPR	ss/eval.h	/^  ERR_BADEXPR,			\/* badly formed constant *\/$/;"	e	enum:eval_err_t
+ERR_DIV0	ss/eval.h	/^  ERR_DIV0,			\/* divide by zero *\/$/;"	e	enum:eval_err_t
+ERR_EXTRA	ss/eval.h	/^  ERR_EXTRA,			\/* extra characters at end of expression *\/$/;"	e	enum:eval_err_t
+ERR_NOERR	ss/eval.h	/^  ERR_NOERR,			\/* no error *\/$/;"	e	enum:eval_err_t
+ERR_NOTERM	ss/eval.h	/^  ERR_NOTERM,			\/* expression term is missing *\/$/;"	e	enum:eval_err_t
+ERR_NUM	ss/eval.h	/^  ERR_NUM$/;"	e	enum:eval_err_t
+ERR_UNDEFVAR	ss/eval.h	/^  ERR_UNDEFVAR,			\/* variable is undefined *\/$/;"	e	enum:eval_err_t
+ERR_UPAREN	ss/eval.h	/^  ERR_UPAREN,			\/* unmatched parenthesis *\/$/;"	e	enum:eval_err_t
+EVAL_H	ss/eval.h	53;"	d
+EVAL_INTEGRAL	ss/eval.h	131;"	d
+EVAL_INTEGRAL	ss/eval.h	135;"	d
+EXE_GRAPH_H	exegraph.h	23;"	d
+FALL	infeasible.h	55;"	d
+FALSE	ss/misc.h	68;"	d
+FD	ss/machine.h	314;"	d
+FF	infeasible.h	60;"	d
+FJ	infeasible.h	59;"	d
+FS	ss/machine.h	312;"	d
+FT	ss/machine.h	313;"	d
+FUClass_NA	ss/machine.h	/^  FUClass_NA = 0,	\/* inst does not use a functional unit *\/$/;"	e	enum:md_fu_class
+FU_FPALU_INDEX	ss/my_opt.c	172;"	d	file:
+FU_FPMULT_INDEX	ss/my_opt.c	173;"	d	file:
+FU_IALU_INDEX	ss/my_opt.c	169;"	d	file:
+FU_IMULT_INDEX	ss/my_opt.c	170;"	d	file:
+FU_MEMPORT_INDEX	ss/my_opt.c	171;"	d	file:
+F_CALL	ss/machine.h	294;"	d
+F_COND	ss/machine.h	283;"	d
+F_CTRL	ss/machine.h	281;"	d
+F_DIRECT	ss/machine.h	289;"	d
+F_DIRJMP	ss/machine.h	292;"	d
+F_DISP	ss/machine.h	287;"	d
+F_FCOMP	ss/machine.h	280;"	d
+F_FPCOND	ss/machine.h	295;"	d
+F_ICOMP	ss/machine.h	279;"	d
+F_IMM	ss/machine.h	296;"	d
+F_INDIRJMP	ss/machine.h	293;"	d
+F_LOAD	ss/machine.h	285;"	d
+F_LONGLAT	ss/machine.h	291;"	d
+F_MEM	ss/machine.h	284;"	d
+F_RR	ss/machine.h	288;"	d
+F_STORE	ss/machine.h	286;"	d
+F_TRAP	ss/machine.h	290;"	d
+F_UNCOND	ss/machine.h	282;"	d
+FloatADD	ss/machine.h	/^  FloatADD,		\/* floating point adder\/subtractor *\/$/;"	e	enum:md_fu_class
+FloatCMP	ss/machine.h	/^  FloatCMP,		\/* floating point comparator *\/$/;"	e	enum:md_fu_class
+FloatCVT	ss/machine.h	/^  FloatCVT,		\/* floating point<->integer converter *\/$/;"	e	enum:md_fu_class
+FloatDIV	ss/machine.h	/^  FloatDIV,		\/* floating point divider *\/$/;"	e	enum:md_fu_class
+FloatMULT	ss/machine.h	/^  FloatMULT,		\/* floating point multiplier *\/$/;"	e	enum:md_fu_class
+FloatSQRT	ss/machine.h	/^  FloatSQRT,		\/* floating point square root *\/$/;"	e	enum:md_fu_class
+GAG	bpred.h	/^enum bpred_scheme_t	{ NO_BPRED, GAG, GSHARE, LOCAL };$/;"	e	enum:bpred_scheme_t
+GE	infeasible.h	64;"	d
+GET_MEM	address.h	19;"	d
+GET_SET	cache.h	126;"	d
+GLOBAL_START	address.h	10;"	d
+GOOD_RANGE	common.h	33;"	d
+GSHARE	bpred.h	/^enum bpred_scheme_t	{ NO_BPRED, GAG, GSHARE, LOCAL };$/;"	e	enum:bpred_scheme_t
+GT	infeasible.h	63;"	d
+HEAP_ELEMS	common.h	38;"	d
+HI	address.h	7;"	d
+HIBITL	ss/misc.c	395;"	d	file:
+HIBITL	ss/misc.c	399;"	d	file:
+HOST_H	ss/host.h	53;"	d
+HOST_HAS_QWORD	ss/host.h	106;"	d
+HOST_HAS_QWORD	ss/host.h	117;"	d
+HOST_HAS_QWORD	ss/host.h	123;"	d
+HOST_HAS_QWORD	ss/host.h	95;"	d
+IC_CATEGORIZE	cache.h	/^enum { IC_ILP, IC_CATEGORIZE };$/;"	e	enum:__anon24
+IC_HIT	cache.h	45;"	d
+IC_ILP	cache.h	/^enum { IC_ILP, IC_CATEGORIZE };$/;"	e	enum:__anon24
+IC_MISS	cache.h	46;"	d
+IC_NONE	ilp.c	85;"	d	file:
+IC_UNCLEAR	cache.h	47;"	d
+IMM	ss/machine.h	317;"	d
+INFINITY	address.h	17;"	d
+INFTY	common.h	39;"	d
+INLINE	ss/host.h	61;"	d
+INLINE	ss/host.h	63;"	d
+INLINE	ss/host.h	65;"	d
+INSIDE	common.h	50;"	d
+INSN_LEN	infeasible.h	50;"	d
+INST_CALL	isa.h	/^    INST_CALL,$/;"	e	enum:inst_type_t
+INST_COND	isa.h	/^    INST_COND,$/;"	e	enum:inst_type_t
+INST_FCOMP	isa.h	/^    INST_FCOMP,	    \/\/ floating-point arithmetic instr.$/;"	e	enum:inst_type_t
+INST_ICOMP	isa.h	/^    INST_ICOMP,	    \/\/ integer arithmetic instr.$/;"	e	enum:inst_type_t
+INST_LOAD	isa.h	/^    INST_LOAD,$/;"	e	enum:inst_type_t
+INST_NOP	isa.h	/^    INST_NOP = 0,   \/\/ instr. doing nothing$/;"	e	enum:inst_type_t
+INST_RET	isa.h	/^    INST_RET,$/;"	e	enum:inst_type_t
+INST_STORE	isa.h	/^    INST_STORE,$/;"	e	enum:inst_type_t
+INST_TRAP	isa.h	/^    INST_TRAP$/;"	e	enum:inst_type_t
+INST_UNCOND	isa.h	/^    INST_UNCOND,$/;"	e	enum:inst_type_t
+INVALID	infeasible.h	40;"	d
+ISA_H	isa.h	23;"	d
+ISA_SS_H	ss/ss_isa.h	23;"	d
+IntALU	ss/machine.h	/^  IntALU,		\/* integer ALU *\/$/;"	e	enum:md_fu_class
+IntDIV	ss/machine.h	/^  IntDIV,		\/* integer divider *\/$/;"	e	enum:md_fu_class
+IntMULT	ss/machine.h	/^  IntMULT,		\/* integer multiplier *\/$/;"	e	enum:md_fu_class
+Intersect	unicache.c	/^static acs_p Intersect(acs_p acs1, acs_p acs2)$/;"	f	file:
+JF	infeasible.h	58;"	d
+JJ	infeasible.h	57;"	d
+JUMP	infeasible.h	54;"	d
+JoinCacheState	unicache.c	/^static void JoinCacheState(tcfg_node_t* pred, tcfg_node_t* bbi, int type)$/;"	f	file:
+JoinPredAloc	address.c	/^static void JoinPredAloc(tcfg_node_t* succ, tcfg_node_t* bbi, int* change_flag)$/;"	f	file:
+KO	infeasible.h	73;"	d
+L1_MISS_PENALTY	cache.h	124;"	d
+L2_MISS_PENALTY	cache.h	125;"	d
+LATE	estimate.c	29;"	d	file:
+LE	infeasible.h	66;"	d
+LENGTH	ss/misc.c	449;"	d	file:
+LL	ss/host.h	100;"	d
+LL	ss/host.h	103;"	d
+LL	ss/host.h	111;"	d
+LL	ss/host.h	114;"	d
+LL	ss/host.h	121;"	d
+LLHIGH	ss/misc.h	80;"	d
+LLLOW	ss/misc.h	81;"	d
+LL_MAX	ss/misc.c	787;"	d	file:
+LL_MIN	ss/misc.c	788;"	d	file:
+LO	address.h	8;"	d
+LOADER_H	ss/loader.h	53;"	d
+LOCAL	bpred.h	/^enum bpred_scheme_t	{ NO_BPRED, GAG, GSHARE, LOCAL };$/;"	e	enum:bpred_scheme_t
+LOOPS	fir.c	14;"	d	file:
+LOOPS_H	loops.h	25;"	d
+LOOP_ENTRY	loops.h	33;"	d
+LOOP_EXIT	loops.h	34;"	d
+LOOP_HEAD	cfg.h	33;"	d
+LOOP_TAIL	cfg.h	34;"	d
+LSB_OFF	cache.h	39;"	d
+LSB_ON	cache.h	40;"	d
+LSQ_size	ss/my_opt.c	/^int LSQ_size = 8;$/;"	v
+LT	infeasible.h	65;"	d
+LZERO	ss/misc.c	447;"	d	file:
+MAX	ss/misc.h	73;"	d
+MAXDIGS	ss/misc.c	453;"	d	file:
+MAXINT_VAL	ss/machine.h	335;"	d
+MAX_BB	common.h	35;"	d
+MAX_CACHE_SET	cache.h	121;"	d
+MAX_CACHE_SETS	cache.h	25;"	d
+MAX_EG_EDGES	exegraph.h	32;"	d
+MAX_EG_LEN	exegraph.h	31;"	d
+MAX_FILENAME_LEN	ss/options.c	1197;"	d	file:
+MAX_INST	common.h	34;"	d
+MAX_INSTS_PER_CLASS	ss/resource.h	61;"	d
+MAX_ITERS	estimate.c	33;"	d	file:
+MAX_LINE_ARGS	ss/options.c	1196;"	d	file:
+MAX_LOOP_NEST	loops.h	31;"	d
+MAX_NO_REGISTERS	address.h	6;"	d
+MAX_OVRL_NODES	cfg.h	108;"	d
+MAX_REGS	pipeline.c	101;"	d	file:
+MAX_RES_CLASSES	ss/resource.h	58;"	d
+MAX_SSCALAR	pipeline.h	32;"	d
+MAX_TAG_BITS	cache.h	31;"	d
+MAX_VARS	ss/options.c	1715;"	d	file:
+MAY	cache.h	/^	MAY,$/;"	e	enum:ANALYSIS
+MBLK_ID	cache.h	43;"	d
+MC_INC_SIZE	cache.h	48;"	d
+MD_AGEN_OP	ss/machine.h	645;"	d
+MD_AMODE_POSTPROBE	ss/machine.h	477;"	d
+MD_AMODE_PREPROBE	ss/machine.h	451;"	d
+MD_AMODE_PROBE	ss/machine.h	455;"	d
+MD_BR_SHIFT	ss/machine.h	663;"	d
+MD_CROSS_ENDIAN	ss/machine.h	82;"	d
+MD_CROSS_ENDIAN	ss/machine.h	85;"	d
+MD_DATA_BASE	ss/machine.h	212;"	d
+MD_EIO_FILE_FORMAT	ss/machine.h	486;"	d
+MD_EXIT_SYSCALL	ss/machine.h	416;"	d
+MD_EXO_CMP_IREG	ss/machine.h	539;"	d
+MD_EXO_TO_FREG	ss/machine.h	536;"	d
+MD_EXO_TO_IREG	ss/machine.h	533;"	d
+MD_EXO_TO_MISC_REGS	ss/machine.h	504;"	d
+MD_FETCH_INST	ss/machine.h	202;"	d
+MD_FIRST_IN_REG	ss/machine.h	542;"	d
+MD_FIRST_OUT_REG	ss/machine.h	545;"	d
+MD_FREG_TO_EXO	ss/machine.h	501;"	d
+MD_FU_NAME	ss/machine.h	275;"	d
+MD_IREG_TO_EXO	ss/machine.h	498;"	d
+MD_IS_CALL	ss/machine.h	429;"	d
+MD_IS_INDIR	ss/machine.h	436;"	d
+MD_IS_RETURN	ss/machine.h	433;"	d
+MD_LAST_IN_REG	ss/machine.h	543;"	d
+MD_LAST_OUT_REG	ss/machine.h	546;"	d
+MD_LOG_PAGE_SIZE	ss/machine.h	108;"	d
+MD_MAX_ENVIRON	ss/machine.h	216;"	d
+MD_MAX_MASK	ss/machine.h	229;"	d
+MD_MISC_REGS_TO_EXO	ss/machine.h	488;"	d
+MD_NOP_INST	ss/machine.c	/^md_inst_t MD_NOP_INST = { NOP, 0 };$/;"	v
+MD_NOP_OP	ss/machine.h	648;"	d
+MD_NUM_CREGS	ss/machine.h	138;"	d
+MD_NUM_FREGS	ss/machine.h	135;"	d
+MD_NUM_IREGS	ss/machine.h	132;"	d
+MD_OPFIELD	ss/machine.h	224;"	d
+MD_OP_ENUM	ss/machine.h	242;"	d
+MD_OP_FLAGS	ss/machine.h	299;"	d
+MD_OP_FORMAT	ss/machine.h	250;"	d
+MD_OP_FUCLASS	ss/machine.h	271;"	d
+MD_OP_NAME	ss/machine.h	246;"	d
+MD_OUTPUT_SYSCALL	ss/machine.h	420;"	d
+MD_PAGE_SIZE	ss/machine.h	107;"	d
+MD_QWORD_ADDRS	ss/machine.h	96;"	d
+MD_REG_FP	ss/machine.h	/^  MD_REG_FP = 30	\/* frame pointer *\/$/;"	e	enum:md_reg_names
+MD_REG_GP	ss/machine.h	/^  MD_REG_GP = 28,	\/* global data section pointer *\/$/;"	e	enum:md_reg_names
+MD_REG_SP	ss/machine.h	/^  MD_REG_SP = 29,	\/* stack pointer *\/$/;"	e	enum:md_reg_names
+MD_REG_ZERO	ss/machine.h	/^  MD_REG_ZERO = 0,	\/* zero register *\/$/;"	e	enum:md_reg_names
+MD_SET_OPCODE	ss/machine.h	225;"	d
+MD_STACK_BASE	ss/machine.h	213;"	d
+MD_STREAM_FILENO	ss/machine.h	426;"	d
+MD_SWAPD	ss/machine.h	196;"	d
+MD_SWAPH	ss/machine.h	185;"	d
+MD_SWAPH	ss/machine.h	193;"	d
+MD_SWAPI	ss/machine.h	188;"	d
+MD_SWAPI	ss/machine.h	197;"	d
+MD_SWAPQ	ss/machine.h	187;"	d
+MD_SWAPQ	ss/machine.h	195;"	d
+MD_SWAPW	ss/machine.h	186;"	d
+MD_SWAPW	ss/machine.h	194;"	d
+MD_TEXT_BASE	ss/machine.h	211;"	d
+MD_TOTAL_REGS	ss/machine.h	141;"	d
+MD_VALID_ADDR	ss/machine.h	652;"	d
+MIN	ss/misc.h	76;"	d
+MINUS	ilp.c	1896;"	d	file:
+MINUS	ilp.c	80;"	d	file:
+MISC_H	ss/misc.h	53;"	d
+MUST	cache.h	/^	MUST = 0,$/;"	e	enum:ANALYSIS
+NA	infeasible.h	69;"	d
+NA	ss/machine.h	89;"	d
+NE	infeasible.h	68;"	d
+NIL	infeasible.h	74;"	d
+NONE	infeasible.h	53;"	d
+NOSIGN	ilp.c	78;"	d	file:
+NOT_CLASSIFIED	cache.h	/^	NOT_CLASSIFIED$/;"	e	enum:ACCESS
+NOT_TAKEN	cfg.h	30;"	d
+NO_BPRED	bpred.h	/^enum bpred_scheme_t	{ NO_BPRED, GAG, GSHARE, LOCAL };$/;"	e	enum:bpred_scheme_t
+NO_DELAY	exegraph.h	/^enum { BI_DELAY, UNI_DELAY, NO_DELAY };$/;"	e	enum:__anon20
+NO_PREFIX	ilp.c	81;"	d	file:
+NO_REG	infeasible.h	51;"	d
+NO_SUFFIX	ilp.c	82;"	d	file:
+NUM_FLAGS	ss/options.c	606;"	d	file:
+NUM_FU_CLASSES	ss/machine.h	/^  NUM_FU_CLASSES	\/* total functional unit classes *\/$/;"	e	enum:md_fu_class
+NUM_PFU_CLASSES	ss/ss_machine.h	/^    NUM_PFU_CLASSES$/;"	e	enum:ss_pfu_class
+NUM_VAR_GRP	ilp.c	125;"	d	file:
+N_ELT	ss/misc.h	84;"	d
+OBJ	Makefile	/^OBJ=$(SRC:.c=.o)$/;"	m
+OFS	ss/machine.h	329;"	d
+OPT	cfg.h	109;"	d
+OPTIONS_H	ss/options.h	53;"	d
+OP_LEN	infeasible.h	48;"	d
+OP_MAX	ss/machine.h	/^  OP_MAX	\/* number of opcodes + NA *\/$/;"	e	enum:md_opcode
+OP_NA	ss/machine.h	/^  OP_NA = 0,	\/* NA *\/$/;"	e	enum:md_opcode
+OUTSIZE	fir.c	173;"	d	file:
+OVER	ss/machine.h	338;"	d
+PAD	ss/misc.c	385;"	d	file:
+PADZERO	ss/misc.c	445;"	d	file:
+PEERS_WIN	estimate.c	202;"	d	file:
+PENALTY	cache.h	127;"	d
+PERSISTENCE	cache.h	/^	PERSISTENCE	  $/;"	e	enum:ANALYSIS
+PIPE_LINE_H	pipeline.h	23;"	d
+PISA_H	ss/machine.h	53;"	d
+PLOG_CODE	pipeline.h	29;"	d
+PLUS	ilp.c	1895;"	d	file:
+PLUS	ilp.c	79;"	d	file:
+POLYNOMIAL	ss/misc.c	1148;"	d	file:
+PROCESS_ADDI	symexec.c	123;"	d	file:
+PROCESS_ADDI	symexec.cp.c	123;"	d	file:
+PROCESS_ADDU	symexec.c	268;"	d	file:
+PROCESS_ADDU	symexec.cp.c	268;"	d	file:
+PROCESS_ANDI	symexec.c	168;"	d	file:
+PROCESS_ANDI	symexec.cp.c	168;"	d	file:
+PROCESS_LOAD	symexec.c	102;"	d	file:
+PROCESS_LOAD	symexec.cp.c	102;"	d	file:
+PROCESS_LUI	symexec.c	115;"	d	file:
+PROCESS_LUI	symexec.cp.c	115;"	d	file:
+PROCESS_OR	symexec.c	332;"	d	file:
+PROCESS_OR	symexec.cp.c	332;"	d	file:
+PROCESS_ORI	symexec.c	138;"	d	file:
+PROCESS_ORI	symexec.cp.c	138;"	d	file:
+PROCESS_SLL	symexec.c	183;"	d	file:
+PROCESS_SLL	symexec.cp.c	183;"	d	file:
+PROCESS_SLT	symexec.c	241;"	d	file:
+PROCESS_SLT	symexec.cp.c	241;"	d	file:
+PROCESS_SLTI	symexec.c	221;"	d	file:
+PROCESS_SLTI	symexec.cp.c	221;"	d	file:
+PROCESS_SRL	symexec.c	202;"	d	file:
+PROCESS_SRL	symexec.cp.c	202;"	d	file:
+PROCESS_SUBU	symexec.c	300;"	d	file:
+PROCESS_SUBU	symexec.cp.c	300;"	d	file:
+PROCESS_XOR	symexec.c	364;"	d	file:
+PROCESS_XOR	symexec.cp.c	364;"	d	file:
+PROCESS_XORI	symexec.c	153;"	d	file:
+PROCESS_XORI	symexec.cp.c	153;"	d	file:
+PROGRESS_STEP	main.c	/^int PROGRESS_STEP = 10000;$/;"	v
+PROLOG_SIZE	ss/my_opt.c	/^int	    PROLOG_SIZE, EPILOG_SIZE;$/;"	v
+PS	cache.h	/^	PS,$/;"	e	enum:ACCESS
+PSEUDO	cache.h	122;"	d
+PUT	ss/misc.c	374;"	d	file:
+P_FP_Adder	ss/ss_machine.h	/^    P_FP_Adder,$/;"	e	enum:ss_pfu_class
+P_FP_Mult_Div	ss/ss_machine.h	/^    P_FP_Mult_Div,$/;"	e	enum:ss_pfu_class
+P_FUClass_NA	ss/ss_machine.h	/^    P_FUClass_NA = 0,$/;"	e	enum:ss_pfu_class
+P_IntALU	ss/ss_machine.h	/^    P_IntALU,$/;"	e	enum:ss_pfu_class
+P_Int_Mult_Div	ss/ss_machine.h	/^    P_Int_Mult_Div,$/;"	e	enum:ss_pfu_class
+P_Mem_Port	ss/ss_machine.h	/^    P_Mem_Port,$/;"	e	enum:ss_pfu_class
+QUEUE	common.h	97;"	d
+QUEUE_ELEMS	common.h	37;"	d
+Queue	common.h	/^} Queue;$/;"	t	typeref:struct:queue_t
+RD	ss/machine.h	306;"	d
+REGS_H	ss/regs.h	53;"	d
+REG_RETURN	infeasible.h	33;"	d
+RELEVANT_SCOPE	ss/symbol.c	201;"	d	file:
+RESET_FLAG	common.h	54;"	d
+RESOURCE_H	ss/resource.h	53;"	d
+RETURN_ADDRESS	address.h	11;"	d
+ROOT_BBB_ID	bpred.h	37;"	d
+ROUND_DOWN	ss/misc.h	88;"	d
+ROUND_UP	ss/misc.h	87;"	d
+RS	ss/machine.h	303;"	d
+RS	ss/machine.h	304;"	d
+RT	ss/machine.h	305;"	d
+RUU_size	ss/my_opt.c	/^int RUU_size = 8;$/;"	v
+RZERO	ss/misc.c	446;"	d	file:
+RdPort	ss/machine.h	/^  RdPort,		\/* memory read port *\/$/;"	e	enum:md_fu_class
+SET	cache.h	35;"	d
+SET_FLAG	common.h	53;"	d
+SET_TPC	ss/machine.h	349;"	d
+SHADED	estimate.c	34;"	d	file:
+SHAMT	ss/machine.h	309;"	d
+SHOW_PROGRESS	common.h	30;"	d
+SIZE_OF_BLOCK	address.h	16;"	d
+SIZE_OF_BYTE	address.h	13;"	d
+SIZE_OF_HALF_WORD	address.h	15;"	d
+SIZE_OF_WORD	address.h	14;"	d
+SLT	infeasible.h	76;"	d
+SLTI	infeasible.h	75;"	d
+SRC	Makefile	/^SRC=main.c common.c isa.c readfile.c cfg.c tcfg.c loops.c options.c \\$/;"	m
+SS_MaCHINE_H	ss/ss_machine.h	23;"	d
+SS_SRC	Makefile	/^SS_SRC=$(wildcard ss\/*.c)$/;"	m
+SS_SYS_exit	ss/machine.h	415;"	d
+SS_SYS_write	ss/machine.h	419;"	d
+STACK_ELEMS	common.h	36;"	d
+STACK_START	address.h	9;"	d
+STAGE_CM	ss/ss_machine.h	/^enum { STAGE_IF, STAGE_ID, STAGE_EX, STAGE_WB, STAGE_CM };$/;"	e	enum:__anon30
+STAGE_EX	ss/ss_machine.h	/^enum { STAGE_IF, STAGE_ID, STAGE_EX, STAGE_WB, STAGE_CM };$/;"	e	enum:__anon30
+STAGE_ID	ss/ss_machine.h	/^enum { STAGE_IF, STAGE_ID, STAGE_EX, STAGE_WB, STAGE_CM };$/;"	e	enum:__anon30
+STAGE_IF	ss/ss_machine.h	/^enum { STAGE_IF, STAGE_ID, STAGE_EX, STAGE_WB, STAGE_CM };$/;"	e	enum:__anon30
+STAGE_WB	ss/ss_machine.h	/^enum { STAGE_IF, STAGE_ID, STAGE_EX, STAGE_WB, STAGE_CM };$/;"	e	enum:__anon30
+STEP_EST	estimate.c	32;"	d	file:
+STEP_SEP	estimate.c	31;"	d	file:
+SYMBOL_H	ss/symbol.h	53;"	d
+SYMCAT	ss/host.h	71;"	d
+SYMCAT	ss/host.h	75;"	d
+SYMCAT	ss/host.h	77;"	d
+Stack	common.h	/^} Stack;$/;"	t	typeref:struct:stack_t
+TAG	cache.h	36;"	d
+TAGSET	cache.h	37;"	d
+TAGSET2	cache.h	38;"	d
+TAKEN	cfg.h	31;"	d
+TARG	ss/machine.h	323;"	d
+TARGET_PISA	ss/machine.h	67;"	d
+TARGET_PISA_BIG	ss/machine.h	73;"	d
+TARGET_PISA_LITTLE	ss/machine.h	75;"	d
+TARGET_SS	common.h	28;"	d
+TCFG_H	tcfg.h	26;"	d
+TEST_FLAG	common.h	55;"	d
+TEXT_TAIL_PADDING	ss/loader.c	63;"	d	file:
+TEXT_TAIL_PADDING	ss/ss_readfile.c	37;"	d	file:
+TRUE	ss/misc.h	65;"	d
+UIMM	ss/machine.h	320;"	d
+ULL	ss/host.h	102;"	d
+ULL	ss/host.h	110;"	d
+ULL	ss/host.h	113;"	d
+ULL	ss/host.h	120;"	d
+ULL	ss/host.h	99;"	d
+ULL_MAX	ss/misc.c	789;"	d	file:
+UNDER	ss/machine.h	343;"	d
+UNI_DELAY	exegraph.h	/^enum { BI_DELAY, UNI_DELAY, NO_DELAY };$/;"	e	enum:__anon20
+Union	unicache.c	/^static acs_p Union(acs_p acs1, acs_p acs2)$/;"	f	file:
+UnionCacheMem	unicache.c	/^static acs_p UnionCacheMem(acs_p acs1, mem_blk_set_t* mem_blk_set)$/;"	f	file:
+VALID	infeasible.h	41;"	d
+VAR	infeasible.h	43;"	d
+VAR_GRP_SIZE	ilp.c	126;"	d	file:
+V_END_ID	tcfg.h	34;"	d
+V_START_ID	tcfg.h	33;"	d
+WIDENING_POINT	address.h	18;"	d
+WL_BASE	ss/machine.h	355;"	d
+WL_BASE	ss/machine.h	369;"	d
+WL_PROT_MASK	ss/machine.h	356;"	d
+WL_PROT_MASK	ss/machine.h	370;"	d
+WL_PROT_MASK1	ss/machine.h	357;"	d
+WL_PROT_MASK1	ss/machine.h	371;"	d
+WL_PROT_MASK2	ss/machine.h	358;"	d
+WL_PROT_MASK2	ss/machine.h	372;"	d
+WL_SIZE	ss/machine.h	354;"	d
+WL_SIZE	ss/machine.h	368;"	d
+WR_BASE	ss/machine.h	362;"	d
+WR_BASE	ss/machine.h	376;"	d
+WR_PROT_MASK	ss/machine.h	363;"	d
+WR_PROT_MASK	ss/machine.h	377;"	d
+WR_PROT_MASK1	ss/machine.h	364;"	d
+WR_PROT_MASK1	ss/machine.h	378;"	d
+WR_PROT_MASK2	ss/machine.h	365;"	d
+WR_PROT_MASK2	ss/machine.h	379;"	d
+WR_SIZE	ss/machine.h	361;"	d
+WR_SIZE	ss/machine.h	375;"	d
+WrPort	ss/machine.h	/^  WrPort,		\/* memory write port *\/$/;"	e	enum:md_fu_class
+X	unicache.c	/^int X,Y,B,l1,l2;$/;"	v
+Y	unicache.c	/^int X,Y,B,l1,l2;$/;"	v
+__ADDRESS_H_	address.h	2;"	d
+__opt_process_options	ss/options.c	/^__opt_process_options(struct opt_odb_t *odb,	\/* option data base *\/$/;"	f	file:
+_debug	ss/misc.c	/^_debug(char *file, char *func, int line, char *fmt, ...)$/;"	f
+_info	ss/misc.c	/^_info(char *file, char *func, int line, char *fmt, ...)$/;"	f
+_lowdigit	ss/misc.c	/^_lowdigit(slargeint_t *valptr)$/;"	f	file:
+_warn	ss/misc.c	/^_warn(char *file, char *func, int line, char *fmt, ...)$/;"	f
+a	qurt.c	/^double a[3], x1[2], x2[2];$/;"	v
+a	ss/machine.h	/^  word_t a;		\/* simplescalar opcode (must be unsigned) *\/$/;"	m	struct:__anon34
+aFile	address.c	/^FILE* aFile;$/;"	v
+a_double	ss/eval.c	/^static struct eval_value_t a_double;$/;"	v	typeref:struct:eval_value_t	file:
+a_float	ss/eval.c	/^static struct eval_value_t a_float;$/;"	v	typeref:struct:eval_value_t	file:
+a_symbol	ss/eval.c	/^static struct eval_value_t a_symbol;$/;"	v	typeref:struct:eval_value_t	file:
+a_uint	ss/eval.c	/^static struct eval_value_t a_uint;$/;"	v	typeref:struct:eval_value_t	file:
+abs_mem	address.h	/^struct abs_mem {$/;"	s
+abs_mem_p	address.h	/^typedef struct abs_mem* abs_mem_p;$/;"	t	typeref:struct:abs_mem
+abs_mem_s	address.h	/^typedef struct abs_mem abs_mem_s;$/;"	t	typeref:struct:abs_mem
+abs_reg	isa.h	/^	 ric_p* 	abs_reg;				\/* Abstract register value at entry point $/;"	m	struct:__anon36
+accrue	ss/options.h	/^  int accrue;			\/* accrue list across uses *\/$/;"	m	struct:opt_opt_t
+acmp	ss/symbol.c	/^acmp(struct sym_sym_t **sym1, struct sym_sym_t **sym2)$/;"	f	file:
+acs_in	isa.h	/^	 acs_p** 	acs_in;		\/* abstract data cache state at the entry $/;"	m	struct:__anon36
+acs_out	isa.h	/^	 acs_p** 	acs_out;		\/* abstract data cache state at the exit $/;"	m	struct:__anon36
+acs_p	cache.h	/^typedef struct cache_block* acs_p;$/;"	t	typeref:struct:cache_block
+acs_s	cache.h	/^typedef struct cache_block acs_s;$/;"	t	typeref:struct:cache_block
+addAssign	symexec.c	/^int addAssign( char deritree[], cfg_node_t *bb, int lineno, int rhs, char rhs_var ) {$/;"	f
+addAssign	symexec.cp.c	/^int addAssign( char deritree[], cfg_node_t *bb, int lineno, int rhs, char rhs_var ) {$/;"	f
+addBranch	symexec.c	/^int addBranch( char deritree[], cfg_node_t *bb, int rhs, char rhs_var, char jump_cond ) {$/;"	f
+addBranch	symexec.cp.c	/^int addBranch( char deritree[], cfg_node_t *bb, int rhs, char rhs_var, char jump_cond ) {$/;"	f
+addNullifier	conflicts.c	/^int addNullifier( assign_t *as, assign_t ***nullifier_list, int *num_nullifiers ) {$/;"	f
+addToWorkList	address.c	/^void addToWorkList(worklist_p* Wlist, void* data)$/;"	f
+add_inst	ss/ss_exegraph.c	/^add_inst(int inst)$/;"	f	file:
+add_option	ss/options.c	/^add_option(struct opt_odb_t *odb,	\/* option database *\/$/;"	f	file:
+add_tag	cache.c	/^add_tag(int lp_id, unsigned short set, unsigned short tag)$/;"	f	file:
+add_var	ilp.c	/^add_var(char *var)$/;"	f
+addr	address.h	/^	ric_p addr;$/;"	m	struct:abs_mem
+addr	infeasible.h	/^  char addr[OP_LEN];$/;"	m	struct:__anon7
+addr	isa.h	/^    addr_t  addr;$/;"	m	struct:__anon36
+addr	ss/symbol.h	/^  md_addr_t addr;		\/* symbol address value *\/$/;"	m	struct:sym_sym_t
+addr_t	address.h	/^typedef unsigned addr_t;$/;"	t
+adr	main.c	/^        addr_t adr;$/;"	m	struct:jptb	file:
+adr	ss/ecoff.h	/^  unsigned int adr;$/;"	m	struct:ecoff_fdr
+adr	ss/ecoff.h	/^  unsigned int adr;$/;"	m	struct:ecoff_pdr
+alloc_dep_mem	ss/ss_exegraph.c	/^alloc_dep_mem()$/;"	f	file:
+alloc_est_units	pipeline.c	/^alloc_est_units()$/;"	f	file:
+alloc_mem	exegraph.c	/^alloc_mem()$/;"	f	file:
+an_int	ss/eval.c	/^static struct eval_value_t an_int;$/;"	v	typeref:struct:eval_value_t	file:
+anal_count	tcfg.h	/^	 int 				anal_count;		$/;"	m	struct:__anon28
+analysis	unicache.c	/^int analysis = 0;$/;"	v
+analyze	address.c	/^static void analyze(tcfg_node_t* bbi)$/;"	f	file:
+analyze_abs_instr_cache	unicache.c	/^void analyze_abs_instr_cache()$/;"	f
+analyze_abs_instr_cache_may	unicache.c	/^static void analyze_abs_instr_cache_may()$/;"	f	file:
+analyze_abs_instr_cache_must	unicache.c	/^static void analyze_abs_instr_cache_must()$/;"	f	file:
+analyze_abs_instr_cache_ps	unicache.c	/^static void analyze_abs_instr_cache_ps()$/;"	f	file:
+analyze_abs_l2_instr_cache_must	unicache.c	/^static void analyze_abs_l2_instr_cache_must()$/;"	f	file:
+analyze_abs_l2_instr_cache_ps	unicache.c	/^static void analyze_abs_l2_instr_cache_ps()$/;"	f	file:
+analyze_address	address.c	/^void analyze_address()$/;"	f
+analyze_data_cache	unicache.c	/^void analyze_data_cache()$/;"	f
+analyze_data_cache_may	unicache.c	/^static void analyze_data_cache_may()$/;"	f	file:
+analyze_data_cache_must	unicache.c	/^static void analyze_data_cache_must()$/;"	f	file:
+analyze_data_cache_ps	unicache.c	/^static void analyze_data_cache_ps()$/;"	f	file:
+analyze_loop	address.c	/^static void analyze_loop(tcfg_node_t* iter, int loop_id)$/;"	f	file:
+analyze_loop_top	address.c	/^static slist_p analyze_loop_top(loop_t* loop, int loop_id)$/;"	f	file:
+analyze_top	address.c	/^static void analyze_top()$/;"	f	file:
+analyze_unified_cache	unicache.c	/^void analyze_unified_cache()$/;"	f
+analyze_unified_cache_must	unicache.c	/^void analyze_unified_cache_must()$/;"	f
+analyze_unified_cache_ps	unicache.c	/^void analyze_unified_cache_ps()$/;"	f
+analyzed	address.c	/^static int* analyzed;$/;"	v	file:
+analyzed_loop	address.c	/^static int* analyzed_loop;$/;"	v	file:
+as_addr	ss/eval.h	/^    md_addr_t as_addr;			\/* value for type == et_addr *\/$/;"	m	union:eval_value_t::__anon31
+as_double	ss/eval.h	/^    double as_double;			\/* value for type == et_double *\/$/;"	m	union:eval_value_t::__anon31
+as_float	ss/eval.h	/^    float as_float;			\/* value for type == et_float *\/$/;"	m	union:eval_value_t::__anon31
+as_int	ss/eval.h	/^    int as_int;				\/* value for type == et_int *\/$/;"	m	union:eval_value_t::__anon31
+as_qword	ss/eval.h	/^    qword_t as_qword;			\/* value for type == ec_qword *\/$/;"	m	union:eval_value_t::__anon31
+as_sqword	ss/eval.h	/^    sqword_t as_sqword;			\/* value for type == ec_sqword *\/$/;"	m	union:eval_value_t::__anon31
+as_symbol	ss/eval.h	/^    char *as_symbol;			\/* value for type == et_symbol *\/$/;"	m	union:eval_value_t::__anon31
+as_uint	ss/eval.h	/^    unsigned int as_uint;		\/* value for type == et_uint *\/$/;"	m	union:eval_value_t::__anon31
+assign_t	infeasible.h	/^} assign_t;$/;"	t	typeref:struct:__anon8
+assignlist	infeasible.h	/^  assign_t   **assignlist;    \/\/ list of assign effects (ptr) in this node$/;"	m	struct:__anon11
+asym	ss/ecoff.h	/^  ecoff_SYMR asym;$/;"	m	struct:ecoff_EXTR
+b	ss/machine.h	/^  word_t b;		\/* simplescalar unsigned immediate fields *\/$/;"	m	struct:__anon34
+base	common.h	/^    void    *base;$/;"	m	struct:queue_t
+base	common.h	/^    void    *base;$/;"	m	struct:stack_t
+bb	infeasible.h	/^  cfg_node_t *bb;               \/\/ associated block$/;"	m	struct:__anon8
+bb	infeasible.h	/^  cfg_node_t *bb;               \/\/ associated block$/;"	m	struct:branch_t
+bb	infeasible.h	/^  cfg_node_t *bb;$/;"	m	struct:__anon11
+bb	tcfg.h	/^    cfg_node_t	*bb;	\/\/ pointer to the physical basic block$/;"	m	struct:__anon28
+bb_is_loop_head	cfg.c	/^bb_is_loop_head(cfg_node_t *bb)$/;"	f
+bb_is_loop_tail	cfg.c	/^bb_is_loop_tail(cfg_node_t *bb)$/;"	f
+bb_type_t	cfg.h	/^typedef enum {CTRL_SEQ, CTRL_COND, CTRL_UNCOND, CTRL_CALL, CTRL_RET} bb_type_t;$/;"	t	typeref:enum:__anon14
+bbi	bpred.h	/^    tcfg_node_t	*bbi;$/;"	m	struct:__anon5
+bbi	tcfg.h	/^    tcfg_node_t	    *bbi;$/;"	m	struct:tcfg_nlink_t
+bbi_backedge	tcfg.c	/^bbi_backedge(tcfg_edge_t *edge)$/;"	f
+bbi_bid	tcfg.c	/^bbi_bid(tcfg_node_t *bbi)$/;"	f
+bbi_categorize	cache.c	/^bbi_categorize(tcfg_node_t *bbi, loop_t **bbi_hit_loops, int len)$/;"	f	file:
+bbi_hm_list	cache.c	/^loop_t		***bbi_hm_list;$/;"	v
+bbi_id	pipeline.h	/^    short	bbi_id;$/;"	m	struct:__anon1
+bbi_is_loopback	tcfg.c	/^bbi_is_loopback(tcfg_edge_t *edge, int head, int tail)$/;"	f
+bbi_is_return	tcfg.c	/^bbi_is_return(tcfg_node_t *bbi)$/;"	f
+bbi_map	tcfg.c	/^tcfg_nlink_t	***bbi_map;$/;"	v
+bbi_pid	tcfg.c	/^bbi_pid(tcfg_node_t *bbi)$/;"	f
+bbi_type	tcfg.c	/^bbi_type(tcfg_node_t *bbi)$/;"	f
+bdepth	main.c	/^int     bdepth = 0;$/;"	v
+bfg	bpred.c	/^bfg_node_t	    ***bfg;$/;"	v
+bfg_cons	ilp.c	/^bfg_cons()$/;"	f	file:
+bfg_edge_str	ilp.c	/^bfg_edge_str(bfg_edge_t *e, int bpred)$/;"	f	file:
+bfg_edge_t	bpred.h	/^struct bfg_edge_t {$/;"	s
+bfg_edge_t	bpred.h	/^typedef struct bfg_edge_t    bfg_edge_t;$/;"	t	typeref:struct:bfg_edge_t
+bfg_edge_term	ilp.c	/^bfg_edge_term(FILE *fp, bfg_edge_t *e, int bpred, char *prefix, char *suffix)$/;"	f	file:
+bfg_node_str	ilp.c	/^bfg_node_str(bfg_node_t *bbb)$/;"	f	file:
+bfg_node_t	bpred.h	/^} bfg_node_t;$/;"	t	typeref:struct:__anon5
+bfg_node_term	ilp.c	/^bfg_node_term(FILE *fp, bfg_node_t *bbb, char *prefix, char *suffix)$/;"	f	file:
+bhr	bpred.h	/^    short	bhr;	\/\/ BHR: branch history register$/;"	m	struct:__anon5
+bhr_to_pi	bpred.c	/^bhr_to_pi(tcfg_node_t *bbi, unsigned bhr)$/;"	f	file:
+bhr_update	bpred.c	/^bhr_update(unsigned bhr, int branch)$/;"	f	file:
+bimod_config	ss/my_opt.c	/^int bimod_config[1] =$/;"	v
+bimod_nelt	ss/my_opt.c	/^int bimod_nelt = 1;$/;"	v
+binary_search	bs.c	/^binary_search(x)$/;"	f
+bind_to_enum	ss/options.c	/^bind_to_enum(char *str,			\/* string to bind to an enum *\/$/;"	f	file:
+bind_to_str	ss/options.c	/^bind_to_str(int val,			\/* enumeration value *\/$/;"	f	file:
+bits	common.c	/^bits(unsigned x)$/;"	f
+bjptb	main.c	/^int    bjptb = 0;$/;"	v
+block	cache.h	/^	unsigned block;	  $/;"	m	struct:mem_blk_set
+bodies	pipeline.c	/^mas_inst_t	**bodies, *start_body;$/;"	v
+body_len	exegraph.c	/^int		eg_len = 0, plog_len = 0, elog_len = 0, body_len = 0;$/;"	v
+body_loop	exegraph.c	/^loop_t		*body_loop;$/;"	v
+bool_t	ss/host.h	/^typedef int bool_t;			\/* generic boolean type *\/$/;"	t
+bound	infeasible.h	/^  int bound;              \/\/ constraint for execution count by user-specified loopbound$/;"	m	struct:__anon13
+bound_elog_len	pipeline.c	/^bound_elog_len()$/;"	f	file:
+bp_flag	pipeline.h	/^    short	bp_flag;$/;"	m	struct:__anon1
+bp_type	exegraph.h	/^    char	    bp_type;		\/\/ BP_CPRED, BP_MPRED, BP_UNCLEAR$/;"	m	struct:__anon22
+bpred_analysis	bpred.c	/^bpred_analysis()$/;"	f
+bpred_misses	ilp.c	/^bpred_misses()$/;"	f	file:
+bpred_scheme	main.c	/^int	    bpred_scheme;$/;"	v
+bpred_scheme_t	bpred.h	/^enum bpred_scheme_t	{ NO_BPRED, GAG, GSHARE, LOCAL };$/;"	g
+bpred_type	exegraph.c	/^int		bpred_type;$/;"	v
+branch	bpred.h	/^    int		branch;$/;"	m	struct:bfg_edge_t
+branch	bpred.h	/^    int		branch;$/;"	m	struct:btg_edge_t
+branch	infeasible.h	/^  branch_t   *branch;         \/\/ ptr to branch effect associated with this node; NULL if not a branch$/;"	m	struct:__anon11
+branch	tcfg.h	/^    int		branch;		\/\/ TAKEN or NOT_TAKEN$/;"	m	struct:tcfg_edge_t
+branch_t	infeasible.h	/^struct branch_t {$/;"	s
+branch_t	infeasible.h	/^typedef struct branch_t branch_t;$/;"	t	typeref:struct:branch_t
+bsize	ss/ecoff.h	/^  int bsize;$/;"	m	struct:ecoff_aouthdr
+bss_start	ss/ecoff.h	/^  int bss_start;$/;"	m	struct:ecoff_aouthdr
+btb_config	ss/my_opt.c	/^int btb_config[2] =$/;"	v
+btb_nelt	ss/my_opt.c	/^int btb_nelt = 2;$/;"	v
+btg_cons	ilp.c	/^btg_cons()$/;"	f	file:
+btg_edge_str	ilp.c	/^btg_edge_str(btg_edge_t *e)$/;"	f	file:
+btg_edge_t	bpred.h	/^struct btg_edge_t {$/;"	s
+btg_edge_t	bpred.h	/^typedef struct btg_edge_t   btg_edge_t;$/;"	t	typeref:struct:btg_edge_t
+btg_edge_term	ilp.c	/^btg_edge_term(FILE *fp, btg_edge_t *e, char *prefix, char *suffix)$/;"	f	file:
+btg_in	bpred.c	/^btg_edge_t	**btg_in, **btg_out;$/;"	v
+btg_out	bpred.c	/^btg_edge_t	**btg_in, **btg_out;$/;"	v
+build_bbi_map	tcfg.c	/^build_bbi_map()$/;"	f	file:
+build_bfg	bpred.c	/^build_bfg()$/;"	f	file:
+build_btg	bpred.c	/^build_btg()$/;"	f	file:
+build_cfgs	cfg.c	/^build_cfgs()$/;"	f
+build_contends	ss/ss_exegraph.c	/^build_contends()$/;"	f	file:
+build_depends	ss/ss_exegraph.c	/^build_depends()$/;"	f	file:
+builtin_options	ss/options.c	/^static struct opt_opt_t *builtin_options = &config_opt;$/;"	v	typeref:struct:opt_opt_t	file:
+busy	ss/resource.h	/^  int busy;				\/* non-zero if this unit is busy *\/$/;"	m	struct:res_desc
+byte_t	ss/host.h	/^typedef unsigned char byte_t;		\/* byte - 8 bits *\/$/;"	t
+cache	cache.c	/^cache_t		    cache;$/;"	v
+cache_analysis	cache.c	/^cache_analysis()$/;"	f
+cache_block	cache.h	/^struct cache_block {$/;"	s
+cache_cons	ilp.c	/^cache_cons()$/;"	f	file:
+cache_dl1_lat	ss/my_opt.c	/^int cache_dl1_lat;$/;"	v
+cache_dl1_opt	ss/my_opt.c	/^char *cache_dl1_opt;$/;"	v
+cache_dl2_lat	ss/my_opt.c	/^int cache_dl2_lat;$/;"	v
+cache_dl2_opt	ss/my_opt.c	/^char *cache_dl2_opt;$/;"	v
+cache_il1_lat	ss/my_opt.c	/^int cache_il1_lat;$/;"	v
+cache_il1_opt	ss/my_opt.c	/^char *cache_il1_opt;$/;"	v
+cache_il2_lat	ss/my_opt.c	/^int cache_il2_lat;$/;"	v
+cache_il2_opt	ss/my_opt.c	/^char *cache_il2_opt;$/;"	v
+cache_misses	ilp.c	/^cache_misses()$/;"	f	file:
+cache_t	cache.h	/^} cache_t;$/;"	t	typeref:struct:__anon25
+calc_gen	cache.c	/^calc_gen()$/;"	f	file:
+calc_num_mblks	cache.c	/^calc_num_mblks()$/;"	f	file:
+callee	cfg.h	/^    proc_t	*callee;	\/\/ points to a callee if callee_addr not NULL$/;"	m	struct:__anon15
+callgraph	infeasible.h	/^int *callgraph;$/;"	v
+capt	common.h	/^    int	    capt;	    \/* capacity *\/$/;"	m	struct:queue_t
+capt	common.h	/^    int	    capt;	\/* capacity *\/$/;"	m	struct:stack_t
+categorize	cache.c	/^categorize()$/;"	f	file:
+categorize_all_miss	unicache.c	/^static void categorize_all_miss(de_inst_t* inst, ric_p addr)$/;"	f	file:
+categorize_data_access	unicache.c	/^static void categorize_data_access()$/;"	f	file:
+categorize_data_access_miss	unicache.c	/^static void categorize_data_access_miss()$/;"	f	file:
+categorize_data_access_ps	unicache.c	/^static void categorize_data_access_ps()$/;"	f	file:
+categorize_hit_miss	unicache.c	/^static void categorize_hit_miss(de_inst_t* inst, ric_p addr, int bb)$/;"	f	file:
+categorize_inst_access	unicache.c	/^static void categorize_inst_access()$/;"	f	file:
+categorize_inst_access_miss	unicache.c	/^static void categorize_inst_access_miss()$/;"	f	file:
+categorize_inst_access_ps	unicache.c	/^static void categorize_inst_access_ps()$/;"	f	file:
+categorize_inst_all_miss	unicache.c	/^static void categorize_inst_all_miss(de_inst_t* inst)$/;"	f	file:
+categorize_inst_hit_miss	unicache.c	/^static void categorize_inst_hit_miss(de_inst_t* inst)$/;"	f	file:
+categorize_inst_ps_nc	unicache.c	/^static void categorize_inst_ps_nc(de_inst_t* inst)$/;"	f	file:
+categorize_l2_inst_access	unicache.c	/^static void categorize_l2_inst_access()$/;"	f	file:
+categorize_l2_inst_hit_miss	unicache.c	/^static void categorize_l2_inst_hit_miss(de_inst_t* inst)$/;"	f	file:
+categorize_l2_inst_ps	unicache.c	/^static void categorize_l2_inst_ps(de_inst_t* inst)$/;"	f	file:
+categorize_l2_inst_ps_access	unicache.c	/^static void categorize_l2_inst_ps_access()$/;"	f	file:
+categorize_ps_data	unicache.c	/^static void categorize_ps_data(de_inst_t* inst, ric_p addr)$/;"	f	file:
+categorize_u1_hit_miss	unicache.c	/^static void categorize_u1_hit_miss(de_inst_t* inst, ric_p addr)$/;"	f	file:
+categorize_u1_ps	unicache.c	/^static void categorize_u1_ps(de_inst_t* inst, ric_p addr)$/;"	f	file:
+categorize_unified_cache_access	unicache.c	/^static void categorize_unified_cache_access()$/;"	f	file:
+categorize_unified_ps_cache_access	unicache.c	/^static void categorize_unified_ps_cache_access()$/;"	f	file:
+caux	ss/ecoff.h	/^  int caux;$/;"	m	struct:ecoff_fdr
+cbAuxOffset	ss/ecoff.h	/^  int cbAuxOffset;$/;"	m	struct:ecoff_symhdr_t
+cbDnOffset	ss/ecoff.h	/^  int cbDnOffset;$/;"	m	struct:ecoff_symhdr_t
+cbExtOffset	ss/ecoff.h	/^  int cbExtOffset;$/;"	m	struct:ecoff_symhdr_t
+cbFdOffset	ss/ecoff.h	/^  int cbFdOffset;$/;"	m	struct:ecoff_symhdr_t
+cbLine	ss/ecoff.h	/^  int cbLine;$/;"	m	struct:ecoff_fdr
+cbLine	ss/ecoff.h	/^  int cbLine;$/;"	m	struct:ecoff_symhdr_t
+cbLineOffset	ss/ecoff.h	/^  int cbLineOffset;$/;"	m	struct:ecoff_fdr
+cbLineOffset	ss/ecoff.h	/^  int cbLineOffset;$/;"	m	struct:ecoff_pdr
+cbLineOffset	ss/ecoff.h	/^  int cbLineOffset;$/;"	m	struct:ecoff_symhdr_t
+cbOptOffset	ss/ecoff.h	/^  int cbOptOffset;$/;"	m	struct:ecoff_symhdr_t
+cbPdOffset	ss/ecoff.h	/^  int cbPdOffset;$/;"	m	struct:ecoff_symhdr_t
+cbRfdOffset	ss/ecoff.h	/^  int cbRfdOffset;$/;"	m	struct:ecoff_symhdr_t
+cbSs	ss/ecoff.h	/^  int cbSs;$/;"	m	struct:ecoff_fdr
+cbSsExtOffset	ss/ecoff.h	/^  int cbSsExtOffset;$/;"	m	struct:ecoff_symhdr_t
+cbSsOffset	ss/ecoff.h	/^  int cbSsOffset;$/;"	m	struct:ecoff_symhdr_t
+cbSymOffset	ss/ecoff.h	/^  int cbSymOffset;$/;"	m	struct:ecoff_symhdr_t
+cfg	cfg.h	/^    cfg_node_t	*cfg;		\/\/ cfg nodes with num_bb nodes$/;"	m	struct:proc_t
+cfg_edge_t	cfg.h	/^struct cfg_edge_t {$/;"	s
+cfg_edge_t	cfg.h	/^typedef struct cfg_edge_t   cfg_edge_t;$/;"	t	typeref:struct:cfg_edge_t
+cfg_node_t	cfg.h	/^} cfg_node_t;$/;"	t	typeref:struct:__anon15
+changed	estimate.c	/^int		changed;$/;"	v
+chdir	ss/options.c	57;"	d	file:
+checkEquality	address.c	/^static int checkEquality(ric_p arg1, ric_p arg2)$/;"	f	file:
+checkEquality	unicache.c	/^static int checkEquality(acs_p* acs1, acs_p* acs2)$/;"	f	file:
+checkForInclusion	unicache.c	/^static int checkForInclusion(acs_p* acs_in, mem_blk_set_t* mem_blk_set)$/;"	f	file:
+checkForInclusionSingle	unicache.c	/^static int checkForInclusionSingle(acs_p* acs_in, mem_blk_set_t* mem_blk_set)$/;"	f	file:
+checkForOnePresence	unicache.c	/^static int checkForOnePresence(acs_p** acs_in, mem_blk_set_t* mem_blk_set)$/;"	f	file:
+checkForPresence	unicache.c	/^static int checkForPresence(acs_p** acs_in, mem_blk_set_t* mem_blk_set)$/;"	f	file:
+checkForVictim	unicache.c	/^static int checkForVictim(acs_p** acs_in, mem_blk_set_t* mem_blk_set)$/;"	f	file:
+check_fetch_times	estimate.c	/^check_fetch_times()$/;"	f
+cleanup_cache	unicache.c	/^static void cleanup_cache()$/;"	f	file:
+clearReg	reg.c	/^int clearReg() {$/;"	f
+clear_bbi_flags	tcfg.c	/^clear_bbi_flags()$/;"	f
+clear_queue	common.c	/^clear_queue(Queue *queue)$/;"	f
+clear_stack	common.c	/^clear_stack(Stack *stack)$/;"	f
+clear_tcfg_edge_flags	tcfg.c	/^clear_tcfg_edge_flags()$/;"	f
+cline	ss/ecoff.h	/^  int cline;$/;"	m	struct:ecoff_fdr
+cmd	ss/misc.c	/^  char *cmd;$/;"	m	struct:__anon29	file:
+cmp	cache.h	/^    int		cmp;    \/\/ cache miss penalty$/;"	m	struct:__anon25
+cnt1	bs.c	/^	int cnt1;$/;"	v
+code	cfg.h	/^    de_inst_t	*code;		\/\/ decoded program text$/;"	m	struct:__anon16
+code	cfg.h	/^    de_inst_t   *code;		\/\/ instructions$/;"	m	struct:proc_t
+code	cfg.h	/^    de_inst_t   *code;		\/\/ pointer to the first instruction$/;"	m	struct:__anon15
+code	pipeline.h	/^    mas_inst_t	*code;$/;"	m	struct:code_link_t
+code_link_t	pipeline.h	/^struct code_link_t {$/;"	s
+code_link_t	pipeline.h	/^typedef struct code_link_t code_link_t;$/;"	t	typeref:struct:code_link_t
+code_size	cfg.h	/^    int		code_size;	\/\/ code size (in bytes)$/;"	m	struct:__anon16
+code_size	est.sh	/^code_size()$/;"	f
+code_size	sim.sh	/^code_size()$/;"	f
+code_size	solve.sh	/^code_size()$/;"	f
+code_size	solve_time.sh	/^code_size()$/;"	f
+coexist	exegraph.c	/^range16_t	*coexist;$/;"	v
+col_data	cfg.h	/^struct col_data$/;"	s
+col_data_p	cfg.h	/^typedef struct col_data* col_data_p;$/;"	t	typeref:struct:col_data
+col_data_s	cfg.h	/^typedef struct col_data col_data_s;$/;"	t	typeref:struct:col_data
+collect_affected_sets	pipeline.c	/^collect_affected_sets()$/;"	f	file:
+collect_bfg_nodes	bpred.c	/^collect_bfg_nodes()$/;"	f	file:
+collect_bodies	pipeline.c	/^collect_bodies()$/;"	f	file:
+collect_epilogs	pipeline.c	/^collect_epilogs()$/;"	f	file:
+collect_mp_insts	bpred.c	/^collect_mp_insts()$/;"	f
+collect_prologs	pipeline.c	/^collect_prologs()$/;"	f	file:
+collect_reachables	bpred.c	/^collect_reachables(bfg_node_t *bbb, int branch)$/;"	f	file:
+collect_root_reachable	bpred.c	/^collect_root_reachable(int pi)$/;"	f	file:
+collect_tcfg_edges	tcfg.c	/^collect_tcfg_edges()$/;"	f	file:
+comb_config	ss/my_opt.c	/^int comb_config[1] =$/;"	v
+comb_nelt	ss/my_opt.c	/^int comb_nelt = 1;$/;"	v
+commit_width_depends	ss/ss_exegraph.c	/^commit_width_depends(int inst, int succ)$/;"	f	file:
+compress_icache_addrs	ss/my_opt.c	/^int compress_icache_addrs;$/;"	v
+cond_bbi	tcfg.c	/^cond_bbi(tcfg_node_t *bbi)$/;"	f
+config_opt	ss/options.c	/^static struct opt_opt_t config_opt =$/;"	v	typeref:struct:opt_opt_t	file:
+conflict_dir	infeasible.h	/^  char     conflict_dir;        \/\/ branch direction in the BA conflict: JUMP or FALL$/;"	m	struct:__anon9
+conflict_dir	infeasible.h	/^  char     conflict_dir;        \/\/ combination of branch directions in the BB conflict: JJ, JF, FJ, or JJ$/;"	m	struct:__anon10
+conflict_src	infeasible.h	/^  assign_t *conflict_src;$/;"	m	struct:__anon9
+conflict_src	infeasible.h	/^  branch_t *conflict_src;$/;"	m	struct:__anon10
+constant	ss/eval.c	/^constant(struct eval_state_t *es)	\/* expression evaluator *\/$/;"	f	file:
+constraints	ilp.c	/^constraints()$/;"	f
+contd_type	exegraph.h	/^    char	    contd_type;$/;"	m	struct:egraph_edge_t
+copt	ss/ecoff.h	/^  int copt;$/;"	m	struct:ecoff_fdr
+copy_cache	unicache.c	/^static acs_p* copy_cache(acs_p* acs)$/;"	f	file:
+copy_stack	common.c	/^copy_stack(Stack *y, Stack *x)$/;"	f
+cost_func	ilp.c	/^cost_func()$/;"	f	file:
+cost_term	ilp.c	/^cost_term(int edge_id, int bpred)$/;"	f	file:
+count	address.c	/^int count = 0;$/;"	v
+count	unicache.c	/^static int count;$/;"	v	file:
+counter_t	ss/host.h	/^typedef dfloat_t counter_t;$/;"	t
+counter_t	ss/host.h	/^typedef sqword_t counter_t;$/;"	t
+cpd	ss/ecoff.h	/^  unsigned short cpd;$/;"	m	struct:ecoff_fdr
+cpred_times	pipeline.c	/^int		**cpred_times, **mpred_times, start_time;$/;"	v
+cprmask	ss/ecoff.h	/^  int cprmask[4];$/;"	m	struct:ecoff_aouthdr
+crc	ss/misc.c	/^crc(word_t crc_accum, word_t data)$/;"	f
+crc_gentab	ss/misc.c	/^crc_gentab(void)$/;"	f	file:
+crc_init	ss/misc.c	/^static int crc_init = FALSE;$/;"	v	file:
+crc_table	ss/misc.c	/^static unsigned long crc_table[256];$/;"	v	file:
+createMemoryAloc	address.c	/^static abs_mem_p createMemoryAloc(ric_s addr, ric_p value)$/;"	f	file:
+create_aloc	address.c	/^static void create_aloc()$/;"	f	file:
+create_bpred_depend	ss/ss_exegraph.c	/^create_bpred_depend(int src_id, int dst_id, int normal)$/;"	f	file:
+create_cfg	cfg.c	/^create_cfg(proc_t *proc)$/;"	f	file:
+create_cfg_edges	cfg.c	/^create_cfg_edges(proc_t *proc)$/;"	f	file:
+create_data_depend	ss/ss_exegraph.c	/^create_data_depend(int src_id, int dst_id, int normal)$/;"	f	file:
+create_egraph	exegraph.c	/^create_egraph(mas_inst_t *plog, int np, mas_inst_t *elog, int ne,$/;"	f
+create_egraph_ss	ss/ss_exegraph.c	/^create_egraph_ss()$/;"	f
+crfd	ss/ecoff.h	/^  int crfd;$/;"	m	struct:ecoff_fdr
+crfd	ss/ecoff.h	/^  int crfd;$/;"	m	struct:ecoff_symhdr_t
+csym	ss/ecoff.h	/^  int csym;$/;"	m	struct:ecoff_fdr
+ctx_mpmiss_time	pipeline.c	/^ctx_mpmiss_time(int edge_id, int hm_id, int set, int bp)$/;"	f	file:
+ctx_unit_time	pipeline.c	/^ctx_unit_time(int edge_id, int hm_id, int bp)$/;"	f	file:
+curr_grp	ilp.c	/^int	curr_grp = 0, curr_idx = 0;$/;"	v
+curr_idx	ilp.c	/^int	curr_grp = 0, curr_idx = 0;$/;"	v
+d	ss/machine.h	/^  dfloat_t d[MD_NUM_FREGS\/2];	\/* double-prediction floating point view *\/$/;"	m	union:__anon32
+data	address.h	/^	void* data;$/;"	m	struct:worklist
+data	bs.c	/^struct DATA data[30] = {$/;"	v	typeref:struct:DATA
+data_access	isa.h	/^	 ACCESS_T data_access;		\/* data access classification(hit\/not known) $/;"	m	struct:__anon36
+data_dep	ss/ss_exegraph.c	/^char			**data_dep;$/;"	v
+data_depends	ss/ss_exegraph.c	/^data_depends()$/;"	f	file:
+data_start	ss/ecoff.h	/^  int data_start;$/;"	m	struct:ecoff_aouthdr
+dcache_delay	tcfg.h	/^	 int 				dcache_delay; 		\/* For data cache analysis *\/ 	$/;"	m	struct:__anon28
+de_inst_t	isa.h	/^} de_inst_t;$/;"	t	typeref:struct:__anon36
+deal_exit_edge	loops.c	/^deal_exit_edge(tcfg_edge_t *e)$/;"	f	file:
+deal_other_edge	loops.c	/^deal_other_edge(tcfg_edge_t *e)$/;"	f	file:
+dealloc_dep_mem	ss/ss_exegraph.c	/^dealloc_dep_mem()$/;"	f	file:
+debug	ss/misc.h	/^static void debug(char *fmt, ...) {}$/;"	f
+debug	ss/misc.h	158;"	d
+debug	ss/misc.h	174;"	d
+debugging	ss/misc.c	/^int debugging = FALSE;$/;"	v
+decode_inst	ss/ss_isa.c	/^decode_inst(de_inst_t *de_inst, md_inst_t inst)$/;"	f
+decode_width_depends	ss/ss_exegraph.c	/^decode_width_depends(int inst, int succ)$/;"	f	file:
+decode_width_depends_m	ss/ss_exegraph.c	/^decode_width_depends_m(int inst)$/;"	f	file:
+decode_width_depends_n	ss/ss_exegraph.c	/^decode_width_depends_n(int inst, int succ)$/;"	f	file:
+delay_type	ss/ss_exegraph.c	/^delay_type(egraph_edge_t *ce)$/;"	f	file:
+dep_regs	pipeline.c	/^int		    dep_regs[MAX_REGS];$/;"	v
+dequeue	common.c	/^dequeue(Queue *queue)$/;"	f
+deritree	infeasible.h	/^  char deritree[DERI_LEN];      \/\/ a sequence of operations on mem. accesses$/;"	m	struct:__anon6
+deritree	infeasible.h	/^  char deritree[DERI_LEN];      \/\/ derivation tree of affected variable$/;"	m	struct:__anon8
+deritree	infeasible.h	/^  char deritree[DERI_LEN];      \/\/ derivation tree of tested variable$/;"	m	struct:branch_t
+desc	ss/options.h	/^  char *desc;			\/* option description *\/$/;"	m	struct:opt_opt_t
+detectConflicts	conflicts.c	/^int detectConflicts() {$/;"	f
+dfloat_t	ss/host.h	/^typedef double dfloat_t;		\/* double-precision float - 64 bits *\/$/;"	t
+distance	estimate.c	/^distance(egraph_node_t *v, egraph_node_t *u)$/;"	f	file:
+do_ilp	main.c	/^do_ilp(char *obj_file)$/;"	f	file:
+dsize	ss/ecoff.h	/^  int dsize;$/;"	m	struct:ecoff_aouthdr
+dst	address.h	/^	void* dst;$/;"	m	struct:slist
+dst	bpred.h	/^    bfg_node_t	*src, *dst;	\/\/ block s -> t$/;"	m	struct:bfg_edge_t
+dst	bpred.h	/^    bfg_node_t	*src, *dst;$/;"	m	struct:btg_edge_t
+dst	cfg.h	/^    cfg_node_t  *src, *dst;	\/\/ src -> dst$/;"	m	struct:cfg_edge_t
+dst	exegraph.h	/^    egraph_node_t   *src, *dst;$/;"	m	struct:egraph_edge_t
+dst	tcfg.h	/^    tcfg_node_t	*src, *dst;$/;"	m	struct:tcfg_edge_t
+dtlb_opt	ss/my_opt.c	/^char *dtlb_opt;$/;"	v
+dump	address.c	/^static void dump(de_inst_t* inst, ric_p addr, FILE* fp)$/;"	f	file:
+dumpAddress	address.c	/^static void dumpAddress(tcfg_node_t* bbi) $/;"	f	file:
+dumpAlocStatus	address.c	/^static void dumpAlocStatus(tcfg_node_t* bbi, FILE* fp) $/;"	f	file:
+dumpCache	unicache.c	/^static void dumpCache()$/;"	f	file:
+dumpCacheBB	unicache.c	/^static void dumpCacheBB(acs_p** acs, FILE* fp)$/;"	f	file:
+dumpInstCache	unicache.c	/^static void dumpInstCache()$/;"	f	file:
+dump_bfg	bpred.c	/^dump_bfg()$/;"	f
+dump_btg	bpred.c	/^dump_btg()$/;"	f	file:
+dump_cfg	cfg.c	/^dump_cfg(FILE *fp, proc_t *proc)$/;"	f
+dump_code	readfile.c	/^dump_code()$/;"	f
+dump_coexist	ss/ss_exegraph.c	/^dump_coexist(int first, int last)$/;"	f
+dump_config	ss/options.c	/^dump_config(struct opt_odb_t *odb,	\/* option data base *\/$/;"	f	file:
+dump_context_stats	pipeline.c	/^dump_context_stats()$/;"	f
+dump_data_address	address.c	/^static void dump_data_address()$/;"	f	file:
+dump_data_dep	ss/ss_exegraph.c	/^dump_data_dep()$/;"	f
+dump_econtd	estimate.c	/^dump_econtd(egraph_node_t *v)$/;"	f	file:
+dump_edge_mp_times	pipeline.c	/^dump_edge_mp_times(int edge_id, int hm)$/;"	f
+dump_egraph	exegraph.c	/^dump_egraph()$/;"	f
+dump_egraph_contends	exegraph.c	/^dump_egraph_contends(int inst)$/;"	f	file:
+dump_egraph_depends	exegraph.c	/^dump_egraph_depends(int inst)$/;"	f	file:
+dump_egraph_earliest	estimate.c	/^dump_egraph_earliest(int start, int end)$/;"	f
+dump_egraph_times	estimate.c	/^dump_egraph_times(int start, int end)$/;"	f
+dump_elog_len	pipeline.c	/^dump_elog_len()$/;"	f
+dump_elog_stats	pipeline.c	/^dump_elog_stats()$/;"	f
+dump_gen	cache.c	/^dump_gen()$/;"	f
+dump_hm_list	cache.c	/^dump_hm_list()$/;"	f
+dump_isa	isa.c	/^dump_isa()$/;"	f
+dump_loop_comm_ances	loops.c	/^dump_loop_comm_ances()$/;"	f
+dump_loop_tags	cache.c	/^dump_loop_tags()$/;"	f
+dump_loops	loops.c	/^dump_loops()$/;"	f	file:
+dump_mblk_hitloop	cache.c	/^dump_mblk_hitloop()$/;"	f
+dump_mlat_mpinst	pipeline.c	/^dump_mlat_mpinst()$/;"	f
+dump_mod_data_address	address.c	/^void dump_mod_data_address()$/;"	f
+dump_mp_times	pipeline.c	/^dump_mp_times()$/;"	f
+dump_plog_stats	pipeline.c	/^dump_plog_stats()$/;"	f
+dump_tcfg	tcfg.c	/^dump_tcfg(FILE *fp)$/;"	f
+dump_unit_time	pipeline.c	/^dump_unit_time(int edge_id, int hm, int bp)$/;"	f
+dump_units_times	pipeline.c	/^dump_units_times()$/;"	f
+dump_xlogs	pipeline.c	/^dump_xlogs(code_link_t **xlogs)$/;"	f	file:
+dumpconfig_opt	ss/options.c	/^static struct opt_opt_t dumpconfig_opt =$/;"	v	typeref:struct:opt_opt_t	file:
+e_contd	exegraph.h	/^    egraph_edge_t   *e_contd, *l_contd;$/;"	m	struct:__anon22
+earliest_time	estimate.c	/^earliest_time(egraph_node_t *v)$/;"	f	file:
+ecoff_EXTR	ss/ecoff.h	/^typedef struct ecoff_EXTR {$/;"	s
+ecoff_EXTR	ss/ecoff.h	/^} ecoff_EXTR;$/;"	t	typeref:struct:ecoff_EXTR
+ecoff_FDR	ss/ecoff.h	/^} ecoff_FDR;$/;"	t	typeref:struct:ecoff_fdr
+ecoff_HDRR	ss/ecoff.h	/^} ecoff_HDRR;$/;"	t	typeref:struct:ecoff_symhdr_t
+ecoff_PDR	ss/ecoff.h	/^} ecoff_PDR;$/;"	t	typeref:struct:ecoff_pdr
+ecoff_SYMR	ss/ecoff.h	/^typedef struct ecoff_SYMR {$/;"	s
+ecoff_SYMR	ss/ecoff.h	/^} ecoff_SYMR;$/;"	t	typeref:struct:ecoff_SYMR
+ecoff_aouthdr	ss/ecoff.h	/^struct ecoff_aouthdr {$/;"	s
+ecoff_fdr	ss/ecoff.h	/^typedef struct ecoff_fdr {$/;"	s
+ecoff_filehdr	ss/ecoff.h	/^struct ecoff_filehdr {$/;"	s
+ecoff_pdr	ss/ecoff.h	/^typedef struct ecoff_pdr {$/;"	s
+ecoff_scnhdr	ss/ecoff.h	/^struct ecoff_scnhdr {$/;"	s
+ecoff_symhdr_t	ss/ecoff.h	/^typedef struct ecoff_symhdr_t {$/;"	s
+econtd_delay	estimate.c	/^econtd_delay(egraph_node_t *v, int new_hi)$/;"	f	file:
+edge	tcfg.h	/^    tcfg_edge_t	    *edge;$/;"	m	struct:tcfg_elink_t
+edge_mpset_cons	ilp.c	/^edge_mpset_cons(int lp_id, tcfg_edge_t *edge)$/;"	f	file:
+eg_chain	exegraph.c	/^eg_chain_t	*eg_chain;$/;"	v
+eg_chain_t	exegraph.h	/^} eg_chain_t;$/;"	t	typeref:struct:__anon23
+eg_insts	exegraph.c	/^mas_inst_t	**eg_insts;$/;"	v
+eg_insts_type	ss/ss_exegraph.c	/^char			*eg_insts_type;$/;"	v
+eg_len	exegraph.c	/^int		eg_len = 0, plog_len = 0, elog_len = 0, body_len = 0;$/;"	v
+eg_mem_insts	ss/ss_exegraph.c	/^short int		*eg_mem_insts, num_mem_insts;$/;"	v
+egraph	exegraph.c	/^egraph_node_t	**egraph;$/;"	v
+egraph_edge_t	exegraph.h	/^struct egraph_edge_t {$/;"	s
+egraph_edge_t	exegraph.h	/^typedef struct egraph_edge_t egraph_edge_t;$/;"	t	typeref:struct:egraph_edge_t
+egraph_edges	exegraph.c	/^egraph_edge_t	*egraph_edges = NULL;$/;"	v
+egraph_node_t	exegraph.h	/^} egraph_node_t;$/;"	t	typeref:struct:__anon22
+elapsed_time	ss/misc.c	/^elapsed_time(long sec)$/;"	f
+elog_len	exegraph.c	/^int		eg_len = 0, plog_len = 0, elog_len = 0, body_len = 0;$/;"	v
+emap	ss/options.h	/^      char **emap;		\/* array of enum strings *\/$/;"	m	struct:opt_opt_t::opt_variant_t::opt_for_enum_t
+emap_sz	ss/options.h	/^      int emap_sz;		\/* number of enum's in arrays *\/$/;"	m	struct:opt_opt_t::opt_variant_t::opt_for_enum_t
+enable_abs_inst_cache	main.c	/^int 		 enable_abs_inst_cache = 0;	\/* For anabling abstract instruction $/;"	v
+enable_dcache	main.c	/^int 		 enable_dcache = 0;				\/* For anabling data cache analysis *\/$/;"	v
+enable_icache	main.c	/^int	    enable_icache;$/;"	v
+enable_infeas	main.c	/^char enable_infeas;$/;"	v
+end_addr	cfg.h	/^    addr_t	start_addr, end_addr, main_addr;$/;"	m	struct:__anon16
+end_bbb	bpred.c	/^bfg_node_t	    root_bbb, end_bbb;$/;"	v
+end_bbb_id	bpred.c	/^int		    root_bbb_id, end_bbb_id;$/;"	v
+end_bbb_in	bpred.c	/^btg_edge_t	**end_bbb_in, **root_bbb_out;$/;"	v
+end_str	ilp.c	/^char	start_str[] = "Sta", end_str[] = "End";$/;"	v
+enqueue	common.c	/^enqueue(Queue *queue, void *x)$/;"	f
+entry	infeasible.h	/^  int entry;              \/\/ block id of loop entry$/;"	m	struct:__anon13
+entry	ss/ecoff.h	/^  int entry;$/;"	m	struct:ecoff_aouthdr
+epilogs	pipeline.c	/^code_link_t	**prologs, **epilogs;$/;"	v
+err_value	ss/eval.c	/^static struct eval_value_t err_value = { et_int, { 0 } };$/;"	v	typeref:struct:eval_value_t	file:
+esize	common.h	/^    int	    esize;	    \/* element size *\/$/;"	m	struct:queue_t
+esize	common.h	/^    int	    esize;	\/* element size *\/$/;"	m	struct:stack_t
+est_egraph	estimate.c	/^est_egraph()$/;"	f
+est_mpmiss_times	pipeline.c	/^est_mpmiss_times()$/;"	f	file:
+est_start_unit	pipeline.c	/^est_start_unit()$/;"	f	file:
+est_unit_term	ilp.c	/^est_unit_term(FILE *fp, tcfg_edge_t *e, int bpred, int hm, char *prefix, char *suffix)$/;"	f	file:
+est_units	pipeline.c	/^est_units()$/;"	f	file:
+estunit_mpcost_func	ilp.c	/^estunit_mpcost_func(int bbi_id, int hm, int lp_id)$/;"	f	file:
+estunit_mpunit_cons	ilp.c	/^estunit_mpunit_cons(int bbi_id, int hm, int lp_id)$/;"	f	file:
+et_NUM	ss/eval.h	/^  et_NUM$/;"	e	enum:eval_type_t
+et_addr	ss/eval.h	/^  et_addr,			\/* address value *\/$/;"	e	enum:eval_type_t
+et_double	ss/eval.h	/^  et_double,			\/* double-precision floating point value *\/$/;"	e	enum:eval_type_t
+et_float	ss/eval.h	/^  et_float,			\/* single-precision floating point value *\/$/;"	e	enum:eval_type_t
+et_int	ss/eval.h	/^  et_int,			\/* signed integer result *\/$/;"	e	enum:eval_type_t
+et_qword	ss/eval.h	/^  et_qword,			\/* unsigned qword length integer result *\/$/;"	e	enum:eval_type_t
+et_sqword	ss/eval.h	/^  et_sqword,			\/* signed qword length integer result *\/$/;"	e	enum:eval_type_t
+et_symbol	ss/eval.h	/^  et_symbol,			\/* non-numeric result (!allowed in exprs)*\/$/;"	e	enum:eval_type_t
+et_uint	ss/eval.h	/^  et_uint,			\/* unsigned integer result *\/$/;"	e	enum:eval_type_t
+eval	ss/options.h	/^      int *eval;		\/* optional array of enum values *\/$/;"	m	struct:opt_opt_t::opt_variant_t::opt_for_enum_t
+eval_as_addr	ss/eval.c	/^eval_as_addr(struct eval_value_t val)$/;"	f
+eval_as_double	ss/eval.c	/^eval_as_double(struct eval_value_t val)$/;"	f
+eval_as_float	ss/eval.c	/^eval_as_float(struct eval_value_t val)$/;"	f
+eval_as_int	ss/eval.c	/^eval_as_int(struct eval_value_t val)$/;"	f
+eval_as_qword	ss/eval.c	/^eval_as_qword(struct eval_value_t val)$/;"	f
+eval_as_sqword	ss/eval.c	/^eval_as_sqword(struct eval_value_t val)$/;"	f
+eval_as_uint	ss/eval.c	/^eval_as_uint(struct eval_value_t val)$/;"	f
+eval_delete	ss/eval.c	/^eval_delete(struct eval_state_t *es)	\/* evaluator to delete *\/$/;"	f
+eval_err_str	ss/eval.c	/^char *eval_err_str[ERR_NUM] = {$/;"	v
+eval_err_t	ss/eval.h	/^enum eval_err_t {$/;"	g
+eval_error	ss/eval.c	/^enum eval_err_t eval_error = ERR_NOERR;$/;"	v	typeref:enum:eval_err_t
+eval_expr	ss/eval.c	/^eval_expr(struct eval_state_t *es,	\/* expression evaluator *\/$/;"	f
+eval_ident_t	ss/eval.h	/^(*eval_ident_t)(struct eval_state_t *es); \/* ident string in es->tok_buf *\/$/;"	t	typeref:struct:eval_ident_t
+eval_new	ss/eval.c	/^eval_new(eval_ident_t f_eval_ident,	\/* user ident evaluator *\/$/;"	f
+eval_print	ss/eval.c	/^eval_print(FILE *stream,		\/* output stream *\/$/;"	f
+eval_state_t	ss/eval.h	/^struct eval_state_t {$/;"	s
+eval_token_t	ss/eval.h	/^enum eval_token_t {$/;"	g
+eval_type_str	ss/eval.c	/^char *eval_type_str[et_NUM] = {$/;"	v
+eval_type_t	ss/eval.h	/^enum eval_type_t {$/;"	g
+eval_value_t	ss/eval.h	/^struct eval_value_t {$/;"	s
+exec_count	infeasible.h	/^  int        exec_count;      \/\/ constraint for execution count as determined from DFA (-1 if undetermined)$/;"	m	struct:__anon11
+exec_count	tcfg.h	/^    int           exec_count;  \/\/ vivy: for infeasible path constraints$/;"	m	struct:__anon28
+execute	symexec.c	/^int execute() {$/;"	f
+execute	symexec.cp.c	/^int execute() {$/;"	f
+exit_loop	loops.c	/^exit_loop(tcfg_edge_t *e)$/;"	f	file:
+exits	loops.h	/^    tcfg_elink_t    *exits;$/;"	m	struct:loop_t
+exo_address_t	ss/machine.h	/^typedef qword_t exo_address_t;$/;"	t
+exo_float_t	ss/machine.h	/^typedef double exo_float_t;$/;"	t
+exo_integer_t	ss/machine.h	/^typedef qword_t exo_integer_t;$/;"	t
+expr	ss/eval.c	/^expr(struct eval_state_t *es)		\/* expression evaluator *\/$/;"	f	file:
+ext	ss/misc.c	/^  char *ext;$/;"	m	struct:__anon29	file:
+extractl	ss/misc.c	/^extractl(int word,		\/* the word from which to extract *\/$/;"	f
+f	ss/machine.h	/^  sfloat_t f[MD_NUM_FREGS];	\/* single-precision floating point view *\/$/;"	m	union:__anon32
+fBigendian	ss/ecoff.h	/^  unsigned fBigendian :1;$/;"	m	struct:ecoff_fdr
+fMerge	ss/ecoff.h	/^  unsigned fMerge :1;$/;"	m	struct:ecoff_fdr
+fReadin	ss/ecoff.h	/^  unsigned fReadin :1;$/;"	m	struct:ecoff_fdr
+f_add	ss/eval.c	/^f_add(struct eval_value_t val1, struct eval_value_t val2)$/;"	f	file:
+f_div	ss/eval.c	/^f_div(struct eval_value_t val1, struct eval_value_t val2)$/;"	f	file:
+f_eq_zero	ss/eval.c	/^f_eq_zero(struct eval_value_t val1)$/;"	f	file:
+f_eval_ident	ss/eval.h	/^  eval_ident_t f_eval_ident;	\/* identifier evaluator *\/$/;"	m	struct:eval_state_t
+f_flags	ss/ecoff.h	/^  unsigned short f_flags;$/;"	m	struct:ecoff_filehdr
+f_magic	ss/ecoff.h	/^  unsigned short f_magic;$/;"	m	struct:ecoff_filehdr
+f_mult	ss/eval.c	/^f_mult(struct eval_value_t val1, struct eval_value_t val2)$/;"	f	file:
+f_neg	ss/eval.c	/^f_neg(struct eval_value_t val1)$/;"	f	file:
+f_nscns	ss/ecoff.h	/^  unsigned short f_nscns;$/;"	m	struct:ecoff_filehdr
+f_nsyms	ss/ecoff.h	/^  int f_nsyms;$/;"	m	struct:ecoff_filehdr
+f_opthdr	ss/ecoff.h	/^  unsigned short f_opthdr;$/;"	m	struct:ecoff_filehdr
+f_orphan_fn	ss/options.c	/^f_orphan_fn(int i, int argc, char **argv)$/;"	f
+f_sub	ss/eval.c	/^f_sub(struct eval_value_t val1, struct eval_value_t val2)$/;"	f	file:
+f_symptr	ss/ecoff.h	/^  int f_symptr;$/;"	m	struct:ecoff_filehdr
+f_timdat	ss/ecoff.h	/^  int f_timdat;$/;"	m	struct:ecoff_filehdr
+fabs	qurt.c	/^double fabs(double n)$/;"	f
+factor	ss/eval.c	/^factor(struct eval_state_t *es)		\/* expression evaluator *\/$/;"	f	file:
+fatal	ss/misc.c	/^fatal(char *fmt, ...)$/;"	f
+fatal_hook	ss/misc.c	/^fatal_hook(void (*fn)(FILE *stream))	\/* fatal hook function *\/$/;"	f
+fcc	ss/machine.h	/^  int fcc;			\/* floating point condition codes *\/$/;"	m	struct:__anon33
+fetch_dep	estimate.c	/^fetch_dep(egraph_edge_t *e)$/;"	f	file:
+fetch_speed	ss/my_opt.c	/^int fetch_speed = 1;$/;"	v
+fetch_width	ss/my_opt.c	/^int fetch_width;$/;"	v
+fetch_width_depends	ss/ss_exegraph.c	/^fetch_width_depends(int inst, int succ)$/;"	f	file:
+fetch_width_depends_m	ss/ss_exegraph.c	/^fetch_width_depends_m(int inst)$/;"	f	file:
+fetch_width_depends_n	ss/ss_exegraph.c	/^fetch_width_depends_n(int inst, int succ)$/;"	f	file:
+fifo_ibuf_depends	ss/ss_exegraph.c	/^fifo_ibuf_depends()$/;"	f	file:
+fifo_rob_depends	ss/ss_exegraph.c	/^fifo_rob_depends()$/;"	f	file:
+file	ss/machine.h	/^  enum md_reg_type file;	\/* register file *\/$/;"	m	struct:md_reg_names_t	typeref:enum:md_reg_names_t::md_reg_type
+filp	ilp.c	/^FILE	*filp, *fusr;$/;"	v
+fin	exegraph.h	/^    range_t	    rdy, str, fin;	\/\/ ready, start, finish$/;"	m	struct:__anon22
+findReg	reg.c	/^int findReg( char key[] ) {$/;"	f
+find_cond_exit	ilp.c	/^find_cond_exit(int lp_id, tcfg_edge_t *edge)$/;"	f	file:
+find_cond_exit	pipeline.c	/^find_cond_exit(int lp_id, tcfg_edge_t *edge, int num_inst)$/;"	f	file:
+find_hitloop	cache.c	/^find_hitloop()$/;"	f	file:
+find_loops	loops.c	/^find_loops()$/;"	f	file:
+find_mlat_mpinst	pipeline.c	/^find_mlat_mpinst()$/;"	f	file:
+find_sep	estimate.c	/^find_sep()$/;"	f	file:
+findproc	main.c	/^int findproc( int addr ) {$/;"	f
+fir_filter_int	fir.c	/^void fir_filter_int(long* in,long* out,long in_len,$/;"	f
+fir_int	fir.c	/^long fir_int[36]={$/;"	v
+first_b	estimate.c	/^int		last_p, last_np, first_b, last_b, first_e;$/;"	v
+first_e	estimate.c	/^int		last_p, last_np, first_b, last_b, first_e;$/;"	v
+flag	exegraph.h	/^    char	    flag;$/;"	m	struct:__anon22
+flag	infeasible.h	/^  char flag;                    \/\/ any special kind of instruction; -1 if not specified 	$/;"	m	struct:__anon6
+flag	qurt.c	/^int flag;$/;"	v
+flag_emap	ss/options.c	/^static char *flag_emap[NUM_FLAGS] = {$/;"	v	file:
+flag_eval	ss/options.c	/^static int flag_eval[NUM_FLAGS] = {$/;"	v	file:
+flags	bpred.h	/^    int		flags;$/;"	m	struct:__anon5
+flags	cfg.h	/^    int		flags;		\/\/ for traverse usage$/;"	m	struct:__anon15
+flags	cfg.h	/^    int		flags;$/;"	m	struct:proc_t
+flags	loops.h	/^    int		    flags;$/;"	m	struct:loop_t
+flags	tcfg.h	/^    int		flags;$/;"	m	struct:tcfg_edge_t
+flags	tcfg.h	/^    unsigned	flags;$/;"	m	struct:__anon28
+flags2str	ss/symbol.c	/^flags2str(unsigned int flags)	\/* bfd symbol flags *\/$/;"	f	file:
+flush_on_syscalls	ss/my_opt.c	/^int flush_on_syscalls;$/;"	v
+for_counter	ss/machine.h	571;"	d
+for_counter	ss/machine.h	575;"	d
+for_double	ss/options.h	/^    } for_double;$/;"	m	union:opt_opt_t::opt_variant_t	typeref:struct:opt_opt_t::opt_variant_t::opt_for_double_t
+for_enum	ss/options.h	/^    } for_enum;$/;"	m	union:opt_opt_t::opt_variant_t	typeref:struct:opt_opt_t::opt_variant_t::opt_for_enum_t
+for_float	ss/options.h	/^    } for_float;$/;"	m	union:opt_opt_t::opt_variant_t	typeref:struct:opt_opt_t::opt_variant_t::opt_for_float_t
+for_int	ss/options.h	/^    } for_int;$/;"	m	union:opt_opt_t::opt_variant_t	typeref:struct:opt_opt_t::opt_variant_t::opt_for_int_t
+for_string	ss/options.h	/^    } for_string;$/;"	m	union:opt_opt_t::opt_variant_t	typeref:struct:opt_opt_t::opt_variant_t::opt_for_string_t
+for_uint	ss/options.h	/^    } for_uint;$/;"	m	union:opt_opt_t::opt_variant_t	typeref:struct:opt_opt_t::opt_variant_t::opt_for_uint_t
+format	ss/options.h	/^  char *format;			\/* option value print format *\/$/;"	m	struct:opt_opt_t
+frameoffset	ss/ecoff.h	/^  int frameoffset;$/;"	m	struct:ecoff_pdr
+framereg	ss/ecoff.h	/^  short framereg;$/;"	m	struct:ecoff_pdr
+freeCacheState	unicache.c	/^static void freeCacheState(acs_p* acs)$/;"	f	file:
+free_queue	common.c	/^free_queue(Queue *queue)$/;"	f
+free_stack	common.c	/^free_stack(Stack *stack)$/;"	f
+fregmask	ss/ecoff.h	/^  int fregmask;$/;"	m	struct:ecoff_pdr
+fregoffset	ss/ecoff.h	/^  int fregoffset;$/;"	m	struct:ecoff_pdr
+freq	cfg.h	/^	int freq;$/;"	m	struct:ovrl_graph
+fu	exegraph.h	/^    char	    fu, num_fu;		\/\/ applicable to EX nodes$/;"	m	struct:__anon22
+fu2pfu	ss/ss_machine.c	/^enum ss_pfu_class fu2pfu[] = {$/;"	v	typeref:enum:ss_pfu_class
+fu_config	ss/my_opt.c	/^struct res_desc fu_config[] = {$/;"	v	typeref:struct:res_desc
+fu_lat	ss/ss_exegraph.c	/^range16_t fu_lat[] = {$/;"	v	file:
+fu_lat	ss/ss_machine.c	/^range_t fu_lat[] = {$/;"	v
+fusr	ilp.c	/^FILE	*filp, *fusr;$/;"	v
+gcd	address.c	/^int gcd ( int a, int b )$/;"	f
+gen	cache.c	/^mem_blk_t	    **gen;$/;"	v
+getAddrBaseIndex	address.c	/^ric_p getAddrBaseIndex(de_inst_t* inst, int base, int index, int opt)$/;"	f
+getAddrBaseOffset	address.c	/^ric_p getAddrBaseOffset(de_inst_t* inst, int base, int offset, int opt)$/;"	f
+getAllLoopNodes	address.c	/^static slist_p getAllLoopNodes(int loop_id)$/;"	f	file:
+getCardinality	unicache.c	/^static int getCardinality(mem_blk_set_t* mem_blk_set)$/;"	f	file:
+getDirName	infdump.c	/^char *getDirName( int dir ) {$/;"	f
+getLoopBound	address.c	/^static int getLoopBound(loop_t* loop)$/;"	f	file:
+getMemoryBlockOfSet	unicache.c	/^static mem_blk_set_t* getMemoryBlockOfSet(mem_blk_set_t* mem_blk, int set)$/;"	f	file:
+getMemoryBlocks	unicache.c	/^static mem_blk_set_t* getMemoryBlocks(ric_p addr)$/;"	f	file:
+get_jptable	main.c	/^void get_jptable(addr_t src,int index, addr_t * target){$/;"	f
+get_jptable_static	main.c	/^int get_jptable_static(addr_t src, addr_t * target){$/;"	f
+get_loop_affected_sets	pipeline.c	/^get_loop_affected_sets(int lp_id, tcfg_edge_t *mp_edge, int num_inst)$/;"	f	file:
+get_loop_tags	cache.c	/^get_loop_tags()$/;"	f	file:
+get_mblk_hitmiss	cache.c	/^get_mblk_hitmiss(tcfg_node_t *bbi, int mblk_id, loop_t *lp)$/;"	f
+get_mblks	cache.c	/^get_mblks()$/;"	f
+get_mp_conflicts	cache.c	/^get_mp_conflicts(tcfg_node_t *bbi)$/;"	f	file:
+get_next_token	ss/eval.c	/^get_next_token(struct eval_state_t *es)	\/* expression evaluator *\/$/;"	f	file:
+getcore	ss/misc.c	/^getcore(int nbytes)$/;"	f
+getcwd	ss/options.c	58;"	d	file:
+getticks	main.c	/^static __inline__ ticks getticks(void)$/;"	f	file:
+getticks	test.c	/^static __inline__ ticks getticks(void)$/;"	f	file:
+gp_value	ss/ecoff.h	/^  int gp_value;$/;"	m	struct:ecoff_aouthdr
+gprmask	ss/ecoff.h	/^  int gprmask;$/;"	m	struct:ecoff_aouthdr
+gzclose	ss/misc.c	/^gzclose(FILE *fd)$/;"	f
+gzcmds	ss/misc.c	/^} gzcmds[] = {$/;"	v	typeref:struct:__anon29	file:
+gzopen	ss/misc.c	/^gzopen(char *fname, char *type)$/;"	f
+half_t	ss/host.h	/^typedef unsigned short half_t;		\/* half - 16 bits *\/$/;"	t
+handle_first_mblk	cache.c	/^handle_first_mblk(int bbi_id)$/;"	f	file:
+handle_mpmiss	pipeline.c	/^handle_mpmiss()$/;"	f	file:
+handle_other_mblk	cache.c	/^handle_other_mblk(int bbi_id, int start_mb)$/;"	f	file:
+head	common.h	/^    void    *head, *tail;   \/* head points to oldest element *\/$/;"	m	struct:queue_t
+head	loops.h	/^    tcfg_node_t	    *head;	\/\/ [head, tail]$/;"	m	struct:loop_t
+header	ss/options.h	/^  char *header;			\/* options header *\/$/;"	m	struct:opt_odb_t
+hexValue	reg.c	/^int hexValue( char *hexStr ) {$/;"	f
+hi	common.h	/^    char lo, hi;$/;"	m	struct:__anon4
+hi	common.h	/^    int	    lo, hi;$/;"	m	struct:__anon2
+hi	common.h	/^    short int	lo, hi;$/;"	m	struct:__anon3
+hi	ss/machine.h	/^  sword_t hi, lo;		\/* multiplier HI\/LO result registers *\/$/;"	m	struct:__anon33
+hm_str	ilp.c	/^hm_str(int edge_id, int hm)$/;"	f	file:
+hm_term	ilp.c	/^hm_term(FILE *fp, int edge_id, int hm, char *prefix, char *suffix)$/;"	f	file:
+hook_fn	ss/misc.c	/^static void (*hook_fn)(FILE *stream) = NULL;$/;"	v	file:
+i1_u1_ps	unicache.c	/^int i1_u1_ps = 0;$/;"	v
+iauxBase	ss/ecoff.h	/^  int iauxBase;$/;"	m	struct:ecoff_fdr
+iauxMax	ss/ecoff.h	/^  int iauxMax;$/;"	m	struct:ecoff_symhdr_t
+ibuf_mpred_depends	ss/ss_exegraph.c	/^ibuf_mpred_depends(int inst, int succ)$/;"	f	file:
+ibuf_normal_depends	ss/ss_exegraph.c	/^ibuf_normal_depends(int inst, int succ)$/;"	f	file:
+ic_flag	pipeline.h	/^    short	ic_flag;$/;"	m	struct:__anon1
+id	bpred.h	/^    int		id;$/;"	m	struct:__anon5
+id	cfg.h	/^    int		id;		\/\/ basic block id (per procedure)$/;"	m	struct:__anon15
+id	cfg.h	/^    int		id;		\/\/ proc id$/;"	m	struct:proc_t
+id	loops.h	/^    int		    id;$/;"	m	struct:loop_t
+id	tcfg.h	/^    int		id;	\/\/ global id in tcfg (has nothing to do with its bb id)$/;"	m	struct:__anon28
+id	tcfg.h	/^    int		id;$/;"	m	struct:tcfg_edge_t
+identify_loops	cfg.c	/^identify_loops(proc_t *proc)$/;"	f	file:
+idnMax	ss/ecoff.h	/^  int idnMax;$/;"	m	struct:ecoff_symhdr_t
+iextMax	ss/ecoff.h	/^  int iextMax;$/;"	m	struct:ecoff_symhdr_t
+ifd	ss/ecoff.h	/^  short ifd;$/;"	m	struct:ecoff_EXTR
+ifdMax	ss/ecoff.h	/^  int ifdMax;$/;"	m	struct:ecoff_symhdr_t
+iline	ss/ecoff.h	/^  int iline;$/;"	m	struct:ecoff_pdr
+ilineBase	ss/ecoff.h	/^  int ilineBase;$/;"	m	struct:ecoff_fdr
+ilineMax	ss/ecoff.h	/^  int ilineMax;$/;"	m	struct:ecoff_symhdr_t
+imm	isa.h	/^	 int 		 imm;					\/* Immediate integer value. For base $/;"	m	struct:__anon36
+in	bpred.h	/^    bfg_edge_t	*in;	\/\/ in edges$/;"	m	struct:__anon5
+in	cfg.h	/^    cfg_edge_t	**in;		\/\/ incoming edges$/;"	m	struct:__anon15
+in	exegraph.h	/^    egraph_edge_t   *in, *out;$/;"	m	struct:__anon22
+in	isa.h	/^    int	    *in, *out;		   \/* input\/output operands (registers) *\/$/;"	m	struct:__anon36
+in	tcfg.h	/^    tcfg_edge_t	*in, *out;  \/\/ incoming and outgoing edges$/;"	m	struct:__anon28
+in_abs_mem_value	cfg.h	/^	 abs_mem_p in_abs_mem_value;  \/* A data structure holding value in abstract *\/$/;"	m	struct:__anon15
+in_abs_reg_value	cfg.h	/^	 ric_p* in_abs_reg_value;	\/* values. Register numbers can directly be *\/$/;"	m	struct:__anon15
+in_data	fir.c	/^long in_data[701]={$/;"	v
+include_proc	main.c	/^char *include_proc;$/;"	v
+index	main.c	/^        int    index;$/;"	m	struct:jptb	file:
+index	ss/ecoff.h	/^  unsigned index :20;$/;"	m	struct:ecoff_SYMR
+inf_cfg	infeasible.h	/^  inf_node_t *inf_cfg;$/;"	m	struct:__anon12
+inf_loop_t	infeasible.h	/^} inf_loop_t;$/;"	t	typeref:struct:__anon13
+inf_loops	infeasible.h	/^inf_loop_t *inf_loops;$/;"	v
+inf_node_t	infeasible.h	/^} inf_node_t;$/;"	t	typeref:struct:__anon11
+inf_proc_t	infeasible.h	/^} inf_proc_t;$/;"	t	typeref:struct:__anon12
+inf_procs	infeasible.h	/^inf_proc_t *inf_procs;    \/\/ extension to cfg structure for infeasibility analysis$/;"	v
+infeas_analysis	infeasible.c	/^void infeas_analysis( char *obj_file ) {$/;"	f
+infeas_blockcount	ilp.c	/^int infeas_blockcount( tcfg_node_t *ib, int ctxt ) {$/;"	f
+infeas_cons	ilp.c	/^int infeas_cons() {$/;"	f
+infeas_nullifiers	ilp.c	/^int infeas_nullifiers( assign_t **nullifier_list, int num_nullifiers, int pid, int ctxt ) {$/;"	f
+info	ss/misc.h	144;"	d
+initRegSet	reg.c	/^int initRegSet() {$/;"	f
+init_bfg	bpred.c	/^init_bfg()$/;"	f	file:
+init_end_bbb	bpred.c	/^init_end_bbb()$/;"	f	file:
+init_est	estimate.c	/^init_est()$/;"	f	file:
+init_est_body	estimate.c	/^init_est_body()$/;"	f	file:
+init_est_plog	estimate.c	/^init_est_plog()$/;"	f	file:
+init_isa	isa.c	/^init_isa()$/;"	f
+init_isa_ss	ss/ss_isa.c	/^init_isa_ss()$/;"	f
+init_pa	pipeline.c	/^init_pa()$/;"	f	file:
+init_queue	common.c	/^init_queue(Queue *queue, int elem_size)$/;"	f
+init_root_bbb	bpred.c	/^init_root_bbb()$/;"	f	file:
+init_sep	estimate.c	/^init_sep()$/;"	f	file:
+init_shaded_pnode	estimate.c	/^init_shaded_pnode(egraph_edge_t *e)$/;"	f	file:
+init_stack	common.c	/^init_stack(Stack *stack, int elem_size)$/;"	f
+init_tok_map	ss/eval.c	/^init_tok_map(void)$/;"	f	file:
+init_var_grps	ilp.c	/^init_var_grps()$/;"	f	file:
+initialize_cache	unicache.c	/^static void initialize_cache(tcfg_node_t* bbi)$/;"	f	file:
+initialized	ss/symbol.h	/^  int initialized;		\/* initialized? (if data segment) *\/$/;"	m	struct:sym_sym_t
+inorder_depends	ss/ss_exegraph.c	/^inorder_depends()$/;"	f	file:
+insn_t	infeasible.h	/^} insn_t;$/;"	t	typeref:struct:__anon7
+insnlist	infeasible.h	/^  insn_t     *insnlist;$/;"	m	struct:__anon11
+insnlist_st	infeasible.h	/^insn_t *insnlist_st;      \/\/ preprocessing instructions$/;"	v
+inst	cfg.h	/^		 de_inst_t* inst;$/;"	m	union:col_data::__anon17
+inst	cfg.h	/^		 de_inst_t* inst;$/;"	m	union:ovrl_graph::__anon18
+inst	exegraph.h	/^    short	    inst, stage;   $/;"	m	struct:__anon22
+inst	pipeline.h	/^    de_inst_t	*inst;$/;"	m	struct:__anon1
+inst_access	isa.h	/^	 ACCESS_T inst_access;		\/* Instruction access classification *\/$/;"	m	struct:__anon36
+inst_addr	address.h	/^	int inst_addr;$/;"	m	struct:abs_mem
+inst_cache_delay	tcfg.h	/^	 int 				inst_cache_delay;	\/* For instruction cache analysis using abstract$/;"	m	struct:__anon28
+inst_coexists	ss/ss_exegraph.c	/^inst_coexists(int curr)$/;"	f	file:
+inst_contends	ss/ss_exegraph.c	/^inst_contends(int curr)$/;"	f	file:
+inst_num	common.h	47;"	d
+inst_size	common.h	48;"	d
+inst_type	isa.c	/^inst_type(de_inst_t *inst)$/;"	f
+inst_type_t	isa.h	/^enum inst_type_t {$/;"	g
+inst_win_size_ss	ss/ss_machine.c	/^inst_win_size_ss()$/;"	f
+invalid	cfg.h	/^	int invalid;$/;"	m	struct:ovrl_graph
+invalidateMemoryAloc	address.c	/^static void invalidateMemoryAloc(abs_mem_p abs_mem_st)$/;"	f	file:
+iopt	ss/ecoff.h	/^  int iopt;$/;"	m	struct:ecoff_pdr
+ioptBase	ss/ecoff.h	/^  int ioptBase;$/;"	m	struct:ecoff_fdr
+ioptMax	ss/ecoff.h	/^  int ioptMax;$/;"	m	struct:ecoff_symhdr_t
+ipdFirst	ss/ecoff.h	/^  unsigned short ipdFirst;$/;"	m	struct:ecoff_fdr
+ipdMax	ss/ecoff.h	/^  int ipdMax;$/;"	m	struct:ecoff_symhdr_t
+isBAConflict	conflicts.c	/^char isBAConflict( assign_t *A, branch_t *B, int r ) {  $/;"	f
+isBBConflict	conflicts.c	/^char isBBConflict( branch_t *A, branch_t *B, int r1, int r2 ) {  $/;"	f
+isDeeper	infeasible.c	/^char isDeeper( int paft, int pbef ) {$/;"	f
+isEmpty	address.c	/^int isEmpty(worklist_p Wlist)$/;"	f
+isLoadInst	unicache.c	/^static int isLoadInst(char* isa_name)$/;"	f	file:
+isLoopBranch	conflicts.c	/^char isLoopBranch( cfg_node_t *bb ) {$/;"	f
+isResident	unicache.c	/^static int isResident(mem_blk_set_t* mem_blk_h, mem_blk_set_t* item)$/;"	f	file:
+isStoreInst	unicache.c	/^static int isStoreInst(char* isa_name)$/;"	f	file:
+is_lib_func	ss/ss_readfile.c	/^is_lib_func(char *func_name)$/;"	f	file:
+is_same_cache_block	unicache.c	/^static int is_same_cache_block(acs_p acs1, acs_p acs2)$/;"	f	file:
+isa	isa.c	/^isa_t	*isa;		\/\/ info of the instruction types of the ISA$/;"	v
+isa_t	isa.h	/^} isa_t;$/;"	t	typeref:struct:__anon35
+iss	ss/ecoff.h	/^  int iss;$/;"	m	struct:ecoff_SYMR
+issBase	ss/ecoff.h	/^  int issBase;$/;"	m	struct:ecoff_fdr
+issExtMax	ss/ecoff.h	/^  int issExtMax;$/;"	m	struct:ecoff_symhdr_t
+issMax	ss/ecoff.h	/^  int issMax;$/;"	m	struct:ecoff_symhdr_t
+issue_width_depends	ss/ss_exegraph.c	/^issue_width_depends(int inst, int succ)$/;"	f	file:
+issue_width_depends_m	ss/ss_exegraph.c	/^issue_width_depends_m(int inst)$/;"	f	file:
+issue_width_depends_n	ss/ss_exegraph.c	/^issue_width_depends_n(int inst, int succ)$/;"	f	file:
+issuelat	ss/resource.h	/^    int issuelat;			\/* issue latency: number of cycles$/;"	m	struct:res_desc::res_template
+isym	ss/ecoff.h	/^  int isym;$/;"	m	struct:ecoff_pdr
+isymBase	ss/ecoff.h	/^  int isymBase;$/;"	m	struct:ecoff_fdr
+isymMax	ss/ecoff.h	/^  int isymMax;$/;"	m	struct:ecoff_symhdr_t
+itlb_opt	ss/my_opt.c	/^char *itlb_opt;$/;"	v
+joinCache	unicache.c	/^static acs_p* joinCache(acs_p* acs1, acs_p* arg, ANALYSIS_T type)$/;"	f	file:
+joinMemoryAloc	address.c	/^static void joinMemoryAloc(abs_mem_p mem1, abs_mem_p* mem2)$/;"	f	file:
+jptb	main.c	/^typedef struct jptb{$/;"	s	file:
+jptb	main.c	/^}jptb;$/;"	t	typeref:struct:jptb	file:
+jump_cond	infeasible.h	/^  char jump_cond;               \/\/ condition that makes a branch instruction jump$/;"	m	struct:branch_t
+key	bs.c	/^  int  key;$/;"	m	struct:DATA	file:
+l	ss/machine.h	/^  sword_t l[MD_NUM_FREGS];	\/* integer word view *\/$/;"	m	union:__anon32
+l1	unicache.c	/^int X,Y,B,l1,l2;$/;"	v
+l1_d1_ps	unicache.c	/^int l1_d1_ps = 0;$/;"	v
+l1_i1_ps	unicache.c	/^int l1_i1_ps = 0;$/;"	v
+l2	unicache.c	/^int X,Y,B,l1,l2;$/;"	v
+l2_inst_access	isa.h	/^	 ACCESS_T l2_inst_access;	\/* L2 Instruction access classification *\/$/;"	m	struct:__anon36
+l_contd	exegraph.h	/^    egraph_edge_t   *e_contd, *l_contd;$/;"	m	struct:__anon22
+l_msk	cache.h	/^    unsigned	l_msk;	\/\/ block mask$/;"	m	struct:__anon25
+lang	ss/ecoff.h	/^  unsigned lang :5;$/;"	m	struct:ecoff_fdr
+largeint_t	ss/misc.c	/^typedef qword_t largeint_t;$/;"	t	file:
+largeint_t	ss/misc.c	/^typedef word_t largeint_t;$/;"	t	file:
+last_b	estimate.c	/^int		last_p, last_np, first_b, last_b, first_e;$/;"	v
+last_np	estimate.c	/^int		last_p, last_np, first_b, last_b, first_e;$/;"	v
+last_p	estimate.c	/^int		last_p, last_np, first_b, last_b, first_e;$/;"	v
+lastp	ss/eval.h	/^  char *lastp;			\/* save space for token peeks *\/$/;"	m	struct:eval_state_t
+lat	exegraph.h	/^    range16_t	    lat;		\/\/ execution latency of EX nodes$/;"	m	struct:__anon22
+lat	exegraph.h	/^    range16_t	    lat;	\/\/ max\/min latencies from src to dst$/;"	m	struct:egraph_edge_t
+latest_time	estimate.c	/^latest_time(egraph_node_t *v)$/;"	f	file:
+lcontd_delay	estimate.c	/^lcontd_delay(egraph_node_t *v)$/;"	f	file:
+ld_load_prog	ss/loader.c	/^ld_load_prog(char *fname)		$/;"	f
+ld_prog_entry	ss/loader.c	/^md_addr_t ld_prog_entry = 0;$/;"	v
+ld_text_base	ss/ss_readfile.c	/^md_addr_t	ld_text_base = 0;$/;"	v
+ld_text_size	ss/ss_readfile.c	/^unsigned int	ld_text_size = 0;$/;"	v
+lineno	infeasible.h	/^  int  lineno;                  \/\/ line number in bb$/;"	m	struct:__anon8
+lnHigh	ss/ecoff.h	/^  int lnHigh;$/;"	m	struct:ecoff_pdr
+lnLow	ss/ecoff.h	/^  int lnLow;$/;"	m	struct:ecoff_pdr
+lo	common.h	/^    char lo, hi;$/;"	m	struct:__anon4
+lo	common.h	/^    int	    lo, hi;$/;"	m	struct:__anon2
+lo	common.h	/^    short int	lo, hi;$/;"	m	struct:__anon3
+lo	ss/machine.h	/^  sword_t hi, lo;		\/* multiplier HI\/LO result registers *\/$/;"	m	struct:__anon33
+load_wait_store	ss/ss_exegraph.c	/^load_wait_store()$/;"	f	file:
+local	ss/symbol.h	/^  int local;			\/* compiler local symbol? *\/$/;"	m	struct:sym_sym_t
+log_base2	ss/misc.c	/^log_base2(int n)$/;"	f
+longjmp	ss/host.h	137;"	d
+lookup_addr	cfg.c	/^lookup_addr(de_inst_t *code, int num, addr_t addr)$/;"	f	file:
+lookup_addr	ss/ss_readfile.c	/^lookup_addr(char *fname)$/;"	f	file:
+lookup_bb	cfg.c	/^lookup_bb(cfg_node_t *cfg, int num, addr_t addr)$/;"	f	file:
+lookup_jptable	main.c	/^int lookup_jptable(addr_t adr){$/;"	f
+lookup_mlat	pipeline.c	/^lookup_mlat(int orig, int dist, tcfg_node_t *bbi, int no_mlat)$/;"	f	file:
+lookup_proc	cfg.c	/^lookup_proc(addr_t addr)$/;"	f	file:
+loopEqual	conflicts.c	/^char loopEqual( cfg_node_t *b1, cfg_node_t *b2 ) {$/;"	f
+loop_bbb_idx	loops.c	31;"	d	file:
+loop_cache_tags	cache.c	/^tag_link_t	***loop_cache_tags;$/;"	v
+loop_check	cfg.c	/^loop_check(proc_t *proc, int start, int end)$/;"	f	file:
+loop_comm_ances	loops.c	/^loop_t	    ***loop_comm_ances;	\/\/ loop_comm_ances[lp1, lp2]$/;"	v
+loop_id	infeasible.h	/^  int        loop_id;$/;"	m	struct:__anon11
+loop_id	tcfg.h	/^    int           loop_id;     \/\/ vivy: for infeasible path constraints$/;"	m	struct:__anon28
+loop_map	address.c	/^loop_t** loop_map;$/;"	v
+loop_map	loops.c	/^loop_t	    **loop_map;		\/\/ bbi => loop$/;"	v
+loop_process	loops.c	/^loop_process()$/;"	f
+loop_relations	loops.c	/^loop_relations()$/;"	f	file:
+loop_role	cfg.h	/^    int		loop_role;	\/\/ whether it is a loop head, tail, or neither$/;"	m	struct:__anon15
+loop_t	loops.h	/^struct loop_t {$/;"	s
+loop_t	loops.h	/^typedef struct loop_t	loop_t;$/;"	t	typeref:struct:loop_t
+loops	loops.c	/^loop_t	    **loops;$/;"	v
+lower_bound	address.h	/^	addr_t lower_bound;	  $/;"	m	struct:ric
+ls	cache.h	/^    int		ls;	\/\/ cache line size$/;"	m	struct:__anon25
+lsb	cache.h	/^    int		lsb;    \/\/ lsb = log(ls)$/;"	m	struct:__anon25
+magic	ss/ecoff.h	/^  short magic;$/;"	m	struct:ecoff_aouthdr
+magic	ss/ecoff.h	/^  short magic;$/;"	m	struct:ecoff_symhdr_t
+main	bs.c	/^main()$/;"	f
+main	fir.c	/^void main()$/;"	f
+main	main.c	/^main(int argc, char **argv)$/;"	f
+main	qurt.c	/^void main()$/;"	f
+main	ss/eval.c	/^main(void)$/;"	f
+main	ss/options.c	/^main(int argc, char **argv)$/;"	f
+main	test.c	/^int main()$/;"	f
+main_addr	cfg.h	/^    addr_t	start_addr, end_addr, main_addr;$/;"	m	struct:__anon16
+main_proc	cfg.h	/^    int		main_proc;	\/\/ index of the main proc$/;"	m	struct:__anon16
+makeCacheBlock	unicache.c	/^static acs_p makeCacheBlock(mem_blk_set_t* mem_blk_set)$/;"	f	file:
+makeCacheSet	unicache.c	/^static acs_p* makeCacheSet()$/;"	f	file:
+makeCopy	unicache.c	/^static acs_p makeCopy(acs_p acs_in)$/;"	f	file:
+makeEmpty	unicache.c	/^static acs_p makeEmpty()$/;"	f	file:
+makeRIC	address.c	/^ric_p makeRIC(ric_p arg)$/;"	f
+makeRICPerInstruction	address.c	/^static void makeRICPerInstruction(de_inst_t* inst, ric_p* abs_reg)$/;"	f	file:
+make_est	estimate.c	/^make_est()$/;"	f	file:
+map_bb_bbi	ilp.c	/^map_bb_bbi(int proc, int bb, int first, int sign, int coeff)$/;"	f	file:
+map_bb_bbi_context	ilp.c	/^map_bb_bbi_context(int proc, int bb, int first, int sign, int coeff, int k)$/;"	f	file:
+map_bbi_loop	loops.c	/^map_bbi_loop()$/;"	f	file:
+markLoop	infeasible.c	/^void markLoop( inf_proc_t *ip, inf_node_t *head, inf_node_t *ib, int lpid, char **checked ) {$/;"	f
+mark_data_dep	ss/ss_exegraph.c	/^mark_data_dep(int src_id, int dst_id)$/;"	f	file:
+mas_inst_t	pipeline.h	/^} mas_inst_t;$/;"	t	typeref:struct:__anon1
+master	ss/resource.h	/^    struct res_desc *master;		\/* master resource record *\/$/;"	m	struct:res_desc::res_template	typeref:struct:res_desc::res_template::res_desc
+max	common.h	51;"	d
+max_elog_len	pipeline.c	/^int		*max_elog_len;$/;"	v
+max_inst_lat	isa.c	/^max_inst_lat(de_inst_t *inst)$/;"	f
+maxof	address.c	/^int maxof(int n_args, ...){$/;"	f
+mblk_hit_loop	cache.c	/^loop_t		***mblk_hit_loop;$/;"	v
+mblk_id	pipeline.h	/^    short	mblk_id;$/;"	m	struct:__anon1
+mblk_tag_t	cache.h	/^} mblk_tag_t;$/;"	t	typeref:struct:__anon27
+md_addr_t	ss/machine.h	/^typedef word_t md_addr_t;$/;"	t
+md_amode_NUM	ss/machine.h	/^  md_amode_NUM$/;"	e	enum:md_amode_type
+md_amode_disp	ss/machine.h	/^  md_amode_disp,	\/* (reg + const) addressing *\/$/;"	e	enum:md_amode_type
+md_amode_fp	ss/machine.h	/^  md_amode_fp,		\/* stack access through frame pointer *\/$/;"	e	enum:md_amode_type
+md_amode_gp	ss/machine.h	/^  md_amode_gp,		\/* global data access through global pointer *\/$/;"	e	enum:md_amode_type
+md_amode_imm	ss/machine.h	/^  md_amode_imm,		\/* immediate addressing mode *\/$/;"	e	enum:md_amode_type
+md_amode_rr	ss/machine.h	/^  md_amode_rr,		\/* (reg + reg) addressing *\/$/;"	e	enum:md_amode_type
+md_amode_sp	ss/machine.h	/^  md_amode_sp,		\/* stack access through stack pointer *\/$/;"	e	enum:md_amode_type
+md_amode_str	ss/machine.c	/^char *md_amode_str[md_amode_NUM] =$/;"	v
+md_amode_type	ss/machine.h	/^enum md_amode_type {$/;"	g
+md_crc_regs	ss/machine.c	/^md_crc_regs(struct regs_t *regs)$/;"	f
+md_ctrl_t	ss/machine.h	/^} md_ctrl_t;$/;"	t	typeref:struct:__anon33
+md_fault_access	ss/machine.h	/^  md_fault_access,		\/* storage access fault *\/$/;"	e	enum:md_fault_type
+md_fault_alignment	ss/machine.h	/^  md_fault_alignment,		\/* storage alignment fault *\/$/;"	e	enum:md_fault_type
+md_fault_break	ss/machine.h	/^  md_fault_break,		\/* BREAK instruction fault *\/$/;"	e	enum:md_fault_type
+md_fault_div0	ss/machine.h	/^  md_fault_div0,		\/* division by zero fault *\/$/;"	e	enum:md_fault_type
+md_fault_internal	ss/machine.h	/^  md_fault_internal		\/* internal S\/W fault *\/$/;"	e	enum:md_fault_type
+md_fault_none	ss/machine.h	/^  md_fault_none = 0,		\/* no fault *\/$/;"	e	enum:md_fault_type
+md_fault_overflow	ss/machine.h	/^  md_fault_overflow,		\/* signed arithmetic overflow fault *\/$/;"	e	enum:md_fault_type
+md_fault_type	ss/machine.h	/^enum md_fault_type {$/;"	g
+md_fault_unimpl	ss/machine.h	/^  md_fault_unimpl,		\/* unimplemented instruction fault *\/$/;"	e	enum:md_fault_type
+md_fpr_t	ss/machine.h	/^} md_fpr_t;$/;"	t	typeref:union:__anon32
+md_fu2name	ss/machine.c	/^char *md_fu2name[NUM_FU_CLASSES] = {$/;"	v
+md_fu_class	ss/machine.h	/^enum md_fu_class {$/;"	g
+md_gpr_t	ss/machine.h	/^typedef sword_t md_gpr_t[MD_NUM_IREGS];$/;"	t
+md_init_decoder	ss/machine.c	/^md_init_decoder(void)$/;"	f
+md_inst_t	ss/machine.h	/^} md_inst_t;$/;"	t	typeref:struct:__anon34
+md_lr_masks	ss/machine.c	/^word_t md_lr_masks[] = {$/;"	v
+md_mask2op	ss/machine.c	/^enum md_opcode md_mask2op[MD_MAX_MASK+1];$/;"	v	typeref:enum:md_opcode
+md_op2flags	ss/machine.c	/^unsigned int md_op2flags[OP_MAX] = {$/;"	v
+md_op2flags	ss/ss_isa.c	/^unsigned int md_op2flags[OP_MAX] = {$/;"	v
+md_op2format	ss/machine.c	/^char *md_op2format[OP_MAX] = {$/;"	v
+md_op2fu	ss/machine.c	/^enum md_fu_class md_op2fu[OP_MAX] = {$/;"	v	typeref:enum:md_fu_class
+md_op2name	ss/machine.c	/^char *md_op2name[OP_MAX] = {$/;"	v
+md_op2name	ss/ss_isa.c	/^char *md_op2name[OP_MAX] = {$/;"	v
+md_opcode	ss/machine.h	/^enum md_opcode {$/;"	g
+md_print_creg	ss/machine.c	/^md_print_creg(md_ctrl_t regs, int reg, FILE *stream)$/;"	f
+md_print_cregs	ss/machine.c	/^md_print_cregs(md_ctrl_t regs, FILE *stream)$/;"	f
+md_print_fpreg	ss/machine.c	/^md_print_fpreg(md_fpr_t regs, int reg, FILE *stream)$/;"	f
+md_print_fpregs	ss/machine.c	/^md_print_fpregs(md_fpr_t regs, FILE *stream)$/;"	f
+md_print_insn	ss/machine.c	/^md_print_insn(md_inst_t inst,		\/* instruction to disassemble *\/$/;"	f
+md_print_ireg	ss/machine.c	/^md_print_ireg(md_gpr_t regs, int reg, FILE *stream)$/;"	f
+md_print_iregs	ss/machine.c	/^md_print_iregs(md_gpr_t regs, FILE *stream)$/;"	f
+md_reg_name	ss/machine.c	/^md_reg_name(enum md_reg_type rt, int reg)$/;"	f
+md_reg_names	ss/machine.c	/^struct md_reg_names_t md_reg_names[] =$/;"	v	typeref:struct:md_reg_names_t
+md_reg_names	ss/machine.h	/^enum md_reg_names {$/;"	g
+md_reg_names_t	ss/machine.h	/^struct md_reg_names_t {$/;"	s
+md_reg_obj	ss/machine.c	/^md_reg_obj(struct regs_t *regs,			\/* registers to access *\/$/;"	f
+md_reg_type	ss/machine.h	/^enum md_reg_type {$/;"	g
+md_xor_regs	ss/machine.c	/^md_xor_regs(struct regs_t *regs)$/;"	f
+mem_blk_h	cache.h	/^	mem_blk_set_t* mem_blk_h;$/;"	m	struct:cache_block
+mem_blk_set	cache.h	/^struct mem_blk_set $/;"	s
+mem_blk_set_t	cache.h	/^typedef struct mem_blk_set mem_blk_set_t;$/;"	t	typeref:struct:mem_blk_set
+mem_blk_t	cache.h	/^} mem_blk_t;$/;"	t	typeref:struct:__anon26
+mem_bus_width	ss/my_opt.c	/^int mem_bus_width;$/;"	v
+mem_free	common.h	57;"	d
+mem_lat	ss/my_opt.c	/^int mem_lat[2] =$/;"	v
+mem_nelt	ss/my_opt.c	/^int mem_nelt = 2;$/;"	v
+microarch_modeling	main.c	/^microarch_modeling()$/;"	f	file:
+min	common.h	52;"	d
+min_overlap	estimate.c	/^min_overlap(egraph_node_t *v, egraph_node_t *u)$/;"	f	file:
+minof	address.c	/^int minof(int n_args, ...){$/;"	f
+mlat_bbi	pipeline.c	/^int		*mlat_bbi;$/;"	v
+mlat_mpinst	pipeline.c	/^int		*mlat_mpinst;$/;"	v
+mod_addr	isa.h	/^	 ric_p mod_addr;$/;"	m	struct:__anon36
+mp_affected_sets	pipeline.c	/^tcfg_elink_t    ***mp_affected_sets;$/;"	v
+mp_cache_cons	ilp.c	/^mp_cache_cons()$/;"	f	file:
+mp_gen	cache.c	/^mem_blk_t	    **mp_gen;$/;"	v
+mp_insts	bpred.c	/^de_inst_t	***mp_insts;$/;"	v
+mp_set_body_hitmiss	pipeline.c	/^mp_set_body_hitmiss(int edge_id, int hm_id, int set)$/;"	f	file:
+mp_set_tags	pipeline.c	/^int		**mp_set_tags;$/;"	v
+mp_times	pipeline.c	/^int		    ***mp_times;$/;"	v
+mpcache_misses	ilp.c	/^mpcache_misses()$/;"	f	file:
+mpcost_func	ilp.c	/^mpcost_func()$/;"	f	file:
+mpinst_coexists	ss/ss_exegraph.c	/^mpinst_coexists(int curr, int br_inst)$/;"	f	file:
+mpred_times	pipeline.c	/^int		**cpred_times, **mpred_times, start_time;$/;"	v
+mpset_cons	ilp.c	/^mpset_cons()$/;"	f	file:
+mpset_str	ilp.c	/^mpset_str(tcfg_edge_t *edge, int lp_id, int set)$/;"	f	file:
+mpset_term	ilp.c	/^mpset_term(FILE *fp, tcfg_edge_t *edge, int lp_id, int set, char *prefix, char *suffix)$/;"	f	file:
+mpunit_cache_misses	ilp.c	/^mpunit_cache_misses(int bbi_id, int hm, int lp_id)$/;"	f	file:
+mpunit_cons	ilp.c	/^mpunit_cons()$/;"	f	file:
+mpunit_str	ilp.c	/^mpunit_str(tcfg_edge_t *edge, int hm, int set)$/;"	f	file:
+mpunit_term	ilp.c	/^mpunit_term(FILE *fp, tcfg_edge_t *edge, int hm, int set, char *prefix, char *suffix)$/;"	f	file:
+my_bsearch	common.c	/^my_bsearch(const void *key, const void *base, size_t n, size_t size,$/;"	f
+my_eval_ident	ss/eval.c	/^my_eval_ident(struct eval_state_t *es)$/;"	f
+my_insert	common.c	/^my_insert(const void *x, void *base, void *y, int *nelem, int size)$/;"	f
+myatoq	ss/misc.c	/^myatoq(char *nptr, char **endp, int base)$/;"	f
+myatosq	ss/misc.c	/^myatosq(char *nptr, char **endp, int base)$/;"	f
+myfprintf	ss/misc.c	/^myfprintf(FILE *stream, char *format, ...)$/;"	f
+myrand	ss/misc.c	/^myrand(void)			\/* returns random number *\/$/;"	f
+mysprintf	ss/misc.c	/^mysprintf(char *obuf, char *format, ...)$/;"	f
+mysrand	ss/misc.c	/^mysrand(unsigned int seed)	\/* random number generator seed *\/$/;"	f
+mystrdup	ss/misc.c	/^mystrdup(char *s)		\/* string to duplicate to heap storage *\/$/;"	f
+mystricmp	ss/misc.c	/^mystricmp(char *s1, char *s2)	\/* strings to compare, case insensitive *\/$/;"	f
+mystrrchr	ss/misc.c	/^mystrrchr(char *s, char c)$/;"	f
+myvfprintf	ss/misc.c	/^myvfprintf(FILE *stream, char *format, va_list v)$/;"	f
+myvsprintf	ss/misc.c	/^myvsprintf(char *obuf, char *format, va_list v)$/;"	f
+n_data_persistence	tcfg.h	/^	 int 				n_data_persistence;		\/* Number of persistence data blocks *\/$/;"	m	struct:__anon28
+n_l2_persistence	tcfg.h	/^	 int 				n_l2_persistence;	\/* Number of instruction in l2 instruction cache *\/$/;"	m	struct:__anon28
+n_persistence	tcfg.h	/^	 int 				n_persistence;		\/* Number of persistence instruction *\/$/;"	m	struct:__anon28
+n_u1_data_persistence	tcfg.h	/^	 int 				n_u1_data_persistence;	\/* Number of persistence data blocks in unified cache *\/$/;"	m	struct:__anon28
+n_u1_persistence	tcfg.h	/^	 int 				n_u1_persistence;			\/* Number of persistence instruction in Unified cache*\/$/;"	m	struct:__anon28
+na	cache.h	/^    int		na;$/;"	m	struct:__anon25
+name	infeasible.h	/^  char name[OP_LEN];$/;"	m	struct:__anon6
+name	isa.h	/^    char    *name;	\/\/ inst name$/;"	m	struct:__anon35
+name	ss/options.h	/^  char *name;			\/* option name, e.g., "-foo:bar" *\/$/;"	m	struct:opt_opt_t
+name	ss/resource.h	/^  char *name;				\/* name of functional unit *\/$/;"	m	struct:res_desc
+name	ss/resource.h	/^  char *name;				\/* pool name *\/$/;"	m	struct:res_pool
+name	ss/symbol.h	/^  char *name;			\/* symbol name *\/$/;"	m	struct:sym_sym_t
+ncmp	ss/symbol.c	/^ncmp(struct sym_sym_t **sym1, struct sym_sym_t **sym2)$/;"	f	file:
+neg	conflicts.c	/^int neg( int a ) {$/;"	f
+nelt	ss/options.h	/^  int *nelt;			\/* number of elements parsed *\/$/;"	m	struct:opt_opt_t
+nents	ss/resource.h	/^  int nents[MAX_RES_CLASSES];$/;"	m	struct:res_pool
+new_bbb	bpred.c	/^new_bbb(int bbi_id, int bhr)$/;"	f	file:
+new_bfg_edge	bpred.c	/^new_bfg_edge(bfg_node_t *x, bfg_node_t *y, int branch)$/;"	f	file:
+new_contend	ss/ss_exegraph.c	/^new_contend(egraph_node_t *src, egraph_node_t *dst, int normal)$/;"	f	file:
+new_depend	ss/ss_exegraph.c	/^new_depend(egraph_node_t *src, egraph_node_t *dst, int low, int high, int normal)$/;"	f	file:
+new_edge	cfg.c	/^new_edge(cfg_node_t *src, cfg_node_t *dst, int taken)$/;"	f	file:
+new_epilog	pipeline.c	/^new_epilog(int log_set, tcfg_edge_t **path, int path_len)$/;"	f	file:
+new_loop	loops.c	/^new_loop(tcfg_edge_t *e)$/;"	f	file:
+new_prolog	pipeline.c	/^new_prolog(int log_set, tcfg_edge_t **path, int path_len, int num_skip)$/;"	f	file:
+new_tcfg_edge	tcfg.c	/^new_tcfg_edge(tcfg_node_t *src, tcfg_node_t *dst, int branch)$/;"	f	file:
+new_tcfg_node	tcfg.c	/^new_tcfg_node(cfg_node_t *bb)$/;"	f	file:
+new_term	ilp.c	/^new_term(FILE *fp)$/;"	f
+newb	cache.h	/^	unsigned newb;$/;"	m	struct:ovr_mapping
+next	address.h	/^	struct abs_mem* next;$/;"	m	struct:abs_mem	typeref:struct:abs_mem::abs_mem
+next	address.h	/^	struct slist* next;$/;"	m	struct:slist	typeref:struct:slist::slist
+next	address.h	/^	struct worklist* next;$/;"	m	struct:worklist	typeref:struct:worklist::worklist
+next	cache.c	/^    tag_link_t	    *next;$/;"	m	struct:tag_link_t	file:
+next	cache.h	/^	struct mem_blk_set* next;$/;"	m	struct:mem_blk_set	typeref:struct:mem_blk_set::mem_blk_set
+next	cache.h	/^	struct ovr_mapping* next;$/;"	m	struct:ovr_mapping	typeref:struct:ovr_mapping::ovr_mapping
+next	cfg.h	/^	struct col_data* next;$/;"	m	struct:col_data	typeref:struct:col_data::col_data
+next	cfg.h	/^	struct ovrl_graph* next;$/;"	m	struct:ovrl_graph	typeref:struct:ovrl_graph::ovrl_graph
+next	pipeline.h	/^    code_link_t	*next;$/;"	m	struct:code_link_t
+next	ss/options.h	/^  struct opt_note_t *next;	\/* next option note *\/$/;"	m	struct:opt_note_t	typeref:struct:opt_note_t::opt_note_t
+next	ss/options.h	/^  struct opt_opt_t *next;	\/* next option *\/$/;"	m	struct:opt_opt_t	typeref:struct:opt_opt_t::opt_opt_t
+next	tcfg.h	/^    tcfg_elink_t    *next;$/;"	m	struct:tcfg_elink_t
+next	tcfg.h	/^    tcfg_nlink_t    *next;$/;"	m	struct:tcfg_nlink_t
+next_cond_bbi	bpred.c	/^next_cond_bbi(tcfg_edge_t *e)$/;"	f	file:
+next_in	bpred.h	/^    bfg_edge_t  *prev_out, *next_out, *prev_in, *next_in;$/;"	m	struct:bfg_edge_t
+next_in	bpred.h	/^    btg_edge_t	*next_in, *next_out;$/;"	m	struct:btg_edge_t
+next_in	exegraph.h	/^    egraph_edge_t   *next_in, *next_out;$/;"	m	struct:egraph_edge_t
+next_in	tcfg.h	/^    tcfg_edge_t *next_in;	\/\/ next incoming edge of dst$/;"	m	struct:tcfg_edge_t
+next_out	bpred.h	/^    bfg_edge_t  *prev_out, *next_out, *prev_in, *next_in;$/;"	m	struct:bfg_edge_t
+next_out	bpred.h	/^    btg_edge_t	*next_in, *next_out;$/;"	m	struct:btg_edge_t
+next_out	exegraph.h	/^    egraph_edge_t   *next_in, *next_out;$/;"	m	struct:egraph_edge_t
+next_out	tcfg.h	/^    tcfg_edge_t *next_out;	\/\/ next outgoing edge of src$/;"	m	struct:tcfg_edge_t
+njp	main.c	/^int    njp;$/;"	v
+normal	exegraph.h	/^    char	    normal;$/;"	m	struct:egraph_edge_t
+note	ss/options.h	/^  char *note;			\/* option note *\/$/;"	m	struct:opt_note_t
+notes	ss/options.h	/^  struct opt_note_t *notes;	\/* option notes *\/$/;"	m	struct:opt_odb_t	typeref:struct:opt_odb_t::opt_note_t
+ns	cache.h	/^    int		ns;	\/\/ #sets$/;"	m	struct:__anon25
+nsb	cache.h	/^    int		nsb;    \/\/ nsb = log(ns)$/;"	m	struct:__anon25
+nt	cache.h	/^    int		nt;	\/\/ #tags$/;"	m	struct:__anon25
+nt_s	cache.h	/^    int		nt_s;	\/\/ # of tag + set$/;"	m	struct:__anon25
+ntarget	main.c	/^        int    ntarget;$/;"	m	struct:jptb	file:
+ntb	cache.h	/^    int		ntb;	\/\/ tag bits = log(nt)$/;"	m	struct:__anon25
+nullifier_list	infeasible.h	/^  assign_t **nullifier_list;$/;"	m	struct:__anon10
+nullifier_list	infeasible.h	/^  assign_t **nullifier_list;$/;"	m	struct:__anon9
+num_BA	infeasible.h	/^int num_BA;               \/\/ global number of BA conflict pairs$/;"	v
+num_BA_conflicts	infeasible.h	/^  int  num_BA_conflicts;$/;"	m	struct:branch_t
+num_BB	infeasible.h	/^int num_BB;               \/\/ global number of BB conflict pairs$/;"	v
+num_BB_conflicts	infeasible.h	/^  int  num_BB_conflicts;$/;"	m	struct:branch_t
+num_assign	infeasible.h	/^  int        num_assign;      \/\/ #assign effects in this node$/;"	m	struct:__anon11
+num_bb	cfg.h	/^    int		num_bb;		\/\/ number of basic blocks$/;"	m	struct:proc_t
+num_bb	infeasible.h	/^  int num_bb;$/;"	m	struct:__anon12
+num_bfg_nodes	bpred.c	/^int		    num_bfg_nodes;$/;"	v
+num_eg_edges	exegraph.c	/^int		num_eg_edges = 0;$/;"	v
+num_elogs	pipeline.c	/^int		num_plogs, num_elogs;$/;"	v
+num_fu	exegraph.h	/^    char	    fu, num_fu;		\/\/ applicable to EX nodes$/;"	m	struct:__anon22
+num_hit_miss	cache.c	/^int		    *num_hit_miss;$/;"	v
+num_in	cfg.h	/^    int		num_in;		\/\/ number of incoming edges$/;"	m	struct:__anon15
+num_in	isa.h	/^    int	    num_in, num_out;	\/* number of input\/output operands *\/$/;"	m	struct:__anon36
+num_inf_loops	infeasible.h	/^int num_inf_loops;        \/\/ loops detected for infeasible path analysis, as specified in .cons (global across procedures)$/;"	v
+num_insn	infeasible.h	/^  int        num_insn;$/;"	m	struct:__anon11
+num_insn_st	infeasible.h	/^int     num_insn_st;$/;"	v
+num_inst	cfg.h	/^    int		num_inst;	\/\/ number of instructions$/;"	m	struct:__anon15
+num_inst	cfg.h	/^    int		num_inst;	\/\/ number of instructions$/;"	m	struct:__anon16
+num_inst	cfg.h	/^    int		num_inst;	\/\/ number of instructions$/;"	m	struct:proc_t
+num_inst	pipeline.h	/^    int		num_inst;$/;"	m	struct:code_link_t
+num_isa	isa.c	/^int	num_isa;	\/\/ number of instruction types of the ISA$/;"	v
+num_mblk_conflicts	cache.c	/^int		**num_mblk_conflicts;$/;"	v
+num_mblks	cache.c	/^int		    *num_mblks;$/;"	v
+num_mem_insts	ss/ss_exegraph.c	/^short int		*eg_mem_insts, num_mem_insts;$/;"	v
+num_mp_insts	bpred.c	/^int		*num_mp_insts;$/;"	v
+num_mp_set_tags	pipeline.c	/^int		*num_mp_set_tags;$/;"	v
+num_nullifiers	infeasible.h	/^  int      num_nullifiers;$/;"	m	struct:__anon10
+num_nullifiers	infeasible.h	/^  int      num_nullifiers;$/;"	m	struct:__anon9
+num_out	isa.h	/^    int	    num_in, num_out;	\/* number of input\/output operands *\/$/;"	m	struct:__anon36
+num_plog_trunc	pipeline.c	/^int		*num_plog_trunc;$/;"	v
+num_plogs	pipeline.c	/^int		num_plogs, num_elogs;$/;"	v
+num_procs	cfg.h	/^    int		num_procs;	\/\/ number of procedures$/;"	m	struct:__anon16
+num_procs	ss/ss_readfile.c	/^int		num_procs;$/;"	v
+num_resources	ss/resource.h	/^  int num_resources;			\/* total number of res instances *\/$/;"	m	struct:res_pool
+num_tcfg_edges	tcfg.c	/^int		num_tcfg_edges = 0;$/;"	v
+num_tcfg_loops	loops.c	/^int	    num_tcfg_loops;$/;"	v
+num_tcfg_nodes	tcfg.c	/^int		num_tcfg_nodes = 0, tcfg_size = 0;$/;"	v
+nvars	ss/options.h	/^  int nvars;			\/* > 1 if var for list options *\/$/;"	m	struct:opt_opt_t
+oc	ss/options.h	/^  enum opt_class_t oc;		\/* class of this option *\/$/;"	m	struct:opt_opt_t	typeref:enum:opt_opt_t::opt_class_t
+oc_NUM	ss/options.h	/^  oc_NUM$/;"	e	enum:opt_class_t
+oc_double	ss/options.h	/^  oc_double,		\/* double option *\/$/;"	e	enum:opt_class_t
+oc_enum	ss/options.h	/^  oc_enum,		\/* enumeration option *\/$/;"	e	enum:opt_class_t
+oc_flag	ss/options.h	/^  oc_flag,		\/* boolean option *\/$/;"	e	enum:opt_class_t
+oc_float	ss/options.h	/^  oc_float,		\/* float option *\/$/;"	e	enum:opt_class_t
+oc_int	ss/options.h	/^  oc_int = 0,		\/* integer option *\/$/;"	e	enum:opt_class_t
+oc_string	ss/options.h	/^  oc_string,		\/* string option *\/$/;"	e	enum:opt_class_t
+oc_uint	ss/options.h	/^  oc_uint,		\/* unsigned integer option *\/$/;"	e	enum:opt_class_t
+old	cache.h	/^	unsigned old;$/;"	m	struct:ovr_mapping
+op	infeasible.h	/^  char op[OP_LEN];$/;"	m	struct:__anon7
+op_enum	isa.h	/^    int	    op_enum;	    	\/* continuous numbered opcode $/;"	m	struct:__anon36
+opcode	isa.h	/^    int	    opcode;	\/\/ inst opcode$/;"	m	struct:__anon35
+oplat	ss/resource.h	/^    int oplat;				\/* operation latency: cycles until$/;"	m	struct:res_desc::res_template
+opt	unicache.c	/^int opt = 0;$/;"	v
+opt_class_t	ss/options.h	/^enum opt_class_t {$/;"	g
+opt_delete	ss/options.c	/^opt_delete(struct opt_odb_t *odb)	\/* option database *\/$/;"	f
+opt_find_option	ss/options.c	/^opt_find_option(struct opt_odb_t *odb,	\/* option database *\/$/;"	f
+opt_for_double_t	ss/options.h	/^    struct opt_for_double_t {$/;"	s	union:opt_opt_t::opt_variant_t
+opt_for_enum_t	ss/options.h	/^    struct opt_for_enum_t {$/;"	s	union:opt_opt_t::opt_variant_t
+opt_for_float_t	ss/options.h	/^    struct opt_for_float_t {$/;"	s	union:opt_opt_t::opt_variant_t
+opt_for_int_t	ss/options.h	/^    struct opt_for_int_t {$/;"	s	union:opt_opt_t::opt_variant_t
+opt_for_string_t	ss/options.h	/^    struct opt_for_string_t {$/;"	s	union:opt_opt_t::opt_variant_t
+opt_for_uint_t	ss/options.h	/^    struct opt_for_uint_t {$/;"	s	union:opt_opt_t::opt_variant_t
+opt_new	ss/options.c	/^opt_new(orphan_fn_t orphan_fn)	\/* user-specified orphan parser *\/$/;"	f
+opt_note_t	ss/options.h	/^struct opt_note_t {$/;"	s
+opt_null_string	ss/options.c	/^opt_null_string(struct opt_opt_t *opt)$/;"	f
+opt_odb_t	ss/options.h	/^struct opt_odb_t {$/;"	s
+opt_opt_t	ss/options.h	/^struct opt_opt_t {$/;"	s
+opt_print_help	ss/options.c	/^opt_print_help(struct opt_odb_t *odb,	\/* option data base *\/$/;"	f
+opt_print_option	ss/options.c	/^opt_print_option(struct opt_opt_t *opt,\/* option variable *\/$/;"	f
+opt_print_options	ss/options.c	/^opt_print_options(struct opt_odb_t *odb,\/* option data base *\/$/;"	f
+opt_process_options	ss/options.c	/^opt_process_options(struct opt_odb_t *odb,	\/* option data base *\/$/;"	f
+opt_reg_double	ss/options.c	/^opt_reg_double(struct opt_odb_t *odb,	\/* option data base *\/$/;"	f
+opt_reg_double_list	ss/options.c	/^opt_reg_double_list(struct opt_odb_t *odb, \/* option data base *\/$/;"	f
+opt_reg_enum	ss/options.c	/^opt_reg_enum(struct opt_odb_t *odb,	\/* option data base *\/$/;"	f
+opt_reg_enum_list	ss/options.c	/^opt_reg_enum_list(struct opt_odb_t *odb,\/* option data base *\/$/;"	f
+opt_reg_flag	ss/options.c	/^opt_reg_flag(struct opt_odb_t *odb,	\/* option data base *\/$/;"	f
+opt_reg_flag_list	ss/options.c	/^opt_reg_flag_list(struct opt_odb_t *odb,\/* option database *\/$/;"	f
+opt_reg_float	ss/options.c	/^opt_reg_float(struct opt_odb_t *odb,	\/* option data base *\/$/;"	f
+opt_reg_float_list	ss/options.c	/^opt_reg_float_list(struct opt_odb_t *odb,\/* option data base *\/$/;"	f
+opt_reg_header	ss/options.c	/^opt_reg_header(struct opt_odb_t *odb,	\/* option database *\/$/;"	f
+opt_reg_int	ss/options.c	/^opt_reg_int(struct opt_odb_t *odb,	\/* option data base *\/$/;"	f
+opt_reg_int_list	ss/options.c	/^opt_reg_int_list(struct opt_odb_t *odb,\/* option database *\/$/;"	f
+opt_reg_note	ss/options.c	/^opt_reg_note(struct opt_odb_t *odb,	\/* option database *\/$/;"	f
+opt_reg_string	ss/options.c	/^opt_reg_string(struct opt_odb_t *odb,	\/* option data base *\/$/;"	f
+opt_reg_string_list	ss/options.c	/^opt_reg_string_list(struct opt_odb_t *odb,\/* option data base *\/$/;"	f
+opt_reg_uint	ss/options.c	/^opt_reg_uint(struct opt_odb_t *odb,	\/* option database *\/$/;"	f
+opt_reg_uint_list	ss/options.c	/^opt_reg_uint_list(struct opt_odb_t *odb,\/* option database *\/$/;"	f
+opt_variant_t	ss/options.h	/^  union opt_variant_t {$/;"	u	struct:opt_opt_t
+options	ss/options.h	/^  struct opt_opt_t *options;	\/* user-installed options in option database *\/$/;"	m	struct:opt_odb_t	typeref:struct:opt_odb_t::opt_opt_t
+orphan_fn	ss/my_opt.c	/^orphan_fn(int i, int argc, char **argv)$/;"	f	file:
+orphan_fn	ss/options.h	/^  orphan_fn_t orphan_fn;	\/* user-specified orphan parser *\/$/;"	m	struct:opt_odb_t
+orphan_fn_t	ss/options.h	/^(*orphan_fn_t)(int i,		\/* index of the orphan'ed argument *\/$/;"	t
+out	bpred.h	/^    bfg_edge_t	*out;	\/\/ out edges$/;"	m	struct:__anon5
+out	exegraph.h	/^    egraph_edge_t   *in, *out;$/;"	m	struct:__anon22
+out	isa.h	/^    int	    *in, *out;		   \/* input\/output operands (registers) *\/$/;"	m	struct:__anon36
+out	tcfg.h	/^    tcfg_edge_t	*in, *out;  \/\/ incoming and outgoing edges$/;"	m	struct:__anon28
+out_abs_mem_value	cfg.h	/^	 abs_mem_p out_abs_mem_value; \/*  memory locations *\/$/;"	m	struct:__anon15
+out_abs_reg_value	cfg.h	/^	 ric_p* out_abs_reg_value; \/* indexed in this structure *\/$/;"	m	struct:__anon15
+out_data	fir.c	/^long out_data[720]={$/;"	v
+out_n	cfg.h	/^    cfg_edge_t	*out_n, *out_t;	\/\/ outgoing edges (non-taken\/taken) $/;"	m	struct:__anon15
+out_t	cfg.h	/^    cfg_edge_t	*out_n, *out_t;	\/\/ outgoing edges (non-taken\/taken) $/;"	m	struct:__anon15
+ovr_graph	unicache.c	/^ovrl_graph_p* ovr_graph;$/;"	v
+ovr_map	unicache.c	/^ovr_map_p ovr_map;$/;"	v
+ovr_map_p	cache.h	/^typedef struct ovr_mapping* ovr_map_p;$/;"	t	typeref:struct:ovr_mapping
+ovr_map_s	cache.h	/^typedef struct ovr_mapping ovr_map_s;$/;"	t	typeref:struct:ovr_mapping
+ovr_mapping	cache.h	/^struct ovr_mapping {$/;"	s
+ovrl_graph	cfg.h	/^struct ovrl_graph {$/;"	s
+ovrl_graph_p	cfg.h	/^typedef struct ovrl_graph* ovrl_graph_p;$/;"	t	typeref:struct:ovrl_graph
+ovrl_graph_s	cfg.h	/^typedef struct ovrl_graph ovrl_graph_s;$/;"	t	typeref:struct:ovrl_graph
+p	ss/eval.h	/^  char *p;			\/* ptr to next char to consume from expr *\/$/;"	m	struct:eval_state_t
+panic	ss/misc.c	/^panic(char *fmt, ...)$/;"	f
+parent	loops.h	/^    loop_t	    *parent;$/;"	m	struct:loop_t
+partition	unicache.c	/^static void partition(acs_p* acs_in, mem_blk_set_t* mem_blk_h,$/;"	f	file:
+path_analysis	main.c	/^path_analysis(char *obj_file)$/;"	f	file:
+pcreg	ss/ecoff.h	/^  short pcreg;$/;"	m	struct:ecoff_pdr
+pdepth	main.c	/^int    *pdepth;$/;"	v
+peek_next_token	ss/eval.c	/^peek_next_token(struct eval_state_t *es) \/* expression evalutor *\/$/;"	f	file:
+peek_tok	ss/eval.h	/^  enum eval_token_t peek_tok;	\/* peek buffer, for one token look-ahead *\/$/;"	m	struct:eval_state_t	typeref:enum:eval_state_t::eval_token_t
+pfu_quant	ss/ss_machine.c	/^pfu_quant[] = {$/;"	v
+pi	bpred.h	/^    short	pi;	\/\/ branch context (bhr manipulated with branch address)$/;"	m	struct:__anon5
+pi_table	bpred.c	/^int		    *pi_table;$/;"	v
+pid	infeasible.h	/^  int pid;                \/\/ procedure id$/;"	m	struct:__anon13
+pipe_analysis	pipeline.c	/^pipe_analysis()$/;"	f
+pipe_ibuf_size	pipeline.c	/^int		pipe_ibuf_size;$/;"	v
+pipe_iwin_size	pipeline.c	/^int		pipe_iwin_size;$/;"	v
+pipe_iwin_size	pipeline.c	/^int		prolog_size, pipe_iwin_size;$/;"	v
+pipe_stages	pipeline.c	/^int		pipe_stages = 5;$/;"	v
+pjptb	main.c	/^jptb * pjptb;$/;"	v
+plog_backtrack	estimate.c	/^plog_backtrack(egraph_edge_t *e)$/;"	f	file:
+plog_len	exegraph.c	/^int		eg_len = 0, plog_len = 0, elog_len = 0, body_len = 0;$/;"	v
+pred	exegraph.h	/^    short   pred;$/;"	m	struct:__anon23
+pred_type	ss/my_opt.c	/^char *pred_type;$/;"	v
+pref	cfg.h	/^		 col_data_p pref;$/;"	m	union:ovrl_graph::__anon18
+prev_in	bpred.h	/^    bfg_edge_t  *prev_out, *next_out, *prev_in, *next_in;$/;"	m	struct:bfg_edge_t
+prev_out	bpred.h	/^    bfg_edge_t  *prev_out, *next_out, *prev_in, *next_in;$/;"	m	struct:bfg_edge_t
+print	ss/options.h	/^  int print;			\/* print option during `-dumpconfig'? *\/$/;"	m	struct:opt_opt_t
+printAssign	infdump.c	/^int printAssign( assign_t *assg, char printcf ) {$/;"	f
+printBAConflict	infdump.c	/^int printBAConflict( BA_conflict_t *cf ) {$/;"	f
+printBBConflict	infdump.c	/^int printBBConflict( BB_conflict_t *cf ) {$/;"	f
+printBranch	infdump.c	/^int printBranch( branch_t *br, char printcf ) {$/;"	f
+printEffects	infdump.c	/^int printEffects( char printcf ) {$/;"	f
+printInstr	infdump.c	/^void printInstr( insn_t *is ) {$/;"	f
+printInstructions	infdump.c	/^int printInstructions() {$/;"	f
+printReg	infdump.c	/^void printReg( int regpos ) {$/;"	f
+print_classification	unicache.c	/^static void print_classification()$/;"	f	file:
+print_classification_data	unicache.c	/^static void print_classification_data()$/;"	f	file:
+print_help	ss/options.c	/^print_help(struct opt_opt_t *opt,	\/* option variable *\/$/;"	f	file:
+print_option_header	ss/options.c	/^print_option_header(struct opt_odb_t *odb,\/* options database *\/$/;"	f	file:
+print_option_notes	ss/options.c	/^print_option_notes(struct opt_odb_t *odb,\/* options database *\/$/;"	f	file:
+proc	cfg.h	/^		 proc_t* proc;$/;"	m	union:col_data::__anon17
+proc	cfg.h	/^		 proc_t* proc;$/;"	m	union:ovrl_graph::__anon18
+proc	cfg.h	/^    proc_t  	*proc;		\/\/ up-link to the procedure containing it$/;"	m	struct:__anon15
+proc	infeasible.h	/^  proc_t *proc;$/;"	m	struct:__anon12
+proc_inline	tcfg.c	/^proc_inline(proc_t *proc, tcfg_node_t *call_bbi, tcfg_node_t *ret_bbi, int depth)$/;"	f	file:
+proc_t	cfg.h	/^struct proc_t {$/;"	s
+proc_t	cfg.h	/^typedef struct proc_t	    proc_t;$/;"	t	typeref:struct:proc_t
+process_file	ss/options.c	/^process_file(struct opt_odb_t *odb, char *fname, int depth)$/;"	f	file:
+process_option	ss/options.c	/^process_option(struct opt_odb_t *odb,	\/* option database *\/$/;"	f
+procs	cfg.h	/^    proc_t	*procs;		\/\/ procedures$/;"	m	struct:__anon16
+procs_addr	ss/ss_readfile.c	/^addr_t		*procs_addr; $/;"	v
+prog	main.c	/^prog_t	    prog;$/;"	v
+prog_name	est.sh	/^prog_name()$/;"	f
+prog_name	sim.sh	/^prog_name()$/;"	f
+prog_name	solve.sh	/^prog_name()$/;"	f
+prog_name	solve_time.sh	/^prog_name()$/;"	f
+prog_t	cfg.h	/^} prog_t;$/;"	t	typeref:struct:__anon16
+prog_tran	tcfg.c	/^prog_tran()$/;"	f
+prolog_size	pipeline.c	/^int		prolog_size, pipe_iwin_size;$/;"	v
+prologs	pipeline.c	/^code_link_t	**prologs, **epilogs;$/;"	v
+ptarget	main.c	/^        addr_t *ptarget;$/;"	m	struct:jptb	file:
+pub	ss/symbol.h	/^  int pub;			\/* externally visible? *\/$/;"	m	struct:sym_sym_t
+quantity	ss/resource.h	/^  int quantity;				\/* total instances of this unit *\/$/;"	m	struct:res_desc
+queue_empty	common.c	/^queue_empty(Queue *queue)$/;"	f
+queue_t	common.h	/^typedef struct queue_t {$/;"	s
+qurt	qurt.c	/^int  qurt()$/;"	f
+qword_t	ss/host.h	/^typedef unsigned __int64 qword_t;	\/* qword - 64 bits *\/$/;"	t
+qword_t	ss/host.h	/^typedef unsigned long long qword_t;	\/* qword - 64 bits *\/$/;"	t
+qword_t	ss/host.h	/^typedef unsigned long qword_t;		\/* qword - 64 bits *\/$/;"	t
+r1	infeasible.h	/^  char r1[OP_LEN];$/;"	m	struct:__anon7
+r2	infeasible.h	/^  char r2[OP_LEN];$/;"	m	struct:__anon7
+r3	infeasible.h	/^  char r3[OP_LEN];$/;"	m	struct:__anon7
+r_addr	isa.h	/^    addr_t  r_addr;$/;"	m	struct:__anon36
+range16_t	common.h	/^} range16_t;$/;"	t	typeref:struct:__anon3
+range8_t	common.h	/^} range8_t;$/;"	t	typeref:struct:__anon4
+range_isect	common.c	/^range_isect(range_t *x, range_t *y)$/;"	f
+range_t	common.h	/^} range_t;$/;"	t	typeref:struct:__anon2
+range_union	common.c	/^range_union(range_t *x, range_t *y)$/;"	f
+ras_size	ss/my_opt.c	/^int ras_size = 8;$/;"	v
+rdy	exegraph.h	/^    range_t	    rdy, str, fin;	\/\/ ready, start, finish$/;"	m	struct:__anon22
+reach	bpred.c	/^reach(bfg_node_t *x, bfg_node_t *y, int branch)$/;"	f	file:
+reach_end	bpred.c	/^reach_end(bfg_node_t *x, int branch)$/;"	f	file:
+reachableNoCancel	conflicts.c	/^int reachableNoCancel( char *res, assign_t ***nullifier_list, int *num_nullifiers,$/;"	f
+readBlockCounts	infeasible.c	/^int readBlockCounts( char *obj_file ) {$/;"	f
+readInstr	infeasible.c	/^void readInstr( char *obj_file ) {$/;"	f
+read_code	readfile.c	/^read_code(char *fname)$/;"	f
+read_code_ss	ss/ss_readfile.c	/^read_code_ss(char *fname)$/;"	f
+read_functions	main.c	/^int read_functions( char *obj_file ) {$/;"	f
+read_injp	main.c	/^void read_injp(char * objfile){$/;"	f
+read_inst	ss/ss_readfile.c	/^read_inst(FILE *fp, addr_t addr, int i)$/;"	f	file:
+read_opt	options.c	/^read_opt(int argc, char **argv)$/;"	f
+read_opt_ss	ss/my_opt.c	/^read_opt_ss(int argc, char **argv)$/;"	f
+read_recursive	main.c	/^void read_recursive(char * objfile){$/;"	f
+read_text_head	ss/ss_readfile.c	/^read_text_head(FILE *fp)$/;"	f	file:
+ready_earlier	ss/ss_exegraph.c	/^ready_earlier(int inst1, int inst2)$/;"	f	file:
+reg	ss/machine.h	/^  int reg;			\/* register index *\/$/;"	m	struct:md_reg_names_t
+regList	infeasible.h	/^reg_t regList[NO_REG];$/;"	v
+regOp	reg.c	/^char regOp( insn_t *insn, int *val, char *deri ) {$/;"	f
+reg_loop_exit	loops.c	/^reg_loop_exit(tcfg_edge_t *e)$/;"	f	file:
+reg_t	infeasible.h	/^} reg_t;$/;"	t	typeref:struct:__anon6
+regmask	ss/ecoff.h	/^  int regmask;$/;"	m	struct:ecoff_pdr
+regoffset	ss/ecoff.h	/^  int regoffset;$/;"	m	struct:ecoff_pdr
+regs_C	ss/regs.h	/^  md_ctrl_t regs_C;		\/* control register file *\/$/;"	m	struct:regs_t
+regs_F	ss/regs.h	/^  md_fpr_t regs_F;		\/* floating point register file *\/$/;"	m	struct:regs_t
+regs_NPC	ss/regs.h	/^  md_addr_t regs_NPC;		\/* next-cycle program counter *\/$/;"	m	struct:regs_t
+regs_PC	ss/regs.h	/^  md_addr_t regs_PC;		\/* program counter *\/$/;"	m	struct:regs_t
+regs_R	ss/regs.h	/^  md_gpr_t regs_R;		\/* (signed) integer register file *\/$/;"	m	struct:regs_t
+regs_t	ss/regs.h	/^struct regs_t {$/;"	s
+removeOneFromWorkList	address.c	/^void* removeOneFromWorkList(worklist_p* Wlist)$/;"	f
+res_desc	ss/resource.h	/^struct res_desc {$/;"	s
+res_fpalu	ss/my_opt.c	/^int res_fpalu;$/;"	v
+res_fpmult	ss/my_opt.c	/^int res_fpmult;$/;"	v
+res_ialu	ss/my_opt.c	/^int res_ialu;$/;"	v
+res_imult	ss/my_opt.c	/^int res_imult;$/;"	v
+res_memport	ss/my_opt.c	/^int res_memport;$/;"	v
+res_pool	ss/resource.h	/^struct res_pool {$/;"	s
+res_template	ss/resource.h	/^  struct res_template {$/;"	s	struct:res_desc
+reserved	ss/ecoff.h	/^  short reserved;$/;"	m	struct:ecoff_EXTR
+reserved	ss/ecoff.h	/^  unsigned reserved :1;$/;"	m	struct:ecoff_SYMR
+reserved	ss/ecoff.h	/^  unsigned reserved :24;$/;"	m	struct:ecoff_fdr
+reset_nodes_flags	estimate.c	/^reset_nodes_flags(int first, int last)$/;"	f	file:
+resources	ss/resource.h	/^  struct res_desc *resources;		\/* resource instances *\/$/;"	m	struct:res_pool	typeref:struct:res_pool::res_desc
+result_type	ss/eval.c	/^result_type(enum eval_type_t t1,	\/* left operand type *\/$/;"	f	file:
+returnMemoryAloc	address.c	/^ric_p returnMemoryAloc(ric_s mem, abs_mem_p abs_mem_st)$/;"	f
+rfdBase	ss/ecoff.h	/^  int rfdBase;$/;"	m	struct:ecoff_fdr
+rhs	infeasible.h	/^  int  rhs;                     \/\/ the rhs constant$/;"	m	struct:__anon8
+rhs	infeasible.h	/^  int  rhs;                     \/\/ the rhs constant$/;"	m	struct:branch_t
+rhs_var	infeasible.h	/^  char rhs_var;                 \/\/ 1 if rhs is a variable$/;"	m	struct:__anon8
+rhs_var	infeasible.h	/^  char rhs_var;                 \/\/ 1 if rhs is a variable$/;"	m	struct:branch_t
+ric	address.h	/^struct ric {$/;"	s
+ric_p	address.h	/^typedef struct ric* ric_p;$/;"	t	typeref:struct:ric
+ric_s	address.h	/^typedef struct ric ric_s;$/;"	t	typeref:struct:ric
+rob_depends	ss/ss_exegraph.c	/^rob_depends(int inst, int succ)$/;"	f	file:
+root_bbb	bpred.c	/^bfg_node_t	    root_bbb, end_bbb;$/;"	v
+root_bbb_id	bpred.c	/^int		    root_bbb_id, end_bbb_id;$/;"	v
+root_bbb_out	bpred.c	/^btg_edge_t	**end_bbb_in, **root_bbb_out;$/;"	v
+root_reach	bpred.c	/^root_reach(bfg_node_t *target)$/;"	f	file:
+root_reach_end	bpred.c	/^root_reach_end(int pi)$/;"	f	file:
+rss	ss/ecoff.h	/^  int rss;$/;"	m	struct:ecoff_fdr
+rt_NPC	ss/machine.h	/^  rt_NPC,		\/* next program counter *\/$/;"	e	enum:md_reg_type
+rt_NUM	ss/machine.h	/^  rt_NUM$/;"	e	enum:md_reg_type
+rt_PC	ss/machine.h	/^  rt_PC,		\/* program counter *\/$/;"	e	enum:md_reg_type
+rt_ctrl	ss/machine.h	/^  rt_ctrl,		\/* control register *\/$/;"	e	enum:md_reg_type
+rt_dpr	ss/machine.h	/^  rt_dpr,		\/* double-precision floating pointer register *\/$/;"	e	enum:md_reg_type
+rt_fpr	ss/machine.h	/^  rt_fpr,		\/* single-precision floating pointer register *\/$/;"	e	enum:md_reg_type
+rt_gpr	ss/machine.h	/^  rt_gpr,		\/* general purpose register *\/$/;"	e	enum:md_reg_type
+rt_lpr	ss/machine.h	/^  rt_lpr,		\/* integer-precision floating pointer register *\/$/;"	e	enum:md_reg_type
+run_cfg	main.c	/^run_cfg(char *obj_file)$/;"	f	file:
+run_est	main.c	/^run_est(char *obj_file)$/;"	f	file:
+run_opt	ss/my_opt.c	/^char	*run_opt;	\/\/ EST (estimation) or CFG (generate CFG file)$/;"	v
+run_prog	est.sh	/^run_prog()$/;"	f
+run_prog	sim.sh	/^run_prog()$/;"	f
+run_prog	solve.sh	/^run_prog()$/;"	f
+run_prog	solve_time.sh	/^run_prog()$/;"	f
+ruu_branch_penalty	ss/my_opt.c	/^int ruu_branch_penalty;$/;"	v
+ruu_commit_width	ss/my_opt.c	/^int ruu_commit_width;$/;"	v
+ruu_decode_width	ss/my_opt.c	/^int ruu_decode_width;$/;"	v
+ruu_ifq_size	ss/my_opt.c	/^int ruu_ifq_size;$/;"	v
+ruu_include_spec	ss/my_opt.c	/^int ruu_include_spec = TRUE;$/;"	v
+ruu_inorder_issue	ss/my_opt.c	/^int ruu_inorder_issue;$/;"	v
+ruu_issue_width	ss/my_opt.c	/^int ruu_issue_width;$/;"	v
+s_flags	ss/ecoff.h	/^  int s_flags;$/;"	m	struct:ecoff_scnhdr
+s_lb	cache.h	/^    int		s_lb;	\/\/ set + line bits$/;"	m	struct:__anon25
+s_lnnoptr	ss/ecoff.h	/^  int s_lnnoptr;$/;"	m	struct:ecoff_scnhdr
+s_msk	cache.h	/^    unsigned	s_msk;	\/\/ set mask$/;"	m	struct:__anon25
+s_name	ss/ecoff.h	/^  char s_name[8];$/;"	m	struct:ecoff_scnhdr
+s_nlnno	ss/ecoff.h	/^  unsigned short s_nlnno;$/;"	m	struct:ecoff_scnhdr
+s_nreloc	ss/ecoff.h	/^  unsigned short s_nreloc;$/;"	m	struct:ecoff_scnhdr
+s_paddr	ss/ecoff.h	/^  int s_paddr;$/;"	m	struct:ecoff_scnhdr
+s_relptr	ss/ecoff.h	/^  int s_relptr;$/;"	m	struct:ecoff_scnhdr
+s_scnptr	ss/ecoff.h	/^  int s_scnptr;$/;"	m	struct:ecoff_scnhdr
+s_size	ss/ecoff.h	/^  int s_size;$/;"	m	struct:ecoff_scnhdr
+s_vaddr	ss/ecoff.h	/^  int s_vaddr;$/;"	m	struct:ecoff_scnhdr
+sa	cfg.h	/^    addr_t	sa;		\/\/ block start addr$/;"	m	struct:__anon15
+sa	cfg.h	/^    addr_t	sa;		\/\/ proc start addr$/;"	m	struct:proc_t
+sbyte_t	ss/host.h	/^typedef signed char sbyte_t;$/;"	t
+sc	ss/ecoff.h	/^  unsigned sc :5;$/;"	m	struct:ecoff_SYMR
+sc_counter	ss/machine.h	570;"	d
+sc_counter	ss/machine.h	574;"	d
+scalar_delay	estimate.c	/^scalar_delay(egraph_node_t *v, int new_hi)$/;"	f	file:
+scan_blocks	cfg.c	/^scan_blocks(int *bb_ent, proc_t *proc)$/;"	f	file:
+scan_coexists	ss/ss_exegraph.c	/^scan_coexists()$/;"	f	file:
+scan_pred	ss/ss_exegraph.c	/^scan_pred()$/;"	f	file:
+scan_pred_mpred	ss/ss_exegraph.c	/^scan_pred_mpred(int curr)$/;"	f	file:
+scan_pred_normal	ss/ss_exegraph.c	/^scan_pred_normal(int curr)$/;"	f	file:
+scan_procs	cfg.c	/^scan_procs(int *proc_ent)$/;"	f	file:
+sdb_NUM	ss/symbol.h	/^  sdb_NUM$/;"	e	enum:sym_db_t
+sdb_any	ss/symbol.h	/^  sdb_any,			\/* search all symbols *\/$/;"	e	enum:sym_db_t
+sdb_data	ss/symbol.h	/^  sdb_data,			\/* search data symbols *\/$/;"	e	enum:sym_db_t
+sdb_text	ss/symbol.h	/^  sdb_text,			\/* search text symbols *\/$/;"	e	enum:sym_db_t
+search_common_ancestor	loops.c	/^search_common_ancestor(loop_t *x, loop_t *y)$/;"	f	file:
+search_tag	cache.c	/^search_tag(int lp_id, unsigned short set, unsigned short tag)$/;"	f	file:
+seg	ss/symbol.h	/^  enum sym_seg_t seg;		\/* symbol segment *\/$/;"	m	struct:sym_sym_t	typeref:enum:sym_sym_t::sym_seg_t
+set	cache.h	/^    unsigned short  set;    \/\/ cache line$/;"	m	struct:__anon26
+setBAConflict	conflicts.c	/^int setBAConflict( assign_t *assg, branch_t *br, char dir, assign_t **nullifier_list, int num_nullifiers ) {$/;"	f
+setBBConflict	conflicts.c	/^int setBBConflict( branch_t *br1, branch_t *br2, char dir, assign_t **nullifier_list, int num_nullifiers ) {$/;"	f
+setCount	infeasible.c	/^int setCount( tcfg_node_t *bbi, int count ) {$/;"	f
+setCountRec	infeasible.c	/^int setCountRec( tcfg_node_t *bbi, int count, int return_pid ) {$/;"	f
+setLoopID	infeasible.c	/^int setLoopID( tcfg_node_t *bbi, int lpid ) {$/;"	f
+setLoopIDRec	infeasible.c	/^int setLoopIDRec( tcfg_node_t *bbi, int lpid, int return_pid ) {$/;"	f
+setReg	reg.c	/^int setReg( int pos, char deritree[], int value, char valid, char flag ) {$/;"	f
+set_body_hitmiss	pipeline.c	/^set_body_hitmiss(int edge_id, int hm_id)$/;"	f	file:
+set_cache	cache.c	/^set_cache()$/;"	f
+set_cache_basic	cache.c	/^set_cache_basic(int nsets, int assoc, int bsize, int miss_penalty)$/;"	f
+set_loop_flags	loops.c	/^set_loop_flags(int flag)$/;"	f
+set_mlat_bbi	pipeline.c	/^set_mlat_bbi()$/;"	f	file:
+set_mpunit_cons	ilp.c	/^set_mpunit_cons(int bbi_id, int hm, int lp_id)$/;"	f	file:
+setjmp	ss/host.h	136;"	d
+sfloat_t	ss/host.h	/^typedef float sfloat_t;			\/* single-precision float - 32 bits *\/$/;"	t
+shalf_t	ss/host.h	/^typedef signed short shalf_t;$/;"	t
+sim_check_options	ss/my_opt.c	/^sim_check_options(struct opt_odb_t *odb,        \/* options database *\/$/;"	f
+sim_odb	ss/my_opt.c	/^struct opt_odb_t *sim_odb;$/;"	v	typeref:struct:opt_odb_t
+sim_reg_options	ss/my_opt.c	/^sim_reg_options(struct opt_odb_t *odb)$/;"	f
+size	cfg.h	/^    int		size;		\/\/ size (in bytes)$/;"	m	struct:__anon15
+size	cfg.h	/^    int		size;		\/\/ size (in bytes)$/;"	m	struct:proc_t
+size	isa.h	/^    int	    size;$/;"	m	struct:__anon36
+size	ss/symbol.h	/^  int size;			\/* bytes to next symbol *\/$/;"	m	struct:sym_sym_t
+slargeint_t	ss/misc.c	/^typedef sqword_t slargeint_t;$/;"	t	file:
+slargeint_t	ss/misc.c	/^typedef sword_t slargeint_t;$/;"	t	file:
+slist	address.h	/^struct slist$/;"	s
+slist_p	address.h	/^typedef struct slist* slist_p;$/;"	t	typeref:struct:slist
+slist_s	address.h	/^typedef struct slist slist_s;$/;"	t	typeref:struct:slist
+sqrt	qurt.c	/^double sqrt(val)$/;"	f
+sqword_t	ss/host.h	/^typedef signed __int64 sqword_t;$/;"	t
+sqword_t	ss/host.h	/^typedef signed long long sqword_t;$/;"	t
+sqword_t	ss/host.h	/^typedef signed long sqword_t;$/;"	t
+src	bpred.h	/^    bfg_node_t	*src, *dst;	\/\/ block s -> t$/;"	m	struct:bfg_edge_t
+src	bpred.h	/^    bfg_node_t	*src, *dst;$/;"	m	struct:btg_edge_t
+src	cfg.h	/^    cfg_node_t  *src, *dst;	\/\/ src -> dst$/;"	m	struct:cfg_edge_t
+src	exegraph.h	/^    egraph_node_t   *src, *dst;$/;"	m	struct:egraph_edge_t
+src	tcfg.h	/^    tcfg_node_t	*src, *dst;$/;"	m	struct:tcfg_edge_t
+ss_NUM	ss/symbol.h	/^  ss_NUM$/;"	e	enum:sym_seg_t
+ss_alloc_mem	ss/ss_exegraph.c	/^ss_alloc_mem()$/;"	f	file:
+ss_data	ss/symbol.h	/^  ss_data,			\/* data segment symbol *\/$/;"	e	enum:sym_seg_t
+ss_inst_fu	ss/ss_isa.c	/^ss_inst_fu(de_inst_t *inst)$/;"	f
+ss_max_inst_lat	ss/ss_isa.c	/^ss_max_inst_lat(de_inst_t *inst)$/;"	f
+ss_pfu_class	ss/ss_machine.h	/^enum ss_pfu_class {$/;"	g
+ss_text	ss/symbol.h	/^  ss_text,			\/* text segment symbol *\/$/;"	e	enum:sym_seg_t
+st	ss/ecoff.h	/^  unsigned st :6;$/;"	m	struct:ecoff_SYMR
+stack_empty	common.c	/^stack_empty(Stack *stack)$/;"	f
+stack_pop	common.c	/^stack_pop(Stack *stack)$/;"	f
+stack_push	common.c	/^stack_push(Stack *stack, void *x)$/;"	f
+stack_t	common.h	/^typedef struct stack_t {$/;"	s
+stage	exegraph.h	/^    short	    inst, stage;   $/;"	m	struct:__anon22
+stage_order_depends	ss/ss_exegraph.c	/^stage_order_depends()$/;"	f	file:
+start_addr	cfg.h	/^    addr_t	start_addr, end_addr, main_addr;$/;"	m	struct:__anon16
+start_body	pipeline.c	/^mas_inst_t	**bodies, *start_body;$/;"	v
+start_str	ilp.c	/^char	start_str[] = "Sta", end_str[] = "End";$/;"	v
+start_time	pipeline.c	/^int		**cpred_times, **mpred_times, start_time;$/;"	v
+stat_reg_addr	ss/machine.h	579;"	d
+stat_reg_counter	ss/machine.h	569;"	d
+stat_reg_counter	ss/machine.h	573;"	d
+step	estimate.c	/^int		step = STEP_SEP;$/;"	v
+stestit	ss/misc.c	/^stestit(char *s)$/;"	f
+str	exegraph.h	/^    range_t	    rdy, str, fin;	\/\/ ready, start, finish$/;"	m	struct:__anon22
+str	ilp.c	/^char	str[32], term[32];$/;"	v
+str	ss/machine.h	/^  char *str;			\/* register name *\/$/;"	m	struct:md_reg_names_t
+streq	infeasible.h	36;"	d
+stride	address.h	/^	addr_t stride;$/;"	m	struct:ric
+strtoul	ss/eval.c	62;"	d	file:
+strtoul	ss/misc.h	224;"	d
+succ	exegraph.h	/^    short   succ;$/;"	m	struct:__anon23
+succ_commit_depends	ss/ss_exegraph.c	/^succ_commit_depends(int inst)$/;"	f	file:
+succ_decode_depends	ss/ss_exegraph.c	/^succ_decode_depends(int inst)$/;"	f	file:
+succ_fetch_depends	ss/ss_exegraph.c	/^succ_fetch_depends(int inst)$/;"	f	file:
+succ_issue_depends	ss/ss_exegraph.c	/^succ_issue_depends(int inst)$/;"	f	file:
+sword_t	ss/host.h	/^typedef signed int sword_t;$/;"	t
+sym_bind_addr	ss/symbol.c	/^sym_bind_addr(md_addr_t addr,		\/* address of symbol to locate *\/$/;"	f
+sym_bind_name	ss/symbol.c	/^sym_bind_name(char *name,			\/* symbol name to locate *\/$/;"	f
+sym_datasyms	ss/symbol.c	/^struct sym_sym_t **sym_datasyms = NULL;$/;"	v	typeref:struct:sym_sym_t
+sym_datasyms_by_name	ss/symbol.c	/^struct sym_sym_t **sym_datasyms_by_name = NULL;$/;"	v	typeref:struct:sym_sym_t
+sym_db	ss/symbol.c	/^struct sym_sym_t *sym_db = NULL;$/;"	v	typeref:struct:sym_sym_t
+sym_db_t	ss/symbol.h	/^enum sym_db_t {$/;"	g
+sym_dumpstate	ss/symbol.c	/^sym_dumpstate(FILE *fd)			\/* output stream *\/$/;"	f
+sym_dumpsym	ss/symbol.c	/^sym_dumpsym(struct sym_sym_t *sym,	\/* symbol to display *\/$/;"	f
+sym_dumpsyms	ss/symbol.c	/^sym_dumpsyms(FILE *fd)			\/* output stream *\/$/;"	f
+sym_dumptextsyms	ss/symbol.c	/^sym_dumptextsyms(FILE *fd)			\/* output stream *\/$/;"	f
+sym_loadsyms	ss/symbol.c	/^sym_loadsyms(char *fname,	\/* file name containing symbols *\/$/;"	f
+sym_map	ss/eval.c	/^static struct sym_map_t sym_map[] = {$/;"	v	typeref:struct:sym_map_t	file:
+sym_map_t	ss/eval.c	/^struct sym_map_t {$/;"	s	file:
+sym_ndatasyms	ss/symbol.c	/^int sym_ndatasyms = 0;$/;"	v
+sym_nsyms	ss/symbol.c	/^int sym_nsyms = 0;$/;"	v
+sym_ntextsyms	ss/symbol.c	/^int sym_ntextsyms = 0;$/;"	v
+sym_seg_t	ss/symbol.h	/^enum sym_seg_t {$/;"	g
+sym_sym_t	ss/symbol.h	/^struct sym_sym_t {$/;"	s
+sym_syms	ss/symbol.c	/^struct sym_sym_t **sym_syms = NULL;$/;"	v	typeref:struct:sym_sym_t
+sym_syms_by_name	ss/symbol.c	/^struct sym_sym_t **sym_syms_by_name = NULL;$/;"	v	typeref:struct:sym_sym_t
+sym_textsyms	ss/symbol.c	/^struct sym_sym_t **sym_textsyms = NULL;$/;"	v	typeref:struct:sym_sym_t
+sym_textsyms_by_name	ss/symbol.c	/^struct sym_sym_t **sym_textsyms_by_name = NULL;$/;"	v	typeref:struct:sym_sym_t
+symbol	ss/eval.c	/^  char *symbol;$/;"	m	struct:sym_map_t	file:
+syms_loaded	ss/symbol.c	/^static int syms_loaded = FALSE;$/;"	v	file:
+t_msk	cache.h	/^    unsigned	t_msk;	\/\/ tag mask$/;"	m	struct:__anon25
+t_s_msk	cache.h	/^    unsigned	t_s_msk;\/\/ set+tag mask$/;"	m	struct:__anon25
+t_sb	cache.h	/^    int		t_sb;	\/\/ tag + set bits$/;"	m	struct:__anon25
+table	ss/resource.h	/^  struct res_template *table[MAX_RES_CLASSES][MAX_INSTS_PER_CLASS];$/;"	m	struct:res_pool	typeref:struct:res_pool::res_template
+tag	cache.c	/^    unsigned short  tag;$/;"	m	struct:tag_link_t	file:
+tag	cache.h	/^    unsigned short  tag;    \/\/ memory block tag$/;"	m	struct:__anon27
+tag	cache.h	/^    unsigned short  tag;    \/\/ valid tag$/;"	m	struct:__anon26
+tag_link_t	cache.c	/^struct tag_link_t {$/;"	s	file:
+tag_link_t	cache.c	/^typedef struct tag_link_t   tag_link_t;$/;"	t	typeref:struct:tag_link_t	file:
+tail	common.h	/^    void    *head, *tail;   \/* head points to oldest element *\/$/;"	m	struct:queue_t
+tail	loops.h	/^    tcfg_node_t	    *tail;$/;"	m	struct:loop_t
+target	isa.h	/^    addr_t  target;				\/* target addr for control transfer inst *\/$/;"	m	struct:__anon36
+tcfg	tcfg.c	/^tcfg_node_t	**tcfg;$/;"	v
+tcfg_bfg_cons	ilp.c	/^tcfg_bfg_cons()$/;"	f	file:
+tcfg_cons	ilp.c	/^tcfg_cons()$/;"	f	file:
+tcfg_edge_mp_gen	cache.c	/^tcfg_edge_mp_gen(tcfg_edge_t *e)$/;"	f	file:
+tcfg_edge_str	ilp.c	/^tcfg_edge_str(tcfg_edge_t *e, int bpred)$/;"	f	file:
+tcfg_edge_t	tcfg.h	/^struct tcfg_edge_t {$/;"	s
+tcfg_edge_t	tcfg.h	/^typedef struct tcfg_edge_t tcfg_edge_t;$/;"	t	typeref:struct:tcfg_edge_t
+tcfg_edge_term	ilp.c	/^tcfg_edge_term(FILE *fp, tcfg_edge_t *e, int bpred, char *prefix, char *suffix)$/;"	f	file:
+tcfg_edges	tcfg.c	/^tcfg_edge_t	**tcfg_edges;$/;"	v
+tcfg_elink_t	tcfg.h	/^struct tcfg_elink_t {$/;"	s
+tcfg_elink_t	tcfg.h	/^typedef struct tcfg_elink_t tcfg_elink_t;$/;"	t	typeref:struct:tcfg_elink_t
+tcfg_estunit_cons	ilp.c	/^tcfg_estunit_cons()$/;"	f	file:
+tcfg_estunit_cons_ps	ilp.c	/^static void tcfg_estunit_cons_ps()$/;"	f	file:
+tcfg_nlink_t	tcfg.h	/^struct tcfg_nlink_t {$/;"	s
+tcfg_nlink_t	tcfg.h	/^typedef struct tcfg_nlink_t tcfg_nlink_t;$/;"	t	typeref:struct:tcfg_nlink_t
+tcfg_node_cons	ilp.c	/^tcfg_node_cons(tcfg_node_t *bbi)$/;"	f	file:
+tcfg_node_gen	cache.c	/^tcfg_node_gen(tcfg_node_t *bbi)$/;"	f	file:
+tcfg_node_hm_term	ilp.c	/^tcfg_node_hm_term(FILE *fp, tcfg_node_t *bbi, int hm, char *prefix, char *suffix)$/;"	f	file:
+tcfg_node_str	ilp.c	/^tcfg_node_str(tcfg_node_t *bbi)$/;"	f	file:
+tcfg_node_t	tcfg.h	/^} tcfg_node_t;$/;"	t	typeref:struct:__anon28
+tcfg_node_term	ilp.c	/^tcfg_node_term(FILE *fp, tcfg_node_t *bbi, char *prefix, char *suffix)$/;"	f	file:
+tcfg_size	tcfg.c	/^int		num_tcfg_nodes = 0, tcfg_size = 0;$/;"	v
+term	ilp.c	/^char	str[32], term[32];$/;"	v
+term	ss/eval.c	/^term(struct eval_state_t *es)		\/* expression evaluator *\/$/;"	f	file:
+testConflict	conflicts.c	/^char testConflict( int a, int rhs_a, int b, int rhs_b ) {$/;"	f
+testReachableNoCancel	conflicts.c	/^int testReachableNoCancel( char *res, assign_t ***nullifier_list, int *num_nullifiers,$/;"	f
+test_depth	main.c	/^int  test_depth(int pid, int depth){$/;"	f
+testit	ss/misc.c	/^testit(char *s)$/;"	f
+text_entry	ss/ss_readfile.c	/^unsigned	text_entry;$/;"	v
+text_offset	ss/ss_readfile.c	/^unsigned	text_offset;$/;"	v
+text_start	ss/ecoff.h	/^  int text_start;$/;"	m	struct:ecoff_aouthdr
+tick_t	ss/host.h	/^typedef dfloat_t tick_t;$/;"	t
+tick_t	ss/host.h	/^typedef sqword_t tick_t;		\/* NOTE: unsigned breaks caches *\/$/;"	t
+ticks	main.c	/^typedef unsigned long long ticks;$/;"	t	file:
+ticks	test.c	/^typedef unsigned long long ticks;$/;"	t	file:
+tlb_miss_lat	ss/my_opt.c	/^int tlb_miss_lat;$/;"	v
+tmp_cs	pipeline.c	/^mblk_tag_t	*tmp_cs;$/;"	v
+tok_buf	ss/eval.h	/^  char tok_buf[512];		\/* text of last token returned *\/$/;"	m	struct:eval_state_t
+tok_const	ss/eval.h	/^  tok_const,		\/* numeric literals *\/$/;"	e	enum:eval_token_t
+tok_cparen	ss/eval.h	/^  tok_cparen,		\/* `)' *\/$/;"	e	enum:eval_token_t
+tok_div	ss/eval.h	/^  tok_div,		\/* `\/' *\/$/;"	e	enum:eval_token_t
+tok_eof	ss/eval.h	/^  tok_eof,		\/* end of file *\/$/;"	e	enum:eval_token_t
+tok_ident	ss/eval.h	/^  tok_ident,		\/* user-valued identifiers *\/$/;"	e	enum:eval_token_t
+tok_invalid	ss/eval.h	/^  tok_invalid		\/* unrecognized token *\/$/;"	e	enum:eval_token_t
+tok_map	ss/eval.c	/^static enum eval_token_t tok_map[256];$/;"	v	typeref:enum:eval_token_t	file:
+tok_map_initialized	ss/eval.c	/^static int tok_map_initialized = FALSE;$/;"	v	file:
+tok_minus	ss/eval.h	/^  tok_minus,		\/* `-' *\/$/;"	e	enum:eval_token_t
+tok_mult	ss/eval.h	/^  tok_mult,		\/* `*' *\/$/;"	e	enum:eval_token_t
+tok_oparen	ss/eval.h	/^  tok_oparen,		\/* `(' *\/$/;"	e	enum:eval_token_t
+tok_plus	ss/eval.h	/^  tok_plus,		\/* `+' *\/$/;"	e	enum:eval_token_t
+tok_whitespace	ss/eval.h	/^  tok_whitespace,	\/* ` ', `\\t', `\\n' *\/$/;"	e	enum:eval_token_t
+top	common.h	/^    void    *top;$/;"	m	struct:stack_t
+topo_call	infeasible.c	/^int topo_call( int **callees, int *num_callee ) {$/;"	f
+total_cons	ilp.c	/^int	total_cons = 0, total_vars = 0;$/;"	v
+total_vars	ilp.c	/^int	total_cons = 0, total_vars = 0;$/;"	v
+transformAloc	address.c	/^static void transformAloc(tcfg_node_t* bbi, int* change)$/;"	f	file:
+transformCacheState	unicache.c	/^static void transformCacheState(tcfg_node_t* bbi, int* change_flag, ANALYSIS_T type)$/;"	f	file:
+transformInstCacheState	unicache.c	/^static void transformInstCacheState(tcfg_node_t* bbi, int* change_flag)$/;"	f	file:
+transformUnifiedCacheState	unicache.c	/^static void transformUnifiedCacheState(tcfg_node_t* bbi, int* change_flag, ANALYSIS_T type)$/;"	f	file:
+transforml2InstCacheState	unicache.c	/^static void transforml2InstCacheState(tcfg_node_t* bbi, int* change_flag, ANALYSIS_T type)$/;"	f	file:
+trav_backward	pipeline.c	/^trav_backward(int log_set, tcfg_edge_t **path, int path_len, int code_len)$/;"	f	file:
+trav_forward	pipeline.c	/^trav_forward(int log_set, tcfg_edge_t **path, int path_len, int code_len)$/;"	f	file:
+trav_tcfg	bpred.c	/^trav_tcfg()$/;"	f	file:
+tsize	ss/ecoff.h	/^  int tsize;$/;"	m	struct:ecoff_aouthdr
+twolev_config	ss/my_opt.c	/^int twolev_config[4] =$/;"	v
+twolev_nelt	ss/my_opt.c	/^int twolev_nelt = 4;$/;"	v
+type	cfg.h	/^	int type;$/;"	m	struct:col_data
+type	cfg.h	/^	int type;$/;"	m	struct:ovrl_graph
+type	cfg.h	/^    bb_type_t	type;		$/;"	m	struct:__anon15
+type	isa.h	/^    int	    type;	\/\/ inst type$/;"	m	struct:__anon35
+type	ss/eval.h	/^  enum eval_type_t type;		\/* type of expression value *\/$/;"	m	struct:eval_value_t	typeref:enum:eval_value_t::eval_type_t
+type	ss/misc.c	/^  char *type;$/;"	m	struct:__anon29	file:
+u	cfg.h	/^	}u;$/;"	m	struct:col_data	typeref:union:col_data::__anon17
+u	cfg.h	/^	}u;$/;"	m	struct:ovrl_graph	typeref:union:ovrl_graph::__anon18
+u1_d1_ps	unicache.c	/^int u1_d1_ps = 0;$/;"	v
+u1_data_access	isa.h	/^	 ACCESS_T u1_data_access;	\/* unified D\/I cache access classification *\/$/;"	m	struct:__anon36
+unified	unicache.c	/^int unified = 0;	 $/;"	v
+updateMemoryAloc	address.c	/^static void updateMemoryAloc(ric_s mem, abs_mem_p* abs_mem_st, ric_p value, $/;"	f	file:
+updateRIC	address.c	/^static void updateRIC(ric_p* dest, ric_p src1)$/;"	f	file:
+updateRICAdd	address.c	/^static void updateRICAdd(ric_p* dest, ric_p src1, ric_p src2)$/;"	f	file:
+updateRICAddImm	address.c	/^static void updateRICAddImm(ric_p* dest, ric_p src1, int imm)$/;"	f	file:
+updateRICBool	address.c	/^static void updateRICBool(ric_p* dest, ric_p src1, ric_p src2)$/;"	f	file:
+updateRICBoolImm	address.c	/^static void updateRICBoolImm(ric_p* dest, ric_p src1, int imm)$/;"	f	file:
+updateRICBoolU	address.c	/^static void updateRICBoolU(ric_p* dest)$/;"	f	file:
+updateRICImm	address.c	/^static void updateRICImm(ric_p* dest, int imm)$/;"	f	file:
+updateRICJoin	address.c	/^static ric_p updateRICJoin(ric_p src1, ric_p src2)$/;"	f	file:
+updateRICLeftShift	address.c	/^static void updateRICLeftShift(ric_p* dest, ric_p src1, int imm)$/;"	f	file:
+updateRICLoad	address.c	/^static void updateRICLoad(ric_p* dest, ric_p src1, int imm, abs_mem_p abs_mem_st,$/;"	f	file:
+updateRICLoadIndex	address.c	/^static void updateRICLoadIndex(ric_p* dest, ric_p src1, ric_p src2,$/;"	f	file:
+updateRICMul	address.c	/^static void updateRICMul(ric_p* hi, ric_p* lo, ric_p src1, ric_p src2)$/;"	f	file:
+updateRICRightShift	address.c	/^static void updateRICRightShift(ric_p* dest, ric_p src1, int imm)$/;"	f	file:
+updateRICRightShiftV	address.c	/^static void updateRICRightShiftV(ric_p* dest, ric_p src1, ric_p src2)$/;"	f	file:
+updateRICStore	address.c	/^static void updateRICStore(ric_p value, ric_p base, int imm, abs_mem_p* abs_mem_st,$/;"	f	file:
+updateRICStoreIndex	address.c	/^static void updateRICStoreIndex(ric_p value, ric_p base, ric_p index, $/;"	f	file:
+updateRICSub	address.c	/^static void updateRICSub(ric_p* dest, ric_p src1, ric_p src2)$/;"	f	file:
+updateSuccessorAloc	address.c	/^static void updateSuccessorAloc(tcfg_node_t* bbi, int* change_flag)$/;"	f	file:
+update_A	unicache.c	/^static acs_p** update_A(acs_p** acs_in, ric_p addr, ANALYSIS_T type)$/;"	f	file:
+update_Reinherd	unicache.c	/^ acs_p** update_Reinherd(acs_p** acs_in, ric_p addr)$/;"	f
+update_Reinherd1	unicache.c	/^static acs_p** update_Reinherd1(acs_p** acs_in, ric_p addr)$/;"	f	file:
+update_abs_inst	unicache.c	/^static acs_p** update_abs_inst(acs_p** acs_in, unsigned addr)$/;"	f	file:
+update_bbi_map	tcfg.c	/^update_bbi_map(tcfg_node_t *bbi)$/;"	f	file:
+update_contd	estimate.c	/^update_contd(egraph_node_t *v)$/;"	f	file:
+update_must	unicache.c	/^ acs_p** update_must(acs_p** acs_in, ric_p addr, ANALYSIS_T type)$/;"	f
+update_singleton	unicache.c	/^static acs_p* update_singleton(acs_p* acs, mem_blk_set_t* mem_blk_set)$/;"	f	file:
+upper_bound	address.h	/^	addr_t upper_bound;$/;"	m	struct:ric
+user_cons	ilp.c	/^user_cons()$/;"	f	file:
+user_cons_context	ilp.c	/^user_cons_context()$/;"	f	file:
+user_ptr	ss/eval.h	/^  void *user_ptr;		\/* user-supplied argument pointer *\/$/;"	m	struct:eval_state_t
+valid	address.h	/^	int valid;	  $/;"	m	struct:abs_mem
+valid	cache.h	/^    unsigned short  valid;  \/\/ valid == 0 means empty mempry block$/;"	m	struct:__anon27
+valid	infeasible.h	/^  char valid;                   \/\/ 1 if value is a valid constant (not unresolved mem. access)$/;"	m	struct:__anon6
+value	address.h	/^	ric_p value;$/;"	m	struct:abs_mem
+value	bs.c	/^  int  value;$/;"	m	struct:DATA	file:
+value	infeasible.h	/^  int  value;                   \/\/ a constant; 0 if mem. access (not resolved)$/;"	m	struct:__anon6
+value	ss/ecoff.h	/^  int value;$/;"	m	struct:ecoff_SYMR
+value	ss/eval.c	/^  struct eval_value_t *value;$/;"	m	struct:sym_map_t	typeref:struct:sym_map_t::eval_value_t	file:
+value	ss/eval.h	/^  } value;$/;"	m	struct:eval_value_t	typeref:union:eval_value_t::__anon31
+var	ss/options.h	/^      char **var;		\/* pointer to string pointer option *\/$/;"	m	struct:opt_opt_t::opt_variant_t::opt_for_string_t
+var	ss/options.h	/^      double *var;		\/* pointer to double option *\/$/;"	m	struct:opt_opt_t::opt_variant_t::opt_for_double_t
+var	ss/options.h	/^      float *var;		\/* pointer to float option *\/$/;"	m	struct:opt_opt_t::opt_variant_t::opt_for_float_t
+var	ss/options.h	/^      int *var;			\/* pointer to integer option *\/$/;"	m	struct:opt_opt_t::opt_variant_t::opt_for_int_t
+var	ss/options.h	/^      int *var;			\/* ptr to *int* enum option, NOTE: AN INT *\/$/;"	m	struct:opt_opt_t::opt_variant_t::opt_for_enum_t
+var	ss/options.h	/^      unsigned int *var;	\/* pointer to unsigned integer option *\/$/;"	m	struct:opt_opt_t::opt_variant_t::opt_for_uint_t
+var_grps	ilp.c	/^char	**var_grps[256];$/;"	v
+variant	ss/options.h	/^  } variant;$/;"	m	struct:opt_opt_t	typeref:union:opt_opt_t::opt_variant_t
+vbbb	bpred.c	/^bfg_node_t	    **vbbb;$/;"	v
+verbose	ss/misc.c	/^int verbose = FALSE;$/;"	v
+vstamp	ss/ecoff.h	/^  short vstamp;$/;"	m	struct:ecoff_aouthdr
+vstamp	ss/ecoff.h	/^  short vstamp;$/;"	m	struct:ecoff_symhdr_t
+vstart_cost_term	ilp.c	/^vstart_cost_term()$/;"	f	file:
+warn	ss/misc.h	132;"	d
+widenMemoryAloc	address.c	/^static void widenMemoryAloc(ric_s mem, abs_mem_p* abs_mem_st, ric_p value)$/;"	f	file:
+widenRICJoin	address.c	/^static ric_p widenRICJoin(ric_p src1, ric_p src2)$/;"	f	file:
+word_t	ss/host.h	/^typedef unsigned int word_t;		\/* word - 32 bits *\/$/;"	t
+worklist	address.h	/^struct worklist {$/;"	s
+worklist_p	address.h	/^typedef struct worklist* worklist_p;$/;"	t	typeref:struct:worklist
+worklist_s	address.h	/^typedef struct worklist worklist_s;$/;"	t	typeref:struct:worklist
+write_vars	ilp.c	/^write_vars()$/;"	f	file:
+x	ss/resource.h	/^  } x[MAX_RES_CLASSES];$/;"	m	struct:res_desc	typeref:struct:res_desc::res_template
+x1	qurt.c	/^double a[3], x1[2], x2[2];$/;"	v
+x2	qurt.c	/^double a[3], x1[2], x2[2];$/;"	v
+xtestit	ss/misc.c	/^xtestit(char *s)$/;"	f

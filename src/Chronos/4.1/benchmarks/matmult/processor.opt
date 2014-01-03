@@ -1,0 +1,1 @@
+ -cache:il1 il1:16:8:1:l -mem:lat 30 2  -bpred perfect -decode:width 1 -issue:width 1 -commit:width 1 -fetch:ifqsize 2 -ruu:size 2 

@@ -1,0 +1,104 @@
+start_addr
+00400140 <__start> lw        $16,0($29)
+00400148 <__start+0x8> lui       $28,4097
+00400150 <__start+0x10> addiu     $28,$28,-32032
+00400158 <__start+0x18> addiu     $17,$29,4
+00400160 <__start+0x20> addiu     $3,$17,4
+00400168 <__start+0x28> sll       $2,$16,0x2
+00400170 <__start+0x30> addu      $3,$3,$2
+00400178 <__start+0x38> addu      $18,$0,$3
+00400180 <__start+0x40> sw        $18,-32636($28)
+00400188 <__start+0x48> addiu     $29,$29,-24
+00400190 <__start+0x50> addu      $4,$0,$16
+00400198 <__start+0x58> addu      $5,$0,$17
+004001a0 <__start+0x60> addu      $6,$0,$18
+004001a8 <__start+0x68> jal       004003e0 <__libc_init> 
+004001b0 <__start+0x70> sw        $0,-32640($28)
+004001b8 <__start+0x78> addu      $4,$0,$16
+004001c0 <__start+0x80> addu      $5,$0,$17
+004001c8 <__start+0x88> addu      $6,$0,$18
+004001d0 <__start+0x90> jal       004001f0 <main> 
+004001d8 <__start+0x98> addu      $4,$0,$2
+004001e0 <__start+0xa0> jal       00400410 <exit> 
+004001e8 <__start+0xa8> nop       
+    ...
+main():
+insertsort.c:7
+004001f0 <main> addiu     $6,$0,2
+insertsort.c:5
+004001f8 <main+0x8> lui       $2,4096
+00400200 <main+0x10> addiu     $2,$2,944
+insertsort.c:8
+00400208 <main+0x18> addu      $9,$0,$2
+00400210 <main+0x20> addiu     $10,$9,-4
+00400218 <main+0x28> addiu     $8,$9,4
+00400220 <main+0x30> addiu     $7,$9,8
+insertsort.c:5
+00400228 <main+0x38> addiu     $2,$0,11
+00400230 <main+0x40> sw        $0,0($9)
+00400238 <main+0x48> lui       $1,4096
+00400240 <main+0x50> sw        $2,948($1)
+00400248 <main+0x58> addiu     $2,$0,10
+00400250 <main+0x60> lui       $1,4096
+00400258 <main+0x68> sw        $2,952($1)
+00400260 <main+0x70> addiu     $2,$0,9
+00400268 <main+0x78> lui       $1,4096
+00400270 <main+0x80> sw        $2,956($1)
+00400278 <main+0x88> addiu     $2,$0,8
+00400280 <main+0x90> lui       $1,4096
+00400288 <main+0x98> sw        $2,960($1)
+insertsort.c:6
+00400290 <main+0xa0> addiu     $2,$0,7
+00400298 <main+0xa8> lui       $1,4096
+004002a0 <main+0xb0> sw        $2,964($1)
+004002a8 <main+0xb8> addiu     $2,$0,6
+004002b0 <main+0xc0> lui       $1,4096
+004002b8 <main+0xc8> sw        $2,968($1)
+004002c0 <main+0xd0> addiu     $2,$0,5
+004002c8 <main+0xd8> lui       $1,4096
+004002d0 <main+0xe0> sw        $2,972($1)
+004002d8 <main+0xe8> addiu     $2,$0,4
+004002e0 <main+0xf0> lui       $1,4096
+004002e8 <main+0xf8> sw        $2,976($1)
+004002f0 <main+0x100> addiu     $2,$0,3
+004002f8 <main+0x108> lui       $1,4096
+00400300 <main+0x110> sw        $2,980($1)
+00400308 <main+0x118> addiu     $2,$0,2
+00400310 <main+0x120> lui       $1,4096
+00400318 <main+0x128> sw        $2,984($1)
+insertsort.c:10
+00400320 <main+0x130> lw        $2,0($7)
+00400328 <main+0x138> lw        $3,0($8)
+00400330 <main+0x140> sll       $4,$6,0x2
+00400338 <main+0x148> sltu      $2,$2,$3
+00400340 <main+0x150> beq       $2,$0,004003a8
+00400348 <main+0x158> addu      $5,$4,$10
+00400350 <main+0x160> addu      $4,$4,$9
+insertsort.c:13
+00400358 <main+0x168> lw        $2,0($5)
+insertsort.c:12
+00400360 <main+0x170> lw        $3,0($4)
+insertsort.c:13
+00400368 <main+0x178> sw        $2,0($4)
+insertsort.c:14
+00400370 <main+0x180> sw        $3,0($5)
+insertsort.c:15
+00400378 <main+0x188> addiu     $5,$5,-4
+00400380 <main+0x190> addiu     $4,$4,-4
+insertsort.c:16
+00400388 <main+0x198> lw        $2,0($4)
+00400390 <main+0x1a0> lw        $3,0($5)
+00400398 <main+0x1a8> sltu      $2,$2,$3
+004003a0 <main+0x1b0> bne       $2,$0,00400358
+insertsort.c:17
+004003a8 <main+0x1b8> addiu     $8,$8,4
+004003b0 <main+0x1c0> addiu     $7,$7,4
+004003b8 <main+0x1c8> addiu     $6,$6,1
+insertsort.c:18
+004003c0 <main+0x1d0> slti      $2,$6,11
+004003c8 <main+0x1d8> bne       $2,$0,00400320
+insertsort.c:19
+004003d0 <main+0x1e0> addiu     $2,$0,1
+insertsort.c:20
+004003d8 <main+0x1e8> jr        $31
+end_addr

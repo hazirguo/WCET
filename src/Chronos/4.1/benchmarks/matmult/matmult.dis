@@ -1,0 +1,185 @@
+start_addr
+00400140 <__start> lw        $16,0($29)
+00400148 <__start+0x8> lui       $28,4097
+00400150 <__start+0x10> addiu     $28,$28,-32032
+00400158 <__start+0x18> addiu     $17,$29,4
+00400160 <__start+0x20> addiu     $3,$17,4
+00400168 <__start+0x28> sll       $2,$16,0x2
+00400170 <__start+0x30> addu      $3,$3,$2
+00400178 <__start+0x38> addu      $18,$0,$3
+00400180 <__start+0x40> sw        $18,-32636($28)
+00400188 <__start+0x48> addiu     $29,$29,-24
+00400190 <__start+0x50> addu      $4,$0,$16
+00400198 <__start+0x58> addu      $5,$0,$17
+004001a0 <__start+0x60> addu      $6,$0,$18
+004001a8 <__start+0x68> jal       004005c0 <__libc_init> 
+004001b0 <__start+0x70> sw        $0,-32640($28)
+004001b8 <__start+0x78> addu      $4,$0,$16
+004001c0 <__start+0x80> addu      $5,$0,$17
+004001c8 <__start+0x88> addu      $6,$0,$18
+004001d0 <__start+0x90> jal       004001f0 <main> 
+004001d8 <__start+0x98> addu      $4,$0,$2
+004001e0 <__start+0xa0> jal       004005f0 <exit> 
+004001e8 <__start+0xa8> nop       
+    ...
+main():
+matmult.c:53
+004001f0 <main> addiu     $29,$29,-24
+004001f8 <main+0x8> sw        $31,16($29)
+matmult.c:54
+00400200 <main+0x10> jal       00400258 <InitSeed> 
+matmult.c:61
+00400208 <main+0x18> lui       $4,4096
+00400210 <main+0x20> addiu     $4,$4,4160
+00400218 <main+0x28> lui       $5,4096
+00400220 <main+0x30> addiu     $5,$5,2560
+00400228 <main+0x38> lui       $6,4096
+00400230 <main+0x40> addiu     $6,$6,960
+00400238 <main+0x48> jal       00400268 <Test> 
+00400240 <main+0x50> lw        $31,16($29)
+00400248 <main+0x58> addiu     $29,$29,24
+00400250 <main+0x60> jr        $31
+InitSeed():
+matmult.c:73
+00400258 <InitSeed> sw        $0,-32624($28)
+00400260 <InitSeed+0x8> jr        $31
+Test():
+matmult.c:82
+00400268 <Test> addiu     $29,$29,-32
+00400270 <Test+0x8> sw        $16,16($29)
+00400278 <Test+0x10> addu      $16,$0,$4
+00400280 <Test+0x18> sw        $17,20($29)
+00400288 <Test+0x20> addu      $17,$0,$5
+00400290 <Test+0x28> sw        $18,24($29)
+00400298 <Test+0x30> addu      $18,$0,$6
+004002a0 <Test+0x38> sw        $31,28($29)
+matmult.c:88
+004002a8 <Test+0x40> jal       00400310 <Initialize> 
+matmult.c:89
+004002b0 <Test+0x48> addu      $4,$0,$17
+004002b8 <Test+0x50> jal       00400310 <Initialize> 
+matmult.c:96
+004002c0 <Test+0x58> addu      $4,$0,$16
+004002c8 <Test+0x60> addu      $5,$0,$17
+004002d0 <Test+0x68> addu      $6,$0,$18
+004002d8 <Test+0x70> jal       004004b0 <Multiply> 
+004002e0 <Test+0x78> lw        $31,28($29)
+004002e8 <Test+0x80> lw        $18,24($29)
+004002f0 <Test+0x88> lw        $17,20($29)
+004002f8 <Test+0x90> lw        $16,16($29)
+00400300 <Test+0x98> addiu     $29,$29,32
+00400308 <Test+0xa0> jr        $31
+Initialize():
+matmult.c:112
+00400310 <Initialize> addiu     $29,$29,-40
+00400318 <Initialize+0x8> sw        $19,28($29)
+matmult.c:115
+00400320 <Initialize+0x10> addu      $19,$0,$0
+matmult.c:112
+00400328 <Initialize+0x18> sw        $18,24($29)
+matmult.c:115
+00400330 <Initialize+0x20> addu      $18,$0,$4
+matmult.c:112
+00400338 <Initialize+0x28> sw        $31,32($29)
+00400340 <Initialize+0x30> sw        $17,20($29)
+00400348 <Initialize+0x38> sw        $16,16($29)
+matmult.c:116
+00400350 <Initialize+0x40> addu      $17,$0,$0
+00400358 <Initialize+0x48> addu      $16,$0,$18
+matmult.c:117
+00400360 <Initialize+0x50> jal       004003e8 <RandomInteger> 
+00400368 <Initialize+0x58> sw        $2,0($16)
+matmult.c:116
+00400370 <Initialize+0x60> addiu     $16,$16,4
+00400378 <Initialize+0x68> addiu     $17,$17,1
+00400380 <Initialize+0x70> slti      $2,$17,20
+00400388 <Initialize+0x78> bne       $2,$0,00400360
+matmult.c:115
+00400390 <Initialize+0x80> addiu     $18,$18,80
+00400398 <Initialize+0x88> addiu     $19,$19,1
+004003a0 <Initialize+0x90> slti      $2,$19,20
+004003a8 <Initialize+0x98> bne       $2,$0,00400350
+matmult.c:118
+004003b0 <Initialize+0xa0> lw        $31,32($29)
+004003b8 <Initialize+0xa8> lw        $19,28($29)
+004003c0 <Initialize+0xb0> lw        $18,24($29)
+004003c8 <Initialize+0xb8> lw        $17,20($29)
+004003d0 <Initialize+0xc0> lw        $16,16($29)
+004003d8 <Initialize+0xc8> addiu     $29,$29,40
+004003e0 <Initialize+0xd0> jr        $31
+RandomInteger():
+matmult.c:126
+004003e8 <RandomInteger> lw        $3,-32624($28)
+004003f0 <RandomInteger+0x8> lui       $4,4145
+004003f8 <RandomInteger+0x10> ori       $4,$4,5319
+00400400 <RandomInteger+0x18> sll       $2,$3,0x5
+00400408 <RandomInteger+0x20> addu      $2,$2,$3
+00400410 <RandomInteger+0x28> sll       $2,$2,0x2
+00400418 <RandomInteger+0x30> addu      $2,$2,$3
+00400420 <RandomInteger+0x38> addiu     $2,$2,81
+00400428 <RandomInteger+0x40> mult      $2,$4
+00400430 <RandomInteger+0x48> mfhi      $5
+00400438 <RandomInteger+0x50> mflo      $4
+00400440 <RandomInteger+0x58> srl       $4,$5,0x0
+00400448 <RandomInteger+0x60> addu      $5,$0,$0
+00400450 <RandomInteger+0x68> sra       $4,$4,0x9
+00400458 <RandomInteger+0x70> sra       $3,$2,0x1f
+00400460 <RandomInteger+0x78> subu      $4,$4,$3
+00400468 <RandomInteger+0x80> sll       $3,$4,0x6
+00400470 <RandomInteger+0x88> subu      $3,$3,$4
+00400478 <RandomInteger+0x90> sll       $3,$3,0x2
+00400480 <RandomInteger+0x98> addu      $3,$3,$4
+00400488 <RandomInteger+0xa0> sll       $3,$3,0x5
+00400490 <RandomInteger+0xa8> subu      $3,$3,$4
+00400498 <RandomInteger+0xb0> subu      $2,$2,$3
+004004a0 <RandomInteger+0xb8> sw        $2,-32624($28)
+004004a8 <RandomInteger+0xc0> jr        $31
+Multiply():
+matmult.c:154
+004004b0 <Multiply> addu      $15,$0,$0
+matmult.c:155
+004004b8 <Multiply+0x8> addu      $13,$0,$0
+004004c0 <Multiply+0x10> addu      $11,$0,$6
+004004c8 <Multiply+0x18> addu      $12,$0,$0
+matmult.c:157
+004004d0 <Multiply+0x20> sw        $0,0($11)
+matmult.c:158
+004004d8 <Multiply+0x28> addu      $9,$0,$0
+004004e0 <Multiply+0x30> addu      $14,$0,$12
+004004e8 <Multiply+0x38> addu      $10,$0,$11
+004004f0 <Multiply+0x40> addu      $8,$0,$4
+004004f8 <Multiply+0x48> addu      $7,$0,$5
+matmult.c:159
+00400500 <Multiply+0x50> addu      $2,$14,$7
+00400508 <Multiply+0x58> lw        $3,0($8)
+00400510 <Multiply+0x60> lw        $2,0($2)
+00400518 <Multiply+0x68> mult      $3,$2
+matmult.c:158
+00400520 <Multiply+0x70> addiu     $7,$7,80
+matmult.c:159
+00400528 <Multiply+0x78> mflo      $3
+00400530 <Multiply+0x80> lw        $2,0($10)
+matmult.c:158
+00400538 <Multiply+0x88> addiu     $9,$9,1
+00400540 <Multiply+0x90> addiu     $8,$8,4
+matmult.c:159
+00400548 <Multiply+0x98> addu      $2,$2,$3
+00400550 <Multiply+0xa0> sw        $2,0($10)
+matmult.c:158
+00400558 <Multiply+0xa8> slti      $2,$9,20
+00400560 <Multiply+0xb0> bne       $2,$0,00400500
+matmult.c:155
+00400568 <Multiply+0xb8> addiu     $11,$11,4
+00400570 <Multiply+0xc0> addiu     $12,$12,4
+00400578 <Multiply+0xc8> addiu     $13,$13,1
+00400580 <Multiply+0xd0> slti      $2,$13,20
+00400588 <Multiply+0xd8> bne       $2,$0,004004d0
+matmult.c:154
+00400590 <Multiply+0xe0> addiu     $4,$4,80
+00400598 <Multiply+0xe8> addiu     $6,$6,80
+004005a0 <Multiply+0xf0> addiu     $15,$15,1
+004005a8 <Multiply+0xf8> slti      $2,$15,20
+004005b0 <Multiply+0x100> bne       $2,$0,004004b8
+matmult.c:162
+004005b8 <Multiply+0x108> jr        $31
+end_addr

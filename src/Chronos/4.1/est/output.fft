@@ -1,0 +1,822 @@
+Immediate value = 2
+Immediate value = 1
+Immediate value = 1
+Immediate value = 32
+Immediate value = -8
+Immediate value = 1
+Immediate value = 1
+Immediate value = 1
+Immediate value = 1
+Immediate value = 8
+Immediate value = -16512
+Immediate value = 16488
+Immediate value = 6
+Immediate value = 16476
+Immediate value = 16484
+Immediate value = 1024
+Immediate value = 16460
+Immediate value = 16472
+Immediate value = 4194
+Immediate value = 19923
+Immediate value = 16468
+Immediate value = 16
+Immediate value = 16464
+Immediate value = 5893
+Immediate value = 16456
+Immediate value = 3549
+Immediate value = 16492
+Immediate value = 16480
+Immediate value = 16504
+Immediate value = 16496
+Immediate value = 0
+Immediate value = 6
+Immediate value = 5
+Immediate value = 2
+Immediate value = 3
+Immediate value = 0
+Immediate value = 6
+Immediate value = 5
+Immediate value = 2
+Immediate value = 3
+Immediate value = 1
+Immediate value = 91
+Immediate value = 4096
+Immediate value = 83
+Immediate value = 0
+Immediate value = 4
+Immediate value = 1024
+Immediate value = 16
+Immediate value = 0
+Immediate value = 2
+Immediate value = 8192
+Immediate value = 4096
+Immediate value = 1
+Immediate value = 4
+Immediate value = 12288
+Immediate value = 1
+Immediate value = 2
+Immediate value = 2
+Immediate value = 16
+Immediate value = -1
+Immediate value = 32768
+Immediate value = 1
+Immediate value = 1
+Immediate value = 16408
+Immediate value = 16404
+Immediate value = 16424
+Immediate value = 16420
+Immediate value = 2
+Immediate value = 16404
+Immediate value = 16420
+Immediate value = 16408
+Immediate value = 16424
+Immediate value = 16408
+Immediate value = 16424
+Immediate value = 2
+Immediate value = 16400
+Immediate value = 16404
+Immediate value = 16416
+Immediate value = 16420
+Immediate value = 8192
+Immediate value = 12288
+Immediate value = 8192
+Immediate value = 8192
+Immediate value = 12288
+Immediate value = 1
+Immediate value = 12288
+Immediate value = 8192
+Immediate value = 12288
+Immediate value = 1
+Immediate value = 8192
+Immediate value = 12288
+Immediate value = 4
+Immediate value = 1
+Immediate value = 16492
+Immediate value = 16488
+Immediate value = 16484
+Immediate value = 16480
+Immediate value = 16476
+Immediate value = 16472
+Immediate value = 16468
+Immediate value = 16464
+Immediate value = 16460
+Immediate value = 16456
+Immediate value = 16504
+Immediate value = 16496
+Immediate value = 16512
+Existing count tcfg 28(0::0) = 1
+Existing count tcfg 35(1::0) = 1024
+Starting symbolic execution...
+Starting conflict detection...
+Detected 0 BB and 1 BA
+Analysis count = 1956080
+ for 38 BB nodes
+===================================================
+Address computation time = 0.274209 secs
+===================================================
+Data cache analysis starts
+Transfer starts for bbi 0
+Transfer ends for bbi 0
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 1
+Transfer ends for bbi 1
+Before joining cache
+After joining cache
+Transfer starts for bbi 2
+Transfer ends for bbi 2
+Before joining cache
+After joining cache
+Transfer starts for bbi 3
+Transfer ends for bbi 3
+Before joining cache
+After joining cache
+Transfer starts for bbi 4
+Transfer ends for bbi 4
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 5
+Transfer ends for bbi 5
+Before joining cache
+After joining cache
+Transfer starts for bbi 6
+Transfer ends for bbi 6
+Before joining cache
+After joining cache
+Transfer starts for bbi 7
+Transfer ends for bbi 7
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 8
+Transfer ends for bbi 8
+Before joining cache
+After joining cache
+Transfer starts for bbi 9
+Transfer ends for bbi 9
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 10
+Transfer ends for bbi 10
+Before joining cache
+After joining cache
+Transfer starts for bbi 11
+Transfer ends for bbi 11
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 12
+Transfer ends for bbi 12
+Before joining cache
+After joining cache
+Transfer starts for bbi 13
+Transfer ends for bbi 13
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 14
+Transfer ends for bbi 14
+Before joining cache
+After joining cache
+Transfer starts for bbi 15
+Transfer ends for bbi 15
+Before joining cache
+After joining cache
+Transfer starts for bbi 16
+Transfer ends for bbi 16
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 17
+Transfer ends for bbi 17
+Before joining cache
+After joining cache
+Transfer starts for bbi 18
+Transfer ends for bbi 18
+Before joining cache
+After joining cache
+Transfer starts for bbi 19
+Transfer ends for bbi 19
+Before joining cache
+After joining cache
+Transfer starts for bbi 20
+Transfer ends for bbi 20
+Before joining cache
+After joining cache
+Transfer starts for bbi 21
+Transfer ends for bbi 21
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 22
+Transfer ends for bbi 22
+Before joining cache
+After joining cache
+Transfer starts for bbi 23
+Transfer ends for bbi 23
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 24
+Transfer ends for bbi 24
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 25
+Transfer ends for bbi 25
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 26
+Transfer ends for bbi 26
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 27
+Transfer ends for bbi 27
+Before joining cache
+After joining cache
+Transfer starts for bbi 28
+Transfer ends for bbi 28
+Before joining cache
+After joining cache
+Transfer starts for bbi 29
+Transfer ends for bbi 29
+Before joining cache
+After joining cache
+Transfer starts for bbi 30
+Transfer ends for bbi 30
+Before joining cache
+After joining cache
+Transfer starts for bbi 31
+Transfer ends for bbi 31
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 32
+Transfer ends for bbi 32
+Before joining cache
+After joining cache
+Transfer starts for bbi 33
+Transfer ends for bbi 33
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 34
+Transfer ends for bbi 34
+Before joining cache
+After joining cache
+Transfer starts for bbi 35
+Transfer ends for bbi 35
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 36
+Transfer ends for bbi 36
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 37
+Transfer ends for bbi 37
+Transfer starts for bbi 0
+Transfer ends for bbi 0
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 1
+Transfer ends for bbi 1
+Before joining cache
+After joining cache
+Transfer starts for bbi 2
+Transfer ends for bbi 2
+Before joining cache
+After joining cache
+Transfer starts for bbi 3
+Transfer ends for bbi 3
+Before joining cache
+After joining cache
+Transfer starts for bbi 4
+Transfer ends for bbi 4
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 5
+Transfer ends for bbi 5
+Before joining cache
+After joining cache
+Transfer starts for bbi 6
+Transfer ends for bbi 6
+Before joining cache
+After joining cache
+Transfer starts for bbi 7
+Transfer ends for bbi 7
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 8
+Transfer ends for bbi 8
+Before joining cache
+After joining cache
+Transfer starts for bbi 9
+Transfer ends for bbi 9
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 10
+Transfer ends for bbi 10
+Before joining cache
+After joining cache
+Transfer starts for bbi 11
+Transfer ends for bbi 11
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 12
+Transfer ends for bbi 12
+Before joining cache
+After joining cache
+Transfer starts for bbi 13
+Transfer ends for bbi 13
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 14
+Transfer ends for bbi 14
+Before joining cache
+After joining cache
+Transfer starts for bbi 15
+Transfer ends for bbi 15
+Before joining cache
+After joining cache
+Transfer starts for bbi 16
+Transfer ends for bbi 16
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 17
+Transfer ends for bbi 17
+Before joining cache
+After joining cache
+Transfer starts for bbi 18
+Transfer ends for bbi 18
+Before joining cache
+After joining cache
+Transfer starts for bbi 19
+Transfer ends for bbi 19
+Before joining cache
+After joining cache
+Transfer starts for bbi 20
+Transfer ends for bbi 20
+Before joining cache
+After joining cache
+Transfer starts for bbi 21
+Transfer ends for bbi 21
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 22
+Transfer ends for bbi 22
+Before joining cache
+After joining cache
+Transfer starts for bbi 23
+Transfer ends for bbi 23
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 24
+Transfer ends for bbi 24
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 25
+Transfer ends for bbi 25
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 26
+Transfer ends for bbi 26
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 27
+Transfer ends for bbi 27
+Before joining cache
+After joining cache
+Transfer starts for bbi 28
+Transfer ends for bbi 28
+Before joining cache
+After joining cache
+Transfer starts for bbi 29
+Transfer ends for bbi 29
+Before joining cache
+After joining cache
+Transfer starts for bbi 30
+Transfer ends for bbi 30
+Before joining cache
+After joining cache
+Transfer starts for bbi 31
+Transfer ends for bbi 31
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 32
+Transfer ends for bbi 32
+Before joining cache
+After joining cache
+Transfer starts for bbi 33
+Transfer ends for bbi 33
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 34
+Transfer ends for bbi 34
+Before joining cache
+After joining cache
+Transfer starts for bbi 35
+Transfer ends for bbi 35
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 36
+Transfer ends for bbi 36
+Before joining cache
+After joining cache
+Before joining cache
+After joining cache
+Transfer starts for bbi 37
+Transfer ends for bbi 37
+Unknown data access at 4002e0(BB=0) recognized
+Unknown data access at 4002f0(BB=0) recognized
+All hit at instruction 400300(BB=0) recognized
+All hit at instruction 400310(BB=0) recognized
+All hit at instruction 400320(BB=0) recognized
+All hit at instruction 400338(BB=0) recognized
+All hit at instruction 400348(BB=0) recognized
+All hit at instruction 400358(BB=0) recognized
+All hit at instruction 400368(BB=0) recognized
+All hit at instruction 400370(BB=0) recognized
+All hit at instruction 400378(BB=0) recognized
+All hit at instruction 400380(BB=0) recognized
+Unknown data access at 400488(BB=2) recognized
+Unknown data access at 4004a0(BB=2) recognized
+Unknown data access at 400520(BB=9) recognized
+Unknown data access at 400538(BB=9) recognized
+Unknown data access at 400540(BB=9) recognized
+Unknown data access at 400558(BB=9) recognized
+Unknown data access at 4006c0(BB=22) recognized
+All hit at instruction 4006c8(BB=22) recognized
+Unknown data access at 4006d0(BB=22) recognized
+All hit at instruction 4006d8(BB=22) recognized
+Unknown data access at 4006f8(BB=24) recognized
+Unknown data access at 400708(BB=24) recognized
+All hit at instruction 400720(BB=24) recognized
+All hit at instruction 400728(BB=24) recognized
+All hit at instruction 400730(BB=24) recognized
+All hit at instruction 400738(BB=24) recognized
+All hit at instruction 400768(BB=24) recognized
+All hit at instruction 400770(BB=24) recognized
+All hit at instruction 400780(BB=24) recognized
+All hit at instruction 400788(BB=24) recognized
+Unknown data access at 400790(BB=24) recognized
+Unknown data access at 4007a0(BB=24) recognized
+Unknown data access at 4007d8(BB=24) recognized
+Unknown data access at 4007f8(BB=24) recognized
+Unknown data access at 400800(BB=24) recognized
+Unknown data access at 400820(BB=24) recognized
+Unknown data access at 400828(BB=24) recognized
+Unknown data access at 400830(BB=24) recognized
+Unknown data access at 400850(BB=24) recognized
+Unknown data access at 400858(BB=24) recognized
+Unknown data access at 4008b0(BB=27) recognized
+All hit at instruction 4008b8(BB=27) recognized
+All hit at instruction 4008c0(BB=27) recognized
+All hit at instruction 4008c8(BB=27) recognized
+Unknown data access at 4008d0(BB=27) recognized
+All hit at instruction 4008d8(BB=27) recognized
+All hit at instruction 4008e0(BB=27) recognized
+All hit at instruction 4008e8(BB=27) recognized
+All hit at instruction 4008f0(BB=27) recognized
+All hit at instruction 4008f8(BB=27) recognized
+All hit at instruction 400900(BB=27) recognized
+All hit at instruction 400908(BB=27) recognized
+Data cache analysis iteration count = 0
+Instruction all miss at 4002d8
+Instruction all miss at 4002e0
+Instruction all hit at 4002e8
+Instruction all hit at 4002f0
+Instruction all hit at 4002f8
+Instruction all miss at 400300
+Instruction all hit at 400308
+Instruction all hit at 400310
+Instruction all hit at 400318
+Instruction all miss at 400320
+Instruction all hit at 400328
+Instruction all hit at 400330
+Instruction all hit at 400338
+Instruction all miss at 400340
+Instruction all hit at 400348
+Instruction all hit at 400350
+Instruction all hit at 400358
+Instruction all miss at 400360
+Instruction all hit at 400368
+Instruction all hit at 400370
+Instruction all hit at 400378
+Instruction all miss at 400380
+tcfg node 0 delay = (I=210,D=60)
+Instruction persistence at 400388
+Instruction all hit at 400390
+Instruction all hit at 400398
+Instruction persistence at 4003a0
+Instruction all hit at 4003a8
+Instruction all hit at 4003b0
+Instruction all hit at 4003b8
+Instruction persistence at 4003c0
+Instruction all hit at 4003c8
+Instruction all hit at 4003d0
+Instruction all hit at 4003d8
+Instruction persistence at 4003e0
+Instruction all hit at 4003e8
+Instruction all hit at 4003f0
+Instruction all hit at 4003f8
+Instruction persistence at 400400
+Instruction all hit at 400408
+Instruction all hit at 400410
+Instruction all hit at 400418
+Instruction persistence at 400420
+Instruction all hit at 400428
+Instruction all hit at 400430
+Instruction all hit at 400438
+Instruction persistence at 400440
+Instruction all hit at 400448
+Instruction all hit at 400450
+Instruction all hit at 400458
+Instruction persistence at 400460
+Instruction all hit at 400468
+tcfg node 1 delay = (I=240,D=0)
+Instruction persistence at 400470
+Instruction all hit at 400478
+Instruction persistence at 400480
+Instruction all hit at 400488
+Instruction all hit at 400490
+Instruction all hit at 400498
+Instruction persistence at 4004a0
+Instruction all hit at 4004a8
+Instruction all hit at 4004b0
+Instruction all hit at 4004b8
+tcfg node 2 delay = (I=90,D=60)
+Instruction all miss at 4004c0
+tcfg node 3 delay = (I=30,D=0)
+Instruction persistence at 4004c8
+tcfg node 4 delay = (I=30,D=0)
+Instruction persistence at 4004d0
+Instruction all hit at 4004d8
+tcfg node 5 delay = (I=30,D=0)
+Instruction all miss at 4004e0
+Instruction all hit at 4004e8
+Instruction all hit at 4004f0
+tcfg node 6 delay = (I=30,D=0)
+Instruction persistence at 4004f8
+Instruction all miss at 400500
+tcfg node 7 delay = (I=60,D=0)
+Instruction persistence at 400508
+Instruction all hit at 400510
+Instruction all hit at 400518
+tcfg node 8 delay = (I=30,D=0)
+Instruction persistence at 400520
+Instruction all hit at 400528
+Instruction all hit at 400530
+Instruction all hit at 400538
+Instruction persistence at 400540
+Instruction all hit at 400548
+Instruction all hit at 400550
+Instruction all hit at 400558
+Instruction persistence at 400560
+Instruction all hit at 400568
+tcfg node 9 delay = (I=90,D=120)
+Instruction persistence at 400570
+Instruction all hit at 400578
+Instruction all miss at 400580
+Instruction all hit at 400588
+tcfg node 10 delay = (I=60,D=0)
+Instruction persistence at 400590
+tcfg node 11 delay = (I=30,D=0)
+Instruction persistence at 400598
+Instruction persistence at 4005a0
+tcfg node 12 delay = (I=60,D=0)
+Instruction persistence at 4005a8
+tcfg node 13 delay = (I=30,D=0)
+Instruction persistence at 4005b0
+Instruction all hit at 4005b8
+tcfg node 14 delay = (I=30,D=0)
+Instruction persistence at 4005c0
+Instruction all hit at 4005c8
+tcfg node 15 delay = (I=30,D=0)
+Instruction persistence at 4005d0
+tcfg node 16 delay = (I=30,D=0)
+Instruction persistence at 4005d8
+Instruction persistence at 4005e0
+Instruction all hit at 4005e8
+Instruction all hit at 4005f0
+Instruction all hit at 4005f8
+Instruction persistence at 400600
+Instruction all hit at 400608
+Instruction all hit at 400610
+tcfg node 17 delay = (I=90,D=0)
+Instruction persistence at 400618
+Instruction persistence at 400620
+Instruction all hit at 400628
+Instruction all hit at 400630
+Instruction all hit at 400638
+Instruction persistence at 400640
+Instruction all hit at 400648
+tcfg node 18 delay = (I=90,D=0)
+Instruction persistence at 400650
+Instruction all hit at 400658
+Instruction persistence at 400660
+Instruction all hit at 400668
+tcfg node 19 delay = (I=60,D=0)
+Instruction persistence at 400670
+Instruction all hit at 400678
+Instruction persistence at 400680
+Instruction all hit at 400688
+tcfg node 20 delay = (I=60,D=0)
+Instruction persistence at 400690
+Instruction all hit at 400698
+Instruction persistence at 4006a0
+Instruction all hit at 4006a8
+tcfg node 21 delay = (I=60,D=0)
+Instruction persistence at 4006b0
+Instruction all hit at 4006b8
+Instruction persistence at 4006c0
+Instruction all hit at 4006c8
+Instruction all hit at 4006d0
+Instruction all hit at 4006d8
+Instruction persistence at 4006e0
+tcfg node 22 delay = (I=90,D=60)
+Instruction persistence at 4006e8
+Instruction all hit at 4006f0
+tcfg node 23 delay = (I=30,D=0)
+Instruction persistence at 4006f8
+Instruction persistence at 400700
+Instruction all hit at 400708
+Instruction all hit at 400710
+Instruction all hit at 400718
+Instruction persistence at 400720
+Instruction all hit at 400728
+Instruction all hit at 400730
+Instruction all hit at 400738
+Instruction persistence at 400740
+Instruction all hit at 400748
+Instruction all hit at 400750
+Instruction all hit at 400758
+Instruction persistence at 400760
+Instruction all hit at 400768
+Instruction all hit at 400770
+Instruction all hit at 400778
+Instruction persistence at 400780
+Instruction all hit at 400788
+Instruction all hit at 400790
+Instruction all hit at 400798
+Instruction persistence at 4007a0
+Instruction all hit at 4007a8
+Instruction all hit at 4007b0
+Instruction all hit at 4007b8
+Instruction persistence at 4007c0
+Instruction all hit at 4007c8
+Instruction all hit at 4007d0
+Instruction all hit at 4007d8
+Instruction persistence at 4007e0
+Instruction all hit at 4007e8
+Instruction all hit at 4007f0
+Instruction all hit at 4007f8
+Instruction persistence at 400800
+Instruction all hit at 400808
+Instruction all hit at 400810
+Instruction all hit at 400818
+Instruction persistence at 400820
+Instruction all hit at 400828
+Instruction all hit at 400830
+Instruction all hit at 400838
+Instruction persistence at 400840
+Instruction all hit at 400848
+Instruction all hit at 400850
+Instruction all hit at 400858
+Instruction persistence at 400860
+Instruction all hit at 400868
+Instruction all hit at 400870
+tcfg node 24 delay = (I=390,D=360)
+Instruction persistence at 400878
+Instruction persistence at 400880
+Instruction all hit at 400888
+tcfg node 25 delay = (I=60,D=0)
+Instruction persistence at 400890
+Instruction all hit at 400898
+Instruction persistence at 4008a0
+Instruction all hit at 4008a8
+tcfg node 26 delay = (I=60,D=0)
+Instruction persistence at 4008b0
+Instruction all hit at 4008b8
+Instruction all miss at 4008c0
+Instruction all hit at 4008c8
+Instruction all hit at 4008d0
+Instruction all hit at 4008d8
+Instruction all miss at 4008e0
+Instruction all hit at 4008e8
+Instruction all hit at 4008f0
+Instruction all hit at 4008f8
+Instruction all miss at 400900
+Instruction all hit at 400908
+Instruction all hit at 400910
+Instruction all hit at 400918
+tcfg node 27 delay = (I=120,D=60)
+Instruction all miss at 4001f0
+Instruction all hit at 4001f8
+tcfg node 28 delay = (I=30,D=0)
+Instruction all miss at 400200
+Instruction all hit at 400208
+tcfg node 29 delay = (I=30,D=0)
+Instruction all miss at 400210
+Instruction all hit at 400218
+tcfg node 30 delay = (I=30,D=0)
+Instruction all miss at 400220
+Instruction all hit at 400228
+tcfg node 31 delay = (I=30,D=0)
+Instruction persistence at 400230
+Instruction all hit at 400238
+Instruction persistence at 400240
+tcfg node 32 delay = (I=60,D=0)
+Instruction persistence at 400248
+Instruction all hit at 400250
+Instruction all hit at 400258
+tcfg node 33 delay = (I=30,D=0)
+Instruction all miss at 400260
+tcfg node 34 delay = (I=30,D=0)
+Instruction persistence at 400268
+Instruction all hit at 400270
+Instruction all hit at 400278
+Instruction persistence at 400280
+tcfg node 35 delay = (I=60,D=0)
+Instruction persistence at 400288
+Instruction all hit at 400290
+Instruction all hit at 400298
+Instruction persistence at 4002a0
+Instruction all hit at 4002a8
+Instruction all hit at 4002b0
+Instruction all hit at 4002b8
+tcfg node 36 delay = (I=60,D=0)
+Instruction persistence at 4002c0
+Instruction all hit at 4002c8
+Instruction all hit at 4002d0
+tcfg node 37 delay = (I=30,D=0)
+===================================================
+Maximum cache analysis time = 0.124306 secs
+===================================================
+=====================================================
+PS I1 in L1 = 68
+PS D1 in L1 = 0
+PS D1 in U1 ans all-miss/nc at D1 = 0
+PS I1 in U1 ans all-miss/nc at L1 = 0
+=====================================================
+

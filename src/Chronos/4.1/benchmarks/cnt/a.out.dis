@@ -1,0 +1,179 @@
+start_addr
+00400140 <__start> lw        $16,0($29)
+00400148 <__start+0x8> lui       $28,4097
+00400150 <__start+0x10> addiu     $28,$28,-32032
+00400158 <__start+0x18> addiu     $17,$29,4
+00400160 <__start+0x20> addiu     $3,$17,4
+00400168 <__start+0x28> sll       $2,$16,0x2
+00400170 <__start+0x30> addu      $3,$3,$2
+00400178 <__start+0x38> addu      $18,$0,$3
+00400180 <__start+0x40> sw        $18,-32620($28)
+00400188 <__start+0x48> addiu     $29,$29,-24
+00400190 <__start+0x50> addu      $4,$0,$16
+00400198 <__start+0x58> addu      $5,$0,$17
+004001a0 <__start+0x60> addu      $6,$0,$18
+004001a8 <__start+0x68> jal       00400540 <__libc_init> 
+004001b0 <__start+0x70> sw        $0,-32624($28)
+004001b8 <__start+0x78> addu      $4,$0,$16
+004001c0 <__start+0x80> addu      $5,$0,$17
+004001c8 <__start+0x88> addu      $6,$0,$18
+004001d0 <__start+0x90> jal       004001f0 <main> 
+004001d8 <__start+0x98> addu      $4,$0,$2
+004001e0 <__start+0xa0> jal       00400570 <exit> 
+004001e8 <__start+0xa8> nop       
+    ...
+main():
+cnt.c:30
+004001f0 <main> addiu     $29,$29,-24
+004001f8 <main+0x8> sw        $31,16($29)
+cnt.c:31
+00400200 <main+0x10> jal       00400380 <InitSeed> 
+cnt.c:34
+00400208 <main+0x18> lui       $4,4096
+00400210 <main+0x20> addiu     $4,$4,992
+00400218 <main+0x28> jal       00400240 <Test> 
+cnt.c:35
+00400220 <main+0x30> addiu     $2,$0,1
+00400228 <main+0x38> lw        $31,16($29)
+00400230 <main+0x40> addiu     $29,$29,24
+00400238 <main+0x48> jr        $31
+Test():
+cnt.c:40
+00400240 <Test> addiu     $29,$29,-24
+00400248 <Test+0x8> sw        $16,16($29)
+00400250 <Test+0x10> addu      $16,$0,$4
+00400258 <Test+0x18> sw        $31,20($29)
+cnt.c:44
+00400260 <Test+0x20> jal       004002a0 <Initialize> 
+cnt.c:46
+00400268 <Test+0x28> addu      $4,$0,$16
+00400270 <Test+0x30> jal       00400398 <Sum> 
+cnt.c:56
+00400278 <Test+0x38> addu      $2,$0,$0
+cnt.c:57
+00400280 <Test+0x40> lw        $31,20($29)
+00400288 <Test+0x48> lw        $16,16($29)
+00400290 <Test+0x50> addiu     $29,$29,24
+00400298 <Test+0x58> jr        $31
+Initialize():
+cnt.c:62
+004002a0 <Initialize> addiu     $29,$29,-40
+004002a8 <Initialize+0x8> sw        $19,28($29)
+cnt.c:65
+004002b0 <Initialize+0x10> addu      $19,$0,$0
+cnt.c:62
+004002b8 <Initialize+0x18> sw        $18,24($29)
+cnt.c:65
+004002c0 <Initialize+0x20> addu      $18,$0,$4
+cnt.c:62
+004002c8 <Initialize+0x28> sw        $31,32($29)
+004002d0 <Initialize+0x30> sw        $17,20($29)
+004002d8 <Initialize+0x38> sw        $16,16($29)
+cnt.c:66
+004002e0 <Initialize+0x40> addu      $17,$0,$0
+004002e8 <Initialize+0x48> addu      $16,$0,$18
+cnt.c:67
+004002f0 <Initialize+0x50> jal       00400470 <RandomInteger> 
+004002f8 <Initialize+0x58> sw        $2,0($16)
+cnt.c:66
+00400300 <Initialize+0x60> addiu     $16,$16,4
+00400308 <Initialize+0x68> addiu     $17,$17,1
+00400310 <Initialize+0x70> slti      $2,$17,10
+00400318 <Initialize+0x78> bne       $2,$0,004002f0
+cnt.c:65
+00400320 <Initialize+0x80> addiu     $18,$18,40
+00400328 <Initialize+0x88> addiu     $19,$19,1
+00400330 <Initialize+0x90> slti      $2,$19,10
+00400338 <Initialize+0x98> bne       $2,$0,004002e0
+cnt.c:69
+00400340 <Initialize+0xa0> addu      $2,$0,$0
+cnt.c:70
+00400348 <Initialize+0xa8> lw        $31,32($29)
+00400350 <Initialize+0xb0> lw        $19,28($29)
+00400358 <Initialize+0xb8> lw        $18,24($29)
+00400360 <Initialize+0xc0> lw        $17,20($29)
+00400368 <Initialize+0xc8> lw        $16,16($29)
+00400370 <Initialize+0xd0> addiu     $29,$29,40
+00400378 <Initialize+0xd8> jr        $31
+InitSeed():
+cnt.c:76
+00400380 <InitSeed> sw        $0,-32608($28)
+cnt.c:77
+00400388 <InitSeed+0x8> addu      $2,$0,$0
+00400390 <InitSeed+0x10> jr        $31
+Sum():
+cnt.c:84
+00400398 <Sum> addu      $7,$0,$0
+cnt.c:85
+004003a0 <Sum+0x8> addu      $9,$0,$0
+cnt.c:86
+004003a8 <Sum+0x10> addu      $6,$0,$0
+cnt.c:87
+004003b0 <Sum+0x18> addu      $8,$0,$0
+cnt.c:89
+004003b8 <Sum+0x20> addu      $10,$0,$0
+cnt.c:90
+004003c0 <Sum+0x28> addu      $5,$0,$0
+004003c8 <Sum+0x30> addu      $3,$0,$4
+cnt.c:94
+004003d0 <Sum+0x38> lw        $2,0($3)
+004003d8 <Sum+0x40> bgez      $2,004003f8
+cnt.c:96
+004003e0 <Sum+0x48> addu      $7,$7,$2
+cnt.c:97
+004003e8 <Sum+0x50> addiu     $6,$6,1
+cnt.c:98
+004003f0 <Sum+0x58> j         00400408
+cnt.c:100
+004003f8 <Sum+0x60> addu      $9,$9,$2
+cnt.c:101
+00400400 <Sum+0x68> addiu     $8,$8,1
+cnt.c:90
+00400408 <Sum+0x70> addiu     $3,$3,4
+00400410 <Sum+0x78> addiu     $5,$5,1
+00400418 <Sum+0x80> slti      $2,$5,10
+00400420 <Sum+0x88> bne       $2,$0,004003d0
+cnt.c:89
+00400428 <Sum+0x90> addiu     $4,$4,40
+00400430 <Sum+0x98> addiu     $10,$10,1
+00400438 <Sum+0xa0> slti      $2,$10,10
+00400440 <Sum+0xa8> bne       $2,$0,004003c0
+cnt.c:104
+00400448 <Sum+0xb0> sw        $7,-32604($28)
+cnt.c:105
+00400450 <Sum+0xb8> sw        $6,-32592($28)
+cnt.c:106
+00400458 <Sum+0xc0> sw        $9,-32600($28)
+cnt.c:107
+00400460 <Sum+0xc8> sw        $8,-32596($28)
+cnt.c:108
+00400468 <Sum+0xd0> jr        $31
+RandomInteger():
+cnt.c:126
+00400470 <RandomInteger> lw        $3,-32608($28)
+00400478 <RandomInteger+0x8> lui       $4,4145
+00400480 <RandomInteger+0x10> ori       $4,$4,5319
+00400488 <RandomInteger+0x18> sll       $2,$3,0x5
+00400490 <RandomInteger+0x20> addu      $2,$2,$3
+00400498 <RandomInteger+0x28> sll       $2,$2,0x2
+004004a0 <RandomInteger+0x30> addu      $2,$2,$3
+004004a8 <RandomInteger+0x38> addiu     $2,$2,81
+004004b0 <RandomInteger+0x40> mult      $2,$4
+004004b8 <RandomInteger+0x48> mfhi      $5
+004004c0 <RandomInteger+0x50> mflo      $4
+004004c8 <RandomInteger+0x58> srl       $4,$5,0x0
+004004d0 <RandomInteger+0x60> addu      $5,$0,$0
+004004d8 <RandomInteger+0x68> sra       $4,$4,0x9
+004004e0 <RandomInteger+0x70> sra       $3,$2,0x1f
+004004e8 <RandomInteger+0x78> subu      $4,$4,$3
+004004f0 <RandomInteger+0x80> sll       $3,$4,0x6
+004004f8 <RandomInteger+0x88> subu      $3,$3,$4
+00400500 <RandomInteger+0x90> sll       $3,$3,0x2
+00400508 <RandomInteger+0x98> addu      $3,$3,$4
+00400510 <RandomInteger+0xa0> sll       $3,$3,0x5
+00400518 <RandomInteger+0xa8> subu      $3,$3,$4
+00400520 <RandomInteger+0xb0> subu      $2,$2,$3
+00400528 <RandomInteger+0xb8> sw        $2,-32608($28)
+00400530 <RandomInteger+0xc0> jr        $31
+00400538 <RandomInteger+0xc8> nop       
+end_addr

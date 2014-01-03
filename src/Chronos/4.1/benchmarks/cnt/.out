@@ -1,0 +1,41 @@
+sim-profile: SimpleScalar/PISA Tool Set version 3.0 of August, 2003.
+Copyright (c) 1994-2003 by Todd M. Austin, Ph.D. and SimpleScalar, LLC.
+All Rights Reserved. This version of SimpleScalar is licensed for academic
+non-commercial use.  No portion of this work may be used by any commercial
+entity, or for any commercial purpose, without the prior written permission
+of SimpleScalar, LLC (info@simplescalar.com).
+
+error: no executable specified
+Usage: /home/sudiptac/sudiptac/Work/simplesim-3.0/sim-profile {-options} executable {arguments}
+
+sim-profile: This simulator implements a functional simulator with
+profiling support.  Run with the `-h' flag to see profiling options
+available.
+
+#
+# -option        <args>           #    <default> # description           
+#
+-config          <string>         #       <null> # load configuration from a file
+-dumpconfig      <string>         #       <null> # dump configuration to a file
+-h               <true|false>     #        false # print help message    
+-v               <true|false>     #        false # verbose operation     
+-d               <true|false>     #        false # enable debug message  
+-i               <true|false>     #        false # start in Dlite debugger
+-seed            <int>            #            1 # random number generator seed (0 for timer seed)
+-q               <true|false>     #        false # initialize and terminate immediately
+-chkpt           <string>         #       <null> # restore EIO trace execution from <fname>
+-redir:sim       <string>         #       <null> # redirect simulator output to file (non-interactive only)
+-redir:prog      <string>         #       <null> # redirect simulated program output to file
+-nice            <int>            #            0 # simulator scheduling priority
+-max:inst        <uint>           #            0 # maximum number of inst's to execute
+-all             <true|false>     #        false # enable all profile options
+-iclass          <true|false>     #        false # enable instruction class profiling
+-iprof           <true|false>     #        false # enable instruction profiling
+-brprof          <true|false>     #        false # enable branch instruction profiling
+-amprof          <true|false>     #        false # enable address mode profiling
+-segprof         <true|false>     #        false # enable load/store address segment profiling
+-tsymprof        <true|false>     #        false # enable text symbol profiling
+-taddrprof       <true|false>     #        false # enable text address profiling
+-dsymprof        <true|false>     #        false # enable data symbol profiling
+-internal        <true|false>     #        false # include compiler-internal symbols during symbol profiling
+-pcstat          <string list...> # sim_num_insn # profile stat(s) against text addr's (mult uses ok)

@@ -1,0 +1,3971 @@
+
+adpcm:     file format ss-coff-little
+
+Disassembly of section .text:
+00400140 <__start> lw $16,0($29)
+00400148 <__start+0x8> lui $28,4097
+00400150 <__start+0x10> addiu $28,$28,-31600
+00400158 <__start+0x18> addiu $17,$29,4
+00400160 <__start+0x20> addiu $3,$17,4
+00400168 <__start+0x28> sll $2,$16,0x2
+00400170 <__start+0x30> addu $3,$3,$2
+00400178 <__start+0x38> addu $18,$0,$3
+00400180 <__start+0x40> sw $18,-32636($28)
+00400188 <__start+0x48> addiu $29,$29,-24
+00400190 <__start+0x50> addu $4,$0,$16
+00400198 <__start+0x58> addu $5,$0,$17
+004001a0 <__start+0x60> addu $6,$0,$18
+004001a8 <__start+0x68> jal 004006d0 <__libc_init>
+004001b0 <__start+0x70> sw $0,-32640($28)
+004001b8 <__start+0x78> addu $4,$0,$16
+004001c0 <__start+0x80> addu $5,$0,$17
+004001c8 <__start+0x88> addu $6,$0,$18
+004001d0 <__start+0x90> jal 004001f0 <main>
+004001d8 <__start+0x98> addu $4,$0,$2
+004001e0 <__start+0xa0> jal 00400700 <exit>
+004001e8 <__start+0xa8> nop 
+main():
+adpcm.c:81
+short pcmdata_2[DATASIZE];
+
+struct adpcm_state coder_1_state, coder_2_state, decoder_state,state;
+
+int main() {
+004001f0 <main> addiu $29,$29,-16
+004001f8 <main+0x8> lui $12,4096
+00400200 <main+0x10> addiu $12,$12,9584
+00400208 <main+0x18> lui $13,4096
+00400210 <main+0x20> addiu $13,$13,5488
+00400218 <main+0x28> lh $7,-32624($28)
+00400220 <main+0x30> lb $8,-32622($28)
+00400228 <main+0x38> addiu $11,$0,2048
+00400230 <main+0x40> addiu $10,$0,1
+00400238 <main+0x48> sw $16,8($29)
+00400240 <main+0x50> addiu $16,$0,32767
+00400248 <main+0x58> lui $25,4096
+00400250 <main+0x60> addiu $25,$25,96
+00400258 <main+0x68> lui $24,4096
+00400260 <main+0x70> addiu $24,$24,160
+00400268 <main+0x78> lh $2,0($13)
+00400270 <main+0x80> addu $9,$0,$0
+00400278 <main+0x88> addiu $13,$13,2
+00400280 <main+0x90> subu $4,$2,$7
+00400288 <main+0x98> bgez $4,00400298 <main+0xa8>
+00400290 <main+0xa0> addiu $9,$0,8
+00400298 <main+0xa8> beq $9,$0,004002a8 <main+0xb8>
+004002a0 <main+0xb0> subu $4,$0,$4
+004002a8 <main+0xb8> addu $5,$0,$0
+004002b0 <main+0xc0> sra $3,$6,0x3
+004002b8 <main+0xc8> slt $2,$4,$6
+004002c0 <main+0xd0> bne $2,$0,004002e0 <main+0xf0>
+004002c8 <main+0xd8> addiu $5,$0,4
+004002d0 <main+0xe0> subu $4,$4,$6
+004002d8 <main+0xe8> addu $3,$3,$6
+004002e0 <main+0xf0> sra $6,$6,0x1
+004002e8 <main+0xf8> slt $2,$4,$6
+004002f0 <main+0x100> bne $2,$0,00400310 <main+0x120>
+004002f8 <main+0x108> ori $5,$5,2
+00400300 <main+0x110> subu $4,$4,$6
+00400308 <main+0x118> addu $3,$3,$6
+00400310 <main+0x120> sra $6,$6,0x1
+00400318 <main+0x128> slt $2,$4,$6
+00400320 <main+0x130> bne $2,$0,00400338 <main+0x148>
+00400328 <main+0x138> ori $5,$5,1
+00400330 <main+0x140> addu $3,$3,$6
+00400338 <main+0x148> beq $9,$0,00400350 <main+0x160>
+00400340 <main+0x150> subu $7,$7,$3
+00400348 <main+0x158> j 00400358 <main+0x168>
+00400350 <main+0x160> addu $7,$7,$3
+00400358 <main+0x168> slt $2,$16,$7
+00400360 <main+0x170> beq $2,$0,00400378 <main+0x188>
+00400368 <main+0x178> addiu $7,$0,32767
+00400370 <main+0x180> j 00400390 <main+0x1a0>
+00400378 <main+0x188> slti $2,$7,-32768
+00400380 <main+0x190> beq $2,$0,00400390 <main+0x1a0>
+00400388 <main+0x198> addiu $7,$0,-32768
+00400390 <main+0x1a0> or $5,$5,$9
+00400398 <main+0x1a8> sll $2,$5,0x2
+004003a0 <main+0x1b0> addu $2,$2,$25
+004003a8 <main+0x1b8> lw $2,0($2)
+004003b0 <main+0x1c0> addu $8,$8,$2
+004003b8 <main+0x1c8> bgez $8,004003c8 <main+0x1d8>
+004003c0 <main+0x1d0> addu $8,$0,$0
+004003c8 <main+0x1d8> slti $2,$8,89
+004003d0 <main+0x1e0> bne $2,$0,004003e0 <main+0x1f0>
+004003d8 <main+0x1e8> addiu $8,$0,88
+004003e0 <main+0x1f0> sll $2,$8,0x2
+004003e8 <main+0x1f8> addu $2,$2,$24
+004003f0 <main+0x200> lw $6,0($2)
+004003f8 <main+0x208> beq $10,$0,00400418 <main+0x228>
+00400400 <main+0x210> sll $2,$5,0x4
+00400408 <main+0x218> andi $14,$2,240
+00400410 <main+0x220> j 00400438 <main+0x248>
+00400418 <main+0x228> andi $2,$5,15
+00400420 <main+0x230> or $2,$2,$14
+00400428 <main+0x238> sb $2,0($12)
+00400430 <main+0x240> addiu $12,$12,1
+00400438 <main+0x248> sltiu $10,$10,1
+00400440 <main+0x250> addiu $11,$11,-1
+00400448 <main+0x258> bgtz $11,00400268 <main+0x78>
+00400450 <main+0x260> addiu $2,$28,-32624
+00400458 <main+0x268> sh $7,-32624($28)
+00400460 <main+0x270> sb $8,2($2)
+00400468 <main+0x278> bne $10,$0,00400478 <main+0x288>
+00400470 <main+0x280> sb $14,0($12)
+00400478 <main+0x288> lui $12,4096
+00400480 <main+0x290> addiu $12,$12,1392
+00400488 <main+0x298> lui $4,4096
+00400490 <main+0x2a0> addiu $4,$4,9584
+00400498 <main+0x2a8> addiu $11,$0,2048
+004004a0 <main+0x2b0> lh $7,-32624($28)
+004004a8 <main+0x2b8> lb $8,2($2)
+004004b0 <main+0x2c0> addu $10,$0,$0
+004004b8 <main+0x2c8> lui $24,4096
+004004c0 <main+0x2d0> addiu $24,$24,96
+004004c8 <main+0x2d8> addiu $14,$0,32767
+004004d0 <main+0x2e0> lui $13,4096
+004004d8 <main+0x2e8> addiu $13,$13,160
+004004e0 <main+0x2f0> sll $2,$8,0x2
+004004e8 <main+0x2f8> lui $6,4096
+004004f0 <main+0x300> addu $6,$6,$2
+004004f8 <main+0x308> lw $6,160($6)
+00400500 <main+0x310> beq $10,$0,00400518 <main+0x328>
+00400508 <main+0x318> andi $5,$15,15
+00400510 <main+0x320> j 00400540 <main+0x350>
+00400518 <main+0x328> lbu $2,0($4)
+00400520 <main+0x330> sll $2,$2,0x18
+00400528 <main+0x338> sra $15,$2,0x18
+00400530 <main+0x340> addiu $4,$4,1
+00400538 <main+0x348> srl $5,$2,0x1c
+00400540 <main+0x350> sll $2,$5,0x2
+00400548 <main+0x358> addu $2,$2,$24
+00400550 <main+0x360> lw $2,0($2)
+00400558 <main+0x368> xori $10,$10,1
+00400560 <main+0x370> addu $8,$8,$2
+00400568 <main+0x378> bgez $8,00400578 <main+0x388>
+00400570 <main+0x380> addu $8,$0,$0
+00400578 <main+0x388> slti $2,$8,89
+00400580 <main+0x390> bne $2,$0,00400590 <main+0x3a0>
+00400588 <main+0x398> addiu $8,$0,88
+00400590 <main+0x3a0> andi $9,$5,8
+00400598 <main+0x3a8> andi $5,$5,7
+004005a0 <main+0x3b0> sra $3,$6,0x3
+004005a8 <main+0x3b8> andi $2,$5,4
+004005b0 <main+0x3c0> beq $2,$0,004005c0 <main+0x3d0>
+004005b8 <main+0x3c8> addu $3,$3,$6
+004005c0 <main+0x3d0> andi $2,$5,2
+004005c8 <main+0x3d8> beq $2,$0,004005e0 <main+0x3f0>
+004005d0 <main+0x3e0> sra $2,$6,0x1
+004005d8 <main+0x3e8> addu $3,$3,$2
+004005e0 <main+0x3f0> andi $2,$5,1
+004005e8 <main+0x3f8> beq $2,$0,00400600 <main+0x410>
+004005f0 <main+0x400> sra $2,$6,0x2
+004005f8 <main+0x408> addu $3,$3,$2
+00400600 <main+0x410> beq $9,$0,00400618 <main+0x428>
+00400608 <main+0x418> subu $7,$7,$3
+00400610 <main+0x420> j 00400620 <main+0x430>
+00400618 <main+0x428> addu $7,$7,$3
+00400620 <main+0x430> slt $2,$14,$7
+00400628 <main+0x438> beq $2,$0,00400640 <main+0x450>
+00400630 <main+0x440> addiu $7,$0,32767
+00400638 <main+0x448> j 00400658 <main+0x468>
+00400640 <main+0x450> slti $2,$7,-32768
+00400648 <main+0x458> beq $2,$0,00400658 <main+0x468>
+00400650 <main+0x460> addiu $7,$0,-32768
+00400658 <main+0x468> sll $2,$8,0x2
+00400660 <main+0x470> addu $2,$2,$13
+00400668 <main+0x478> lw $6,0($2)
+00400670 <main+0x480> addiu $11,$11,-1
+00400678 <main+0x488> addu $2,$0,$7
+00400680 <main+0x490> sh $2,0($12)
+00400688 <main+0x498> addiu $12,$12,2
+00400690 <main+0x4a0> bgtz $11,00400500 <main+0x310>
+00400698 <main+0x4a8> sh $2,-32624($28)
+004006a0 <main+0x4b0> addiu $2,$0,1
+004006a8 <main+0x4b8> sb $8,-32622($28)
+004006b0 <main+0x4c0> lw $16,8($29)
+004006b8 <main+0x4c8> addiu $29,$29,16
+004006c0 <main+0x4d0> jr $31
+004006c8 <main+0x4d8> nop 
+__libc_init():
+munch-init.c:27
+004006d0 <__libc_init> addiu $29,$29,-24
+004006d8 <__libc_init+0x8> sw $31,16($29)
+munch-init.c:28
+004006e0 <__libc_init+0x10> jal 004008a0 <__init_misc>
+004006e8 <__libc_init+0x18> lw $31,16($29)
+004006f0 <__libc_init+0x20> addiu $29,$29,24
+004006f8 <__libc_init+0x28> jr $31
+exit():
+exit.c:39
+00400700 <exit> addiu $29,$29,-48
+00400708 <exit+0x8> sw $18,24($29)
+exit.c:42
+00400710 <exit+0x10> lw $18,-32752($28)
+exit.c:39
+00400718 <exit+0x18> sw $19,28($29)
+00400720 <exit+0x20> addu $19,$0,$4
+00400728 <exit+0x28> sw $31,40($29)
+00400730 <exit+0x30> sw $21,36($29)
+00400738 <exit+0x38> sw $20,32($29)
+00400740 <exit+0x40> sw $17,20($29)
+00400748 <exit+0x48> sw $16,16($29)
+exit.c:42
+00400750 <exit+0x50> beq $18,$0,00400840 <exit+0x140>
+00400758 <exit+0x58> addiu $21,$0,1
+00400760 <exit+0x60> addiu $20,$0,2
+exit.c:44
+00400768 <exit+0x68> lw $16,4($18)
+exit.c:45
+00400770 <exit+0x70> addu $2,$0,$16
+00400778 <exit+0x78> addiu $16,$16,-1
+00400780 <exit+0x80> beq $2,$0,00400830 <exit+0x130>
+00400788 <exit+0x88> sll $2,$16,0x1
+00400790 <exit+0x90> addu $2,$2,$16
+00400798 <exit+0x98> sll $2,$2,0x2
+004007a0 <exit+0xa0> addiu $17,$2,8
+exit.c:47
+004007a8 <exit+0xa8> addu $3,$18,$17
+exit.c:48
+004007b0 <exit+0xb0> lw $2,0($3)
+004007b8 <exit+0xb8> beq $2,$21,004007d8 <exit+0xd8>
+004007c0 <exit+0xc0> beq $2,$0,00400810 <exit+0x110>
+004007c8 <exit+0xc8> beq $2,$20,00400800 <exit+0x100>
+004007d0 <exit+0xd0> j 00400810 <exit+0x110>
+exit.c:53
+004007d8 <exit+0xd8> lw $2,4($3)
+004007e0 <exit+0xe0> lw $5,8($3)
+004007e8 <exit+0xe8> addu $4,$0,$19
+004007f0 <exit+0xf0> jalr $31,$2
+exit.c:54
+004007f8 <exit+0xf8> j 00400810 <exit+0x110>
+exit.c:56
+00400800 <exit+0x100> lw $2,4($3)
+00400808 <exit+0x108> jalr $31,$2
+exit.c:59
+00400810 <exit+0x110> addiu $17,$17,-12
+00400818 <exit+0x118> addu $2,$0,$16
+00400820 <exit+0x120> addiu $16,$16,-1
+00400828 <exit+0x128> bne $2,$0,004007a8 <exit+0xa8>
+exit.c:42
+00400830 <exit+0x130> lw $18,0($18)
+00400838 <exit+0x138> bne $18,$0,00400768 <exit+0x68>
+exit.c:71
+00400840 <exit+0x140> jal 00400b40 <_cleanup>
+exit.c:75
+00400848 <exit+0x148> addu $4,$0,$19
+00400850 <exit+0x150> jal 00400b90 <_exit>
+exit.c:76
+00400858 <exit+0x158> lw $31,40($29)
+00400860 <exit+0x160> lw $21,36($29)
+00400868 <exit+0x168> lw $20,32($29)
+00400870 <exit+0x170> lw $19,28($29)
+00400878 <exit+0x178> lw $18,24($29)
+00400880 <exit+0x180> lw $17,20($29)
+00400888 <exit+0x188> lw $16,16($29)
+00400890 <exit+0x190> addiu $29,$29,48
+00400898 <exit+0x198> jr $31
+__init_misc():
+init-misc.c:26
+004008a0 <__init_misc> addiu $29,$29,-24
+004008a8 <__init_misc+0x8> sw $16,16($29)
+004008b0 <__init_misc+0x10> addu $16,$0,$5
+004008b8 <__init_misc+0x18> sw $31,20($29)
+init-misc.c:30
+004008c0 <__init_misc+0x20> beq $16,$0,00400910 <__init_misc+0x70>
+004008c8 <__init_misc+0x28> lw $4,0($16)
+004008d0 <__init_misc+0x30> beq $4,$0,00400910 <__init_misc+0x70>
+init-misc.c:32
+004008d8 <__init_misc+0x38> addiu $5,$0,47
+004008e0 <__init_misc+0x40> jal 00400bb0 <strrchr>
+init-misc.c:33
+004008e8 <__init_misc+0x48> bne $2,$0,00400900 <__init_misc+0x60>
+init-misc.c:34
+004008f0 <__init_misc+0x50> lw $2,0($16)
+004008f8 <__init_misc+0x58> j 00400908 <__init_misc+0x68>
+init-misc.c:36
+00400900 <__init_misc+0x60> addiu $2,$2,1
+00400908 <__init_misc+0x68> sw $2,-32764($28)
+init-misc.c:38
+00400910 <__init_misc+0x70> lw $31,20($29)
+00400918 <__init_misc+0x78> lw $16,16($29)
+00400920 <__init_misc+0x80> addiu $29,$29,24
+00400928 <__init_misc+0x88> jr $31
+atexit():
+atexit.c:27
+00400930 <atexit> addiu $29,$29,-24
+00400938 <atexit+0x8> sw $16,16($29)
+00400940 <atexit+0x10> addu $16,$0,$4
+00400948 <atexit+0x18> sw $31,20($29)
+atexit.c:28
+00400950 <atexit+0x20> jal 004009b8 <__new_exitfn>
+00400958 <atexit+0x28> addu $4,$0,$2
+atexit.c:30
+00400960 <atexit+0x30> beq $4,$0,00400990 <atexit+0x60>
+atexit.c:35
+00400968 <atexit+0x38> addu $2,$0,$0
+atexit.c:33
+00400970 <atexit+0x40> addiu $3,$0,2
+00400978 <atexit+0x48> sw $3,0($4)
+atexit.c:34
+00400980 <atexit+0x50> sw $16,4($4)
+atexit.c:35
+00400988 <atexit+0x58> j 00400998 <atexit+0x68>
+atexit.c:31
+00400990 <atexit+0x60> addiu $2,$0,-1
+atexit.c:36
+00400998 <atexit+0x68> lw $31,20($29)
+004009a0 <atexit+0x70> lw $16,16($29)
+004009a8 <atexit+0x78> addiu $29,$29,24
+004009b0 <atexit+0x80> jr $31
+__new_exitfn():
+atexit.c:47
+004009b8 <__new_exitfn> lw $7,-32752($28)
+atexit.c:44
+004009c0 <__new_exitfn+0x8> addiu $29,$29,-32
+004009c8 <__new_exitfn+0x10> sw $31,24($29)
+atexit.c:47
+004009d0 <__new_exitfn+0x18> beq $7,$0,00400a70 <__new_exitfn+0xb8>
+atexit.c:50
+004009d8 <__new_exitfn+0x20> lw $2,4($7)
+004009e0 <__new_exitfn+0x28> addu $4,$0,$0
+004009e8 <__new_exitfn+0x30> beq $2,$0,00400a48 <__new_exitfn+0x90>
+004009f0 <__new_exitfn+0x38> addu $8,$0,$2
+004009f8 <__new_exitfn+0x40> addu $3,$0,$7
+00400a00 <__new_exitfn+0x48> addu $6,$0,$0
+atexit.c:51
+00400a08 <__new_exitfn+0x50> lw $2,8($3)
+00400a10 <__new_exitfn+0x58> addu $5,$0,$6
+00400a18 <__new_exitfn+0x60> beq $2,$0,00400ac8 <__new_exitfn+0x110>
+atexit.c:50
+00400a20 <__new_exitfn+0x68> addiu $3,$3,12
+00400a28 <__new_exitfn+0x70> addiu $6,$5,12
+00400a30 <__new_exitfn+0x78> addiu $4,$4,1
+00400a38 <__new_exitfn+0x80> sltu $2,$4,$8
+00400a40 <__new_exitfn+0x88> bne $2,$0,00400a08 <__new_exitfn+0x50>
+atexit.c:53
+00400a48 <__new_exitfn+0x90> lw $3,4($7)
+00400a50 <__new_exitfn+0x98> sltiu $2,$3,32
+00400a58 <__new_exitfn+0xa0> bne $2,$0,00400ae0 <__new_exitfn+0x128>
+atexit.c:47
+00400a60 <__new_exitfn+0xa8> lw $7,0($7)
+00400a68 <__new_exitfn+0xb0> bne $7,$0,004009d8 <__new_exitfn+0x20>
+atexit.c:57
+00400a70 <__new_exitfn+0xb8> addiu $4,$0,392
+00400a78 <__new_exitfn+0xc0> jal 00401208 <malloc>
+00400a80 <__new_exitfn+0xc8> addu $7,$0,$2
+atexit.c:58
+00400a88 <__new_exitfn+0xd0> beq $7,$0,00400b20 <__new_exitfn+0x168>
+atexit.c:60
+00400a90 <__new_exitfn+0xd8> lw $4,-32752($28)
+atexit.c:64
+00400a98 <__new_exitfn+0xe0> addiu $2,$7,8
+atexit.c:63
+00400aa0 <__new_exitfn+0xe8> addiu $3,$0,1
+00400aa8 <__new_exitfn+0xf0> sw $3,4($7)
+atexit.c:60
+00400ab0 <__new_exitfn+0xf8> sw $4,0($7)
+atexit.c:61
+00400ab8 <__new_exitfn+0x100> sw $7,-32752($28)
+atexit.c:64
+00400ac0 <__new_exitfn+0x108> j 00400b28 <__new_exitfn+0x170>
+atexit.c:52
+00400ac8 <__new_exitfn+0x110> addiu $2,$6,8
+00400ad0 <__new_exitfn+0x118> addu $2,$7,$2
+00400ad8 <__new_exitfn+0x120> j 00400b28 <__new_exitfn+0x170>
+atexit.c:54
+00400ae0 <__new_exitfn+0x128> addiu $2,$3,1
+00400ae8 <__new_exitfn+0x130> sw $2,4($7)
+00400af0 <__new_exitfn+0x138> sll $2,$3,0x1
+00400af8 <__new_exitfn+0x140> addu $2,$2,$3
+00400b00 <__new_exitfn+0x148> sll $2,$2,0x2
+00400b08 <__new_exitfn+0x150> addiu $2,$2,8
+00400b10 <__new_exitfn+0x158> addu $2,$7,$2
+00400b18 <__new_exitfn+0x160> j 00400b28 <__new_exitfn+0x170>
+atexit.c:59
+00400b20 <__new_exitfn+0x168> addu $2,$0,$0
+atexit.c:65
+00400b28 <__new_exitfn+0x170> lw $31,24($29)
+00400b30 <__new_exitfn+0x178> addiu $29,$29,32
+00400b38 <__new_exitfn+0x180> jr $31
+_cleanup():
+../sysdeps/posix/defs.c:69
+00400b40 <_cleanup> addiu $29,$29,-24
+00400b48 <_cleanup+0x8> sw $31,16($29)
+../sysdeps/posix/defs.c:70
+00400b50 <_cleanup+0x10> addu $4,$0,$0
+00400b58 <_cleanup+0x18> jal 00401b90 <fclose>
+00400b60 <_cleanup+0x20> lw $31,16($29)
+00400b68 <_cleanup+0x28> addiu $29,$29,24
+00400b70 <_cleanup+0x30> jr $31
+00400b78 <_cleanup+0x38> nop 
+00400b80 <_cleanup+0x40> j 00401e10 <syscall_error>
+00400b88 <_cleanup+0x48> nop 
+00400b90 <_exit> addiu $2,$0,1
+00400b98 <_exit+0x8> syscall 
+00400ba0 <_exit+0x10> bne $7,$0,00400b80 <_cleanup+0x40>
+00400ba8 <_exit+0x18> nop 
+strrchr():
+../sysdeps/generic/strrchr.c:26
+00400bb0 <strrchr> addiu $29,$29,-32
+00400bb8 <strrchr+0x8> sw $17,20($29)
+../sysdeps/generic/strrchr.c:29
+00400bc0 <strrchr+0x10> andi $17,$5,255
+../sysdeps/generic/strrchr.c:26
+00400bc8 <strrchr+0x18> sw $31,24($29)
+00400bd0 <strrchr+0x20> sw $16,16($29)
+../sysdeps/generic/strrchr.c:33
+00400bd8 <strrchr+0x28> bne $17,$0,00400bf8 <strrchr+0x48>
+../sysdeps/generic/strrchr.c:34
+00400be0 <strrchr+0x30> addu $5,$0,$0
+00400be8 <strrchr+0x38> jal 00401e30 <strchr>
+00400bf0 <strrchr+0x40> j 00400c38 <strrchr+0x88>
+../sysdeps/generic/strrchr.c:36
+00400bf8 <strrchr+0x48> addu $16,$0,$0
+../sysdeps/generic/strrchr.c:37
+00400c00 <strrchr+0x50> addu $5,$0,$17
+00400c08 <strrchr+0x58> jal 00401e30 <strchr>
+00400c10 <strrchr+0x60> beq $2,$0,00400c30 <strrchr+0x80>
+../sysdeps/generic/strrchr.c:39
+00400c18 <strrchr+0x68> addu $16,$0,$2
+../sysdeps/generic/strrchr.c:40
+00400c20 <strrchr+0x70> addiu $4,$16,1
+../sysdeps/generic/strrchr.c:41
+00400c28 <strrchr+0x78> j 00400c00 <strrchr+0x50>
+../sysdeps/generic/strrchr.c:43
+00400c30 <strrchr+0x80> addu $2,$0,$16
+../sysdeps/generic/strrchr.c:44
+00400c38 <strrchr+0x88> lw $31,24($29)
+00400c40 <strrchr+0x90> lw $17,20($29)
+00400c48 <strrchr+0x98> lw $16,16($29)
+00400c50 <strrchr+0xa0> addiu $29,$29,32
+00400c58 <strrchr+0xa8> jr $31
+initialize():
+malloc.c:92
+00400c60 <initialize> addiu $29,$29,-24
+00400c68 <initialize+0x8> lw $3,-32720($28)
+00400c70 <initialize+0x10> addiu $4,$0,12288
+malloc.c:93
+00400c78 <initialize+0x18> addiu $2,$0,1024
+malloc.c:92
+00400c80 <initialize+0x20> sw $31,20($29)
+00400c88 <initialize+0x28> sw $16,16($29)
+malloc.c:93
+00400c90 <initialize+0x30> sw $2,-32656($28)
+00400c98 <initialize+0x38> jalr $31,$3
+00400ca0 <initialize+0x40> addu $16,$0,$2
+00400ca8 <initialize+0x48> andi $2,$16,4095
+00400cb0 <initialize+0x50> beq $2,$0,00400ce0 <initialize+0x80>
+00400cb8 <initialize+0x58> addiu $4,$0,4096
+00400cc0 <initialize+0x60> subu $4,$4,$2
+00400cc8 <initialize+0x68> lw $2,-32720($28)
+00400cd0 <initialize+0x70> addu $16,$16,$4
+00400cd8 <initialize+0x78> jalr $31,$2
+00400ce0 <initialize+0x80> lw $2,-32588($28)
+00400ce8 <initialize+0x88> beq $2,$0,00400cf8 <initialize+0x98>
+00400cf0 <initialize+0x90> jalr $31,$2
+malloc.c:94
+00400cf8 <initialize+0x98> sw $16,-32584($28)
+malloc.c:95
+00400d00 <initialize+0xa0> beq $16,$0,00400dc0 <initialize+0x160>
+malloc.c:97
+00400d08 <initialize+0xa8> lw $2,-32656($28)
+00400d10 <initialize+0xb0> addu $4,$0,$16
+00400d18 <initialize+0xb8> addu $5,$0,$0
+00400d20 <initialize+0xc0> sll $6,$2,0x1
+00400d28 <initialize+0xc8> addu $6,$6,$2
+00400d30 <initialize+0xd0> sll $6,$6,0x2
+00400d38 <initialize+0xd8> jal 00402020 <memset>
+malloc.c:98
+00400d40 <initialize+0xe0> lw $4,-32584($28)
+malloc.c:104
+00400d48 <initialize+0xe8> lw $5,-32656($28)
+malloc.c:108
+00400d50 <initialize+0xf0> addiu $2,$0,1
+malloc.c:105
+00400d58 <initialize+0xf8> addiu $3,$0,1
+malloc.c:100
+00400d60 <initialize+0x100> sw $0,-32596($28)
+malloc.c:105
+00400d68 <initialize+0x108> sw $3,-32568($28)
+malloc.c:107
+00400d70 <initialize+0x110> sw $3,-32580($28)
+malloc.c:104
+00400d78 <initialize+0x118> sll $3,$5,0x1
+00400d80 <initialize+0x120> addu $3,$3,$5
+00400d88 <initialize+0x128> sll $3,$3,0x2
+malloc.c:98
+00400d90 <initialize+0x130> sw $0,0($4)
+malloc.c:99
+00400d98 <initialize+0x138> sw $0,8($4)
+00400da0 <initialize+0x140> sw $0,4($4)
+malloc.c:101
+00400da8 <initialize+0x148> sw $4,-32572($28)
+malloc.c:104
+00400db0 <initialize+0x150> sw $3,-32608($28)
+malloc.c:108
+00400db8 <initialize+0x158> j 00400dc8 <initialize+0x168>
+malloc.c:96
+00400dc0 <initialize+0x160> addu $2,$0,$0
+malloc.c:109
+00400dc8 <initialize+0x168> lw $31,20($29)
+00400dd0 <initialize+0x170> lw $16,16($29)
+00400dd8 <initialize+0x178> addiu $29,$29,24
+00400de0 <initialize+0x180> jr $31
+morecore():
+malloc.c:116
+00400de8 <morecore> lw $2,-32720($28)
+malloc.c:117
+00400df0 <morecore+0x8> addiu $29,$29,-40
+00400df8 <morecore+0x10> sw $19,28($29)
+00400e00 <morecore+0x18> addu $19,$0,$4
+00400e08 <morecore+0x20> sw $31,36($29)
+00400e10 <morecore+0x28> sw $20,32($29)
+00400e18 <morecore+0x30> sw $18,24($29)
+00400e20 <morecore+0x38> sw $17,20($29)
+00400e28 <morecore+0x40> sw $16,16($29)
+00400e30 <morecore+0x48> jalr $31,$2
+00400e38 <morecore+0x50> addu $16,$0,$2
+00400e40 <morecore+0x58> andi $2,$16,4095
+00400e48 <morecore+0x60> beq $2,$0,00400e78 <morecore+0x90>
+00400e50 <morecore+0x68> addiu $4,$0,4096
+00400e58 <morecore+0x70> subu $4,$4,$2
+00400e60 <morecore+0x78> lw $2,-32720($28)
+00400e68 <morecore+0x80> addu $16,$16,$4
+00400e70 <morecore+0x88> jalr $31,$2
+00400e78 <morecore+0x90> lw $2,-32588($28)
+00400e80 <morecore+0x98> beq $2,$0,00400e90 <morecore+0xa8>
+00400e88 <morecore+0xa0> jalr $31,$2
+00400e90 <morecore+0xa8> addu $18,$0,$16
+malloc.c:123
+00400e98 <morecore+0xb0> bne $18,$0,00400eb0 <morecore+0xc8>
+malloc.c:124
+00400ea0 <morecore+0xb8> addu $2,$0,$0
+00400ea8 <morecore+0xc0> j 004011c8 <morecore+0x3e0>
+malloc.c:127
+00400eb0 <morecore+0xc8> lw $5,-32572($28)
+00400eb8 <morecore+0xd0> addu $4,$18,$19
+00400ec0 <morecore+0xd8> subu $2,$4,$5
+00400ec8 <morecore+0xe0> bgez $2,00400ed8 <morecore+0xf0>
+00400ed0 <morecore+0xe8> addiu $2,$2,4095
+00400ed8 <morecore+0xf0> lw $3,-32656($28)
+00400ee0 <morecore+0xf8> sra $2,$2,0xc
+00400ee8 <morecore+0x100> addiu $2,$2,1
+00400ef0 <morecore+0x108> sltu $2,$3,$2
+00400ef8 <morecore+0x110> beq $2,$0,00401180 <morecore+0x398>
+malloc.c:129
+00400f00 <morecore+0x118> addu $17,$0,$3
+malloc.c:130
+00400f08 <morecore+0x120> addu $3,$0,$5
+00400f10 <morecore+0x128> subu $2,$4,$3
+00400f18 <morecore+0x130> bgez $2,00400f28 <morecore+0x140>
+00400f20 <morecore+0x138> addiu $2,$2,4095
+00400f28 <morecore+0x140> sra $2,$2,0xc
+00400f30 <morecore+0x148> addiu $2,$2,1
+00400f38 <morecore+0x150> sltu $2,$17,$2
+00400f40 <morecore+0x158> beq $2,$0,00400f58 <morecore+0x170>
+malloc.c:131
+00400f48 <morecore+0x160> sll $17,$17,0x1
+00400f50 <morecore+0x168> j 00400f10 <morecore+0x128>
+malloc.c:132
+00400f58 <morecore+0x170> sll $2,$17,0x1
+00400f60 <morecore+0x178> addu $2,$2,$17
+00400f68 <morecore+0x180> lw $3,-32720($28)
+00400f70 <morecore+0x188> sll $20,$2,0x2
+00400f78 <morecore+0x190> addu $4,$0,$20
+00400f80 <morecore+0x198> jalr $31,$3
+00400f88 <morecore+0x1a0> addu $16,$0,$2
+00400f90 <morecore+0x1a8> andi $2,$16,4095
+00400f98 <morecore+0x1b0> beq $2,$0,00400fc8 <morecore+0x1e0>
+00400fa0 <morecore+0x1b8> addiu $4,$0,4096
+00400fa8 <morecore+0x1c0> subu $4,$4,$2
+00400fb0 <morecore+0x1c8> lw $2,-32720($28)
+00400fb8 <morecore+0x1d0> addu $16,$16,$4
+00400fc0 <morecore+0x1d8> jalr $31,$2
+00400fc8 <morecore+0x1e0> lw $2,-32588($28)
+00400fd0 <morecore+0x1e8> beq $2,$0,00400fe0 <morecore+0x1f8>
+00400fd8 <morecore+0x1f0> jalr $31,$2
+malloc.c:133
+00400fe0 <morecore+0x1f8> bne $16,$0,00401010 <morecore+0x228>
+malloc.c:135
+00400fe8 <morecore+0x200> lw $2,-32720($28)
+00400ff0 <morecore+0x208> subu $4,$0,$19
+00400ff8 <morecore+0x210> jalr $31,$2
+malloc.c:136
+00401000 <morecore+0x218> addu $2,$0,$0
+00401008 <morecore+0x220> j 004011c8 <morecore+0x3e0>
+malloc.c:138
+00401010 <morecore+0x228> lw $2,-32656($28)
+00401018 <morecore+0x230> addu $4,$0,$16
+00401020 <morecore+0x238> lw $5,-32584($28)
+00401028 <morecore+0x240> sll $6,$2,0x1
+00401030 <morecore+0x248> addu $6,$6,$2
+00401038 <morecore+0x250> sll $6,$6,0x2
+00401040 <morecore+0x258> jal 00402190 <memcpy>
+malloc.c:139
+00401048 <morecore+0x260> lw $2,-32656($28)
+00401050 <morecore+0x268> addu $5,$0,$0
+00401058 <morecore+0x270> sll $4,$2,0x1
+00401060 <morecore+0x278> addu $4,$4,$2
+00401068 <morecore+0x280> sll $4,$4,0x2
+00401070 <morecore+0x288> addu $4,$16,$4
+00401078 <morecore+0x290> subu $2,$17,$2
+00401080 <morecore+0x298> sll $6,$2,0x1
+00401088 <morecore+0x2a0> addu $6,$6,$2
+00401090 <morecore+0x2a8> sll $6,$6,0x2
+00401098 <morecore+0x2b0> jal 00402020 <memset>
+malloc.c:141
+004010a0 <morecore+0x2b8> lw $4,-32584($28)
+malloc.c:142
+004010a8 <morecore+0x2c0> lw $2,-32572($28)
+004010b0 <morecore+0x2c8> subu $5,$4,$2
+004010b8 <morecore+0x2d0> addu $3,$0,$5
+004010c0 <morecore+0x2d8> bgez $5,004010d0 <morecore+0x2e8>
+004010c8 <morecore+0x2e0> addiu $3,$5,4095
+004010d0 <morecore+0x2e8> sra $3,$3,0xc
+004010d8 <morecore+0x2f0> sll $2,$3,0x1
+004010e0 <morecore+0x2f8> addu $2,$2,$3
+004010e8 <morecore+0x300> sll $2,$2,0x2
+004010f0 <morecore+0x308> addu $6,$2,$16
+004010f8 <morecore+0x310> sw $0,12($6)
+malloc.c:143
+00401100 <morecore+0x318> lw $3,-32656($28)
+malloc.c:148
+00401108 <morecore+0x320> lw $5,-32568($28)
+malloc.c:145
+00401110 <morecore+0x328> sw $16,-32584($28)
+malloc.c:143
+00401118 <morecore+0x330> sll $2,$3,0x1
+00401120 <morecore+0x338> addu $2,$2,$3
+00401128 <morecore+0x340> sll $2,$2,0x2
+malloc.c:147
+00401130 <morecore+0x348> lw $3,-32608($28)
+malloc.c:143
+00401138 <morecore+0x350> addiu $2,$2,4095
+00401140 <morecore+0x358> srl $2,$2,0xc
+malloc.c:148
+00401148 <morecore+0x360> addiu $5,$5,1
+malloc.c:143
+00401150 <morecore+0x368> sw $2,16($6)
+malloc.c:148
+00401158 <morecore+0x370> sw $5,-32568($28)
+malloc.c:147
+00401160 <morecore+0x378> addu $3,$20,$3
+00401168 <morecore+0x380> sw $3,-32608($28)
+malloc.c:149
+00401170 <morecore+0x388> jal 00402350 <_free_internal>
+malloc.c:150
+00401178 <morecore+0x390> sw $17,-32656($28)
+malloc.c:153
+00401180 <morecore+0x398> lw $3,-32572($28)
+00401188 <morecore+0x3a0> addu $2,$18,$19
+00401190 <morecore+0x3a8> subu $2,$2,$3
+00401198 <morecore+0x3b0> bgez $2,004011a8 <morecore+0x3c0>
+004011a0 <morecore+0x3b8> addiu $2,$2,4095
+004011a8 <morecore+0x3c0> sra $2,$2,0xc
+004011b0 <morecore+0x3c8> addiu $2,$2,1
+004011b8 <morecore+0x3d0> sw $2,-32592($28)
+malloc.c:154
+004011c0 <morecore+0x3d8> addu $2,$0,$18
+malloc.c:155
+004011c8 <morecore+0x3e0> lw $31,36($29)
+004011d0 <morecore+0x3e8> lw $20,32($29)
+004011d8 <morecore+0x3f0> lw $19,28($29)
+004011e0 <morecore+0x3f8> lw $18,24($29)
+004011e8 <morecore+0x400> lw $17,20($29)
+004011f0 <morecore+0x408> lw $16,16($29)
+004011f8 <morecore+0x410> addiu $29,$29,40
+00401200 <morecore+0x418> jr $31
+malloc():
+malloc.c:179
+00401208 <malloc> lw $2,-32604($28)
+malloc.c:161
+00401210 <malloc+0x8> addiu $29,$29,-40
+00401218 <malloc+0x10> sw $16,16($29)
+00401220 <malloc+0x18> addu $16,$0,$4
+00401228 <malloc+0x20> sw $31,36($29)
+00401230 <malloc+0x28> sw $20,32($29)
+00401238 <malloc+0x30> sw $19,28($29)
+00401240 <malloc+0x38> sw $18,24($29)
+00401248 <malloc+0x40> sw $17,20($29)
+malloc.c:179
+00401250 <malloc+0x48> beq $2,$0,00401268 <malloc+0x60>
+malloc.c:180
+00401258 <malloc+0x50> jalr $31,$2
+00401260 <malloc+0x58> j 00401b48 <malloc+0x940>
+malloc.c:182
+00401268 <malloc+0x60> lw $2,-32580($28)
+00401270 <malloc+0x68> bne $2,$0,00401288 <malloc+0x80>
+malloc.c:183
+00401278 <malloc+0x70> jal 00400c60 <initialize>
+00401280 <malloc+0x78> beq $2,$0,00401a18 <malloc+0x810>
+malloc.c:186
+00401288 <malloc+0x80> sltiu $2,$16,8
+00401290 <malloc+0x88> beq $2,$0,004012a0 <malloc+0x98>
+malloc.c:187
+00401298 <malloc+0x90> addiu $16,$0,8
+malloc.c:195
+004012a0 <malloc+0x98> sltiu $2,$16,2049
+004012a8 <malloc+0xa0> beq $2,$0,00401640 <malloc+0x438>
+malloc.c:199
+004012b0 <malloc+0xa8> addiu $17,$0,1
+malloc.c:200
+004012b8 <malloc+0xb0> addiu $16,$16,-1
+malloc.c:201
+004012c0 <malloc+0xb8> srl $16,$16,0x1
+004012c8 <malloc+0xc0> beq $16,$0,004012e8 <malloc+0xe0>
+malloc.c:202
+004012d0 <malloc+0xc8> addiu $17,$17,1
+004012d8 <malloc+0xd0> srl $16,$16,0x1
+004012e0 <malloc+0xd8> bne $16,$0,004012d0 <malloc+0xc8>
+malloc.c:206
+004012e8 <malloc+0xe0> sll $16,$17,0x3
+004012f0 <malloc+0xe8> lui $2,4096
+004012f8 <malloc+0xf0> addu $2,$2,$16
+00401300 <malloc+0xf8> lw $2,10608($2)
+malloc.c:207
+00401308 <malloc+0x100> beq $2,$0,00401460 <malloc+0x258>
+malloc.c:212
+00401310 <malloc+0x108> addu $6,$0,$2
+malloc.c:213
+00401318 <malloc+0x110> lw $3,4($6)
+00401320 <malloc+0x118> lw $2,0($6)
+00401328 <malloc+0x120> sw $2,0($3)
+malloc.c:214
+00401330 <malloc+0x128> lw $3,0($6)
+00401338 <malloc+0x130> beq $3,$0,00401350 <malloc+0x148>
+malloc.c:215
+00401340 <malloc+0x138> lw $2,4($6)
+00401348 <malloc+0x140> sw $2,4($3)
+malloc.c:216
+00401350 <malloc+0x148> lw $2,-32572($28)
+00401358 <malloc+0x150> subu $2,$6,$2
+00401360 <malloc+0x158> bgez $2,00401370 <malloc+0x168>
+00401368 <malloc+0x160> addiu $2,$2,4095
+00401370 <malloc+0x168> sra $2,$2,0xc
+00401378 <malloc+0x170> addiu $7,$2,1
+malloc.c:217
+00401380 <malloc+0x178> lw $3,-32584($28)
+00401388 <malloc+0x180> sll $2,$7,0x1
+00401390 <malloc+0x188> addu $2,$2,$7
+00401398 <malloc+0x190> sll $2,$2,0x2
+004013a0 <malloc+0x198> addu $3,$2,$3
+004013a8 <malloc+0x1a0> lw $2,4($3)
+004013b0 <malloc+0x1a8> addiu $2,$2,-1
+004013b8 <malloc+0x1b0> sw $2,4($3)
+004013c0 <malloc+0x1b8> beq $2,$0,004013e8 <malloc+0x1e0>
+malloc.c:218
+004013c8 <malloc+0x1c0> lw $2,0($6)
+004013d0 <malloc+0x1c8> andi $2,$2,4095
+004013d8 <malloc+0x1d0> srlv $2,$2,$17
+004013e0 <malloc+0x1d8> sw $2,8($3)
+malloc.c:223
+004013e8 <malloc+0x1e0> lw $2,-32568($28)
+malloc.c:224
+004013f0 <malloc+0x1e8> addiu $5,$0,1
+malloc.c:225
+004013f8 <malloc+0x1f0> lw $3,-32600($28)
+malloc.c:226
+00401400 <malloc+0x1f8> lw $4,-32576($28)
+malloc.c:224
+00401408 <malloc+0x200> sllv $5,$5,$17
+malloc.c:223
+00401410 <malloc+0x208> addiu $2,$2,1
+00401418 <malloc+0x210> sw $2,-32568($28)
+malloc.c:224
+00401420 <malloc+0x218> lw $2,-32608($28)
+malloc.c:225
+00401428 <malloc+0x220> addiu $3,$3,-1
+malloc.c:226
+00401430 <malloc+0x228> subu $4,$4,$5
+malloc.c:225
+00401438 <malloc+0x230> sw $3,-32600($28)
+malloc.c:226
+00401440 <malloc+0x238> sw $4,-32576($28)
+malloc.c:224
+00401448 <malloc+0x240> addu $2,$5,$2
+00401450 <malloc+0x248> sw $2,-32608($28)
+malloc.c:227
+00401458 <malloc+0x250> j 00401b40 <malloc+0x938>
+malloc.c:232
+00401460 <malloc+0x258> addiu $4,$0,4096
+00401468 <malloc+0x260> jal 00401208 <malloc>
+00401470 <malloc+0x268> addu $6,$0,$2
+malloc.c:233
+00401478 <malloc+0x270> beq $6,$0,00401a18 <malloc+0x810>
+malloc.c:237
+00401480 <malloc+0x278> addiu $4,$0,1
+00401488 <malloc+0x280> addiu $2,$0,4096
+00401490 <malloc+0x288> srav $3,$2,$17
+00401498 <malloc+0x290> sltu $2,$4,$3
+004014a0 <malloc+0x298> beq $2,$0,00401540 <malloc+0x338>
+004014a8 <malloc+0x2a0> addu $7,$0,$16
+004014b0 <malloc+0x2a8> lui $2,4096
+004014b8 <malloc+0x2b0> addiu $2,$2,10608
+004014c0 <malloc+0x2b8> addu $5,$7,$2
+004014c8 <malloc+0x2c0> addu $8,$0,$3
+malloc.c:240
+004014d0 <malloc+0x2c8> lui $3,4096
+004014d8 <malloc+0x2d0> addu $3,$3,$7
+004014e0 <malloc+0x2d8> lw $3,10608($3)
+malloc.c:239
+004014e8 <malloc+0x2e0> sllv $2,$4,$17
+004014f0 <malloc+0x2e8> addu $2,$6,$2
+malloc.c:240
+004014f8 <malloc+0x2f0> sw $3,0($2)
+malloc.c:241
+00401500 <malloc+0x2f8> sw $5,4($2)
+malloc.c:242
+00401508 <malloc+0x300> sw $2,0($5)
+malloc.c:243
+00401510 <malloc+0x308> lw $3,0($2)
+00401518 <malloc+0x310> beq $3,$0,00401528 <malloc+0x320>
+malloc.c:244
+00401520 <malloc+0x318> sw $2,4($3)
+malloc.c:237
+00401528 <malloc+0x320> addiu $4,$4,1
+00401530 <malloc+0x328> sltu $2,$4,$8
+00401538 <malloc+0x330> bne $2,$0,004014d0 <malloc+0x2c8>
+malloc.c:248
+00401540 <malloc+0x338> lw $2,-32572($28)
+00401548 <malloc+0x340> subu $2,$6,$2
+00401550 <malloc+0x348> bgez $2,00401560 <malloc+0x358>
+00401558 <malloc+0x350> addiu $2,$2,4095
+00401560 <malloc+0x358> sra $2,$2,0xc
+00401568 <malloc+0x360> addiu $7,$2,1
+malloc.c:249
+00401570 <malloc+0x368> lw $3,-32584($28)
+00401578 <malloc+0x370> sll $2,$7,0x1
+00401580 <malloc+0x378> addu $2,$2,$7
+malloc.c:253
+00401588 <malloc+0x380> lw $5,-32600($28)
+malloc.c:249
+00401590 <malloc+0x388> sll $2,$2,0x2
+00401598 <malloc+0x390> addu $2,$2,$3
+malloc.c:250
+004015a0 <malloc+0x398> addiu $3,$4,-1
+malloc.c:253
+004015a8 <malloc+0x3a0> addiu $5,$5,-1
+malloc.c:249
+004015b0 <malloc+0x3a8> sw $17,0($2)
+malloc.c:250
+004015b8 <malloc+0x3b0> sw $3,4($2)
+malloc.c:251
+004015c0 <malloc+0x3b8> sw $3,8($2)
+malloc.c:253
+004015c8 <malloc+0x3c0> addiu $2,$0,4096
+malloc.c:254
+004015d0 <malloc+0x3c8> lw $4,-32576($28)
+malloc.c:253
+004015d8 <malloc+0x3d0> srav $2,$2,$17
+004015e0 <malloc+0x3d8> addu $5,$5,$2
+malloc.c:255
+004015e8 <malloc+0x3e0> lw $2,-32608($28)
+malloc.c:254
+004015f0 <malloc+0x3e8> addiu $3,$0,1
+004015f8 <malloc+0x3f0> sllv $3,$3,$17
+malloc.c:253
+00401600 <malloc+0x3f8> sw $5,-32600($28)
+malloc.c:254
+00401608 <malloc+0x400> addiu $4,$4,4096
+00401610 <malloc+0x408> subu $4,$4,$3
+malloc.c:255
+00401618 <malloc+0x410> addiu $2,$2,-4096
+00401620 <malloc+0x418> addu $2,$2,$3
+malloc.c:254
+00401628 <malloc+0x420> sw $4,-32576($28)
+malloc.c:255
+00401630 <malloc+0x428> sw $2,-32608($28)
+malloc.c:257
+00401638 <malloc+0x430> j 00401b40 <malloc+0x938>
+malloc.c:265
+00401640 <malloc+0x438> lw $7,-32596($28)
+malloc.c:266
+00401648 <malloc+0x440> lw $5,-32584($28)
+malloc.c:264
+00401650 <malloc+0x448> addiu $2,$16,4095
+malloc.c:266
+00401658 <malloc+0x450> sll $4,$7,0x1
+00401660 <malloc+0x458> addu $3,$4,$7
+00401668 <malloc+0x460> sll $3,$3,0x2
+00401670 <malloc+0x468> addu $3,$3,$5
+00401678 <malloc+0x470> lw $3,0($3)
+malloc.c:264
+00401680 <malloc+0x478> srl $18,$2,0xc
+malloc.c:265
+00401688 <malloc+0x480> addu $20,$0,$7
+malloc.c:266
+00401690 <malloc+0x488> sltu $3,$3,$18
+00401698 <malloc+0x490> beq $3,$0,004018f8 <malloc+0x6f0>
+004016a0 <malloc+0x498> sll $19,$18,0xc
+malloc.c:268
+004016a8 <malloc+0x4a0> addu $2,$4,$7
+004016b0 <malloc+0x4a8> sll $2,$2,0x2
+004016b8 <malloc+0x4b0> addu $2,$2,$5
+004016c0 <malloc+0x4b8> lw $7,4($2)
+malloc.c:269
+004016c8 <malloc+0x4c0> bne $7,$20,004018b8 <malloc+0x6b0>
+malloc.c:274
+004016d0 <malloc+0x4c8> lw $7,8($5)
+malloc.c:276
+004016d8 <malloc+0x4d0> lw $3,-32592($28)
+malloc.c:275
+004016e0 <malloc+0x4d8> sll $2,$7,0x1
+004016e8 <malloc+0x4e0> addu $2,$2,$7
+004016f0 <malloc+0x4e8> sll $2,$2,0x2
+004016f8 <malloc+0x4f0> addu $2,$2,$5
+00401700 <malloc+0x4f8> lw $17,0($2)
+malloc.c:276
+00401708 <malloc+0x500> beq $3,$0,004017f0 <malloc+0x5e8>
+00401710 <malloc+0x508> addu $16,$7,$17
+00401718 <malloc+0x510> bne $16,$3,004017f0 <malloc+0x5e8>
+00401720 <malloc+0x518> lw $2,-32720($28)
+00401728 <malloc+0x520> addu $4,$0,$0
+00401730 <malloc+0x528> jalr $31,$2
+00401738 <malloc+0x530> lw $4,-32572($28)
+00401740 <malloc+0x538> addiu $3,$16,-1
+00401748 <malloc+0x540> sll $3,$3,0xc
+00401750 <malloc+0x548> addu $3,$3,$4
+00401758 <malloc+0x550> bne $2,$3,004017f0 <malloc+0x5e8>
+00401760 <malloc+0x558> subu $17,$18,$17
+00401768 <malloc+0x560> sll $16,$17,0xc
+00401770 <malloc+0x568> addu $4,$0,$16
+00401778 <malloc+0x570> jal 00400de8 <morecore>
+00401780 <malloc+0x578> beq $2,$0,004017f0 <malloc+0x5e8>
+malloc.c:283
+00401788 <malloc+0x580> lw $3,-32584($28)
+00401790 <malloc+0x588> lw $7,8($3)
+malloc.c:284
+00401798 <malloc+0x590> sll $2,$7,0x1
+004017a0 <malloc+0x598> addu $2,$2,$7
+004017a8 <malloc+0x5a0> sll $2,$2,0x2
+004017b0 <malloc+0x5a8> addu $2,$2,$3
+malloc.c:285
+004017b8 <malloc+0x5b0> lw $3,-32576($28)
+malloc.c:284
+004017c0 <malloc+0x5b8> lw $4,0($2)
+malloc.c:285
+004017c8 <malloc+0x5c0> addu $3,$16,$3
+malloc.c:284
+004017d0 <malloc+0x5c8> addu $4,$17,$4
+malloc.c:285
+004017d8 <malloc+0x5d0> sw $3,-32576($28)
+malloc.c:284
+004017e0 <malloc+0x5d8> sw $4,0($2)
+malloc.c:286
+004017e8 <malloc+0x5e0> j 004018b8 <malloc+0x6b0>
+malloc.c:288
+004017f0 <malloc+0x5e8> addu $4,$0,$19
+004017f8 <malloc+0x5f0> jal 00400de8 <morecore>
+00401800 <malloc+0x5f8> addu $6,$0,$2
+malloc.c:289
+00401808 <malloc+0x600> beq $6,$0,00401a18 <malloc+0x810>
+malloc.c:291
+00401810 <malloc+0x608> lw $2,-32572($28)
+00401818 <malloc+0x610> subu $2,$6,$2
+00401820 <malloc+0x618> bgez $2,00401830 <malloc+0x628>
+00401828 <malloc+0x620> addiu $2,$2,4095
+00401830 <malloc+0x628> sra $2,$2,0xc
+00401838 <malloc+0x630> addiu $7,$2,1
+malloc.c:296
+00401840 <malloc+0x638> addu $2,$0,$6
+malloc.c:292
+00401848 <malloc+0x640> lw $6,-32584($28)
+00401850 <malloc+0x648> sll $3,$7,0x1
+00401858 <malloc+0x650> addu $3,$3,$7
+malloc.c:294
+00401860 <malloc+0x658> lw $4,-32568($28)
+malloc.c:295
+00401868 <malloc+0x660> lw $5,-32608($28)
+malloc.c:292
+00401870 <malloc+0x668> sll $3,$3,0x2
+00401878 <malloc+0x670> addu $3,$3,$6
+malloc.c:294
+00401880 <malloc+0x678> addiu $4,$4,1
+malloc.c:295
+00401888 <malloc+0x680> addu $5,$19,$5
+malloc.c:292
+00401890 <malloc+0x688> sw $0,0($3)
+malloc.c:293
+00401898 <malloc+0x690> sw $18,4($3)
+malloc.c:294
+004018a0 <malloc+0x698> sw $4,-32568($28)
+malloc.c:295
+004018a8 <malloc+0x6a0> sw $5,-32608($28)
+malloc.c:296
+004018b0 <malloc+0x6a8> j 00401b48 <malloc+0x940>
+malloc.c:298
+004018b8 <malloc+0x6b0> lw $5,-32584($28)
+004018c0 <malloc+0x6b8> sll $4,$7,0x1
+004018c8 <malloc+0x6c0> addu $2,$4,$7
+004018d0 <malloc+0x6c8> sll $2,$2,0x2
+004018d8 <malloc+0x6d0> addu $2,$2,$5
+004018e0 <malloc+0x6d8> lw $2,0($2)
+004018e8 <malloc+0x6e0> sltu $2,$2,$18
+004018f0 <malloc+0x6e8> bne $2,$0,004016a8 <malloc+0x4a0>
+malloc.c:302
+004018f8 <malloc+0x6f0> addiu $3,$7,-1
+00401900 <malloc+0x6f8> lw $4,-32572($28)
+malloc.c:303
+00401908 <malloc+0x700> lw $8,-32584($28)
+00401910 <malloc+0x708> sll $2,$7,0x1
+00401918 <malloc+0x710> addu $2,$2,$7
+00401920 <malloc+0x718> sll $2,$2,0x2
+00401928 <malloc+0x720> addu $5,$2,$8
+00401930 <malloc+0x728> lw $9,0($5)
+malloc.c:302
+00401938 <malloc+0x730> sll $3,$3,0xc
+00401940 <malloc+0x738> addu $6,$3,$4
+malloc.c:303
+00401948 <malloc+0x740> sltu $2,$18,$9
+00401950 <malloc+0x748> beq $2,$0,00401a28 <malloc+0x820>
+malloc.c:307
+00401958 <malloc+0x750> addu $4,$7,$18
+00401960 <malloc+0x758> sll $2,$4,0x1
+00401968 <malloc+0x760> addu $2,$2,$4
+00401970 <malloc+0x768> sll $2,$2,0x2
+00401978 <malloc+0x770> addu $2,$2,$8
+00401980 <malloc+0x778> subu $3,$9,$18
+00401988 <malloc+0x780> sw $3,0($2)
+malloc.c:309
+00401990 <malloc+0x788> lw $3,4($5)
+00401998 <malloc+0x790> sw $3,4($2)
+malloc.c:311
+004019a0 <malloc+0x798> lw $3,8($5)
+004019a8 <malloc+0x7a0> sw $3,8($2)
+malloc.c:313
+004019b0 <malloc+0x7a8> lw $3,4($5)
+004019b8 <malloc+0x7b0> sw $4,-32596($28)
+004019c0 <malloc+0x7b8> lw $5,8($5)
+004019c8 <malloc+0x7c0> sll $2,$3,0x1
+004019d0 <malloc+0x7c8> addu $2,$2,$3
+004019d8 <malloc+0x7d0> sll $2,$2,0x2
+004019e0 <malloc+0x7d8> addu $2,$2,$8
+004019e8 <malloc+0x7e0> sw $4,8($2)
+004019f0 <malloc+0x7e8> sll $2,$5,0x1
+004019f8 <malloc+0x7f0> addu $2,$2,$5
+00401a00 <malloc+0x7f8> sll $2,$2,0x2
+00401a08 <malloc+0x800> addu $2,$2,$8
+malloc.c:316
+00401a10 <malloc+0x808> j 00401ab0 <malloc+0x8a8>
+malloc.c:290
+00401a18 <malloc+0x810> addu $2,$0,$0
+00401a20 <malloc+0x818> j 00401b48 <malloc+0x940>
+malloc.c:321
+00401a28 <malloc+0x820> lw $3,4($5)
+00401a30 <malloc+0x828> sll $2,$3,0x1
+00401a38 <malloc+0x830> addu $2,$2,$3
+00401a40 <malloc+0x838> lw $3,8($5)
+00401a48 <malloc+0x840> sll $2,$2,0x2
+00401a50 <malloc+0x848> addu $2,$2,$8
+00401a58 <malloc+0x850> sw $3,8($2)
+malloc.c:323
+00401a60 <malloc+0x858> lw $3,8($5)
+malloc.c:325
+00401a68 <malloc+0x860> lw $2,-32600($28)
+malloc.c:323
+00401a70 <malloc+0x868> lw $4,4($5)
+malloc.c:325
+00401a78 <malloc+0x870> addiu $2,$2,-1
+00401a80 <malloc+0x878> sw $2,-32600($28)
+malloc.c:323
+00401a88 <malloc+0x880> sll $2,$3,0x1
+00401a90 <malloc+0x888> addu $2,$2,$3
+00401a98 <malloc+0x890> sll $2,$2,0x2
+00401aa0 <malloc+0x898> addu $2,$2,$8
+00401aa8 <malloc+0x8a0> sw $4,-32596($28)
+00401ab0 <malloc+0x8a8> sw $4,4($2)
+malloc.c:328
+00401ab8 <malloc+0x8b0> lw $4,-32584($28)
+00401ac0 <malloc+0x8b8> sll $2,$7,0x1
+00401ac8 <malloc+0x8c0> addu $2,$2,$7
+malloc.c:330
+00401ad0 <malloc+0x8c8> lw $3,-32568($28)
+malloc.c:328
+00401ad8 <malloc+0x8d0> sll $2,$2,0x2
+00401ae0 <malloc+0x8d8> addu $2,$2,$4
+00401ae8 <malloc+0x8e0> sw $0,0($2)
+malloc.c:329
+00401af0 <malloc+0x8e8> sw $18,4($2)
+malloc.c:331
+00401af8 <malloc+0x8f0> lw $2,-32608($28)
+malloc.c:330
+00401b00 <malloc+0x8f8> addiu $3,$3,1
+00401b08 <malloc+0x900> sw $3,-32568($28)
+malloc.c:332
+00401b10 <malloc+0x908> lw $3,-32576($28)
+malloc.c:331
+00401b18 <malloc+0x910> sll $4,$18,0xc
+00401b20 <malloc+0x918> addu $2,$4,$2
+malloc.c:332
+00401b28 <malloc+0x920> subu $3,$3,$4
+malloc.c:331
+00401b30 <malloc+0x928> sw $2,-32608($28)
+malloc.c:332
+00401b38 <malloc+0x930> sw $3,-32576($28)
+malloc.c:335
+00401b40 <malloc+0x938> addu $2,$0,$6
+malloc.c:336
+00401b48 <malloc+0x940> lw $31,36($29)
+00401b50 <malloc+0x948> lw $20,32($29)
+00401b58 <malloc+0x950> lw $19,28($29)
+00401b60 <malloc+0x958> lw $18,24($29)
+00401b68 <malloc+0x960> lw $17,20($29)
+00401b70 <malloc+0x968> lw $16,16($29)
+00401b78 <malloc+0x970> addiu $29,$29,40
+00401b80 <malloc+0x978> jr $31
+00401b88 <malloc+0x980> nop 
+fclose():
+fclose.c:29
+00401b90 <fclose> addiu $29,$29,-32
+00401b98 <fclose+0x8> sw $16,16($29)
+00401ba0 <fclose+0x10> addu $16,$0,$4
+00401ba8 <fclose+0x18> sw $31,28($29)
+00401bb0 <fclose+0x20> sw $18,24($29)
+00401bb8 <fclose+0x28> sw $17,20($29)
+fclose.c:32
+00401bc0 <fclose+0x30> bne $16,$0,00401c58 <fclose+0xc8>
+fclose.c:36
+00401bc8 <fclose+0x38> lw $16,-32724($28)
+00401bd0 <fclose+0x40> beq $16,$0,00401c48 <fclose+0xb8>
+00401bd8 <fclose+0x48> lui $18,65261
+00401be0 <fclose+0x50> ori $18,$18,47806
+00401be8 <fclose+0x58> lui $17,65242
+00401bf0 <fclose+0x60> ori $17,$17,48875
+fclose.c:37
+00401bf8 <fclose+0x68> lw $2,0($16)
+00401c00 <fclose+0x70> bne $2,$18,00401c18 <fclose+0x88>
+00401c08 <fclose+0x78> lw $2,4($16)
+00401c10 <fclose+0x80> lw $16,0($2)
+00401c18 <fclose+0x88> lw $2,0($16)
+00401c20 <fclose+0x90> bne $2,$17,00401c38 <fclose+0xa8>
+fclose.c:38
+00401c28 <fclose+0x98> addu $4,$0,$16
+00401c30 <fclose+0xa0> jal 00401b90 <fclose>
+fclose.c:36
+00401c38 <fclose+0xa8> lw $16,68($16)
+00401c40 <fclose+0xb0> bne $16,$0,00401bf8 <fclose+0x68>
+fclose.c:39
+00401c48 <fclose+0xb8> addu $2,$0,$0
+00401c50 <fclose+0xc0> j 00401dd8 <fclose+0x248>
+fclose.c:42
+00401c58 <fclose+0xc8> lw $3,0($16)
+00401c60 <fclose+0xd0> lui $2,65261
+00401c68 <fclose+0xd8> ori $2,$2,47806
+00401c70 <fclose+0xe0> bne $3,$2,00401c88 <fclose+0xf8>
+00401c78 <fclose+0xe8> lw $2,4($16)
+00401c80 <fclose+0xf0> lw $16,0($2)
+00401c88 <fclose+0xf8> lw $3,0($16)
+00401c90 <fclose+0x100> lui $2,65242
+00401c98 <fclose+0x108> ori $2,$2,48875
+00401ca0 <fclose+0x110> beq $3,$2,00401cc8 <fclose+0x138>
+fclose.c:44
+00401ca8 <fclose+0x118> addiu $2,$0,22
+00401cb0 <fclose+0x120> sw $2,-32640($28)
+fclose.c:45
+00401cb8 <fclose+0x128> addiu $2,$0,-1
+00401cc0 <fclose+0x130> j 00401dd8 <fclose+0x248>
+fclose.c:48
+00401cc8 <fclose+0x138> lw $2,28($16)
+00401cd0 <fclose+0x140> andi $2,$2,2
+00401cd8 <fclose+0x148> beq $2,$0,00401d18 <fclose+0x188>
+00401ce0 <fclose+0x150> addu $4,$0,$16
+00401ce8 <fclose+0x158> addiu $5,$0,-1
+00401cf0 <fclose+0x160> jal 00403ce0 <__flshfp>
+00401cf8 <fclose+0x168> addiu $3,$0,-1
+00401d00 <fclose+0x170> bne $2,$3,00401d18 <fclose+0x188>
+fclose.c:51
+00401d08 <fclose+0x178> addiu $2,$0,-1
+00401d10 <fclose+0x180> j 00401dd8 <fclose+0x248>
+fclose.c:54
+00401d18 <fclose+0x188> lw $4,16($16)
+00401d20 <fclose+0x190> beq $4,$0,00401d48 <fclose+0x1b8>
+00401d28 <fclose+0x198> lw $2,76($16)
+00401d30 <fclose+0x1a0> andi $2,$2,2048
+00401d38 <fclose+0x1a8> bne $2,$0,00401d48 <fclose+0x1b8>
+fclose.c:55
+00401d40 <fclose+0x1b0> jal 00402c00 <free>
+fclose.c:58
+00401d48 <fclose+0x1b8> lw $2,44($16)
+00401d50 <fclose+0x1c0> beq $2,$0,00401d78 <fclose+0x1e8>
+fclose.c:59
+00401d58 <fclose+0x1c8> lw $4,24($16)
+00401d60 <fclose+0x1d0> jalr $31,$2
+00401d68 <fclose+0x1d8> addu $17,$0,$2
+00401d70 <fclose+0x1e0> j 00401dc0 <fclose+0x230>
+fclose.c:60
+00401d78 <fclose+0x1e8> lw $2,76($16)
+00401d80 <fclose+0x1f0> andi $2,$2,16384
+00401d88 <fclose+0x1f8> bne $2,$0,00401db8 <fclose+0x228>
+00401d90 <fclose+0x200> lw $4,24($16)
+00401d98 <fclose+0x208> beq $4,$0,00401db8 <fclose+0x228>
+fclose.c:61
+00401da0 <fclose+0x210> jal 004049c0 <__stdio_close>
+00401da8 <fclose+0x218> addu $17,$0,$2
+00401db0 <fclose+0x220> j 00401dc0 <fclose+0x230>
+fclose.c:63
+00401db8 <fclose+0x228> addu $17,$0,$0
+fclose.c:66
+00401dc0 <fclose+0x230> addu $4,$0,$16
+00401dc8 <fclose+0x238> jal 004047a8 <__invalidate>
+fclose.c:68
+00401dd0 <fclose+0x240> sra $2,$17,0x1f
+fclose.c:69
+00401dd8 <fclose+0x248> lw $31,28($29)
+00401de0 <fclose+0x250> lw $18,24($29)
+00401de8 <fclose+0x258> lw $17,20($29)
+00401df0 <fclose+0x260> lw $16,16($29)
+00401df8 <fclose+0x268> addiu $29,$29,32
+00401e00 <fclose+0x270> jr $31
+00401e08 <fclose+0x278> nop 
+00401e10 <syscall_error> lui $1,4096
+00401e18 <syscall_error+0x8> sw $2,1296($1)
+00401e20 <syscall_error+0x10> addiu $2,$0,-1
+00401e28 <syscall_error+0x18> jr $31
+strchr():
+../sysdeps/generic/strchr.c:31
+00401e30 <strchr> addiu $29,$29,-16
+../sysdeps/generic/strchr.c:36
+00401e38 <strchr+0x8> andi $5,$5,255
+../sysdeps/generic/strchr.c:41
+00401e40 <strchr+0x10> andi $2,$4,3
+00401e48 <strchr+0x18> beq $2,$0,00401e80 <strchr+0x50>
+../sysdeps/generic/strchr.c:43
+00401e50 <strchr+0x20> lbu $2,0($4)
+00401e58 <strchr+0x28> beq $2,$5,00401fa8 <strchr+0x178>
+../sysdeps/generic/strchr.c:45
+00401e60 <strchr+0x30> beq $2,$0,00401fb8 <strchr+0x188>
+../sysdeps/generic/strchr.c:42
+00401e68 <strchr+0x38> addiu $4,$4,1
+../sysdeps/generic/strchr.c:41
+00401e70 <strchr+0x40> andi $2,$4,3
+00401e78 <strchr+0x48> bne $2,$0,00401e50 <strchr+0x20>
+../sysdeps/generic/strchr.c:64
+00401e80 <strchr+0x50> lui $8,32510
+00401e88 <strchr+0x58> ori $8,$8,65279
+../sysdeps/generic/strchr.c:71
+00401e90 <strchr+0x60> sll $2,$5,0x8
+00401e98 <strchr+0x68> or $9,$5,$2
+../sysdeps/generic/strchr.c:72
+00401ea0 <strchr+0x70> sll $2,$9,0x10
+00401ea8 <strchr+0x78> or $9,$9,$2
+../sysdeps/generic/strchr.c:117
+00401eb0 <strchr+0x80> lw $6,0($4)
+../sysdeps/generic/strchr.c:120
+00401eb8 <strchr+0x88> nor $7,$0,$8
+../sysdeps/generic/strchr.c:117
+00401ec0 <strchr+0x90> addiu $4,$4,4
+../sysdeps/generic/strchr.c:120
+00401ec8 <strchr+0x98> addu $3,$6,$8
+00401ed0 <strchr+0xa0> nor $2,$0,$6
+00401ed8 <strchr+0xa8> xor $3,$3,$2
+00401ee0 <strchr+0xb0> and $3,$3,$7
+00401ee8 <strchr+0xb8> bne $3,$0,00401f20 <strchr+0xf0>
+00401ef0 <strchr+0xc0> xor $2,$6,$9
+00401ef8 <strchr+0xc8> addu $3,$2,$8
+00401f00 <strchr+0xd0> nor $2,$0,$2
+00401f08 <strchr+0xd8> xor $3,$3,$2
+00401f10 <strchr+0xe0> and $3,$3,$7
+00401f18 <strchr+0xe8> beq $3,$0,00401eb0 <strchr+0x80>
+../sysdeps/generic/strchr.c:139
+00401f20 <strchr+0xf0> lbu $3,-4($4)
+../sysdeps/generic/strchr.c:137
+00401f28 <strchr+0xf8> addiu $2,$4,-4
+../sysdeps/generic/strchr.c:139
+00401f30 <strchr+0x100> beq $3,$5,00401fc0 <strchr+0x190>
+../sysdeps/generic/strchr.c:141
+00401f38 <strchr+0x108> beq $3,$0,00401fb8 <strchr+0x188>
+../sysdeps/generic/strchr.c:143
+00401f40 <strchr+0x110> lbu $3,-3($4)
+00401f48 <strchr+0x118> addiu $2,$4,-3
+00401f50 <strchr+0x120> beq $3,$5,00401fc0 <strchr+0x190>
+../sysdeps/generic/strchr.c:145
+00401f58 <strchr+0x128> beq $3,$0,00401fb8 <strchr+0x188>
+../sysdeps/generic/strchr.c:147
+00401f60 <strchr+0x130> lbu $3,-2($4)
+00401f68 <strchr+0x138> addiu $2,$4,-2
+00401f70 <strchr+0x140> beq $3,$5,00401fc0 <strchr+0x190>
+../sysdeps/generic/strchr.c:149
+00401f78 <strchr+0x148> beq $3,$0,00401fb8 <strchr+0x188>
+../sysdeps/generic/strchr.c:151
+00401f80 <strchr+0x150> lbu $3,-1($4)
+00401f88 <strchr+0x158> addiu $2,$4,-1
+00401f90 <strchr+0x160> beq $3,$5,00401fc0 <strchr+0x190>
+../sysdeps/generic/strchr.c:153
+00401f98 <strchr+0x168> bne $3,$0,00401eb0 <strchr+0x80>
+../sysdeps/generic/strchr.c:154
+00401fa0 <strchr+0x170> j 00401fb8 <strchr+0x188>
+../sysdeps/generic/strchr.c:44
+00401fa8 <strchr+0x178> addu $2,$0,$4
+00401fb0 <strchr+0x180> j 00401fc0 <strchr+0x190>
+../sysdeps/generic/strchr.c:46
+00401fb8 <strchr+0x188> addu $2,$0,$0
+../sysdeps/generic/strchr.c:178
+00401fc0 <strchr+0x190> addiu $29,$29,16
+00401fc8 <strchr+0x198> jr $31
+__default_morecore():
+../sysdeps/generic/morecore.c:43
+00401fd0 <__default_morecore> addiu $29,$29,-24
+00401fd8 <__default_morecore+0x8> sw $31,16($29)
+../sysdeps/generic/morecore.c:48
+00401fe0 <__default_morecore+0x10> jal 00404e60 <__sbrk>
+../sysdeps/generic/morecore.c:49
+00401fe8 <__default_morecore+0x18> nor $3,$0,$2
+00401ff0 <__default_morecore+0x20> sltu $3,$0,$3
+00401ff8 <__default_morecore+0x28> subu $3,$0,$3
+00402000 <__default_morecore+0x30> and $2,$2,$3
+../sysdeps/generic/morecore.c:52
+00402008 <__default_morecore+0x38> lw $31,16($29)
+00402010 <__default_morecore+0x40> addiu $29,$29,24
+00402018 <__default_morecore+0x48> jr $31
+memset():
+../sysdeps/generic/memset.c:26
+00402020 <memset> addu $8,$0,$4
+../sysdeps/generic/memset.c:28
+00402028 <memset+0x8> sltiu $2,$6,8
+00402030 <memset+0x10> bne $2,$0,00402150 <memset+0x130>
+../sysdeps/generic/memset.c:33
+00402038 <memset+0x18> andi $7,$5,255
+../sysdeps/generic/memset.c:34
+00402040 <memset+0x20> sll $2,$7,0x8
+00402048 <memset+0x28> or $7,$7,$2
+../sysdeps/generic/memset.c:35
+00402050 <memset+0x30> sll $2,$7,0x10
+00402058 <memset+0x38> or $7,$7,$2
+../sysdeps/generic/memset.c:41
+00402060 <memset+0x40> andi $2,$4,3
+00402068 <memset+0x48> beq $2,$0,00402098 <memset+0x78>
+../sysdeps/generic/memset.c:43
+00402070 <memset+0x50> sb $5,0($8)
+../sysdeps/generic/memset.c:44
+00402078 <memset+0x58> addiu $8,$8,1
+../sysdeps/generic/memset.c:45
+00402080 <memset+0x60> addiu $6,$6,-1
+../sysdeps/generic/memset.c:46
+00402088 <memset+0x68> andi $2,$8,3
+00402090 <memset+0x70> bne $2,$0,00402070 <memset+0x50>
+../sysdeps/generic/memset.c:49
+00402098 <memset+0x78> srl $3,$6,0x5
+../sysdeps/generic/memset.c:50
+004020a0 <memset+0x80> beq $3,$0,00402110 <memset+0xf0>
+004020a8 <memset+0x88> addiu $2,$8,28
+../sysdeps/generic/memset.c:52
+004020b0 <memset+0x90> sw $7,0($8)
+../sysdeps/generic/memset.c:53
+004020b8 <memset+0x98> sw $7,-24($2)
+../sysdeps/generic/memset.c:54
+004020c0 <memset+0xa0> sw $7,-20($2)
+../sysdeps/generic/memset.c:55
+004020c8 <memset+0xa8> sw $7,-16($2)
+../sysdeps/generic/memset.c:56
+004020d0 <memset+0xb0> sw $7,-12($2)
+../sysdeps/generic/memset.c:57
+004020d8 <memset+0xb8> sw $7,-8($2)
+../sysdeps/generic/memset.c:58
+004020e0 <memset+0xc0> sw $7,-4($2)
+../sysdeps/generic/memset.c:59
+004020e8 <memset+0xc8> sw $7,0($2)
+../sysdeps/generic/memset.c:60
+004020f0 <memset+0xd0> addiu $2,$2,32
+004020f8 <memset+0xd8> addiu $8,$8,32
+../sysdeps/generic/memset.c:61
+00402100 <memset+0xe0> addiu $3,$3,-1
+../sysdeps/generic/memset.c:62
+00402108 <memset+0xe8> bne $3,$0,004020b0 <memset+0x90>
+../sysdeps/generic/memset.c:63
+00402110 <memset+0xf0> andi $6,$6,31
+../sysdeps/generic/memset.c:66
+00402118 <memset+0xf8> srl $3,$6,0x2
+../sysdeps/generic/memset.c:67
+00402120 <memset+0x100> beq $3,$0,00402148 <memset+0x128>
+../sysdeps/generic/memset.c:69
+00402128 <memset+0x108> sw $7,0($8)
+../sysdeps/generic/memset.c:70
+00402130 <memset+0x110> addiu $8,$8,4
+../sysdeps/generic/memset.c:71
+00402138 <memset+0x118> addiu $3,$3,-1
+../sysdeps/generic/memset.c:72
+00402140 <memset+0x120> bne $3,$0,00402128 <memset+0x108>
+../sysdeps/generic/memset.c:73
+00402148 <memset+0x128> andi $6,$6,3
+../sysdeps/generic/memset.c:77
+00402150 <memset+0x130> beq $6,$0,00402178 <memset+0x158>
+../sysdeps/generic/memset.c:79
+00402158 <memset+0x138> sb $5,0($8)
+../sysdeps/generic/memset.c:80
+00402160 <memset+0x140> addiu $8,$8,1
+../sysdeps/generic/memset.c:81
+00402168 <memset+0x148> addiu $6,$6,-1
+../sysdeps/generic/memset.c:82
+00402170 <memset+0x150> bne $6,$0,00402158 <memset+0x138>
+../sysdeps/generic/memset.c:84
+00402178 <memset+0x158> addu $2,$0,$4
+../sysdeps/generic/memset.c:85
+00402180 <memset+0x160> jr $31
+00402188 <memset+0x168> nop 
+memcpy():
+../sysdeps/generic/memcpy.c:28
+00402190 <memcpy> addiu $29,$29,-40
+00402198 <memcpy+0x8> sw $19,28($29)
+004021a0 <memcpy+0x10> addu $19,$0,$4
+004021a8 <memcpy+0x18> sw $18,24($29)
+004021b0 <memcpy+0x20> addu $18,$0,$6
+004021b8 <memcpy+0x28> sw $17,20($29)
+../sysdeps/generic/memcpy.c:29
+004021c0 <memcpy+0x30> addu $17,$0,$19
+../sysdeps/generic/memcpy.c:28
+004021c8 <memcpy+0x38> sw $16,16($29)
+../sysdeps/generic/memcpy.c:30
+004021d0 <memcpy+0x40> addu $16,$0,$5
+../sysdeps/generic/memcpy.c:35
+004021d8 <memcpy+0x48> sltiu $2,$18,16
+../sysdeps/generic/memcpy.c:28
+004021e0 <memcpy+0x50> sw $31,32($29)
+../sysdeps/generic/memcpy.c:35
+004021e8 <memcpy+0x58> bne $2,$0,004022c8 <memcpy+0x138>
+../sysdeps/generic/memcpy.c:38
+004021f0 <memcpy+0x60> subu $2,$0,$19
+004021f8 <memcpy+0x68> andi $2,$2,3
+00402200 <memcpy+0x70> subu $18,$18,$2
+../sysdeps/generic/memcpy.c:39
+00402208 <memcpy+0x78> addu $3,$0,$2
+00402210 <memcpy+0x80> beq $3,$0,00402248 <memcpy+0xb8>
+00402218 <memcpy+0x88> lbu $2,0($16)
+00402220 <memcpy+0x90> addiu $3,$3,-1
+00402228 <memcpy+0x98> addiu $16,$16,1
+00402230 <memcpy+0xa0> sb $2,0($17)
+00402238 <memcpy+0xa8> addiu $17,$17,1
+00402240 <memcpy+0xb0> bne $3,$0,00402218 <memcpy+0x88>
+../sysdeps/generic/memcpy.c:46
+00402248 <memcpy+0xb8> andi $2,$16,3
+00402250 <memcpy+0xc0> bne $2,$0,00402280 <memcpy+0xf0>
+00402258 <memcpy+0xc8> addu $4,$0,$17
+00402260 <memcpy+0xd0> addu $5,$0,$16
+00402268 <memcpy+0xd8> srl $6,$18,0x2
+00402270 <memcpy+0xe0> jal 00404ef0 <_wordcopy_fwd_aligned>
+00402278 <memcpy+0xe8> j 004022a0 <memcpy+0x110>
+00402280 <memcpy+0xf0> addu $4,$0,$17
+00402288 <memcpy+0xf8> addu $5,$0,$16
+00402290 <memcpy+0x100> srl $6,$18,0x2
+00402298 <memcpy+0x108> jal 00405100 <_wordcopy_fwd_dest_aligned>
+004022a0 <memcpy+0x110> addiu $2,$0,-4
+004022a8 <memcpy+0x118> and $2,$18,$2
+004022b0 <memcpy+0x120> addu $16,$16,$2
+004022b8 <memcpy+0x128> addu $17,$17,$2
+004022c0 <memcpy+0x130> andi $18,$18,3
+../sysdeps/generic/memcpy.c:52
+004022c8 <memcpy+0x138> addu $6,$0,$18
+004022d0 <memcpy+0x140> beq $6,$0,00402308 <memcpy+0x178>
+004022d8 <memcpy+0x148> lbu $2,0($16)
+004022e0 <memcpy+0x150> addiu $6,$6,-1
+004022e8 <memcpy+0x158> addiu $16,$16,1
+004022f0 <memcpy+0x160> sb $2,0($17)
+004022f8 <memcpy+0x168> addiu $17,$17,1
+00402300 <memcpy+0x170> bne $6,$0,004022d8 <memcpy+0x148>
+../sysdeps/generic/memcpy.c:54
+00402308 <memcpy+0x178> addu $2,$0,$19
+../sysdeps/generic/memcpy.c:55
+00402310 <memcpy+0x180> lw $31,32($29)
+00402318 <memcpy+0x188> lw $19,28($29)
+00402320 <memcpy+0x190> lw $18,24($29)
+00402328 <memcpy+0x198> lw $17,20($29)
+00402330 <memcpy+0x1a0> lw $16,16($29)
+00402338 <memcpy+0x1a8> addiu $29,$29,40
+00402340 <memcpy+0x1b0> jr $31
+00402348 <memcpy+0x1b8> nop 
+_free_internal():
+free.c:45
+00402350 <_free_internal> lw $10,-32572($28)
+free.c:39
+00402358 <_free_internal+0x8> addiu $29,$29,-40
+00402360 <_free_internal+0x10> addu $6,$0,$4
+00402368 <_free_internal+0x18> sw $31,32($29)
+00402370 <_free_internal+0x20> sw $19,28($29)
+00402378 <_free_internal+0x28> sw $18,24($29)
+00402380 <_free_internal+0x30> sw $17,20($29)
+00402388 <_free_internal+0x38> sw $16,16($29)
+free.c:45
+00402390 <_free_internal+0x40> subu $2,$6,$10
+00402398 <_free_internal+0x48> bgez $2,004023a8 <_free_internal+0x58>
+004023a0 <_free_internal+0x50> addiu $2,$2,4095
+004023a8 <_free_internal+0x58> sra $5,$2,0xc
+004023b0 <_free_internal+0x60> addiu $16,$5,1
+free.c:47
+004023b8 <_free_internal+0x68> lw $7,-32584($28)
+004023c0 <_free_internal+0x70> sll $2,$16,0x1
+004023c8 <_free_internal+0x78> addu $2,$2,$16
+004023d0 <_free_internal+0x80> sll $11,$2,0x2
+004023d8 <_free_internal+0x88> addu $8,$11,$7
+004023e0 <_free_internal+0x90> lw $9,0($8)
+free.c:48
+004023e8 <_free_internal+0x98> bne $9,$0,004028c0 <_free_internal+0x570>
+free.c:52
+004023f0 <_free_internal+0xa0> lw $2,-32568($28)
+free.c:59
+004023f8 <_free_internal+0xa8> lw $6,-32596($28)
+free.c:53
+00402400 <_free_internal+0xb0> lw $3,4($8)
+00402408 <_free_internal+0xb8> lw $4,-32608($28)
+free.c:54
+00402410 <_free_internal+0xc0> lw $5,-32576($28)
+free.c:52
+00402418 <_free_internal+0xc8> addiu $2,$2,-1
+00402420 <_free_internal+0xd0> sw $2,-32568($28)
+free.c:54
+00402428 <_free_internal+0xd8> lw $2,4($8)
+free.c:53
+00402430 <_free_internal+0xe0> sll $3,$3,0xc
+00402438 <_free_internal+0xe8> subu $4,$4,$3
+00402440 <_free_internal+0xf0> sw $4,-32608($28)
+free.c:54
+00402448 <_free_internal+0xf8> sll $2,$2,0xc
+00402450 <_free_internal+0x100> addu $2,$2,$5
+00402458 <_free_internal+0x108> sw $2,-32576($28)
+free.c:60
+00402460 <_free_internal+0x110> sltu $2,$16,$6
+00402468 <_free_internal+0x118> beq $2,$0,004024b8 <_free_internal+0x168>
+free.c:61
+00402470 <_free_internal+0x120> addu $3,$0,$7
+free.c:62
+00402478 <_free_internal+0x128> sll $2,$6,0x1
+00402480 <_free_internal+0x130> addu $2,$2,$6
+00402488 <_free_internal+0x138> sll $2,$2,0x2
+00402490 <_free_internal+0x140> addu $2,$2,$3
+00402498 <_free_internal+0x148> lw $6,8($2)
+004024a0 <_free_internal+0x150> sltu $2,$16,$6
+004024a8 <_free_internal+0x158> bne $2,$0,00402478 <_free_internal+0x128>
+004024b0 <_free_internal+0x160> j 00402528 <_free_internal+0x1d8>
+free.c:65
+004024b8 <_free_internal+0x168> addu $3,$0,$7
+free.c:66
+004024c0 <_free_internal+0x170> sll $2,$6,0x1
+004024c8 <_free_internal+0x178> addu $2,$2,$6
+004024d0 <_free_internal+0x180> sll $2,$2,0x2
+004024d8 <_free_internal+0x188> addu $2,$2,$3
+004024e0 <_free_internal+0x190> lw $6,4($2)
+free.c:67
+004024e8 <_free_internal+0x198> beq $6,$0,00402500 <_free_internal+0x1b0>
+004024f0 <_free_internal+0x1a0> sltu $2,$6,$16
+004024f8 <_free_internal+0x1a8> bne $2,$0,004024c0 <_free_internal+0x170>
+free.c:68
+00402500 <_free_internal+0x1b0> sll $2,$6,0x1
+00402508 <_free_internal+0x1b8> addu $2,$2,$6
+00402510 <_free_internal+0x1c0> sll $2,$2,0x2
+00402518 <_free_internal+0x1c8> addu $2,$2,$3
+00402520 <_free_internal+0x1d0> lw $6,8($2)
+free.c:72
+00402528 <_free_internal+0x1d8> lw $5,-32584($28)
+00402530 <_free_internal+0x1e0> sll $2,$6,0x1
+00402538 <_free_internal+0x1e8> addu $2,$2,$6
+00402540 <_free_internal+0x1f0> sll $2,$2,0x2
+00402548 <_free_internal+0x1f8> addu $4,$2,$5
+00402550 <_free_internal+0x200> lw $3,0($4)
+00402558 <_free_internal+0x208> addu $2,$6,$3
+00402560 <_free_internal+0x210> bne $16,$2,004025b0 <_free_internal+0x260>
+free.c:75
+00402568 <_free_internal+0x218> sll $2,$16,0x1
+00402570 <_free_internal+0x220> addu $2,$2,$16
+00402578 <_free_internal+0x228> sll $2,$2,0x2
+00402580 <_free_internal+0x230> addu $2,$2,$5
+00402588 <_free_internal+0x238> lw $2,4($2)
+free.c:76
+00402590 <_free_internal+0x240> addu $16,$0,$6
+free.c:75
+00402598 <_free_internal+0x248> addu $2,$3,$2
+004025a0 <_free_internal+0x250> sw $2,0($4)
+free.c:77
+004025a8 <_free_internal+0x258> j 00402648 <_free_internal+0x2f8>
+free.c:81
+004025b0 <_free_internal+0x260> sll $2,$16,0x1
+004025b8 <_free_internal+0x268> addu $2,$2,$16
+004025c0 <_free_internal+0x270> sll $2,$2,0x2
+004025c8 <_free_internal+0x278> addu $2,$2,$5
+004025d0 <_free_internal+0x280> lw $3,4($2)
+004025d8 <_free_internal+0x288> sw $3,0($2)
+free.c:82
+004025e0 <_free_internal+0x290> lw $3,4($4)
+004025e8 <_free_internal+0x298> sw $3,4($2)
+free.c:86
+004025f0 <_free_internal+0x2a0> lw $3,-32600($28)
+free.c:83
+004025f8 <_free_internal+0x2a8> sw $6,8($2)
+free.c:84
+00402600 <_free_internal+0x2b0> sw $16,4($4)
+free.c:85
+00402608 <_free_internal+0x2b8> lw $4,4($2)
+free.c:86
+00402610 <_free_internal+0x2c0> addiu $3,$3,1
+free.c:85
+00402618 <_free_internal+0x2c8> sll $2,$4,0x1
+00402620 <_free_internal+0x2d0> addu $2,$2,$4
+00402628 <_free_internal+0x2d8> sll $2,$2,0x2
+00402630 <_free_internal+0x2e0> addu $2,$2,$5
+free.c:86
+00402638 <_free_internal+0x2e8> sw $3,-32600($28)
+free.c:85
+00402640 <_free_internal+0x2f0> sw $16,8($2)
+free.c:92
+00402648 <_free_internal+0x2f8> lw $6,-32584($28)
+00402650 <_free_internal+0x300> sll $2,$16,0x1
+00402658 <_free_internal+0x308> addu $2,$2,$16
+00402660 <_free_internal+0x310> sll $19,$2,0x2
+00402668 <_free_internal+0x318> addu $5,$19,$6
+00402670 <_free_internal+0x320> lw $4,0($5)
+00402678 <_free_internal+0x328> lw $2,4($5)
+00402680 <_free_internal+0x330> addu $3,$16,$4
+00402688 <_free_internal+0x338> bne $3,$2,00402740 <_free_internal+0x3f0>
+free.c:94
+00402690 <_free_internal+0x340> sll $2,$3,0x1
+00402698 <_free_internal+0x348> addu $2,$2,$3
+004026a0 <_free_internal+0x350> sll $2,$2,0x2
+004026a8 <_free_internal+0x358> addu $2,$2,$6
+004026b0 <_free_internal+0x360> lw $2,0($2)
+free.c:96
+004026b8 <_free_internal+0x368> lw $3,4($5)
+free.c:94
+004026c0 <_free_internal+0x370> addu $2,$4,$2
+004026c8 <_free_internal+0x378> sw $2,0($5)
+free.c:96
+004026d0 <_free_internal+0x380> sll $2,$3,0x1
+004026d8 <_free_internal+0x388> addu $2,$2,$3
+004026e0 <_free_internal+0x390> sll $2,$2,0x2
+004026e8 <_free_internal+0x398> addu $2,$2,$6
+free.c:99
+004026f0 <_free_internal+0x3a0> lw $3,-32600($28)
+free.c:96
+004026f8 <_free_internal+0x3a8> lw $4,4($2)
+free.c:99
+00402700 <_free_internal+0x3b0> addiu $3,$3,-1
+free.c:98
+00402708 <_free_internal+0x3b8> sll $2,$4,0x1
+00402710 <_free_internal+0x3c0> addu $2,$2,$4
+00402718 <_free_internal+0x3c8> sll $2,$2,0x2
+00402720 <_free_internal+0x3d0> addu $2,$2,$6
+free.c:99
+00402728 <_free_internal+0x3d8> sw $3,-32600($28)
+free.c:96
+00402730 <_free_internal+0x3e0> sw $4,4($5)
+free.c:98
+00402738 <_free_internal+0x3e8> sw $16,8($2)
+free.c:103
+00402740 <_free_internal+0x3f0> lw $2,-32584($28)
+00402748 <_free_internal+0x3f8> addu $2,$19,$2
+00402750 <_free_internal+0x400> lw $17,0($2)
+free.c:104
+00402758 <_free_internal+0x408> sltiu $2,$17,8
+00402760 <_free_internal+0x410> bne $2,$0,004028b0 <_free_internal+0x560>
+00402768 <_free_internal+0x418> lw $2,-32592($28)
+00402770 <_free_internal+0x420> addu $18,$16,$17
+00402778 <_free_internal+0x428> bne $18,$2,004028b0 <_free_internal+0x560>
+00402780 <_free_internal+0x430> lw $2,-32720($28)
+00402788 <_free_internal+0x438> addu $4,$0,$0
+00402790 <_free_internal+0x440> jalr $31,$2
+00402798 <_free_internal+0x448> lw $4,-32572($28)
+004027a0 <_free_internal+0x450> addiu $3,$18,-1
+004027a8 <_free_internal+0x458> sll $3,$3,0xc
+004027b0 <_free_internal+0x460> addu $3,$3,$4
+004027b8 <_free_internal+0x468> bne $2,$3,004028b0 <_free_internal+0x560>
+free.c:107
+004027c0 <_free_internal+0x470> sll $16,$17,0xc
+free.c:108
+004027c8 <_free_internal+0x478> lw $2,-32592($28)
+free.c:109
+004027d0 <_free_internal+0x480> lw $3,-32720($28)
+004027d8 <_free_internal+0x488> subu $4,$0,$16
+free.c:108
+004027e0 <_free_internal+0x490> subu $2,$2,$17
+004027e8 <_free_internal+0x498> sw $2,-32592($28)
+free.c:109
+004027f0 <_free_internal+0x4a0> jalr $31,$3
+free.c:110
+004027f8 <_free_internal+0x4a8> lw $5,-32584($28)
+00402800 <_free_internal+0x4b0> addu $4,$19,$5
+00402808 <_free_internal+0x4b8> lw $3,8($4)
+00402810 <_free_internal+0x4c0> sll $2,$3,0x1
+00402818 <_free_internal+0x4c8> addu $2,$2,$3
+00402820 <_free_internal+0x4d0> lw $3,4($4)
+00402828 <_free_internal+0x4d8> sll $2,$2,0x2
+00402830 <_free_internal+0x4e0> addu $2,$2,$5
+00402838 <_free_internal+0x4e8> sw $3,4($2)
+free.c:115
+00402840 <_free_internal+0x4f0> lw $2,-32600($28)
+free.c:116
+00402848 <_free_internal+0x4f8> lw $3,-32576($28)
+free.c:112
+00402850 <_free_internal+0x500> lw $6,4($4)
+free.c:115
+00402858 <_free_internal+0x508> addiu $2,$2,-1
+free.c:116
+00402860 <_free_internal+0x510> subu $3,$3,$16
+free.c:115
+00402868 <_free_internal+0x518> sw $2,-32600($28)
+free.c:112
+00402870 <_free_internal+0x520> sll $2,$6,0x1
+00402878 <_free_internal+0x528> addu $2,$2,$6
+free.c:116
+00402880 <_free_internal+0x530> sw $3,-32576($28)
+free.c:112
+00402888 <_free_internal+0x538> lw $3,8($4)
+00402890 <_free_internal+0x540> sll $2,$2,0x2
+00402898 <_free_internal+0x548> addu $2,$2,$5
+004028a0 <_free_internal+0x550> sw $3,8($2)
+free.c:114
+004028a8 <_free_internal+0x558> lw $16,8($4)
+free.c:120
+004028b0 <_free_internal+0x560> sw $16,-32596($28)
+free.c:121
+004028b8 <_free_internal+0x568> j 00402bc8 <_free_internal+0x878>
+free.c:125
+004028c0 <_free_internal+0x570> lw $4,-32568($28)
+free.c:131
+004028c8 <_free_internal+0x578> lw $3,8($8)
+004028d0 <_free_internal+0x580> sll $2,$5,0xc
+004028d8 <_free_internal+0x588> addu $2,$2,$10
+free.c:128
+004028e0 <_free_internal+0x590> lw $5,-32576($28)
+free.c:131
+004028e8 <_free_internal+0x598> sllv $3,$3,$9
+004028f0 <_free_internal+0x5a0> addu $7,$2,$3
+free.c:126
+004028f8 <_free_internal+0x5a8> lw $3,-32608($28)
+00402900 <_free_internal+0x5b0> addiu $10,$0,1
+free.c:125
+00402908 <_free_internal+0x5b8> addiu $4,$4,-1
+00402910 <_free_internal+0x5c0> sw $4,-32568($28)
+free.c:127
+00402918 <_free_internal+0x5c8> lw $4,-32600($28)
+free.c:126
+00402920 <_free_internal+0x5d0> sllv $2,$10,$9
+00402928 <_free_internal+0x5d8> subu $3,$3,$2
+00402930 <_free_internal+0x5e0> sw $3,-32608($28)
+free.c:134
+00402938 <_free_internal+0x5e8> lw $3,4($8)
+free.c:127
+00402940 <_free_internal+0x5f0> addiu $4,$4,1
+free.c:128
+00402948 <_free_internal+0x5f8> addu $2,$2,$5
+00402950 <_free_internal+0x600> sw $2,-32576($28)
+free.c:134
+00402958 <_free_internal+0x608> addiu $2,$0,4096
+free.c:127
+00402960 <_free_internal+0x610> sw $4,-32600($28)
+free.c:134
+00402968 <_free_internal+0x618> srav $4,$2,$9
+00402970 <_free_internal+0x620> addiu $2,$4,-1
+00402978 <_free_internal+0x628> bne $3,$2,00402ac8 <_free_internal+0x778>
+free.c:138
+00402980 <_free_internal+0x630> addu $3,$0,$7
+free.c:139
+00402988 <_free_internal+0x638> addiu $6,$0,1
+00402990 <_free_internal+0x640> sltu $2,$10,$4
+00402998 <_free_internal+0x648> beq $2,$0,004029c0 <_free_internal+0x670>
+free.c:140
+004029a0 <_free_internal+0x650> lw $3,0($3)
+free.c:139
+004029a8 <_free_internal+0x658> addiu $6,$6,1
+004029b0 <_free_internal+0x660> sltu $2,$6,$4
+004029b8 <_free_internal+0x668> bne $2,$0,004029a0 <_free_internal+0x650>
+free.c:141
+004029c0 <_free_internal+0x670> lw $2,4($7)
+004029c8 <_free_internal+0x678> sw $3,0($2)
+free.c:142
+004029d0 <_free_internal+0x680> beq $3,$0,004029e8 <_free_internal+0x698>
+free.c:143
+004029d8 <_free_internal+0x688> lw $2,4($7)
+004029e0 <_free_internal+0x690> sw $2,4($3)
+free.c:153
+004029e8 <_free_internal+0x698> lw $2,-32572($28)
+004029f0 <_free_internal+0x6a0> addiu $4,$16,-1
+004029f8 <_free_internal+0x6a8> sll $4,$4,0xc
+free.c:144
+00402a00 <_free_internal+0x6b0> lw $3,-32584($28)
+free.c:148
+00402a08 <_free_internal+0x6b8> lw $5,-32568($28)
+free.c:149
+00402a10 <_free_internal+0x6c0> lw $6,-32608($28)
+free.c:153
+00402a18 <_free_internal+0x6c8> addu $4,$4,$2
+free.c:144
+00402a20 <_free_internal+0x6d0> sll $2,$16,0x1
+00402a28 <_free_internal+0x6d8> addu $2,$2,$16
+00402a30 <_free_internal+0x6e0> sll $2,$2,0x2
+00402a38 <_free_internal+0x6e8> addu $2,$2,$3
+free.c:145
+00402a40 <_free_internal+0x6f0> addiu $3,$0,1
+00402a48 <_free_internal+0x6f8> sw $3,4($2)
+free.c:150
+00402a50 <_free_internal+0x700> lw $3,-32600($28)
+free.c:148
+00402a58 <_free_internal+0x708> addiu $5,$5,1
+00402a60 <_free_internal+0x710> sw $5,-32568($28)
+free.c:151
+00402a68 <_free_internal+0x718> lw $5,-32576($28)
+free.c:149
+00402a70 <_free_internal+0x720> addiu $6,$6,4096
+free.c:144
+00402a78 <_free_internal+0x728> sw $0,0($2)
+free.c:150
+00402a80 <_free_internal+0x730> addiu $2,$0,4096
+00402a88 <_free_internal+0x738> srav $2,$2,$9
+free.c:149
+00402a90 <_free_internal+0x740> sw $6,-32608($28)
+free.c:150
+00402a98 <_free_internal+0x748> subu $3,$3,$2
+free.c:151
+00402aa0 <_free_internal+0x750> addiu $5,$5,-4096
+free.c:150
+00402aa8 <_free_internal+0x758> sw $3,-32600($28)
+free.c:151
+00402ab0 <_free_internal+0x760> sw $5,-32576($28)
+free.c:153
+00402ab8 <_free_internal+0x768> jal 00402c00 <free>
+free.c:154
+00402ac0 <_free_internal+0x770> j 00402bc8 <_free_internal+0x878>
+free.c:155
+00402ac8 <_free_internal+0x778> beq $3,$0,00402b38 <_free_internal+0x7e8>
+free.c:161
+00402ad0 <_free_internal+0x780> lw $2,0($7)
+00402ad8 <_free_internal+0x788> sw $2,0($6)
+free.c:162
+00402ae0 <_free_internal+0x790> sw $7,4($6)
+free.c:163
+00402ae8 <_free_internal+0x798> sw $6,0($7)
+free.c:164
+00402af0 <_free_internal+0x7a0> lw $2,0($6)
+00402af8 <_free_internal+0x7a8> beq $2,$0,00402b08 <_free_internal+0x7b8>
+free.c:165
+00402b00 <_free_internal+0x7b0> sw $6,4($2)
+free.c:166
+00402b08 <_free_internal+0x7b8> lw $3,-32584($28)
+00402b10 <_free_internal+0x7c0> addu $3,$11,$3
+00402b18 <_free_internal+0x7c8> lw $2,4($3)
+00402b20 <_free_internal+0x7d0> addiu $2,$2,1
+00402b28 <_free_internal+0x7d8> sw $2,4($3)
+free.c:167
+00402b30 <_free_internal+0x7e0> j 00402bc8 <_free_internal+0x878>
+free.c:173
+00402b38 <_free_internal+0x7e8> addu $7,$0,$6
+free.c:175
+00402b40 <_free_internal+0x7f0> andi $2,$7,4095
+00402b48 <_free_internal+0x7f8> srlv $2,$2,$9
+00402b50 <_free_internal+0x800> sw $2,8($8)
+free.c:178
+00402b58 <_free_internal+0x808> sll $2,$9,0x3
+free.c:174
+00402b60 <_free_internal+0x810> sw $10,4($8)
+free.c:178
+00402b68 <_free_internal+0x818> lui $3,4096
+00402b70 <_free_internal+0x820> addu $3,$3,$2
+00402b78 <_free_internal+0x828> lw $3,10608($3)
+00402b80 <_free_internal+0x830> sw $3,0($7)
+free.c:179
+00402b88 <_free_internal+0x838> lui $3,4096
+00402b90 <_free_internal+0x840> addiu $3,$3,10608
+00402b98 <_free_internal+0x848> addu $2,$2,$3
+00402ba0 <_free_internal+0x850> sw $2,4($7)
+free.c:180
+00402ba8 <_free_internal+0x858> sw $7,0($2)
+free.c:181
+00402bb0 <_free_internal+0x860> lw $2,0($7)
+00402bb8 <_free_internal+0x868> beq $2,$0,00402bc8 <_free_internal+0x878>
+free.c:182
+00402bc0 <_free_internal+0x870> sw $7,4($2)
+free.c:186
+00402bc8 <_free_internal+0x878> lw $31,32($29)
+00402bd0 <_free_internal+0x880> lw $19,28($29)
+00402bd8 <_free_internal+0x888> lw $18,24($29)
+00402be0 <_free_internal+0x890> lw $17,20($29)
+00402be8 <_free_internal+0x898> lw $16,16($29)
+00402bf0 <_free_internal+0x8a0> addiu $29,$29,40
+00402bf8 <_free_internal+0x8a8> jr $31
+free():
+free.c:191
+00402c00 <free> addiu $29,$29,-24
+00402c08 <free+0x8> sw $31,16($29)
+free.c:195
+00402c10 <free+0x10> beq $4,$0,00402c88 <free+0x88>
+free.c:198
+00402c18 <free+0x18> lw $3,-32704($28)
+00402c20 <free+0x20> beq $3,$0,00402c48 <free+0x48>
+free.c:199
+00402c28 <free+0x28> lw $2,4($3)
+00402c30 <free+0x30> beq $2,$4,00402c68 <free+0x68>
+free.c:198
+00402c38 <free+0x38> lw $3,0($3)
+00402c40 <free+0x40> bne $3,$0,00402c28 <free+0x28>
+free.c:206
+00402c48 <free+0x48> lw $2,-32560($28)
+00402c50 <free+0x50> beq $2,$0,00402c80 <free+0x80>
+free.c:207
+00402c58 <free+0x58> jalr $31,$2
+00402c60 <free+0x60> j 00402c88 <free+0x88>
+free.c:202
+00402c68 <free+0x68> lw $4,8($3)
+free.c:201
+00402c70 <free+0x70> sw $0,4($3)
+free.c:203
+00402c78 <free+0x78> j 00402c48 <free+0x48>
+free.c:209
+00402c80 <free+0x80> jal 00402350 <_free_internal>
+free.c:210
+00402c88 <free+0x88> lw $31,16($29)
+00402c90 <free+0x90> addiu $29,$29,24
+00402c98 <free+0x98> jr $31
+__stdio_check_funcs():
+internals.c:29
+00402ca0 <__stdio_check_funcs> addiu $29,$29,-24
+00402ca8 <__stdio_check_funcs+0x8> sw $16,16($29)
+00402cb0 <__stdio_check_funcs+0x10> addu $16,$0,$4
+00402cb8 <__stdio_check_funcs+0x18> sw $31,20($29)
+internals.c:30
+00402cc0 <__stdio_check_funcs+0x20> lw $2,76($16)
+00402cc8 <__stdio_check_funcs+0x28> andi $2,$2,16384
+00402cd0 <__stdio_check_funcs+0x30> bne $2,$0,00402d88 <__stdio_check_funcs+0xe8>
+internals.c:38
+00402cd8 <__stdio_check_funcs+0x38> lw $2,-32688($28)
+00402ce0 <__stdio_check_funcs+0x40> lui $3,4096
+00402ce8 <__stdio_check_funcs+0x48> lw $3,1252($3)
+00402cf0 <__stdio_check_funcs+0x50> sw $2,52($16)
+00402cf8 <__stdio_check_funcs+0x58> sw $3,56($16)
+internals.c:39
+00402d00 <__stdio_check_funcs+0x60> lui $5,4096
+00402d08 <__stdio_check_funcs+0x68> addiu $5,$5,0
+00402d10 <__stdio_check_funcs+0x70> lw $2,0($5)
+00402d18 <__stdio_check_funcs+0x78> lw $3,4($5)
+00402d20 <__stdio_check_funcs+0x80> lw $4,8($5)
+00402d28 <__stdio_check_funcs+0x88> sw $2,32($16)
+00402d30 <__stdio_check_funcs+0x90> sw $3,36($16)
+00402d38 <__stdio_check_funcs+0x98> sw $4,40($16)
+00402d40 <__stdio_check_funcs+0xa0> lw $2,12($5)
+00402d48 <__stdio_check_funcs+0xa8> lw $3,16($5)
+00402d50 <__stdio_check_funcs+0xb0> sw $2,44($16)
+00402d58 <__stdio_check_funcs+0xb8> sw $3,48($16)
+internals.c:40
+00402d60 <__stdio_check_funcs+0xc0> addu $4,$0,$16
+00402d68 <__stdio_check_funcs+0xc8> jal 00405740 <__stdio_init_stream>
+internals.c:41
+00402d70 <__stdio_check_funcs+0xd0> lw $2,76($16)
+00402d78 <__stdio_check_funcs+0xd8> ori $2,$2,16384
+00402d80 <__stdio_check_funcs+0xe0> sw $2,76($16)
+internals.c:43
+00402d88 <__stdio_check_funcs+0xe8> lw $31,20($29)
+00402d90 <__stdio_check_funcs+0xf0> lw $16,16($29)
+00402d98 <__stdio_check_funcs+0xf8> addiu $29,$29,24
+00402da0 <__stdio_check_funcs+0x100> jr $31
+__stdio_check_offset():
+internals.c:100
+00402da8 <__stdio_check_offset> addiu $29,$29,-40
+00402db0 <__stdio_check_offset+0x8> sw $16,24($29)
+00402db8 <__stdio_check_offset+0x10> addu $16,$0,$4
+00402dc0 <__stdio_check_offset+0x18> sw $31,32($29)
+00402dc8 <__stdio_check_offset+0x20> sw $17,28($29)
+00402dd0 <__stdio_check_offset+0x28> lw $2,76($16)
+00402dd8 <__stdio_check_offset+0x30> andi $2,$2,16384
+00402de0 <__stdio_check_offset+0x38> bne $2,$0,00402e98 <__stdio_check_offset+0xf0>
+00402de8 <__stdio_check_offset+0x40> lw $2,-32688($28)
+00402df0 <__stdio_check_offset+0x48> lui $3,4096
+00402df8 <__stdio_check_offset+0x50> lw $3,1252($3)
+00402e00 <__stdio_check_offset+0x58> sw $2,52($16)
+00402e08 <__stdio_check_offset+0x60> sw $3,56($16)
+00402e10 <__stdio_check_offset+0x68> lui $5,4096
+00402e18 <__stdio_check_offset+0x70> addiu $5,$5,0
+00402e20 <__stdio_check_offset+0x78> lw $2,0($5)
+00402e28 <__stdio_check_offset+0x80> lw $3,4($5)
+00402e30 <__stdio_check_offset+0x88> lw $4,8($5)
+00402e38 <__stdio_check_offset+0x90> sw $2,32($16)
+00402e40 <__stdio_check_offset+0x98> sw $3,36($16)
+00402e48 <__stdio_check_offset+0xa0> sw $4,40($16)
+00402e50 <__stdio_check_offset+0xa8> lw $2,12($5)
+00402e58 <__stdio_check_offset+0xb0> lw $3,16($5)
+00402e60 <__stdio_check_offset+0xb8> sw $2,44($16)
+00402e68 <__stdio_check_offset+0xc0> sw $3,48($16)
+00402e70 <__stdio_check_offset+0xc8> addu $4,$0,$16
+00402e78 <__stdio_check_offset+0xd0> jal 00405740 <__stdio_init_stream>
+00402e80 <__stdio_check_offset+0xd8> lw $2,76($16)
+00402e88 <__stdio_check_offset+0xe0> ori $2,$2,16384
+00402e90 <__stdio_check_offset+0xe8> sw $2,76($16)
+00402e98 <__stdio_check_offset+0xf0> lw $2,16($16)
+00402ea0 <__stdio_check_offset+0xf8> bne $2,$0,00402f80 <__stdio_check_offset+0x1d8>
+00402ea8 <__stdio_check_offset+0x100> lw $2,76($16)
+00402eb0 <__stdio_check_offset+0x108> andi $2,$2,2048
+00402eb8 <__stdio_check_offset+0x110> bne $2,$0,00402f80 <__stdio_check_offset+0x1d8>
+00402ec0 <__stdio_check_offset+0x118> lw $2,20($16)
+00402ec8 <__stdio_check_offset+0x120> bne $2,$0,00402ee0 <__stdio_check_offset+0x138>
+00402ed0 <__stdio_check_offset+0x128> addiu $2,$0,1024
+00402ed8 <__stdio_check_offset+0x130> sw $2,20($16)
+00402ee0 <__stdio_check_offset+0x138> lw $4,20($16)
+00402ee8 <__stdio_check_offset+0x140> lw $17,-32640($28)
+00402ef0 <__stdio_check_offset+0x148> sltiu $2,$4,128
+00402ef8 <__stdio_check_offset+0x150> bne $2,$0,00402f48 <__stdio_check_offset+0x1a0>
+00402f00 <__stdio_check_offset+0x158> jal 00401208 <malloc>
+00402f08 <__stdio_check_offset+0x160> sw $2,16($16)
+00402f10 <__stdio_check_offset+0x168> bne $2,$0,00402f48 <__stdio_check_offset+0x1a0>
+00402f18 <__stdio_check_offset+0x170> lw $2,20($16)
+00402f20 <__stdio_check_offset+0x178> srl $2,$2,0x1
+00402f28 <__stdio_check_offset+0x180> addu $4,$0,$2
+00402f30 <__stdio_check_offset+0x188> sltiu $2,$4,128
+00402f38 <__stdio_check_offset+0x190> sw $4,20($16)
+00402f40 <__stdio_check_offset+0x198> beq $2,$0,00402f00 <__stdio_check_offset+0x158>
+00402f48 <__stdio_check_offset+0x1a0> lw $2,16($16)
+00402f50 <__stdio_check_offset+0x1a8> sw $17,-32640($28)
+00402f58 <__stdio_check_offset+0x1b0> bne $2,$0,00402f80 <__stdio_check_offset+0x1d8>
+00402f60 <__stdio_check_offset+0x1b8> lw $2,76($16)
+00402f68 <__stdio_check_offset+0x1c0> sw $0,20($16)
+00402f70 <__stdio_check_offset+0x1c8> ori $2,$2,2048
+00402f78 <__stdio_check_offset+0x1d0> sw $2,76($16)
+00402f80 <__stdio_check_offset+0x1d8> lw $2,4($16)
+00402f88 <__stdio_check_offset+0x1e0> bne $2,$0,00402fb8 <__stdio_check_offset+0x210>
+00402f90 <__stdio_check_offset+0x1e8> lw $2,16($16)
+00402f98 <__stdio_check_offset+0x1f0> lw $3,16($16)
+00402fa0 <__stdio_check_offset+0x1f8> sw $2,4($16)
+00402fa8 <__stdio_check_offset+0x200> sw $3,8($16)
+00402fb0 <__stdio_check_offset+0x208> sw $3,12($16)
+internals.c:103
+00402fb8 <__stdio_check_offset+0x210> lw $3,60($16)
+00402fc0 <__stdio_check_offset+0x218> addiu $2,$0,-1
+00402fc8 <__stdio_check_offset+0x220> bne $3,$2,00403070 <__stdio_check_offset+0x2c8>
+internals.c:106
+00402fd0 <__stdio_check_offset+0x228> lw $2,40($16)
+00402fd8 <__stdio_check_offset+0x230> bne $2,$0,00403000 <__stdio_check_offset+0x258>
+internals.c:109
+00402fe0 <__stdio_check_offset+0x238> addiu $2,$0,29
+00402fe8 <__stdio_check_offset+0x240> sw $2,-32640($28)
+internals.c:110
+00402ff0 <__stdio_check_offset+0x248> addiu $2,$0,-1
+00402ff8 <__stdio_check_offset+0x250> j 004030a0 <__stdio_check_offset+0x2f8>
+internals.c:116
+00403000 <__stdio_check_offset+0x258> lw $4,24($16)
+internals.c:115
+00403008 <__stdio_check_offset+0x260> sw $0,16($29)
+internals.c:116
+00403010 <__stdio_check_offset+0x268> lw $2,40($16)
+00403018 <__stdio_check_offset+0x270> addiu $5,$29,16
+00403020 <__stdio_check_offset+0x278> addiu $6,$0,1
+00403028 <__stdio_check_offset+0x280> jalr $31,$2
+00403030 <__stdio_check_offset+0x288> bgez $2,00403060 <__stdio_check_offset+0x2b8>
+internals.c:119
+00403038 <__stdio_check_offset+0x290> lw $3,-32640($28)
+00403040 <__stdio_check_offset+0x298> addiu $2,$0,29
+00403048 <__stdio_check_offset+0x2a0> bne $3,$2,00402ff0 <__stdio_check_offset+0x248>
+internals.c:121
+00403050 <__stdio_check_offset+0x2a8> sw $0,40($16)
+internals.c:122
+00403058 <__stdio_check_offset+0x2b0> j 00402ff0 <__stdio_check_offset+0x248>
+internals.c:124
+00403060 <__stdio_check_offset+0x2b8> lw $2,16($29)
+00403068 <__stdio_check_offset+0x2c0> sw $2,60($16)
+internals.c:128
+00403070 <__stdio_check_offset+0x2c8> lw $3,64($16)
+00403078 <__stdio_check_offset+0x2d0> addiu $2,$0,-1
+00403080 <__stdio_check_offset+0x2d8> bne $3,$2,00403098 <__stdio_check_offset+0x2f0>
+internals.c:132
+00403088 <__stdio_check_offset+0x2e0> lw $2,60($16)
+00403090 <__stdio_check_offset+0x2e8> sw $2,64($16)
+internals.c:134
+00403098 <__stdio_check_offset+0x2f0> addu $2,$0,$0
+internals.c:135
+004030a0 <__stdio_check_offset+0x2f8> lw $31,32($29)
+004030a8 <__stdio_check_offset+0x300> lw $17,28($29)
+004030b0 <__stdio_check_offset+0x308> lw $16,24($29)
+004030b8 <__stdio_check_offset+0x310> addiu $29,$29,40
+004030c0 <__stdio_check_offset+0x318> jr $31
+flushbuf():
+internals.c:188
+004030c8 <flushbuf> addiu $29,$29,-72
+004030d0 <flushbuf+0x8> sw $16,32($29)
+004030d8 <flushbuf+0x10> addu $16,$0,$4
+004030e0 <flushbuf+0x18> sw $20,48($29)
+004030e8 <flushbuf+0x20> addu $20,$0,$5
+internals.c:189
+004030f0 <flushbuf+0x28> nor $2,$0,$20
+internals.c:188
+004030f8 <flushbuf+0x30> sw $21,52($29)
+internals.c:189
+00403100 <flushbuf+0x38> sltiu $21,$2,1
+internals.c:188
+00403108 <flushbuf+0x40> sw $31,64($29)
+00403110 <flushbuf+0x48> sw $23,60($29)
+00403118 <flushbuf+0x50> sw $22,56($29)
+00403120 <flushbuf+0x58> sw $19,44($29)
+00403128 <flushbuf+0x60> sw $18,40($29)
+00403130 <flushbuf+0x68> sw $17,36($29)
+internals.c:196
+00403138 <flushbuf+0x70> lw $5,12($16)
+00403140 <flushbuf+0x78> lw $2,16($16)
+internals.c:194
+00403148 <flushbuf+0x80> addu $23,$0,$0
+internals.c:189
+00403150 <flushbuf+0x88> addiu $22,$0,-1
+internals.c:196
+00403158 <flushbuf+0x90> bne $5,$2,00403400 <flushbuf+0x338>
+internals.c:200
+00403160 <flushbuf+0x98> addu $19,$0,$0
+internals.c:204
+00403168 <flushbuf+0xa0> lw $2,4($16)
+00403170 <flushbuf+0xa8> lw $3,64($16)
+internals.c:206
+00403178 <flushbuf+0xb0> lw $4,28($16)
+internals.c:204
+00403180 <flushbuf+0xb8> subu $2,$2,$5
+00403188 <flushbuf+0xc0> addu $2,$2,$3
+00403190 <flushbuf+0xc8> sw $2,64($16)
+internals.c:206
+00403198 <flushbuf+0xd0> andi $2,$4,1
+004031a0 <flushbuf+0xd8> beq $2,$0,00403358 <flushbuf+0x290>
+004031a8 <flushbuf+0xe0> lw $2,52($16)
+004031b0 <flushbuf+0xe8> beq $2,$0,00403358 <flushbuf+0x290>
+004031b8 <flushbuf+0xf0> andi $2,$4,4
+004031c0 <flushbuf+0xf8> bne $2,$0,00403358 <flushbuf+0x290>
+internals.c:209
+004031c8 <flushbuf+0x100> lw $18,-32640($28)
+internals.c:210
+004031d0 <flushbuf+0x108> lw $2,16($16)
+004031d8 <flushbuf+0x110> addu $17,$0,$0
+004031e0 <flushbuf+0x118> beq $2,$0,00403238 <flushbuf+0x170>
+004031e8 <flushbuf+0x120> addu $4,$0,$16
+004031f0 <flushbuf+0x128> jal 00402da8 <__stdio_check_offset>
+004031f8 <flushbuf+0x130> beq $2,$22,00403238 <flushbuf+0x170>
+00403200 <flushbuf+0x138> lw $2,64($16)
+00403208 <flushbuf+0x140> lw $3,20($16)
+00403210 <flushbuf+0x148> divu $0,$2,$3
+00403218 <flushbuf+0x150> bne $3,$0,00403228 <flushbuf+0x160>
+00403220 <flushbuf+0x158> break 
+00403228 <flushbuf+0x160> mfhi $3
+00403230 <flushbuf+0x168> bne $3,$0,00403240 <flushbuf+0x178>
+00403238 <flushbuf+0x170> addiu $17,$0,1
+internals.c:213
+00403240 <flushbuf+0x178> sw $18,-32640($28)
+internals.c:215
+00403248 <flushbuf+0x180> bne $17,$0,00403350 <flushbuf+0x288>
+internals.c:219
+00403250 <flushbuf+0x188> lw $3,64($16)
+00403258 <flushbuf+0x190> lw $2,20($16)
+00403260 <flushbuf+0x198> divu $0,$3,$2
+00403268 <flushbuf+0x1a0> bne $2,$0,00403278 <flushbuf+0x1b0>
+00403270 <flushbuf+0x1a8> break 
+00403278 <flushbuf+0x1b0> mfhi $17
+internals.c:221
+00403280 <flushbuf+0x1b8> lw $2,52($16)
+00403288 <flushbuf+0x1c0> addu $4,$0,$16
+internals.c:220
+00403290 <flushbuf+0x1c8> subu $3,$3,$17
+00403298 <flushbuf+0x1d0> sw $3,64($16)
+internals.c:221
+004032a0 <flushbuf+0x1d8> jalr $31,$2
+004032a8 <flushbuf+0x1e0> addiu $3,$0,-1
+004032b0 <flushbuf+0x1e8> bne $2,$3,004032d0 <flushbuf+0x208>
+004032b8 <flushbuf+0x1f0> lw $2,76($16)
+004032c0 <flushbuf+0x1f8> andi $2,$2,1024
+004032c8 <flushbuf+0x200> bne $2,$0,004037f8 <flushbuf+0x730>
+internals.c:224
+004032d0 <flushbuf+0x208> lw $3,76($16)
+004032d8 <flushbuf+0x210> addiu $2,$0,-513
+internals.c:226
+004032e0 <flushbuf+0x218> lw $4,8($16)
+004032e8 <flushbuf+0x220> lw $5,16($16)
+internals.c:224
+004032f0 <flushbuf+0x228> and $3,$3,$2
+004032f8 <flushbuf+0x230> addiu $2,$0,-1025
+00403300 <flushbuf+0x238> and $3,$3,$2
+internals.c:226
+00403308 <flushbuf+0x240> subu $4,$4,$5
+00403310 <flushbuf+0x248> sltu $4,$4,$17
+internals.c:224
+00403318 <flushbuf+0x250> sw $3,76($16)
+internals.c:226
+00403320 <flushbuf+0x258> beq $4,$0,00403348 <flushbuf+0x280>
+internals.c:229
+00403328 <flushbuf+0x260> lw $2,64($16)
+00403330 <flushbuf+0x268> addu $2,$17,$2
+00403338 <flushbuf+0x270> sw $2,64($16)
+00403340 <flushbuf+0x278> j 00403350 <flushbuf+0x288>
+internals.c:233
+00403348 <flushbuf+0x280> addu $19,$0,$17
+internals.c:239
+00403350 <flushbuf+0x288> addiu $23,$0,1
+internals.c:242
+00403358 <flushbuf+0x290> lw $4,16($16)
+00403360 <flushbuf+0x298> beq $4,$0,00403400 <flushbuf+0x338>
+internals.c:245
+00403368 <flushbuf+0x2a0> lw $2,20($16)
+internals.c:246
+00403370 <flushbuf+0x2a8> lw $3,16($16)
+internals.c:245
+00403378 <flushbuf+0x2b0> addu $2,$4,$2
+internals.c:246
+00403380 <flushbuf+0x2b8> addu $3,$19,$3
+internals.c:245
+00403388 <flushbuf+0x2c0> sw $2,12($16)
+internals.c:246
+00403390 <flushbuf+0x2c8> sw $3,4($16)
+internals.c:248
+00403398 <flushbuf+0x2d0> bne $21,$0,00403400 <flushbuf+0x338>
+internals.c:253
+004033a0 <flushbuf+0x2d8> addiu $2,$3,1
+004033a8 <flushbuf+0x2e0> sw $2,4($16)
+004033b0 <flushbuf+0x2e8> sb $20,0($3)
+internals.c:254
+004033b8 <flushbuf+0x2f0> lw $2,76($16)
+004033c0 <flushbuf+0x2f8> andi $2,$2,4096
+004033c8 <flushbuf+0x300> beq $2,$0,004033e8 <flushbuf+0x320>
+004033d0 <flushbuf+0x308> andi $3,$20,255
+004033d8 <flushbuf+0x310> addiu $2,$0,10
+004033e0 <flushbuf+0x318> beq $3,$2,004033f8 <flushbuf+0x330>
+internals.c:259
+004033e8 <flushbuf+0x320> addu $19,$0,$0
+internals.c:260
+004033f0 <flushbuf+0x328> j 004037a0 <flushbuf+0x6d8>
+internals.c:264
+004033f8 <flushbuf+0x330> addiu $21,$0,1
+internals.c:272
+00403400 <flushbuf+0x338> lw $2,4($16)
+00403408 <flushbuf+0x340> lw $4,16($16)
+00403410 <flushbuf+0x348> subu $19,$2,$4
+internals.c:273
+00403418 <flushbuf+0x350> beq $19,$0,00403450 <flushbuf+0x388>
+00403420 <flushbuf+0x358> lw $3,8($16)
+00403428 <flushbuf+0x360> addu $18,$0,$19
+00403430 <flushbuf+0x368> sltu $2,$2,$3
+00403438 <flushbuf+0x370> beq $2,$0,00403458 <flushbuf+0x390>
+00403440 <flushbuf+0x378> subu $18,$3,$4
+00403448 <flushbuf+0x380> j 00403458 <flushbuf+0x390>
+00403450 <flushbuf+0x388> addu $18,$0,$0
+internals.c:278
+00403458 <flushbuf+0x390> lw $2,36($16)
+00403460 <flushbuf+0x398> beq $2,$0,00403478 <flushbuf+0x3b0>
+00403468 <flushbuf+0x3a0> bne $18,$0,004034a8 <flushbuf+0x3e0>
+00403470 <flushbuf+0x3a8> beq $21,$0,00403688 <flushbuf+0x5c0>
+internals.c:284
+00403478 <flushbuf+0x3b0> lw $2,60($16)
+internals.c:283
+00403480 <flushbuf+0x3b8> lw $3,16($16)
+internals.c:284
+00403488 <flushbuf+0x3c0> addu $2,$18,$2
+internals.c:283
+00403490 <flushbuf+0x3c8> sw $3,4($16)
+internals.c:284
+00403498 <flushbuf+0x3d0> sw $2,60($16)
+internals.c:285
+004034a0 <flushbuf+0x3d8> j 004037a0 <flushbuf+0x6d8>
+internals.c:294
+004034a8 <flushbuf+0x3e0> lw $2,28($16)
+004034b0 <flushbuf+0x3e8> andi $2,$2,4
+004034b8 <flushbuf+0x3f0> bne $2,$0,004035c8 <flushbuf+0x500>
+internals.c:295
+004034c0 <flushbuf+0x3f8> lw $17,-32640($28)
+004034c8 <flushbuf+0x400> addu $4,$0,$16
+004034d0 <flushbuf+0x408> jal 00402da8 <__stdio_check_offset>
+004034d8 <flushbuf+0x410> addiu $3,$0,-1
+004034e0 <flushbuf+0x418> bne $2,$3,00403510 <flushbuf+0x448>
+004034e8 <flushbuf+0x420> lw $3,-32640($28)
+004034f0 <flushbuf+0x428> addiu $2,$0,29
+004034f8 <flushbuf+0x430> bne $3,$2,004035b0 <flushbuf+0x4e8>
+00403500 <flushbuf+0x438> sw $17,-32640($28)
+00403508 <flushbuf+0x440> j 004035c8 <flushbuf+0x500>
+00403510 <flushbuf+0x448> lw $3,64($16)
+00403518 <flushbuf+0x450> lw $2,60($16)
+00403520 <flushbuf+0x458> beq $3,$2,004035c8 <flushbuf+0x500>
+00403528 <flushbuf+0x460> lw $2,40($16)
+00403530 <flushbuf+0x468> bne $2,$0,00403558 <flushbuf+0x490>
+00403538 <flushbuf+0x470> lw $2,76($16)
+00403540 <flushbuf+0x478> addiu $3,$0,29
+00403548 <flushbuf+0x480> sw $3,-32640($28)
+00403550 <flushbuf+0x488> j 004035b8 <flushbuf+0x4f0>
+00403558 <flushbuf+0x490> lw $4,24($16)
+00403560 <flushbuf+0x498> lw $2,40($16)
+00403568 <flushbuf+0x4a0> addiu $5,$29,16
+00403570 <flushbuf+0x4a8> addu $6,$0,$0
+00403578 <flushbuf+0x4b0> sw $3,16($29)
+00403580 <flushbuf+0x4b8> jalr $31,$2
+00403588 <flushbuf+0x4c0> bltz $2,004035b0 <flushbuf+0x4e8>
+00403590 <flushbuf+0x4c8> lw $2,16($29)
+00403598 <flushbuf+0x4d0> lw $3,64($16)
+004035a0 <flushbuf+0x4d8> sw $2,60($16)
+004035a8 <flushbuf+0x4e0> beq $2,$3,004035c8 <flushbuf+0x500>
+004035b0 <flushbuf+0x4e8> lw $2,76($16)
+004035b8 <flushbuf+0x4f0> ori $2,$2,1024
+004035c0 <flushbuf+0x4f8> sw $2,76($16)
+internals.c:297
+004035c8 <flushbuf+0x500> lw $2,76($16)
+004035d0 <flushbuf+0x508> andi $2,$2,1024
+004035d8 <flushbuf+0x510> bne $2,$0,00403688 <flushbuf+0x5c0>
+internals.c:300
+004035e0 <flushbuf+0x518> lw $4,24($16)
+004035e8 <flushbuf+0x520> lw $5,16($16)
+004035f0 <flushbuf+0x528> lw $2,36($16)
+004035f8 <flushbuf+0x530> addu $6,$0,$18
+00403600 <flushbuf+0x538> jalr $31,$2
+00403608 <flushbuf+0x540> addu $3,$0,$2
+internals.c:302
+00403610 <flushbuf+0x548> blez $3,00403660 <flushbuf+0x598>
+internals.c:304
+00403618 <flushbuf+0x550> lw $2,28($16)
+00403620 <flushbuf+0x558> andi $2,$2,4
+00403628 <flushbuf+0x560> beq $2,$0,00403648 <flushbuf+0x580>
+internals.c:309
+00403630 <flushbuf+0x568> addiu $2,$0,-1
+00403638 <flushbuf+0x570> sw $2,64($16)
+00403640 <flushbuf+0x578> j 00403658 <flushbuf+0x590>
+internals.c:312
+00403648 <flushbuf+0x580> lw $2,60($16)
+00403650 <flushbuf+0x588> addu $2,$3,$2
+00403658 <flushbuf+0x590> sw $2,60($16)
+internals.c:314
+00403660 <flushbuf+0x598> slt $2,$3,$18
+00403668 <flushbuf+0x5a0> beq $2,$0,00403688 <flushbuf+0x5c0>
+internals.c:317
+00403670 <flushbuf+0x5a8> lw $2,76($16)
+00403678 <flushbuf+0x5b0> ori $2,$2,1024
+00403680 <flushbuf+0x5b8> sw $2,76($16)
+internals.c:322
+00403688 <flushbuf+0x5c0> lw $2,16($16)
+00403690 <flushbuf+0x5c8> sw $2,4($16)
+internals.c:325
+00403698 <flushbuf+0x5d0> bne $21,$0,004037a0 <flushbuf+0x6d8>
+004036a0 <flushbuf+0x5d8> lw $3,76($16)
+004036a8 <flushbuf+0x5e0> andi $2,$3,1024
+004036b0 <flushbuf+0x5e8> bne $2,$0,004037a0 <flushbuf+0x6d8>
+internals.c:327
+004036b8 <flushbuf+0x5f0> lw $2,16($16)
+004036c0 <flushbuf+0x5f8> beq $2,$0,004036f0 <flushbuf+0x628>
+004036c8 <flushbuf+0x600> andi $2,$3,4096
+004036d0 <flushbuf+0x608> beq $2,$0,00403780 <flushbuf+0x6b8>
+004036d8 <flushbuf+0x610> andi $3,$20,255
+004036e0 <flushbuf+0x618> addiu $2,$0,10
+004036e8 <flushbuf+0x620> bne $3,$2,00403780 <flushbuf+0x6b8>
+internals.c:332
+004036f0 <flushbuf+0x628> lw $4,24($16)
+004036f8 <flushbuf+0x630> lw $2,36($16)
+00403700 <flushbuf+0x638> addiu $5,$29,24
+00403708 <flushbuf+0x640> addiu $6,$0,1
+internals.c:331
+00403710 <flushbuf+0x648> sb $20,24($29)
+internals.c:332
+00403718 <flushbuf+0x650> jalr $31,$2
+00403720 <flushbuf+0x658> bgtz $2,00403748 <flushbuf+0x680>
+internals.c:333
+00403728 <flushbuf+0x660> lw $2,76($16)
+00403730 <flushbuf+0x668> ori $2,$2,1024
+00403738 <flushbuf+0x670> sw $2,76($16)
+00403740 <flushbuf+0x678> j 004037a0 <flushbuf+0x6d8>
+internals.c:337
+00403748 <flushbuf+0x680> lw $2,60($16)
+internals.c:338
+00403750 <flushbuf+0x688> lw $3,64($16)
+internals.c:337
+00403758 <flushbuf+0x690> addiu $2,$2,1
+internals.c:338
+00403760 <flushbuf+0x698> addiu $3,$3,1
+internals.c:337
+00403768 <flushbuf+0x6a0> sw $2,60($16)
+internals.c:338
+00403770 <flushbuf+0x6a8> sw $3,64($16)
+internals.c:340
+00403778 <flushbuf+0x6b0> j 004037a0 <flushbuf+0x6d8>
+internals.c:343
+00403780 <flushbuf+0x6b8> lw $3,4($16)
+00403788 <flushbuf+0x6c0> addiu $2,$3,1
+00403790 <flushbuf+0x6c8> sw $2,4($16)
+00403798 <flushbuf+0x6d0> sb $20,0($3)
+internals.c:348
+004037a0 <flushbuf+0x6d8> bne $23,$0,004037d0 <flushbuf+0x708>
+internals.c:352
+004037a8 <flushbuf+0x6e0> lw $2,64($16)
+internals.c:356
+004037b0 <flushbuf+0x6e8> lw $3,16($16)
+internals.c:352
+004037b8 <flushbuf+0x6f0> addu $2,$19,$2
+004037c0 <flushbuf+0x6f8> sw $2,64($16)
+internals.c:356
+004037c8 <flushbuf+0x700> sw $3,8($16)
+internals.c:359
+004037d0 <flushbuf+0x708> lw $2,76($16)
+004037d8 <flushbuf+0x710> andi $2,$2,1536
+004037e0 <flushbuf+0x718> beq $2,$0,004037f8 <flushbuf+0x730>
+internals.c:360
+004037e8 <flushbuf+0x720> lw $2,12($16)
+004037f0 <flushbuf+0x728> sw $2,4($16)
+internals.c:361
+004037f8 <flushbuf+0x730> lw $31,64($29)
+00403800 <flushbuf+0x738> lw $23,60($29)
+00403808 <flushbuf+0x740> lw $22,56($29)
+00403810 <flushbuf+0x748> lw $21,52($29)
+00403818 <flushbuf+0x750> lw $20,48($29)
+00403820 <flushbuf+0x758> lw $19,44($29)
+00403828 <flushbuf+0x760> lw $18,40($29)
+00403830 <flushbuf+0x768> lw $17,36($29)
+00403838 <flushbuf+0x770> lw $16,32($29)
+00403840 <flushbuf+0x778> addiu $29,$29,72
+00403848 <flushbuf+0x780> jr $31
+fillbuf():
+internals.c:368
+00403850 <fillbuf> addiu $29,$29,-64
+00403858 <fillbuf+0x8> sw $16,32($29)
+00403860 <fillbuf+0x10> addu $16,$0,$4
+00403868 <fillbuf+0x18> sw $31,60($29)
+00403870 <fillbuf+0x20> sw $22,56($29)
+00403878 <fillbuf+0x28> sw $21,52($29)
+00403880 <fillbuf+0x30> sw $20,48($29)
+00403888 <fillbuf+0x38> sw $19,44($29)
+00403890 <fillbuf+0x40> sw $18,40($29)
+00403898 <fillbuf+0x48> sw $17,36($29)
+internals.c:376
+004038a0 <fillbuf+0x50> lw $2,32($16)
+internals.c:370
+004038a8 <fillbuf+0x58> addu $21,$0,$0
+internals.c:372
+004038b0 <fillbuf+0x60> addu $20,$0,$0
+internals.c:376
+004038b8 <fillbuf+0x68> bne $2,$0,004038e0 <fillbuf+0x90>
+internals.c:379
+004038c0 <fillbuf+0x70> lw $2,76($16)
+004038c8 <fillbuf+0x78> ori $2,$2,512
+004038d0 <fillbuf+0x80> sw $2,76($16)
+internals.c:380
+004038d8 <fillbuf+0x88> j 00403c08 <fillbuf+0x3b8>
+internals.c:383
+004038e0 <fillbuf+0x90> lw $5,16($16)
+004038e8 <fillbuf+0x98> bne $5,$0,00403908 <fillbuf+0xb8>
+internals.c:386
+004038f0 <fillbuf+0xa0> addiu $18,$29,16
+internals.c:387
+004038f8 <fillbuf+0xa8> addiu $17,$0,1
+internals.c:388
+00403900 <fillbuf+0xb0> j 00403918 <fillbuf+0xc8>
+internals.c:392
+00403908 <fillbuf+0xb8> addu $18,$0,$5
+internals.c:393
+00403910 <fillbuf+0xc0> lw $17,20($16)
+internals.c:402
+00403918 <fillbuf+0xc8> addu $4,$0,$16
+internals.c:397
+00403920 <fillbuf+0xd0> lw $2,76($16)
+internals.c:401
+00403928 <fillbuf+0xd8> lw $22,-32640($28)
+internals.c:397
+00403930 <fillbuf+0xe0> addiu $3,$0,-513
+00403938 <fillbuf+0xe8> and $2,$2,$3
+00403940 <fillbuf+0xf0> sw $2,76($16)
+internals.c:402
+00403948 <fillbuf+0xf8> jal 00402da8 <__stdio_check_offset>
+00403950 <fillbuf+0x100> bne $2,$0,00403ab8 <fillbuf+0x268>
+00403958 <fillbuf+0x108> lw $3,64($16)
+00403960 <fillbuf+0x110> lw $2,60($16)
+00403968 <fillbuf+0x118> beq $3,$2,00403ab8 <fillbuf+0x268>
+internals.c:405
+00403970 <fillbuf+0x120> lw $2,20($16)
+00403978 <fillbuf+0x128> beq $2,$0,004039b0 <fillbuf+0x160>
+internals.c:407
+00403980 <fillbuf+0x130> divu $0,$3,$2
+00403988 <fillbuf+0x138> bne $2,$0,00403998 <fillbuf+0x148>
+00403990 <fillbuf+0x140> break 
+00403998 <fillbuf+0x148> mfhi $21
+internals.c:408
+004039a0 <fillbuf+0x150> subu $2,$3,$21
+004039a8 <fillbuf+0x158> sw $2,64($16)
+internals.c:410
+004039b0 <fillbuf+0x160> lw $19,-32640($28)
+004039b8 <fillbuf+0x168> addu $4,$0,$16
+004039c0 <fillbuf+0x170> jal 00402da8 <__stdio_check_offset>
+004039c8 <fillbuf+0x178> addiu $3,$0,-1
+004039d0 <fillbuf+0x180> bne $2,$3,00403a00 <fillbuf+0x1b0>
+004039d8 <fillbuf+0x188> lw $3,-32640($28)
+004039e0 <fillbuf+0x190> addiu $2,$0,29
+004039e8 <fillbuf+0x198> bne $3,$2,00403aa0 <fillbuf+0x250>
+004039f0 <fillbuf+0x1a0> sw $19,-32640($28)
+004039f8 <fillbuf+0x1a8> j 00403ab8 <fillbuf+0x268>
+00403a00 <fillbuf+0x1b0> lw $3,64($16)
+00403a08 <fillbuf+0x1b8> lw $2,60($16)
+00403a10 <fillbuf+0x1c0> beq $3,$2,00403ab8 <fillbuf+0x268>
+00403a18 <fillbuf+0x1c8> lw $2,40($16)
+00403a20 <fillbuf+0x1d0> bne $2,$0,00403a48 <fillbuf+0x1f8>
+00403a28 <fillbuf+0x1d8> lw $2,76($16)
+00403a30 <fillbuf+0x1e0> addiu $3,$0,29
+00403a38 <fillbuf+0x1e8> sw $3,-32640($28)
+00403a40 <fillbuf+0x1f0> j 00403aa8 <fillbuf+0x258>
+00403a48 <fillbuf+0x1f8> lw $4,24($16)
+00403a50 <fillbuf+0x200> lw $2,40($16)
+00403a58 <fillbuf+0x208> addiu $5,$29,24
+00403a60 <fillbuf+0x210> addu $6,$0,$0
+00403a68 <fillbuf+0x218> sw $3,24($29)
+00403a70 <fillbuf+0x220> jalr $31,$2
+00403a78 <fillbuf+0x228> bltz $2,00403aa0 <fillbuf+0x250>
+00403a80 <fillbuf+0x230> lw $2,24($29)
+00403a88 <fillbuf+0x238> lw $3,64($16)
+00403a90 <fillbuf+0x240> sw $2,60($16)
+00403a98 <fillbuf+0x248> beq $2,$3,00403ab8 <fillbuf+0x268>
+00403aa0 <fillbuf+0x250> lw $2,76($16)
+00403aa8 <fillbuf+0x258> ori $2,$2,1024
+00403ab0 <fillbuf+0x260> sw $2,76($16)
+internals.c:415
+00403ab8 <fillbuf+0x268> lw $2,76($16)
+internals.c:412
+00403ac0 <fillbuf+0x270> sw $22,-32640($28)
+internals.c:415
+00403ac8 <fillbuf+0x278> andi $2,$2,1536
+00403ad0 <fillbuf+0x280> bne $2,$0,00403bb0 <fillbuf+0x360>
+00403ad8 <fillbuf+0x288> sltu $2,$21,$20
+00403ae0 <fillbuf+0x290> bne $2,$0,00403bb0 <fillbuf+0x360>
+internals.c:418
+00403ae8 <fillbuf+0x298> lw $4,24($16)
+00403af0 <fillbuf+0x2a0> lw $2,32($16)
+00403af8 <fillbuf+0x2a8> addu $5,$0,$18
+00403b00 <fillbuf+0x2b0> addu $6,$0,$17
+00403b08 <fillbuf+0x2b8> jalr $31,$2
+00403b10 <fillbuf+0x2c0> addu $3,$0,$2
+internals.c:419
+00403b18 <fillbuf+0x2c8> bne $3,$0,00403b40 <fillbuf+0x2f0>
+internals.c:420
+00403b20 <fillbuf+0x2d0> lw $2,76($16)
+00403b28 <fillbuf+0x2d8> ori $2,$2,512
+00403b30 <fillbuf+0x2e0> sw $2,76($16)
+00403b38 <fillbuf+0x2e8> j 00403b98 <fillbuf+0x348>
+internals.c:421
+00403b40 <fillbuf+0x2f0> bgez $3,00403b68 <fillbuf+0x318>
+internals.c:422
+00403b48 <fillbuf+0x2f8> lw $2,76($16)
+00403b50 <fillbuf+0x300> ori $2,$2,1024
+00403b58 <fillbuf+0x308> sw $2,76($16)
+00403b60 <fillbuf+0x310> j 00403b98 <fillbuf+0x348>
+internals.c:425
+00403b68 <fillbuf+0x318> addu $18,$18,$3
+internals.c:429
+00403b70 <fillbuf+0x320> lw $2,60($16)
+internals.c:426
+00403b78 <fillbuf+0x328> addu $20,$20,$3
+internals.c:427
+00403b80 <fillbuf+0x330> subu $17,$17,$3
+internals.c:429
+00403b88 <fillbuf+0x338> addu $2,$3,$2
+00403b90 <fillbuf+0x340> sw $2,60($16)
+internals.c:431
+00403b98 <fillbuf+0x348> lw $2,76($16)
+00403ba0 <fillbuf+0x350> andi $2,$2,1536
+00403ba8 <fillbuf+0x358> beq $2,$0,00403ad8 <fillbuf+0x288>
+internals.c:433
+00403bb0 <fillbuf+0x360> lw $2,16($16)
+00403bb8 <fillbuf+0x368> bne $2,$0,00403bf8 <fillbuf+0x3a8>
+internals.c:436
+00403bc0 <fillbuf+0x370> lw $2,76($16)
+00403bc8 <fillbuf+0x378> addiu $3,$0,-1
+00403bd0 <fillbuf+0x380> andi $2,$2,1536
+00403bd8 <fillbuf+0x388> bne $2,$0,00403be8 <fillbuf+0x398>
+00403be0 <fillbuf+0x390> lbu $3,16($29)
+00403be8 <fillbuf+0x398> addu $2,$0,$3
+00403bf0 <fillbuf+0x3a0> j 00403c90 <fillbuf+0x440>
+internals.c:440
+00403bf8 <fillbuf+0x3a8> addu $2,$21,$2
+00403c00 <fillbuf+0x3b0> sw $2,4($16)
+internals.c:444
+00403c08 <fillbuf+0x3b8> lw $2,76($16)
+00403c10 <fillbuf+0x3c0> andi $2,$2,1536
+00403c18 <fillbuf+0x3c8> bne $2,$0,00403c70 <fillbuf+0x420>
+internals.c:453
+00403c20 <fillbuf+0x3d0> lw $2,16($16)
+internals.c:456
+00403c28 <fillbuf+0x3d8> lw $3,16($16)
+internals.c:459
+00403c30 <fillbuf+0x3e0> lw $4,4($16)
+internals.c:453
+00403c38 <fillbuf+0x3e8> addu $2,$20,$2
+00403c40 <fillbuf+0x3f0> sw $2,8($16)
+internals.c:459
+00403c48 <fillbuf+0x3f8> addiu $2,$4,1
+internals.c:456
+00403c50 <fillbuf+0x400> sw $3,12($16)
+internals.c:459
+00403c58 <fillbuf+0x408> sw $2,4($16)
+00403c60 <fillbuf+0x410> lbu $2,0($4)
+00403c68 <fillbuf+0x418> j 00403c90 <fillbuf+0x440>
+internals.c:448
+00403c70 <fillbuf+0x420> lw $3,16($16)
+internals.c:449
+00403c78 <fillbuf+0x428> addiu $2,$0,-1
+internals.c:448
+00403c80 <fillbuf+0x430> sw $3,8($16)
+00403c88 <fillbuf+0x438> sw $3,12($16)
+internals.c:460
+00403c90 <fillbuf+0x440> lw $31,60($29)
+00403c98 <fillbuf+0x448> lw $22,56($29)
+00403ca0 <fillbuf+0x450> lw $21,52($29)
+00403ca8 <fillbuf+0x458> lw $20,48($29)
+00403cb0 <fillbuf+0x460> lw $19,44($29)
+00403cb8 <fillbuf+0x468> lw $18,40($29)
+00403cc0 <fillbuf+0x470> lw $17,36($29)
+00403cc8 <fillbuf+0x478> lw $16,32($29)
+00403cd0 <fillbuf+0x480> addiu $29,$29,64
+00403cd8 <fillbuf+0x488> jr $31
+__flshfp():
+internals.c:486
+00403ce0 <__flshfp> addiu $29,$29,-40
+00403ce8 <__flshfp+0x8> sw $16,16($29)
+00403cf0 <__flshfp+0x10> addu $16,$0,$4
+00403cf8 <__flshfp+0x18> sw $18,24($29)
+00403d00 <__flshfp+0x20> addu $18,$0,$5
+internals.c:487
+00403d08 <__flshfp+0x28> nor $2,$0,$18
+internals.c:486
+00403d10 <__flshfp+0x30> sw $19,28($29)
+internals.c:487
+00403d18 <__flshfp+0x38> sltiu $19,$2,1
+internals.c:486
+00403d20 <__flshfp+0x40> sw $31,32($29)
+00403d28 <__flshfp+0x48> sw $17,20($29)
+internals.c:489
+00403d30 <__flshfp+0x50> beq $16,$0,00403da0 <__flshfp+0xc0>
+00403d38 <__flshfp+0x58> lw $3,0($16)
+00403d40 <__flshfp+0x60> lui $2,65261
+00403d48 <__flshfp+0x68> ori $2,$2,47806
+00403d50 <__flshfp+0x70> bne $3,$2,00403d68 <__flshfp+0x88>
+00403d58 <__flshfp+0x78> lw $2,4($16)
+00403d60 <__flshfp+0x80> lw $16,0($2)
+00403d68 <__flshfp+0x88> lw $3,0($16)
+00403d70 <__flshfp+0x90> lui $2,65242
+00403d78 <__flshfp+0x98> ori $2,$2,48875
+00403d80 <__flshfp+0xa0> bne $3,$2,00403da0 <__flshfp+0xc0>
+00403d88 <__flshfp+0xa8> lw $2,28($16)
+00403d90 <__flshfp+0xb0> andi $2,$2,2
+00403d98 <__flshfp+0xb8> bne $2,$0,00403dc0 <__flshfp+0xe0>
+internals.c:491
+00403da0 <__flshfp+0xc0> addiu $2,$0,22
+00403da8 <__flshfp+0xc8> sw $2,-32640($28)
+internals.c:492
+00403db0 <__flshfp+0xd0> addiu $2,$0,-1
+00403db8 <__flshfp+0xd8> j 004041e0 <__flshfp+0x500>
+internals.c:495
+00403dc0 <__flshfp+0xe0> lw $3,76($16)
+00403dc8 <__flshfp+0xe8> andi $2,$3,1024
+00403dd0 <__flshfp+0xf0> bne $2,$0,00403db0 <__flshfp+0xd0>
+internals.c:498
+00403dd8 <__flshfp+0xf8> andi $2,$3,256
+00403de0 <__flshfp+0x100> beq $2,$0,00403e18 <__flshfp+0x138>
+internals.c:501
+00403de8 <__flshfp+0x108> lw $2,72($16)
+internals.c:502
+00403df0 <__flshfp+0x110> lw $3,76($16)
+internals.c:501
+00403df8 <__flshfp+0x118> sw $2,4($16)
+internals.c:502
+00403e00 <__flshfp+0x120> addiu $2,$0,-257
+00403e08 <__flshfp+0x128> and $3,$3,$2
+00403e10 <__flshfp+0x130> sw $3,76($16)
+internals.c:506
+00403e18 <__flshfp+0x138> lw $2,76($16)
+00403e20 <__flshfp+0x140> andi $2,$2,16384
+00403e28 <__flshfp+0x148> bne $2,$0,00403ee0 <__flshfp+0x200>
+00403e30 <__flshfp+0x150> lw $2,-32688($28)
+00403e38 <__flshfp+0x158> lui $3,4096
+00403e40 <__flshfp+0x160> lw $3,1252($3)
+00403e48 <__flshfp+0x168> sw $2,52($16)
+00403e50 <__flshfp+0x170> sw $3,56($16)
+00403e58 <__flshfp+0x178> lui $5,4096
+00403e60 <__flshfp+0x180> addiu $5,$5,0
+00403e68 <__flshfp+0x188> lw $2,0($5)
+00403e70 <__flshfp+0x190> lw $3,4($5)
+00403e78 <__flshfp+0x198> lw $4,8($5)
+00403e80 <__flshfp+0x1a0> sw $2,32($16)
+00403e88 <__flshfp+0x1a8> sw $3,36($16)
+00403e90 <__flshfp+0x1b0> sw $4,40($16)
+00403e98 <__flshfp+0x1b8> lw $2,12($5)
+00403ea0 <__flshfp+0x1c0> lw $3,16($5)
+00403ea8 <__flshfp+0x1c8> sw $2,44($16)
+00403eb0 <__flshfp+0x1d0> sw $3,48($16)
+00403eb8 <__flshfp+0x1d8> addu $4,$0,$16
+00403ec0 <__flshfp+0x1e0> jal 00405740 <__stdio_init_stream>
+00403ec8 <__flshfp+0x1e8> lw $2,76($16)
+00403ed0 <__flshfp+0x1f0> ori $2,$2,16384
+00403ed8 <__flshfp+0x1f8> sw $2,76($16)
+00403ee0 <__flshfp+0x200> lw $2,16($16)
+00403ee8 <__flshfp+0x208> bne $2,$0,00403fc8 <__flshfp+0x2e8>
+00403ef0 <__flshfp+0x210> lw $2,76($16)
+00403ef8 <__flshfp+0x218> andi $2,$2,2048
+00403f00 <__flshfp+0x220> bne $2,$0,00403fc8 <__flshfp+0x2e8>
+00403f08 <__flshfp+0x228> lw $2,20($16)
+00403f10 <__flshfp+0x230> bne $2,$0,00403f28 <__flshfp+0x248>
+00403f18 <__flshfp+0x238> addiu $2,$0,1024
+00403f20 <__flshfp+0x240> sw $2,20($16)
+00403f28 <__flshfp+0x248> lw $4,20($16)
+00403f30 <__flshfp+0x250> lw $17,-32640($28)
+00403f38 <__flshfp+0x258> sltiu $2,$4,128
+00403f40 <__flshfp+0x260> bne $2,$0,00403f90 <__flshfp+0x2b0>
+00403f48 <__flshfp+0x268> jal 00401208 <malloc>
+00403f50 <__flshfp+0x270> sw $2,16($16)
+00403f58 <__flshfp+0x278> bne $2,$0,00403f90 <__flshfp+0x2b0>
+00403f60 <__flshfp+0x280> lw $2,20($16)
+00403f68 <__flshfp+0x288> srl $2,$2,0x1
+00403f70 <__flshfp+0x290> addu $4,$0,$2
+00403f78 <__flshfp+0x298> sltiu $2,$4,128
+00403f80 <__flshfp+0x2a0> sw $4,20($16)
+00403f88 <__flshfp+0x2a8> beq $2,$0,00403f48 <__flshfp+0x268>
+00403f90 <__flshfp+0x2b0> lw $2,16($16)
+00403f98 <__flshfp+0x2b8> sw $17,-32640($28)
+00403fa0 <__flshfp+0x2c0> bne $2,$0,00403fc8 <__flshfp+0x2e8>
+00403fa8 <__flshfp+0x2c8> lw $2,76($16)
+00403fb0 <__flshfp+0x2d0> sw $0,20($16)
+00403fb8 <__flshfp+0x2d8> ori $2,$2,2048
+00403fc0 <__flshfp+0x2e0> sw $2,76($16)
+00403fc8 <__flshfp+0x2e8> lw $2,4($16)
+00403fd0 <__flshfp+0x2f0> bne $2,$0,00404000 <__flshfp+0x320>
+00403fd8 <__flshfp+0x2f8> lw $2,16($16)
+00403fe0 <__flshfp+0x300> lw $3,16($16)
+00403fe8 <__flshfp+0x308> sw $2,4($16)
+00403ff0 <__flshfp+0x310> sw $3,8($16)
+00403ff8 <__flshfp+0x318> sw $3,12($16)
+internals.c:509
+00404000 <__flshfp+0x320> lw $2,56($16)
+00404008 <__flshfp+0x328> bne $2,$0,00404038 <__flshfp+0x358>
+internals.c:513
+00404010 <__flshfp+0x330> lw $3,76($16)
+internals.c:514
+00404018 <__flshfp+0x338> addiu $2,$0,-1
+internals.c:513
+00404020 <__flshfp+0x340> ori $3,$3,1024
+00404028 <__flshfp+0x348> sw $3,76($16)
+internals.c:514
+00404030 <__flshfp+0x350> j 004041e0 <__flshfp+0x500>
+internals.c:517
+00404038 <__flshfp+0x358> bne $19,$0,00404100 <__flshfp+0x420>
+00404040 <__flshfp+0x360> lw $2,76($16)
+00404048 <__flshfp+0x368> lw $4,4($16)
+00404050 <__flshfp+0x370> andi $2,$2,8192
+00404058 <__flshfp+0x378> beq $2,$0,00404090 <__flshfp+0x3b0>
+00404060 <__flshfp+0x380> lw $2,16($16)
+00404068 <__flshfp+0x388> lw $3,20($16)
+00404070 <__flshfp+0x390> addu $2,$2,$3
+00404078 <__flshfp+0x398> sltu $2,$4,$2
+00404080 <__flshfp+0x3a0> bne $2,$0,004040a8 <__flshfp+0x3c8>
+00404088 <__flshfp+0x3a8> j 00404100 <__flshfp+0x420>
+00404090 <__flshfp+0x3b0> lw $2,12($16)
+00404098 <__flshfp+0x3b8> sltu $2,$4,$2
+004040a0 <__flshfp+0x3c0> beq $2,$0,00404100 <__flshfp+0x420>
+internals.c:524
+004040a8 <__flshfp+0x3c8> lw $3,4($16)
+004040b0 <__flshfp+0x3d0> addiu $2,$3,1
+004040b8 <__flshfp+0x3d8> sw $2,4($16)
+004040c0 <__flshfp+0x3e0> sb $18,0($3)
+internals.c:525
+004040c8 <__flshfp+0x3e8> lw $2,76($16)
+004040d0 <__flshfp+0x3f0> andi $2,$2,4096
+004040d8 <__flshfp+0x3f8> beq $2,$0,004041c8 <__flshfp+0x4e8>
+004040e0 <__flshfp+0x400> andi $3,$18,255
+004040e8 <__flshfp+0x408> addiu $2,$0,10
+004040f0 <__flshfp+0x410> bne $3,$2,004041c8 <__flshfp+0x4e8>
+internals.c:526
+004040f8 <__flshfp+0x418> addiu $19,$0,1
+internals.c:531
+00404100 <__flshfp+0x420> lw $2,76($16)
+00404108 <__flshfp+0x428> andi $2,$2,8192
+00404110 <__flshfp+0x430> beq $2,$0,00404138 <__flshfp+0x458>
+internals.c:537
+00404118 <__flshfp+0x438> lw $2,16($16)
+00404120 <__flshfp+0x440> lw $3,20($16)
+00404128 <__flshfp+0x448> addu $2,$2,$3
+00404130 <__flshfp+0x450> sw $2,12($16)
+internals.c:540
+00404138 <__flshfp+0x458> addiu $5,$0,-1
+00404140 <__flshfp+0x460> bne $19,$0,00404150 <__flshfp+0x470>
+00404148 <__flshfp+0x468> andi $5,$18,255
+00404150 <__flshfp+0x470> lw $2,56($16)
+00404158 <__flshfp+0x478> addu $4,$0,$16
+00404160 <__flshfp+0x480> jalr $31,$2
+internals.c:542
+00404168 <__flshfp+0x488> lw $2,76($16)
+00404170 <__flshfp+0x490> andi $2,$2,4096
+00404178 <__flshfp+0x498> beq $2,$0,004041a8 <__flshfp+0x4c8>
+internals.c:551
+00404180 <__flshfp+0x4a0> lw $2,76($16)
+internals.c:550
+00404188 <__flshfp+0x4a8> lw $3,16($16)
+internals.c:551
+00404190 <__flshfp+0x4b0> ori $2,$2,8192
+internals.c:550
+00404198 <__flshfp+0x4b8> sw $3,12($16)
+internals.c:551
+004041a0 <__flshfp+0x4c0> sw $2,76($16)
+internals.c:554
+004041a8 <__flshfp+0x4c8> lw $2,76($16)
+004041b0 <__flshfp+0x4d0> andi $2,$2,1024
+004041b8 <__flshfp+0x4d8> bne $2,$0,00403db0 <__flshfp+0xd0>
+internals.c:556
+004041c0 <__flshfp+0x4e0> bne $19,$0,004041d8 <__flshfp+0x4f8>
+internals.c:558
+004041c8 <__flshfp+0x4e8> andi $2,$18,255
+004041d0 <__flshfp+0x4f0> j 004041e0 <__flshfp+0x500>
+internals.c:557
+004041d8 <__flshfp+0x4f8> addu $2,$0,$0
+internals.c:559
+004041e0 <__flshfp+0x500> lw $31,32($29)
+004041e8 <__flshfp+0x508> lw $19,28($29)
+004041f0 <__flshfp+0x510> lw $18,24($29)
+004041f8 <__flshfp+0x518> lw $17,20($29)
+00404200 <__flshfp+0x520> lw $16,16($29)
+00404208 <__flshfp+0x528> addiu $29,$29,40
+00404210 <__flshfp+0x530> jr $31
+__fillbf():
+internals.c:566
+00404218 <__fillbf> addiu $29,$29,-40
+00404220 <__fillbf+0x8> sw $17,20($29)
+00404228 <__fillbf+0x10> addu $17,$0,$4
+00404230 <__fillbf+0x18> sw $31,32($29)
+00404238 <__fillbf+0x20> sw $19,28($29)
+00404240 <__fillbf+0x28> sw $18,24($29)
+00404248 <__fillbf+0x30> sw $16,16($29)
+internals.c:570
+00404250 <__fillbf+0x38> beq $17,$0,004042c0 <__fillbf+0xa8>
+00404258 <__fillbf+0x40> lw $3,0($17)
+00404260 <__fillbf+0x48> lui $2,65261
+00404268 <__fillbf+0x50> ori $2,$2,47806
+00404270 <__fillbf+0x58> bne $3,$2,00404288 <__fillbf+0x70>
+00404278 <__fillbf+0x60> lw $2,4($17)
+00404280 <__fillbf+0x68> lw $17,0($2)
+00404288 <__fillbf+0x70> lw $3,0($17)
+00404290 <__fillbf+0x78> lui $2,65242
+00404298 <__fillbf+0x80> ori $2,$2,48875
+004042a0 <__fillbf+0x88> bne $3,$2,004042c0 <__fillbf+0xa8>
+004042a8 <__fillbf+0x90> lw $2,28($17)
+004042b0 <__fillbf+0x98> andi $2,$2,1
+004042b8 <__fillbf+0xa0> bne $2,$0,004042e0 <__fillbf+0xc8>
+internals.c:572
+004042c0 <__fillbf+0xa8> addiu $2,$0,22
+004042c8 <__fillbf+0xb0> sw $2,-32640($28)
+internals.c:573
+004042d0 <__fillbf+0xb8> addiu $2,$0,-1
+004042d8 <__fillbf+0xc0> j 00404770 <__fillbf+0x558>
+internals.c:576
+004042e0 <__fillbf+0xc8> lw $3,76($17)
+004042e8 <__fillbf+0xd0> andi $2,$3,256
+004042f0 <__fillbf+0xd8> beq $2,$0,00404338 <__fillbf+0x120>
+internals.c:580
+004042f8 <__fillbf+0xe0> lw $2,76($17)
+00404300 <__fillbf+0xe8> addiu $3,$0,-257
+00404308 <__fillbf+0xf0> and $2,$2,$3
+internals.c:579
+00404310 <__fillbf+0xf8> lw $3,72($17)
+internals.c:580
+00404318 <__fillbf+0x100> sw $2,76($17)
+internals.c:581
+00404320 <__fillbf+0x108> lbu $2,76($17)
+internals.c:579
+00404328 <__fillbf+0x110> sw $3,4($17)
+internals.c:581
+00404330 <__fillbf+0x118> j 00404770 <__fillbf+0x558>
+internals.c:585
+00404338 <__fillbf+0x120> andi $2,$3,16384
+00404340 <__fillbf+0x128> bne $2,$0,004043f8 <__fillbf+0x1e0>
+00404348 <__fillbf+0x130> lw $2,-32688($28)
+00404350 <__fillbf+0x138> lui $3,4096
+00404358 <__fillbf+0x140> lw $3,1252($3)
+00404360 <__fillbf+0x148> sw $2,52($17)
+00404368 <__fillbf+0x150> sw $3,56($17)
+00404370 <__fillbf+0x158> lui $5,4096
+00404378 <__fillbf+0x160> addiu $5,$5,0
+00404380 <__fillbf+0x168> lw $2,0($5)
+00404388 <__fillbf+0x170> lw $3,4($5)
+00404390 <__fillbf+0x178> lw $4,8($5)
+00404398 <__fillbf+0x180> sw $2,32($17)
+004043a0 <__fillbf+0x188> sw $3,36($17)
+004043a8 <__fillbf+0x190> sw $4,40($17)
+004043b0 <__fillbf+0x198> lw $2,12($5)
+004043b8 <__fillbf+0x1a0> lw $3,16($5)
+004043c0 <__fillbf+0x1a8> sw $2,44($17)
+004043c8 <__fillbf+0x1b0> sw $3,48($17)
+004043d0 <__fillbf+0x1b8> addu $4,$0,$17
+004043d8 <__fillbf+0x1c0> jal 00405740 <__stdio_init_stream>
+004043e0 <__fillbf+0x1c8> lw $2,76($17)
+004043e8 <__fillbf+0x1d0> ori $2,$2,16384
+004043f0 <__fillbf+0x1d8> sw $2,76($17)
+004043f8 <__fillbf+0x1e0> lw $2,16($17)
+00404400 <__fillbf+0x1e8> bne $2,$0,004044e0 <__fillbf+0x2c8>
+00404408 <__fillbf+0x1f0> lw $2,76($17)
+00404410 <__fillbf+0x1f8> andi $2,$2,2048
+00404418 <__fillbf+0x200> bne $2,$0,004044e0 <__fillbf+0x2c8>
+00404420 <__fillbf+0x208> lw $2,20($17)
+00404428 <__fillbf+0x210> bne $2,$0,00404440 <__fillbf+0x228>
+00404430 <__fillbf+0x218> addiu $2,$0,1024
+00404438 <__fillbf+0x220> sw $2,20($17)
+00404440 <__fillbf+0x228> lw $4,20($17)
+00404448 <__fillbf+0x230> lw $16,-32640($28)
+00404450 <__fillbf+0x238> sltiu $2,$4,128
+00404458 <__fillbf+0x240> bne $2,$0,004044a8 <__fillbf+0x290>
+00404460 <__fillbf+0x248> jal 00401208 <malloc>
+00404468 <__fillbf+0x250> sw $2,16($17)
+00404470 <__fillbf+0x258> bne $2,$0,004044a8 <__fillbf+0x290>
+00404478 <__fillbf+0x260> lw $2,20($17)
+00404480 <__fillbf+0x268> srl $2,$2,0x1
+00404488 <__fillbf+0x270> addu $4,$0,$2
+00404490 <__fillbf+0x278> sltiu $2,$4,128
+00404498 <__fillbf+0x280> sw $4,20($17)
+004044a0 <__fillbf+0x288> beq $2,$0,00404460 <__fillbf+0x248>
+004044a8 <__fillbf+0x290> lw $2,16($17)
+004044b0 <__fillbf+0x298> sw $16,-32640($28)
+004044b8 <__fillbf+0x2a0> bne $2,$0,004044e0 <__fillbf+0x2c8>
+004044c0 <__fillbf+0x2a8> lw $2,76($17)
+004044c8 <__fillbf+0x2b0> sw $0,20($17)
+004044d0 <__fillbf+0x2b8> ori $2,$2,2048
+004044d8 <__fillbf+0x2c0> sw $2,76($17)
+004044e0 <__fillbf+0x2c8> lw $2,4($17)
+004044e8 <__fillbf+0x2d0> bne $2,$0,00404518 <__fillbf+0x300>
+004044f0 <__fillbf+0x2d8> lw $2,16($17)
+004044f8 <__fillbf+0x2e0> lw $3,16($17)
+00404500 <__fillbf+0x2e8> sw $2,4($17)
+00404508 <__fillbf+0x2f0> sw $3,8($17)
+00404510 <__fillbf+0x2f8> sw $3,12($17)
+internals.c:590
+00404518 <__fillbf+0x300> lw $2,16($17)
+00404520 <__fillbf+0x308> beq $2,$0,00404540 <__fillbf+0x328>
+00404528 <__fillbf+0x310> lw $2,76($17)
+00404530 <__fillbf+0x318> andi $2,$2,4096
+00404538 <__fillbf+0x320> beq $2,$0,004045f8 <__fillbf+0x3e0>
+internals.c:593
+00404540 <__fillbf+0x328> lw $16,-32724($28)
+00404548 <__fillbf+0x330> beq $16,$0,004045f8 <__fillbf+0x3e0>
+00404550 <__fillbf+0x338> lui $19,65261
+00404558 <__fillbf+0x340> ori $19,$19,47806
+00404560 <__fillbf+0x348> lui $18,65242
+00404568 <__fillbf+0x350> ori $18,$18,48875
+internals.c:594
+00404570 <__fillbf+0x358> lw $2,0($16)
+00404578 <__fillbf+0x360> bne $2,$19,00404590 <__fillbf+0x378>
+00404580 <__fillbf+0x368> lw $2,4($16)
+00404588 <__fillbf+0x370> lw $16,0($2)
+00404590 <__fillbf+0x378> lw $2,0($16)
+00404598 <__fillbf+0x380> bne $2,$18,004045e8 <__fillbf+0x3d0>
+004045a0 <__fillbf+0x388> lw $2,76($16)
+004045a8 <__fillbf+0x390> andi $2,$2,4096
+004045b0 <__fillbf+0x398> beq $2,$0,004045e8 <__fillbf+0x3d0>
+004045b8 <__fillbf+0x3a0> lw $2,28($16)
+004045c0 <__fillbf+0x3a8> andi $2,$2,2
+004045c8 <__fillbf+0x3b0> beq $2,$0,004045e8 <__fillbf+0x3d0>
+internals.c:595
+004045d0 <__fillbf+0x3b8> addu $4,$0,$16
+004045d8 <__fillbf+0x3c0> addiu $5,$0,-1
+004045e0 <__fillbf+0x3c8> jal 00403ce0 <__flshfp>
+internals.c:593
+004045e8 <__fillbf+0x3d0> lw $16,68($16)
+004045f0 <__fillbf+0x3d8> bne $16,$0,00404570 <__fillbf+0x358>
+internals.c:600
+004045f8 <__fillbf+0x3e0> lw $2,76($17)
+00404600 <__fillbf+0x3e8> andi $2,$2,8192
+00404608 <__fillbf+0x3f0> beq $2,$0,00404650 <__fillbf+0x438>
+internals.c:604
+00404610 <__fillbf+0x3f8> lw $2,16($17)
+00404618 <__fillbf+0x400> lw $4,20($17)
+internals.c:605
+00404620 <__fillbf+0x408> lw $3,76($17)
+internals.c:604
+00404628 <__fillbf+0x410> addu $2,$2,$4
+00404630 <__fillbf+0x418> sw $2,12($17)
+internals.c:605
+00404638 <__fillbf+0x420> addiu $2,$0,-8193
+00404640 <__fillbf+0x428> and $3,$3,$2
+00404648 <__fillbf+0x430> sw $3,76($17)
+internals.c:610
+00404650 <__fillbf+0x438> lw $3,8($17)
+00404658 <__fillbf+0x440> lw $2,16($17)
+00404660 <__fillbf+0x448> lw $4,64($17)
+internals.c:612
+00404668 <__fillbf+0x450> lw $5,12($17)
+internals.c:610
+00404670 <__fillbf+0x458> subu $3,$3,$2
+00404678 <__fillbf+0x460> addu $16,$3,$4
+internals.c:612
+00404680 <__fillbf+0x468> sltu $2,$2,$5
+00404688 <__fillbf+0x470> beq $2,$0,004046d8 <__fillbf+0x4c0>
+internals.c:616
+00404690 <__fillbf+0x478> lw $2,56($17)
+00404698 <__fillbf+0x480> bne $2,$0,004046c0 <__fillbf+0x4a8>
+internals.c:617
+004046a0 <__fillbf+0x488> lw $2,76($17)
+004046a8 <__fillbf+0x490> ori $2,$2,1024
+004046b0 <__fillbf+0x498> sw $2,76($17)
+004046b8 <__fillbf+0x4a0> j 004046d8 <__fillbf+0x4c0>
+internals.c:619
+004046c0 <__fillbf+0x4a8> addu $4,$0,$17
+004046c8 <__fillbf+0x4b0> addiu $5,$0,-1
+004046d0 <__fillbf+0x4b8> jalr $31,$2
+internals.c:624
+004046d8 <__fillbf+0x4c0> lw $3,76($17)
+internals.c:622
+004046e0 <__fillbf+0x4c8> sw $16,64($17)
+internals.c:624
+004046e8 <__fillbf+0x4d0> andi $2,$3,1024
+004046f0 <__fillbf+0x4d8> bne $2,$0,00404760 <__fillbf+0x548>
+internals.c:626
+004046f8 <__fillbf+0x4e0> lw $2,52($17)
+00404700 <__fillbf+0x4e8> beq $2,$0,00404750 <__fillbf+0x538>
+internals.c:628
+00404708 <__fillbf+0x4f0> addu $4,$0,$17
+00404710 <__fillbf+0x4f8> jalr $31,$2
+internals.c:629
+00404718 <__fillbf+0x500> lw $3,16($17)
+internals.c:628
+00404720 <__fillbf+0x508> addu $4,$0,$2
+internals.c:629
+00404728 <__fillbf+0x510> bne $3,$0,00404768 <__fillbf+0x550>
+internals.c:634
+00404730 <__fillbf+0x518> lw $2,64($17)
+00404738 <__fillbf+0x520> addiu $2,$2,1
+00404740 <__fillbf+0x528> sw $2,64($17)
+internals.c:635
+00404748 <__fillbf+0x530> j 00404768 <__fillbf+0x550>
+internals.c:639
+00404750 <__fillbf+0x538> ori $2,$3,512
+00404758 <__fillbf+0x540> sw $2,76($17)
+internals.c:640
+00404760 <__fillbf+0x548> addiu $4,$0,-1
+internals.c:643
+00404768 <__fillbf+0x550> addu $2,$0,$4
+internals.c:644
+00404770 <__fillbf+0x558> lw $31,32($29)
+00404778 <__fillbf+0x560> lw $19,28($29)
+00404780 <__fillbf+0x568> lw $18,24($29)
+00404788 <__fillbf+0x570> lw $17,20($29)
+00404790 <__fillbf+0x578> lw $16,16($29)
+00404798 <__fillbf+0x580> addiu $29,$29,40
+004047a0 <__fillbf+0x588> jr $31
+__invalidate():
+internals.c:650
+004047a8 <__invalidate> addiu $29,$29,-32
+004047b0 <__invalidate+0x8> sw $16,16($29)
+004047b8 <__invalidate+0x10> addu $16,$0,$4
+004047c0 <__invalidate+0x18> sw $31,24($29)
+004047c8 <__invalidate+0x20> sw $17,20($29)
+internals.c:652
+004047d0 <__invalidate+0x28> lw $17,68($16)
+internals.c:655
+004047d8 <__invalidate+0x30> addu $5,$0,$0
+004047e0 <__invalidate+0x38> addiu $6,$0,80
+004047e8 <__invalidate+0x40> jal 00402020 <memset>
+internals.c:658
+004047f0 <__invalidate+0x48> sw $17,68($16)
+internals.c:659
+004047f8 <__invalidate+0x50> lw $31,24($29)
+00404800 <__invalidate+0x58> lw $17,20($29)
+00404808 <__invalidate+0x60> lw $16,16($29)
+00404810 <__invalidate+0x68> addiu $29,$29,32
+00404818 <__invalidate+0x70> jr $31
+__stdio_read():
+../sysdeps/generic/sysd-stdio.c:34
+00404820 <__stdio_read> addiu $29,$29,-24
+00404828 <__stdio_read+0x8> sw $31,16($29)
+../sysdeps/generic/sysd-stdio.c:53
+00404830 <__stdio_read+0x10> jal 00405890 <__read>
+../sysdeps/generic/sysd-stdio.c:55
+00404838 <__stdio_read+0x18> lw $31,16($29)
+00404840 <__stdio_read+0x20> addiu $29,$29,24
+00404848 <__stdio_read+0x28> jr $31
+__stdio_write():
+../sysdeps/generic/sysd-stdio.c:62
+00404850 <__stdio_write> addiu $29,$29,-40
+00404858 <__stdio_write+0x8> sw $17,20($29)
+00404860 <__stdio_write+0x10> addu $17,$0,$5
+00404868 <__stdio_write+0x18> sw $16,16($29)
+00404870 <__stdio_write+0x20> addu $16,$0,$6
+00404878 <__stdio_write+0x28> sw $18,24($29)
+../sysdeps/generic/sysd-stdio.c:64
+00404880 <__stdio_write+0x30> addu $18,$0,$0
+../sysdeps/generic/sysd-stdio.c:62
+00404888 <__stdio_write+0x38> sw $19,28($29)
+../sysdeps/generic/sysd-stdio.c:63
+00404890 <__stdio_write+0x40> addu $19,$0,$4
+../sysdeps/generic/sysd-stdio.c:62
+00404898 <__stdio_write+0x48> sw $31,32($29)
+../sysdeps/generic/sysd-stdio.c:66
+004048a0 <__stdio_write+0x50> beq $16,$0,00404908 <__stdio_write+0xb8>
+../sysdeps/generic/sysd-stdio.c:68
+004048a8 <__stdio_write+0x58> addu $4,$0,$19
+004048b0 <__stdio_write+0x60> addu $5,$0,$17
+004048b8 <__stdio_write+0x68> addu $6,$0,$16
+004048c0 <__stdio_write+0x70> jal 004058d0 <__write>
+../sysdeps/generic/sysd-stdio.c:69
+004048c8 <__stdio_write+0x78> bgtz $2,004048e8 <__stdio_write+0x98>
+../sysdeps/generic/sysd-stdio.c:75
+004048d0 <__stdio_write+0x80> bgez $2,00404900 <__stdio_write+0xb0>
+../sysdeps/generic/sysd-stdio.c:81
+004048d8 <__stdio_write+0x88> addiu $2,$0,-1
+004048e0 <__stdio_write+0x90> j 00404910 <__stdio_write+0xc0>
+../sysdeps/generic/sysd-stdio.c:71
+004048e8 <__stdio_write+0x98> addu $17,$17,$2
+../sysdeps/generic/sysd-stdio.c:72
+004048f0 <__stdio_write+0xa0> addu $18,$18,$2
+../sysdeps/generic/sysd-stdio.c:73
+004048f8 <__stdio_write+0xa8> subu $16,$16,$2
+../sysdeps/generic/sysd-stdio.c:82
+00404900 <__stdio_write+0xb0> bne $16,$0,004048a8 <__stdio_write+0x58>
+../sysdeps/generic/sysd-stdio.c:84
+00404908 <__stdio_write+0xb8> addu $2,$0,$18
+../sysdeps/generic/sysd-stdio.c:85
+00404910 <__stdio_write+0xc0> lw $31,32($29)
+00404918 <__stdio_write+0xc8> lw $19,28($29)
+00404920 <__stdio_write+0xd0> lw $18,24($29)
+00404928 <__stdio_write+0xd8> lw $17,20($29)
+00404930 <__stdio_write+0xe0> lw $16,16($29)
+00404938 <__stdio_write+0xe8> addiu $29,$29,40
+00404940 <__stdio_write+0xf0> jr $31
+__stdio_seek():
+../sysdeps/generic/sysd-stdio.c:94
+00404948 <__stdio_seek> addiu $29,$29,-24
+00404950 <__stdio_seek+0x8> sw $16,16($29)
+00404958 <__stdio_seek+0x10> addu $16,$0,$5
+00404960 <__stdio_seek+0x18> sw $31,20($29)
+../sysdeps/generic/sysd-stdio.c:96
+00404968 <__stdio_seek+0x20> lw $5,0($16)
+00404970 <__stdio_seek+0x28> jal 00405910 <__lseek>
+../sysdeps/generic/sysd-stdio.c:97
+00404978 <__stdio_seek+0x30> bltz $2,00404998 <__stdio_seek+0x50>
+../sysdeps/generic/sysd-stdio.c:99
+00404980 <__stdio_seek+0x38> sw $2,0($16)
+../sysdeps/generic/sysd-stdio.c:100
+00404988 <__stdio_seek+0x40> addu $2,$0,$0
+00404990 <__stdio_seek+0x48> j 004049a0 <__stdio_seek+0x58>
+../sysdeps/generic/sysd-stdio.c:98
+00404998 <__stdio_seek+0x50> addiu $2,$0,1
+../sysdeps/generic/sysd-stdio.c:101
+004049a0 <__stdio_seek+0x58> lw $31,20($29)
+004049a8 <__stdio_seek+0x60> lw $16,16($29)
+004049b0 <__stdio_seek+0x68> addiu $29,$29,24
+004049b8 <__stdio_seek+0x70> jr $31
+__stdio_close():
+../sysdeps/generic/sysd-stdio.c:107
+004049c0 <__stdio_close> addiu $29,$29,-24
+004049c8 <__stdio_close+0x8> sw $31,16($29)
+../sysdeps/generic/sysd-stdio.c:108
+004049d0 <__stdio_close+0x10> jal 00405950 <__close>
+004049d8 <__stdio_close+0x18> lw $31,16($29)
+004049e0 <__stdio_close+0x20> addiu $29,$29,24
+004049e8 <__stdio_close+0x28> jr $31
+__stdio_fileno():
+../sysdeps/generic/sysd-stdio.c:117
+004049f0 <__stdio_fileno> addu $2,$0,$4
+004049f8 <__stdio_fileno+0x8> jr $31
+__stdio_open():
+../sysdeps/generic/sysd-stdio.c:125
+00404a00 <__stdio_open> addiu $29,$29,-24
+00404a08 <__stdio_open+0x8> addu $7,$0,$5
+00404a10 <__stdio_open+0x10> sw $16,16($29)
+00404a18 <__stdio_open+0x18> addu $16,$0,$6
+../sysdeps/generic/sysd-stdio.c:129
+00404a20 <__stdio_open+0x20> andi $3,$7,3
+00404a28 <__stdio_open+0x28> addiu $2,$0,3
+../sysdeps/generic/sysd-stdio.c:125
+00404a30 <__stdio_open+0x30> sw $31,20($29)
+../sysdeps/generic/sysd-stdio.c:129
+00404a38 <__stdio_open+0x38> bne $3,$2,00404a50 <__stdio_open+0x50>
+../sysdeps/generic/sysd-stdio.c:130
+00404a40 <__stdio_open+0x40> addiu $5,$0,2
+00404a48 <__stdio_open+0x48> j 00404a60 <__stdio_open+0x60>
+../sysdeps/generic/sysd-stdio.c:132
+00404a50 <__stdio_open+0x50> xori $5,$7,1
+00404a58 <__stdio_open+0x58> andi $5,$5,1
+../sysdeps/generic/sysd-stdio.c:134
+00404a60 <__stdio_open+0x60> andi $2,$7,4
+00404a68 <__stdio_open+0x68> beq $2,$0,00404a78 <__stdio_open+0x78>
+../sysdeps/generic/sysd-stdio.c:135
+00404a70 <__stdio_open+0x70> ori $5,$5,8
+../sysdeps/generic/sysd-stdio.c:136
+00404a78 <__stdio_open+0x78> andi $2,$7,32
+00404a80 <__stdio_open+0x80> beq $2,$0,00404a90 <__stdio_open+0x90>
+../sysdeps/generic/sysd-stdio.c:137
+00404a88 <__stdio_open+0x88> ori $5,$5,2048
+../sysdeps/generic/sysd-stdio.c:138
+00404a90 <__stdio_open+0x90> andi $2,$7,64
+00404a98 <__stdio_open+0x98> beq $2,$0,00404aa8 <__stdio_open+0xa8>
+../sysdeps/generic/sysd-stdio.c:139
+00404aa0 <__stdio_open+0xa0> ori $5,$5,1024
+../sysdeps/generic/sysd-stdio.c:141
+00404aa8 <__stdio_open+0xa8> andi $2,$7,16
+00404ab0 <__stdio_open+0xb0> beq $2,$0,00404ad8 <__stdio_open+0xd8>
+../sysdeps/generic/sysd-stdio.c:142
+00404ab8 <__stdio_open+0xb8> ori $5,$5,512
+00404ac0 <__stdio_open+0xc0> addiu $6,$0,438
+00404ac8 <__stdio_open+0xc8> jal 00405990 <__open>
+00404ad0 <__stdio_open+0xd0> j 00404ae0 <__stdio_open+0xe0>
+../sysdeps/generic/sysd-stdio.c:145
+00404ad8 <__stdio_open+0xd8> jal 00405990 <__open>
+../sysdeps/generic/sysd-stdio.c:147
+00404ae0 <__stdio_open+0xe0> bltz $2,00404b00 <__stdio_open+0x100>
+../sysdeps/generic/sysd-stdio.c:150
+00404ae8 <__stdio_open+0xe8> sw $2,0($16)
+../sysdeps/generic/sysd-stdio.c:151
+00404af0 <__stdio_open+0xf0> addu $2,$0,$0
+00404af8 <__stdio_open+0xf8> j 00404b08 <__stdio_open+0x108>
+../sysdeps/generic/sysd-stdio.c:148
+00404b00 <__stdio_open+0x100> addiu $2,$0,-1
+../sysdeps/generic/sysd-stdio.c:152
+00404b08 <__stdio_open+0x108> lw $31,20($29)
+00404b10 <__stdio_open+0x110> lw $16,16($29)
+00404b18 <__stdio_open+0x118> addiu $29,$29,24
+00404b20 <__stdio_open+0x120> jr $31
+__stdio_reopen():
+../sysdeps/generic/sysd-stdio.c:161
+00404b28 <__stdio_reopen> addiu $29,$29,-48
+00404b30 <__stdio_reopen+0x8> sw $17,28($29)
+00404b38 <__stdio_reopen+0x10> addu $17,$0,$4
+00404b40 <__stdio_reopen+0x18> sw $16,24($29)
+00404b48 <__stdio_reopen+0x20> addu $16,$0,$5
+00404b50 <__stdio_reopen+0x28> sw $18,32($29)
+00404b58 <__stdio_reopen+0x30> addu $18,$0,$6
+00404b60 <__stdio_reopen+0x38> sw $20,40($29)
+00404b68 <__stdio_reopen+0x40> addu $20,$0,$7
+00404b70 <__stdio_reopen+0x48> sw $19,36($29)
+00404b78 <__stdio_reopen+0x50> addiu $19,$29,16
+00404b80 <__stdio_reopen+0x58> andi $3,$16,3
+00404b88 <__stdio_reopen+0x60> addiu $2,$0,3
+00404b90 <__stdio_reopen+0x68> sw $31,44($29)
+00404b98 <__stdio_reopen+0x70> bne $3,$2,00404bb0 <__stdio_reopen+0x88>
+00404ba0 <__stdio_reopen+0x78> addiu $5,$0,2
+00404ba8 <__stdio_reopen+0x80> j 00404bc0 <__stdio_reopen+0x98>
+00404bb0 <__stdio_reopen+0x88> xori $5,$16,1
+00404bb8 <__stdio_reopen+0x90> andi $5,$5,1
+00404bc0 <__stdio_reopen+0x98> andi $2,$16,4
+00404bc8 <__stdio_reopen+0xa0> beq $2,$0,00404bd8 <__stdio_reopen+0xb0>
+00404bd0 <__stdio_reopen+0xa8> ori $5,$5,8
+00404bd8 <__stdio_reopen+0xb0> andi $2,$16,32
+00404be0 <__stdio_reopen+0xb8> beq $2,$0,00404bf0 <__stdio_reopen+0xc8>
+00404be8 <__stdio_reopen+0xc0> ori $5,$5,2048
+00404bf0 <__stdio_reopen+0xc8> andi $2,$16,64
+00404bf8 <__stdio_reopen+0xd0> beq $2,$0,00404c08 <__stdio_reopen+0xe0>
+00404c00 <__stdio_reopen+0xd8> ori $5,$5,1024
+00404c08 <__stdio_reopen+0xe0> andi $2,$16,16
+00404c10 <__stdio_reopen+0xe8> beq $2,$0,00404c40 <__stdio_reopen+0x118>
+00404c18 <__stdio_reopen+0xf0> addu $4,$0,$17
+00404c20 <__stdio_reopen+0xf8> ori $5,$5,512
+00404c28 <__stdio_reopen+0x100> addiu $6,$0,438
+00404c30 <__stdio_reopen+0x108> jal 00405990 <__open>
+00404c38 <__stdio_reopen+0x110> j 00404c50 <__stdio_reopen+0x128>
+00404c40 <__stdio_reopen+0x118> addu $4,$0,$17
+00404c48 <__stdio_reopen+0x120> jal 00405990 <__open>
+00404c50 <__stdio_reopen+0x128> bgez $2,00404c68 <__stdio_reopen+0x140>
+00404c58 <__stdio_reopen+0x130> addiu $2,$0,-1
+00404c60 <__stdio_reopen+0x138> j 00404c78 <__stdio_reopen+0x150>
+00404c68 <__stdio_reopen+0x140> sw $2,0($19)
+00404c70 <__stdio_reopen+0x148> addu $2,$0,$0
+../sysdeps/generic/sysd-stdio.c:167
+00404c78 <__stdio_reopen+0x150> beq $2,$0,00404dc0 <__stdio_reopen+0x298>
+../sysdeps/generic/sysd-stdio.c:169
+00404c80 <__stdio_reopen+0x158> lw $2,-32640($28)
+00404c88 <__stdio_reopen+0x160> addiu $2,$2,-23
+00404c90 <__stdio_reopen+0x168> sltiu $2,$2,2
+00404c98 <__stdio_reopen+0x170> beq $2,$0,00404dc0 <__stdio_reopen+0x298>
+../sysdeps/generic/sysd-stdio.c:173
+00404ca0 <__stdio_reopen+0x178> lw $4,0($18)
+00404ca8 <__stdio_reopen+0x180> jalr $31,$20
+00404cb0 <__stdio_reopen+0x188> addiu $19,$29,16
+00404cb8 <__stdio_reopen+0x190> andi $3,$16,3
+00404cc0 <__stdio_reopen+0x198> addiu $2,$0,3
+00404cc8 <__stdio_reopen+0x1a0> bne $3,$2,00404ce0 <__stdio_reopen+0x1b8>
+00404cd0 <__stdio_reopen+0x1a8> addiu $5,$0,2
+00404cd8 <__stdio_reopen+0x1b0> j 00404cf0 <__stdio_reopen+0x1c8>
+00404ce0 <__stdio_reopen+0x1b8> xori $5,$16,1
+00404ce8 <__stdio_reopen+0x1c0> andi $5,$5,1
+00404cf0 <__stdio_reopen+0x1c8> andi $2,$16,4
+00404cf8 <__stdio_reopen+0x1d0> beq $2,$0,00404d08 <__stdio_reopen+0x1e0>
+00404d00 <__stdio_reopen+0x1d8> ori $5,$5,8
+00404d08 <__stdio_reopen+0x1e0> andi $2,$16,32
+00404d10 <__stdio_reopen+0x1e8> beq $2,$0,00404d20 <__stdio_reopen+0x1f8>
+00404d18 <__stdio_reopen+0x1f0> ori $5,$5,2048
+00404d20 <__stdio_reopen+0x1f8> andi $2,$16,64
+00404d28 <__stdio_reopen+0x200> beq $2,$0,00404d38 <__stdio_reopen+0x210>
+00404d30 <__stdio_reopen+0x208> ori $5,$5,1024
+00404d38 <__stdio_reopen+0x210> andi $2,$16,16
+00404d40 <__stdio_reopen+0x218> beq $2,$0,00404d70 <__stdio_reopen+0x248>
+00404d48 <__stdio_reopen+0x220> addu $4,$0,$17
+00404d50 <__stdio_reopen+0x228> ori $5,$5,512
+00404d58 <__stdio_reopen+0x230> addiu $6,$0,438
+00404d60 <__stdio_reopen+0x238> jal 00405990 <__open>
+00404d68 <__stdio_reopen+0x240> j 00404d80 <__stdio_reopen+0x258>
+00404d70 <__stdio_reopen+0x248> addu $4,$0,$17
+00404d78 <__stdio_reopen+0x250> jal 00405990 <__open>
+00404d80 <__stdio_reopen+0x258> bgez $2,00404d98 <__stdio_reopen+0x270>
+00404d88 <__stdio_reopen+0x260> addiu $2,$0,-1
+00404d90 <__stdio_reopen+0x268> j 00404da8 <__stdio_reopen+0x280>
+00404d98 <__stdio_reopen+0x270> sw $2,0($19)
+00404da0 <__stdio_reopen+0x278> addu $2,$0,$0
+../sysdeps/generic/sysd-stdio.c:174
+00404da8 <__stdio_reopen+0x280> beq $2,$0,00404dc0 <__stdio_reopen+0x298>
+../sysdeps/generic/sysd-stdio.c:175
+00404db0 <__stdio_reopen+0x288> addiu $2,$0,-1
+00404db8 <__stdio_reopen+0x290> j 00404e18 <__stdio_reopen+0x2f0>
+../sysdeps/generic/sysd-stdio.c:179
+00404dc0 <__stdio_reopen+0x298> lw $4,16($29)
+00404dc8 <__stdio_reopen+0x2a0> lw $5,0($18)
+00404dd0 <__stdio_reopen+0x2a8> beq $4,$5,00404e10 <__stdio_reopen+0x2e8>
+../sysdeps/generic/sysd-stdio.c:181
+00404dd8 <__stdio_reopen+0x2b0> lui $2,64
+00404de0 <__stdio_reopen+0x2b8> addiu $2,$2,18880
+00404de8 <__stdio_reopen+0x2c0> bne $20,$2,00404e00 <__stdio_reopen+0x2d8>
+00404df0 <__stdio_reopen+0x2c8> jal 004059d0 <__dup2>
+00404df8 <__stdio_reopen+0x2d0> bgez $2,00404e10 <__stdio_reopen+0x2e8>
+../sysdeps/generic/sysd-stdio.c:185
+00404e00 <__stdio_reopen+0x2d8> lw $2,16($29)
+00404e08 <__stdio_reopen+0x2e0> sw $2,0($18)
+../sysdeps/generic/sysd-stdio.c:188
+00404e10 <__stdio_reopen+0x2e8> addu $2,$0,$0
+../sysdeps/generic/sysd-stdio.c:189
+00404e18 <__stdio_reopen+0x2f0> lw $31,44($29)
+00404e20 <__stdio_reopen+0x2f8> lw $20,40($29)
+00404e28 <__stdio_reopen+0x300> lw $19,36($29)
+00404e30 <__stdio_reopen+0x308> lw $18,32($29)
+00404e38 <__stdio_reopen+0x310> lw $17,28($29)
+00404e40 <__stdio_reopen+0x318> lw $16,24($29)
+00404e48 <__stdio_reopen+0x320> addiu $29,$29,48
+00404e50 <__stdio_reopen+0x328> jr $31
+00404e58 <__stdio_reopen+0x330> nop 
+__sbrk():
+../sysdeps/generic/__sbrk.c:29
+00404e60 <__sbrk> addiu $29,$29,-24
+00404e68 <__sbrk+0x8> sw $31,20($29)
+00404e70 <__sbrk+0x10> sw $16,16($29)
+../sysdeps/generic/__sbrk.c:32
+00404e78 <__sbrk+0x18> bne $4,$0,00404e90 <__sbrk+0x30>
+../sysdeps/generic/__sbrk.c:33
+00404e80 <__sbrk+0x20> lw $2,-32672($28)
+00404e88 <__sbrk+0x28> j 00404ec8 <__sbrk+0x68>
+../sysdeps/generic/__sbrk.c:35
+00404e90 <__sbrk+0x30> lw $16,-32672($28)
+../sysdeps/generic/__sbrk.c:36
+00404e98 <__sbrk+0x38> addu $4,$16,$4
+00404ea0 <__sbrk+0x40> jal 00405a00 <__brk>
+00404ea8 <__sbrk+0x48> addu $3,$0,$2
+../sysdeps/generic/__sbrk.c:37
+00404eb0 <__sbrk+0x50> addiu $2,$0,-1
+../sysdeps/generic/__sbrk.c:36
+00404eb8 <__sbrk+0x58> bltz $3,00404ec8 <__sbrk+0x68>
+../sysdeps/generic/__sbrk.c:39
+00404ec0 <__sbrk+0x60> addu $2,$0,$16
+../sysdeps/generic/__sbrk.c:40
+00404ec8 <__sbrk+0x68> lw $31,20($29)
+00404ed0 <__sbrk+0x70> lw $16,16($29)
+00404ed8 <__sbrk+0x78> addiu $29,$29,24
+00404ee0 <__sbrk+0x80> jr $31
+00404ee8 <__sbrk+0x88> nop 
+_wordcopy_fwd_aligned():
+../sysdeps/generic/wordcopy.c:36
+00404ef0 <_wordcopy_fwd_aligned> andi $7,$6,7
+00404ef8 <_wordcopy_fwd_aligned+0x8> sltiu $2,$7,8
+00404f00 <_wordcopy_fwd_aligned+0x10> beq $2,$0,00405050 <_wordcopy_fwd_aligned+0x160>
+00404f08 <_wordcopy_fwd_aligned+0x18> sll $2,$7,0x2
+00404f10 <_wordcopy_fwd_aligned+0x20> lui $1,4096
+00404f18 <_wordcopy_fwd_aligned+0x28> addu $1,$1,$2
+00404f20 <_wordcopy_fwd_aligned+0x30> lw $2,32($1)
+00404f28 <_wordcopy_fwd_aligned+0x38> jr $2
+../sysdeps/generic/wordcopy.c:39
+00404f30 <_wordcopy_fwd_aligned+0x40> lw $2,0($5)
+../sysdeps/generic/wordcopy.c:41
+00404f38 <_wordcopy_fwd_aligned+0x48> addiu $4,$4,-28
+../sysdeps/generic/wordcopy.c:42
+00404f40 <_wordcopy_fwd_aligned+0x50> addiu $6,$6,6
+../sysdeps/generic/wordcopy.c:40
+00404f48 <_wordcopy_fwd_aligned+0x58> addiu $5,$5,-24
+../sysdeps/generic/wordcopy.c:43
+00404f50 <_wordcopy_fwd_aligned+0x60> j 004050c0 <_wordcopy_fwd_aligned+0x1d0>
+../sysdeps/generic/wordcopy.c:45
+00404f58 <_wordcopy_fwd_aligned+0x68> lw $3,0($5)
+../sysdeps/generic/wordcopy.c:47
+00404f60 <_wordcopy_fwd_aligned+0x70> addiu $4,$4,-24
+../sysdeps/generic/wordcopy.c:48
+00404f68 <_wordcopy_fwd_aligned+0x78> addiu $6,$6,5
+../sysdeps/generic/wordcopy.c:46
+00404f70 <_wordcopy_fwd_aligned+0x80> addiu $5,$5,-20
+../sysdeps/generic/wordcopy.c:49
+00404f78 <_wordcopy_fwd_aligned+0x88> j 004050b0 <_wordcopy_fwd_aligned+0x1c0>
+../sysdeps/generic/wordcopy.c:51
+00404f80 <_wordcopy_fwd_aligned+0x90> lw $2,0($5)
+../sysdeps/generic/wordcopy.c:53
+00404f88 <_wordcopy_fwd_aligned+0x98> addiu $4,$4,-20
+../sysdeps/generic/wordcopy.c:54
+00404f90 <_wordcopy_fwd_aligned+0xa0> addiu $6,$6,4
+../sysdeps/generic/wordcopy.c:52
+00404f98 <_wordcopy_fwd_aligned+0xa8> addiu $5,$5,-16
+../sysdeps/generic/wordcopy.c:55
+00404fa0 <_wordcopy_fwd_aligned+0xb0> j 004050a0 <_wordcopy_fwd_aligned+0x1b0>
+../sysdeps/generic/wordcopy.c:57
+00404fa8 <_wordcopy_fwd_aligned+0xb8> lw $3,0($5)
+../sysdeps/generic/wordcopy.c:59
+00404fb0 <_wordcopy_fwd_aligned+0xc0> addiu $4,$4,-16
+../sysdeps/generic/wordcopy.c:60
+00404fb8 <_wordcopy_fwd_aligned+0xc8> addiu $6,$6,3
+../sysdeps/generic/wordcopy.c:58
+00404fc0 <_wordcopy_fwd_aligned+0xd0> addiu $5,$5,-12
+../sysdeps/generic/wordcopy.c:61
+00404fc8 <_wordcopy_fwd_aligned+0xd8> j 00405090 <_wordcopy_fwd_aligned+0x1a0>
+../sysdeps/generic/wordcopy.c:63
+00404fd0 <_wordcopy_fwd_aligned+0xe0> lw $2,0($5)
+../sysdeps/generic/wordcopy.c:65
+00404fd8 <_wordcopy_fwd_aligned+0xe8> addiu $4,$4,-12
+../sysdeps/generic/wordcopy.c:66
+00404fe0 <_wordcopy_fwd_aligned+0xf0> addiu $6,$6,2
+../sysdeps/generic/wordcopy.c:64
+00404fe8 <_wordcopy_fwd_aligned+0xf8> addiu $5,$5,-8
+../sysdeps/generic/wordcopy.c:67
+00404ff0 <_wordcopy_fwd_aligned+0x100> j 00405080 <_wordcopy_fwd_aligned+0x190>
+../sysdeps/generic/wordcopy.c:69
+00404ff8 <_wordcopy_fwd_aligned+0x108> lw $3,0($5)
+../sysdeps/generic/wordcopy.c:71
+00405000 <_wordcopy_fwd_aligned+0x110> addiu $4,$4,-8
+../sysdeps/generic/wordcopy.c:72
+00405008 <_wordcopy_fwd_aligned+0x118> addiu $6,$6,1
+../sysdeps/generic/wordcopy.c:70
+00405010 <_wordcopy_fwd_aligned+0x120> addiu $5,$5,-4
+../sysdeps/generic/wordcopy.c:73
+00405018 <_wordcopy_fwd_aligned+0x128> j 00405070 <_wordcopy_fwd_aligned+0x180>
+../sysdeps/generic/wordcopy.c:78
+00405020 <_wordcopy_fwd_aligned+0x130> lw $2,0($5)
+../sysdeps/generic/wordcopy.c:80
+00405028 <_wordcopy_fwd_aligned+0x138> addiu $4,$4,-4
+../sysdeps/generic/wordcopy.c:81
+00405030 <_wordcopy_fwd_aligned+0x140> j 00405060 <_wordcopy_fwd_aligned+0x170>
+../sysdeps/generic/wordcopy.c:83
+00405038 <_wordcopy_fwd_aligned+0x148> lw $3,0($5)
+../sysdeps/generic/wordcopy.c:86
+00405040 <_wordcopy_fwd_aligned+0x150> addiu $6,$6,-1
+../sysdeps/generic/wordcopy.c:84
+00405048 <_wordcopy_fwd_aligned+0x158> addiu $5,$5,4
+../sysdeps/generic/wordcopy.c:95
+00405050 <_wordcopy_fwd_aligned+0x160> lw $2,0($5)
+../sysdeps/generic/wordcopy.c:96
+00405058 <_wordcopy_fwd_aligned+0x168> sw $3,0($4)
+../sysdeps/generic/wordcopy.c:98
+00405060 <_wordcopy_fwd_aligned+0x170> lw $3,4($5)
+../sysdeps/generic/wordcopy.c:99
+00405068 <_wordcopy_fwd_aligned+0x178> sw $2,4($4)
+../sysdeps/generic/wordcopy.c:101
+00405070 <_wordcopy_fwd_aligned+0x180> lw $2,8($5)
+../sysdeps/generic/wordcopy.c:102
+00405078 <_wordcopy_fwd_aligned+0x188> sw $3,8($4)
+../sysdeps/generic/wordcopy.c:104
+00405080 <_wordcopy_fwd_aligned+0x190> lw $3,12($5)
+../sysdeps/generic/wordcopy.c:105
+00405088 <_wordcopy_fwd_aligned+0x198> sw $2,12($4)
+../sysdeps/generic/wordcopy.c:107
+00405090 <_wordcopy_fwd_aligned+0x1a0> lw $2,16($5)
+../sysdeps/generic/wordcopy.c:108
+00405098 <_wordcopy_fwd_aligned+0x1a8> sw $3,16($4)
+../sysdeps/generic/wordcopy.c:110
+004050a0 <_wordcopy_fwd_aligned+0x1b0> lw $3,20($5)
+../sysdeps/generic/wordcopy.c:111
+004050a8 <_wordcopy_fwd_aligned+0x1b8> sw $2,20($4)
+../sysdeps/generic/wordcopy.c:113
+004050b0 <_wordcopy_fwd_aligned+0x1c0> lw $2,24($5)
+../sysdeps/generic/wordcopy.c:114
+004050b8 <_wordcopy_fwd_aligned+0x1c8> sw $3,24($4)
+../sysdeps/generic/wordcopy.c:116
+004050c0 <_wordcopy_fwd_aligned+0x1d0> lw $3,28($5)
+../sysdeps/generic/wordcopy.c:121
+004050c8 <_wordcopy_fwd_aligned+0x1d8> addiu $6,$6,-8
+../sysdeps/generic/wordcopy.c:119
+004050d0 <_wordcopy_fwd_aligned+0x1e0> addiu $5,$5,32
+../sysdeps/generic/wordcopy.c:117
+004050d8 <_wordcopy_fwd_aligned+0x1e8> sw $2,28($4)
+../sysdeps/generic/wordcopy.c:120
+004050e0 <_wordcopy_fwd_aligned+0x1f0> addiu $4,$4,32
+../sysdeps/generic/wordcopy.c:123
+004050e8 <_wordcopy_fwd_aligned+0x1f8> bne $6,$0,00405050 <_wordcopy_fwd_aligned+0x160>
+../sysdeps/generic/wordcopy.c:128
+004050f0 <_wordcopy_fwd_aligned+0x200> sw $3,0($4)
+../sysdeps/generic/wordcopy.c:129
+004050f8 <_wordcopy_fwd_aligned+0x208> jr $31
+_wordcopy_fwd_dest_aligned():
+../sysdeps/generic/wordcopy.c:146
+00405100 <_wordcopy_fwd_dest_aligned> andi $3,$5,3
+../sysdeps/generic/wordcopy.c:151
+00405108 <_wordcopy_fwd_dest_aligned+0x8> addiu $2,$0,-4
+00405110 <_wordcopy_fwd_dest_aligned+0x10> and $5,$5,$2
+../sysdeps/generic/wordcopy.c:146
+00405118 <_wordcopy_fwd_dest_aligned+0x18> sll $11,$3,0x3
+../sysdeps/generic/wordcopy.c:147
+00405120 <_wordcopy_fwd_dest_aligned+0x20> addiu $2,$0,32
+00405128 <_wordcopy_fwd_dest_aligned+0x28> subu $12,$2,$11
+../sysdeps/generic/wordcopy.c:153
+00405130 <_wordcopy_fwd_dest_aligned+0x30> andi $3,$6,3
+00405138 <_wordcopy_fwd_dest_aligned+0x38> addiu $2,$0,1
+00405140 <_wordcopy_fwd_dest_aligned+0x40> beq $3,$2,004051f8 <_wordcopy_fwd_dest_aligned+0xf8>
+00405148 <_wordcopy_fwd_dest_aligned+0x48> beq $3,$0,004051d0 <_wordcopy_fwd_dest_aligned+0xd0>
+00405150 <_wordcopy_fwd_dest_aligned+0x50> addiu $2,$0,2
+00405158 <_wordcopy_fwd_dest_aligned+0x58> beq $3,$2,00405178 <_wordcopy_fwd_dest_aligned+0x78>
+00405160 <_wordcopy_fwd_dest_aligned+0x60> addiu $2,$0,3
+00405168 <_wordcopy_fwd_dest_aligned+0x68> beq $3,$2,004051a8 <_wordcopy_fwd_dest_aligned+0xa8>
+00405170 <_wordcopy_fwd_dest_aligned+0x70> j 00405218 <_wordcopy_fwd_dest_aligned+0x118>
+../sysdeps/generic/wordcopy.c:156
+00405178 <_wordcopy_fwd_dest_aligned+0x78> lw $8,0($5)
+../sysdeps/generic/wordcopy.c:157
+00405180 <_wordcopy_fwd_dest_aligned+0x80> lw $9,4($5)
+../sysdeps/generic/wordcopy.c:159
+00405188 <_wordcopy_fwd_dest_aligned+0x88> addiu $4,$4,-12
+../sysdeps/generic/wordcopy.c:160
+00405190 <_wordcopy_fwd_dest_aligned+0x90> addiu $6,$6,2
+../sysdeps/generic/wordcopy.c:158
+00405198 <_wordcopy_fwd_dest_aligned+0x98> addiu $5,$5,-4
+../sysdeps/generic/wordcopy.c:161
+004051a0 <_wordcopy_fwd_dest_aligned+0xa0> j 00405290 <_wordcopy_fwd_dest_aligned+0x190>
+../sysdeps/generic/wordcopy.c:163
+004051a8 <_wordcopy_fwd_dest_aligned+0xa8> lw $7,0($5)
+../sysdeps/generic/wordcopy.c:164
+004051b0 <_wordcopy_fwd_dest_aligned+0xb0> lw $8,4($5)
+../sysdeps/generic/wordcopy.c:166
+004051b8 <_wordcopy_fwd_dest_aligned+0xb8> addiu $4,$4,-8
+../sysdeps/generic/wordcopy.c:167
+004051c0 <_wordcopy_fwd_dest_aligned+0xc0> addiu $6,$6,1
+../sysdeps/generic/wordcopy.c:168
+004051c8 <_wordcopy_fwd_dest_aligned+0xc8> j 00405268 <_wordcopy_fwd_dest_aligned+0x168>
+../sysdeps/generic/wordcopy.c:172
+004051d0 <_wordcopy_fwd_dest_aligned+0xd0> lw $10,0($5)
+../sysdeps/generic/wordcopy.c:173
+004051d8 <_wordcopy_fwd_dest_aligned+0xd8> lw $7,4($5)
+../sysdeps/generic/wordcopy.c:175
+004051e0 <_wordcopy_fwd_dest_aligned+0xe0> addiu $4,$4,-4
+../sysdeps/generic/wordcopy.c:174
+004051e8 <_wordcopy_fwd_dest_aligned+0xe8> addiu $5,$5,4
+../sysdeps/generic/wordcopy.c:177
+004051f0 <_wordcopy_fwd_dest_aligned+0xf0> j 00405240 <_wordcopy_fwd_dest_aligned+0x140>
+../sysdeps/generic/wordcopy.c:179
+004051f8 <_wordcopy_fwd_dest_aligned+0xf8> lw $9,0($5)
+../sysdeps/generic/wordcopy.c:180
+00405200 <_wordcopy_fwd_dest_aligned+0x100> lw $10,4($5)
+../sysdeps/generic/wordcopy.c:183
+00405208 <_wordcopy_fwd_dest_aligned+0x108> addiu $6,$6,-1
+../sysdeps/generic/wordcopy.c:181
+00405210 <_wordcopy_fwd_dest_aligned+0x110> addiu $5,$5,8
+../sysdeps/generic/wordcopy.c:192
+00405218 <_wordcopy_fwd_dest_aligned+0x118> lw $7,0($5)
+../sysdeps/generic/wordcopy.c:193
+00405220 <_wordcopy_fwd_dest_aligned+0x120> srlv $2,$9,$11
+00405228 <_wordcopy_fwd_dest_aligned+0x128> sllv $3,$10,$12
+00405230 <_wordcopy_fwd_dest_aligned+0x130> or $2,$2,$3
+00405238 <_wordcopy_fwd_dest_aligned+0x138> sw $2,0($4)
+../sysdeps/generic/wordcopy.c:195
+00405240 <_wordcopy_fwd_dest_aligned+0x140> lw $8,4($5)
+../sysdeps/generic/wordcopy.c:196
+00405248 <_wordcopy_fwd_dest_aligned+0x148> srlv $2,$10,$11
+00405250 <_wordcopy_fwd_dest_aligned+0x150> sllv $3,$7,$12
+00405258 <_wordcopy_fwd_dest_aligned+0x158> or $2,$2,$3
+00405260 <_wordcopy_fwd_dest_aligned+0x160> sw $2,4($4)
+../sysdeps/generic/wordcopy.c:198
+00405268 <_wordcopy_fwd_dest_aligned+0x168> lw $9,8($5)
+../sysdeps/generic/wordcopy.c:199
+00405270 <_wordcopy_fwd_dest_aligned+0x170> srlv $2,$7,$11
+00405278 <_wordcopy_fwd_dest_aligned+0x178> sllv $3,$8,$12
+00405280 <_wordcopy_fwd_dest_aligned+0x180> or $2,$2,$3
+00405288 <_wordcopy_fwd_dest_aligned+0x188> sw $2,8($4)
+../sysdeps/generic/wordcopy.c:201
+00405290 <_wordcopy_fwd_dest_aligned+0x190> lw $10,12($5)
+../sysdeps/generic/wordcopy.c:206
+00405298 <_wordcopy_fwd_dest_aligned+0x198> addiu $6,$6,-4
+../sysdeps/generic/wordcopy.c:202
+004052a0 <_wordcopy_fwd_dest_aligned+0x1a0> srlv $2,$8,$11
+004052a8 <_wordcopy_fwd_dest_aligned+0x1a8> sllv $3,$9,$12
+004052b0 <_wordcopy_fwd_dest_aligned+0x1b0> or $2,$2,$3
+../sysdeps/generic/wordcopy.c:204
+004052b8 <_wordcopy_fwd_dest_aligned+0x1b8> addiu $5,$5,16
+../sysdeps/generic/wordcopy.c:202
+004052c0 <_wordcopy_fwd_dest_aligned+0x1c0> sw $2,12($4)
+../sysdeps/generic/wordcopy.c:205
+004052c8 <_wordcopy_fwd_dest_aligned+0x1c8> addiu $4,$4,16
+../sysdeps/generic/wordcopy.c:208
+004052d0 <_wordcopy_fwd_dest_aligned+0x1d0> bne $6,$0,00405218 <_wordcopy_fwd_dest_aligned+0x118>
+../sysdeps/generic/wordcopy.c:213
+004052d8 <_wordcopy_fwd_dest_aligned+0x1d8> srlv $2,$9,$11
+004052e0 <_wordcopy_fwd_dest_aligned+0x1e0> sllv $3,$10,$12
+004052e8 <_wordcopy_fwd_dest_aligned+0x1e8> or $2,$2,$3
+004052f0 <_wordcopy_fwd_dest_aligned+0x1f0> sw $2,0($4)
+../sysdeps/generic/wordcopy.c:214
+004052f8 <_wordcopy_fwd_dest_aligned+0x1f8> jr $31
+_wordcopy_bwd_aligned():
+../sysdeps/generic/wordcopy.c:227
+00405300 <_wordcopy_bwd_aligned> andi $7,$6,7
+00405308 <_wordcopy_bwd_aligned+0x8> sltiu $2,$7,8
+00405310 <_wordcopy_bwd_aligned+0x10> beq $2,$0,00405470 <_wordcopy_bwd_aligned+0x170>
+00405318 <_wordcopy_bwd_aligned+0x18> sll $2,$7,0x2
+00405320 <_wordcopy_bwd_aligned+0x20> lui $1,4096
+00405328 <_wordcopy_bwd_aligned+0x28> addu $1,$1,$2
+00405330 <_wordcopy_bwd_aligned+0x30> lw $2,64($1)
+00405338 <_wordcopy_bwd_aligned+0x38> jr $2
+../sysdeps/generic/wordcopy.c:230
+00405340 <_wordcopy_bwd_aligned+0x40> addiu $5,$5,-8
+../sysdeps/generic/wordcopy.c:232
+00405348 <_wordcopy_bwd_aligned+0x48> lw $2,4($5)
+../sysdeps/generic/wordcopy.c:231
+00405350 <_wordcopy_bwd_aligned+0x50> addiu $4,$4,-4
+../sysdeps/generic/wordcopy.c:233
+00405358 <_wordcopy_bwd_aligned+0x58> addiu $6,$6,6
+../sysdeps/generic/wordcopy.c:234
+00405360 <_wordcopy_bwd_aligned+0x60> j 004054e0 <_wordcopy_bwd_aligned+0x1e0>
+../sysdeps/generic/wordcopy.c:236
+00405368 <_wordcopy_bwd_aligned+0x68> addiu $5,$5,-12
+../sysdeps/generic/wordcopy.c:238
+00405370 <_wordcopy_bwd_aligned+0x70> lw $3,8($5)
+../sysdeps/generic/wordcopy.c:237
+00405378 <_wordcopy_bwd_aligned+0x78> addiu $4,$4,-8
+../sysdeps/generic/wordcopy.c:239
+00405380 <_wordcopy_bwd_aligned+0x80> addiu $6,$6,5
+../sysdeps/generic/wordcopy.c:240
+00405388 <_wordcopy_bwd_aligned+0x88> j 004054d0 <_wordcopy_bwd_aligned+0x1d0>
+../sysdeps/generic/wordcopy.c:242
+00405390 <_wordcopy_bwd_aligned+0x90> addiu $5,$5,-16
+../sysdeps/generic/wordcopy.c:244
+00405398 <_wordcopy_bwd_aligned+0x98> lw $2,12($5)
+../sysdeps/generic/wordcopy.c:243
+004053a0 <_wordcopy_bwd_aligned+0xa0> addiu $4,$4,-12
+../sysdeps/generic/wordcopy.c:245
+004053a8 <_wordcopy_bwd_aligned+0xa8> addiu $6,$6,4
+../sysdeps/generic/wordcopy.c:246
+004053b0 <_wordcopy_bwd_aligned+0xb0> j 004054c0 <_wordcopy_bwd_aligned+0x1c0>
+../sysdeps/generic/wordcopy.c:248
+004053b8 <_wordcopy_bwd_aligned+0xb8> addiu $5,$5,-20
+../sysdeps/generic/wordcopy.c:250
+004053c0 <_wordcopy_bwd_aligned+0xc0> lw $3,16($5)
+../sysdeps/generic/wordcopy.c:249
+004053c8 <_wordcopy_bwd_aligned+0xc8> addiu $4,$4,-16
+../sysdeps/generic/wordcopy.c:251
+004053d0 <_wordcopy_bwd_aligned+0xd0> addiu $6,$6,3
+../sysdeps/generic/wordcopy.c:252
+004053d8 <_wordcopy_bwd_aligned+0xd8> j 004054b0 <_wordcopy_bwd_aligned+0x1b0>
+../sysdeps/generic/wordcopy.c:254
+004053e0 <_wordcopy_bwd_aligned+0xe0> addiu $5,$5,-24
+../sysdeps/generic/wordcopy.c:256
+004053e8 <_wordcopy_bwd_aligned+0xe8> lw $2,20($5)
+../sysdeps/generic/wordcopy.c:255
+004053f0 <_wordcopy_bwd_aligned+0xf0> addiu $4,$4,-20
+../sysdeps/generic/wordcopy.c:257
+004053f8 <_wordcopy_bwd_aligned+0xf8> addiu $6,$6,2
+../sysdeps/generic/wordcopy.c:258
+00405400 <_wordcopy_bwd_aligned+0x100> j 004054a0 <_wordcopy_bwd_aligned+0x1a0>
+../sysdeps/generic/wordcopy.c:260
+00405408 <_wordcopy_bwd_aligned+0x108> addiu $5,$5,-28
+../sysdeps/generic/wordcopy.c:262
+00405410 <_wordcopy_bwd_aligned+0x110> lw $3,24($5)
+../sysdeps/generic/wordcopy.c:261
+00405418 <_wordcopy_bwd_aligned+0x118> addiu $4,$4,-24
+../sysdeps/generic/wordcopy.c:263
+00405420 <_wordcopy_bwd_aligned+0x120> addiu $6,$6,1
+../sysdeps/generic/wordcopy.c:264
+00405428 <_wordcopy_bwd_aligned+0x128> j 00405490 <_wordcopy_bwd_aligned+0x190>
+../sysdeps/generic/wordcopy.c:269
+00405430 <_wordcopy_bwd_aligned+0x130> addiu $5,$5,-32
+../sysdeps/generic/wordcopy.c:271
+00405438 <_wordcopy_bwd_aligned+0x138> lw $2,28($5)
+../sysdeps/generic/wordcopy.c:270
+00405440 <_wordcopy_bwd_aligned+0x140> addiu $4,$4,-28
+../sysdeps/generic/wordcopy.c:272
+00405448 <_wordcopy_bwd_aligned+0x148> j 00405480 <_wordcopy_bwd_aligned+0x180>
+../sysdeps/generic/wordcopy.c:274
+00405450 <_wordcopy_bwd_aligned+0x150> addiu $5,$5,-36
+../sysdeps/generic/wordcopy.c:275
+00405458 <_wordcopy_bwd_aligned+0x158> addiu $4,$4,-32
+../sysdeps/generic/wordcopy.c:276
+00405460 <_wordcopy_bwd_aligned+0x160> lw $3,32($5)
+../sysdeps/generic/wordcopy.c:277
+00405468 <_wordcopy_bwd_aligned+0x168> addiu $6,$6,-1
+../sysdeps/generic/wordcopy.c:286
+00405470 <_wordcopy_bwd_aligned+0x170> lw $2,28($5)
+../sysdeps/generic/wordcopy.c:287
+00405478 <_wordcopy_bwd_aligned+0x178> sw $3,28($4)
+../sysdeps/generic/wordcopy.c:289
+00405480 <_wordcopy_bwd_aligned+0x180> lw $3,24($5)
+../sysdeps/generic/wordcopy.c:290
+00405488 <_wordcopy_bwd_aligned+0x188> sw $2,24($4)
+../sysdeps/generic/wordcopy.c:292
+00405490 <_wordcopy_bwd_aligned+0x190> lw $2,20($5)
+../sysdeps/generic/wordcopy.c:293
+00405498 <_wordcopy_bwd_aligned+0x198> sw $3,20($4)
+../sysdeps/generic/wordcopy.c:295
+004054a0 <_wordcopy_bwd_aligned+0x1a0> lw $3,16($5)
+../sysdeps/generic/wordcopy.c:296
+004054a8 <_wordcopy_bwd_aligned+0x1a8> sw $2,16($4)
+../sysdeps/generic/wordcopy.c:298
+004054b0 <_wordcopy_bwd_aligned+0x1b0> lw $2,12($5)
+../sysdeps/generic/wordcopy.c:299
+004054b8 <_wordcopy_bwd_aligned+0x1b8> sw $3,12($4)
+../sysdeps/generic/wordcopy.c:301
+004054c0 <_wordcopy_bwd_aligned+0x1c0> lw $3,8($5)
+../sysdeps/generic/wordcopy.c:302
+004054c8 <_wordcopy_bwd_aligned+0x1c8> sw $2,8($4)
+../sysdeps/generic/wordcopy.c:304
+004054d0 <_wordcopy_bwd_aligned+0x1d0> lw $2,4($5)
+../sysdeps/generic/wordcopy.c:305
+004054d8 <_wordcopy_bwd_aligned+0x1d8> sw $3,4($4)
+../sysdeps/generic/wordcopy.c:307
+004054e0 <_wordcopy_bwd_aligned+0x1e0> lw $3,0($5)
+../sysdeps/generic/wordcopy.c:312
+004054e8 <_wordcopy_bwd_aligned+0x1e8> addiu $6,$6,-8
+../sysdeps/generic/wordcopy.c:310
+004054f0 <_wordcopy_bwd_aligned+0x1f0> addiu $5,$5,-32
+../sysdeps/generic/wordcopy.c:308
+004054f8 <_wordcopy_bwd_aligned+0x1f8> sw $2,0($4)
+../sysdeps/generic/wordcopy.c:311
+00405500 <_wordcopy_bwd_aligned+0x200> addiu $4,$4,-32
+../sysdeps/generic/wordcopy.c:314
+00405508 <_wordcopy_bwd_aligned+0x208> bne $6,$0,00405470 <_wordcopy_bwd_aligned+0x170>
+../sysdeps/generic/wordcopy.c:319
+00405510 <_wordcopy_bwd_aligned+0x210> sw $3,28($4)
+../sysdeps/generic/wordcopy.c:320
+00405518 <_wordcopy_bwd_aligned+0x218> jr $31
+_wordcopy_bwd_dest_aligned():
+../sysdeps/generic/wordcopy.c:337
+00405520 <_wordcopy_bwd_dest_aligned> andi $3,$5,3
+../sysdeps/generic/wordcopy.c:342
+00405528 <_wordcopy_bwd_dest_aligned+0x8> addiu $2,$0,-4
+00405530 <_wordcopy_bwd_dest_aligned+0x10> and $5,$5,$2
+../sysdeps/generic/wordcopy.c:343
+00405538 <_wordcopy_bwd_dest_aligned+0x18> addiu $5,$5,4
+../sysdeps/generic/wordcopy.c:337
+00405540 <_wordcopy_bwd_dest_aligned+0x20> sll $11,$3,0x3
+../sysdeps/generic/wordcopy.c:338
+00405548 <_wordcopy_bwd_dest_aligned+0x28> addiu $2,$0,32
+00405550 <_wordcopy_bwd_dest_aligned+0x30> subu $12,$2,$11
+../sysdeps/generic/wordcopy.c:345
+00405558 <_wordcopy_bwd_dest_aligned+0x38> andi $3,$6,3
+00405560 <_wordcopy_bwd_dest_aligned+0x40> addiu $2,$0,1
+00405568 <_wordcopy_bwd_dest_aligned+0x48> beq $3,$2,00405628 <_wordcopy_bwd_dest_aligned+0x108>
+00405570 <_wordcopy_bwd_dest_aligned+0x50> beq $3,$0,00405600 <_wordcopy_bwd_dest_aligned+0xe0>
+00405578 <_wordcopy_bwd_dest_aligned+0x58> addiu $2,$0,2
+00405580 <_wordcopy_bwd_dest_aligned+0x60> beq $3,$2,004055a0 <_wordcopy_bwd_dest_aligned+0x80>
+00405588 <_wordcopy_bwd_dest_aligned+0x68> addiu $2,$0,3
+00405590 <_wordcopy_bwd_dest_aligned+0x70> beq $3,$2,004055d0 <_wordcopy_bwd_dest_aligned+0xb0>
+00405598 <_wordcopy_bwd_dest_aligned+0x78> j 00405650 <_wordcopy_bwd_dest_aligned+0x130>
+../sysdeps/generic/wordcopy.c:348
+004055a0 <_wordcopy_bwd_dest_aligned+0x80> addiu $5,$5,-12
+../sysdeps/generic/wordcopy.c:350
+004055a8 <_wordcopy_bwd_dest_aligned+0x88> lw $8,8($5)
+../sysdeps/generic/wordcopy.c:351
+004055b0 <_wordcopy_bwd_dest_aligned+0x90> lw $10,4($5)
+../sysdeps/generic/wordcopy.c:349
+004055b8 <_wordcopy_bwd_dest_aligned+0x98> addiu $4,$4,-4
+../sysdeps/generic/wordcopy.c:352
+004055c0 <_wordcopy_bwd_dest_aligned+0xa0> addiu $6,$6,2
+../sysdeps/generic/wordcopy.c:353
+004055c8 <_wordcopy_bwd_dest_aligned+0xa8> j 004056c8 <_wordcopy_bwd_dest_aligned+0x1a8>
+../sysdeps/generic/wordcopy.c:355
+004055d0 <_wordcopy_bwd_dest_aligned+0xb0> addiu $5,$5,-16
+../sysdeps/generic/wordcopy.c:357
+004055d8 <_wordcopy_bwd_dest_aligned+0xb8> lw $7,12($5)
+../sysdeps/generic/wordcopy.c:358
+004055e0 <_wordcopy_bwd_dest_aligned+0xc0> lw $8,8($5)
+../sysdeps/generic/wordcopy.c:356
+004055e8 <_wordcopy_bwd_dest_aligned+0xc8> addiu $4,$4,-8
+../sysdeps/generic/wordcopy.c:359
+004055f0 <_wordcopy_bwd_dest_aligned+0xd0> addiu $6,$6,1
+../sysdeps/generic/wordcopy.c:360
+004055f8 <_wordcopy_bwd_dest_aligned+0xd8> j 004056a0 <_wordcopy_bwd_dest_aligned+0x180>
+../sysdeps/generic/wordcopy.c:364
+00405600 <_wordcopy_bwd_dest_aligned+0xe0> addiu $5,$5,-20
+../sysdeps/generic/wordcopy.c:366
+00405608 <_wordcopy_bwd_dest_aligned+0xe8> lw $9,16($5)
+../sysdeps/generic/wordcopy.c:367
+00405610 <_wordcopy_bwd_dest_aligned+0xf0> lw $7,12($5)
+../sysdeps/generic/wordcopy.c:365
+00405618 <_wordcopy_bwd_dest_aligned+0xf8> addiu $4,$4,-12
+../sysdeps/generic/wordcopy.c:368
+00405620 <_wordcopy_bwd_dest_aligned+0x100> j 00405678 <_wordcopy_bwd_dest_aligned+0x158>
+../sysdeps/generic/wordcopy.c:370
+00405628 <_wordcopy_bwd_dest_aligned+0x108> addiu $5,$5,-24
+../sysdeps/generic/wordcopy.c:371
+00405630 <_wordcopy_bwd_dest_aligned+0x110> addiu $4,$4,-16
+../sysdeps/generic/wordcopy.c:372
+00405638 <_wordcopy_bwd_dest_aligned+0x118> lw $10,20($5)
+../sysdeps/generic/wordcopy.c:373
+00405640 <_wordcopy_bwd_dest_aligned+0x120> lw $9,16($5)
+../sysdeps/generic/wordcopy.c:374
+00405648 <_wordcopy_bwd_dest_aligned+0x128> addiu $6,$6,-1
+../sysdeps/generic/wordcopy.c:383
+00405650 <_wordcopy_bwd_dest_aligned+0x130> lw $7,12($5)
+../sysdeps/generic/wordcopy.c:384
+00405658 <_wordcopy_bwd_dest_aligned+0x138> srlv $2,$9,$11
+00405660 <_wordcopy_bwd_dest_aligned+0x140> sllv $3,$10,$12
+00405668 <_wordcopy_bwd_dest_aligned+0x148> or $2,$2,$3
+00405670 <_wordcopy_bwd_dest_aligned+0x150> sw $2,12($4)
+../sysdeps/generic/wordcopy.c:386
+00405678 <_wordcopy_bwd_dest_aligned+0x158> lw $8,8($5)
+../sysdeps/generic/wordcopy.c:387
+00405680 <_wordcopy_bwd_dest_aligned+0x160> srlv $2,$7,$11
+00405688 <_wordcopy_bwd_dest_aligned+0x168> sllv $3,$9,$12
+00405690 <_wordcopy_bwd_dest_aligned+0x170> or $2,$2,$3
+00405698 <_wordcopy_bwd_dest_aligned+0x178> sw $2,8($4)
+../sysdeps/generic/wordcopy.c:389
+004056a0 <_wordcopy_bwd_dest_aligned+0x180> lw $10,4($5)
+../sysdeps/generic/wordcopy.c:390
+004056a8 <_wordcopy_bwd_dest_aligned+0x188> srlv $2,$8,$11
+004056b0 <_wordcopy_bwd_dest_aligned+0x190> sllv $3,$7,$12
+004056b8 <_wordcopy_bwd_dest_aligned+0x198> or $2,$2,$3
+004056c0 <_wordcopy_bwd_dest_aligned+0x1a0> sw $2,4($4)
+../sysdeps/generic/wordcopy.c:392
+004056c8 <_wordcopy_bwd_dest_aligned+0x1a8> lw $9,0($5)
+../sysdeps/generic/wordcopy.c:397
+004056d0 <_wordcopy_bwd_dest_aligned+0x1b0> addiu $6,$6,-4
+../sysdeps/generic/wordcopy.c:393
+004056d8 <_wordcopy_bwd_dest_aligned+0x1b8> srlv $2,$10,$11
+004056e0 <_wordcopy_bwd_dest_aligned+0x1c0> sllv $3,$8,$12
+004056e8 <_wordcopy_bwd_dest_aligned+0x1c8> or $2,$2,$3
+../sysdeps/generic/wordcopy.c:395
+004056f0 <_wordcopy_bwd_dest_aligned+0x1d0> addiu $5,$5,-16
+../sysdeps/generic/wordcopy.c:393
+004056f8 <_wordcopy_bwd_dest_aligned+0x1d8> sw $2,0($4)
+../sysdeps/generic/wordcopy.c:396
+00405700 <_wordcopy_bwd_dest_aligned+0x1e0> addiu $4,$4,-16
+../sysdeps/generic/wordcopy.c:399
+00405708 <_wordcopy_bwd_dest_aligned+0x1e8> bne $6,$0,00405650 <_wordcopy_bwd_dest_aligned+0x130>
+../sysdeps/generic/wordcopy.c:404
+00405710 <_wordcopy_bwd_dest_aligned+0x1f0> srlv $2,$9,$11
+00405718 <_wordcopy_bwd_dest_aligned+0x1f8> sllv $3,$10,$12
+00405720 <_wordcopy_bwd_dest_aligned+0x200> or $2,$2,$3
+00405728 <_wordcopy_bwd_dest_aligned+0x208> sw $2,12($4)
+../sysdeps/generic/wordcopy.c:405
+00405730 <_wordcopy_bwd_dest_aligned+0x210> jr $31
+00405738 <_wordcopy_bwd_dest_aligned+0x218> nop 
+__stdio_init_stream():
+../sysdeps/posix/stdio_init.c:31
+00405740 <__stdio_init_stream> addiu $29,$29,-96
+00405748 <__stdio_init_stream+0x8> sw $16,80($29)
+00405750 <__stdio_init_stream+0x10> addu $16,$0,$4
+00405758 <__stdio_init_stream+0x18> sw $31,88($29)
+00405760 <__stdio_init_stream+0x20> sw $17,84($29)
+../sysdeps/posix/stdio_init.c:35
+00405768 <__stdio_init_stream+0x28> lw $2,16($16)
+../sysdeps/posix/stdio_init.c:32
+00405770 <__stdio_init_stream+0x30> lw $17,24($16)
+../sysdeps/posix/stdio_init.c:35
+00405778 <__stdio_init_stream+0x38> bne $2,$0,00405850 <__stdio_init_stream+0x110>
+00405780 <__stdio_init_stream+0x40> lw $2,76($16)
+00405788 <__stdio_init_stream+0x48> andi $2,$2,2048
+00405790 <__stdio_init_stream+0x50> bne $2,$0,00405850 <__stdio_init_stream+0x110>
+../sysdeps/posix/stdio_init.c:40
+00405798 <__stdio_init_stream+0x58> addu $4,$0,$17
+004057a0 <__stdio_init_stream+0x60> addiu $5,$29,16
+004057a8 <__stdio_init_stream+0x68> jal 00405a70 <__fstat>
+004057b0 <__stdio_init_stream+0x70> bltz $2,00405850 <__stdio_init_stream+0x110>
+../sysdeps/posix/stdio_init.c:43
+004057b8 <__stdio_init_stream+0x78> lhu $2,24($29)
+004057c0 <__stdio_init_stream+0x80> andi $3,$2,61440
+004057c8 <__stdio_init_stream+0x88> addiu $2,$0,4096
+004057d0 <__stdio_init_stream+0x90> bne $3,$2,004057f8 <__stdio_init_stream+0xb8>
+../sysdeps/posix/stdio_init.c:46
+004057d8 <__stdio_init_stream+0x98> lw $2,76($16)
+004057e0 <__stdio_init_stream+0xa0> ori $2,$2,2048
+004057e8 <__stdio_init_stream+0xa8> sw $2,76($16)
+../sysdeps/posix/stdio_init.c:47
+004057f0 <__stdio_init_stream+0xb0> j 00405850 <__stdio_init_stream+0x110>
+../sysdeps/posix/stdio_init.c:50
+004057f8 <__stdio_init_stream+0xb8> addiu $2,$0,8192
+00405800 <__stdio_init_stream+0xc0> bne $3,$2,00405840 <__stdio_init_stream+0x100>
+../sysdeps/posix/stdio_init.c:54
+00405808 <__stdio_init_stream+0xc8> addu $4,$0,$17
+00405810 <__stdio_init_stream+0xd0> jal 00405aa0 <__isatty>
+00405818 <__stdio_init_stream+0xd8> beq $2,$0,00405840 <__stdio_init_stream+0x100>
+../sysdeps/posix/stdio_init.c:56
+00405820 <__stdio_init_stream+0xe0> lw $2,76($16)
+../sysdeps/posix/stdio_init.c:68
+00405828 <__stdio_init_stream+0xe8> sw $0,40($16)
+../sysdeps/posix/stdio_init.c:56
+00405830 <__stdio_init_stream+0xf0> ori $2,$2,4096
+00405838 <__stdio_init_stream+0xf8> sw $2,76($16)
+../sysdeps/posix/stdio_init.c:75
+00405840 <__stdio_init_stream+0x100> lw $2,64($29)
+00405848 <__stdio_init_stream+0x108> sw $2,20($16)
+../sysdeps/posix/stdio_init.c:77
+00405850 <__stdio_init_stream+0x110> lw $31,88($29)
+00405858 <__stdio_init_stream+0x118> lw $17,84($29)
+00405860 <__stdio_init_stream+0x120> lw $16,80($29)
+00405868 <__stdio_init_stream+0x128> addiu $29,$29,96
+00405870 <__stdio_init_stream+0x130> jr $31
+00405878 <__stdio_init_stream+0x138> nop 
+00405880 <__stdio_init_stream+0x140> j 00401e10 <syscall_error>
+00405888 <__stdio_init_stream+0x148> nop 
+00405890 <__read> addiu $2,$0,3
+00405898 <__read+0x8> syscall 
+004058a0 <__read+0x10> bne $7,$0,00405880 <__stdio_init_stream+0x140>
+004058a8 <__read+0x18> nop 
+004058b0 <__read+0x20> jr $31
+004058b8 <__read+0x28> nop 
+004058c0 <__read+0x30> j 00401e10 <syscall_error>
+004058c8 <__read+0x38> nop 
+004058d0 <__write> addiu $2,$0,4
+004058d8 <__write+0x8> syscall 
+004058e0 <__write+0x10> bne $7,$0,004058c0 <__read+0x30>
+004058e8 <__write+0x18> nop 
+004058f0 <__write+0x20> jr $31
+004058f8 <__write+0x28> nop 
+00405900 <__write+0x30> j 00401e10 <syscall_error>
+00405908 <__write+0x38> nop 
+00405910 <__lseek> addiu $2,$0,19
+00405918 <__lseek+0x8> syscall 
+00405920 <__lseek+0x10> bne $7,$0,00405900 <__write+0x30>
+00405928 <__lseek+0x18> nop 
+00405930 <__lseek+0x20> jr $31
+00405938 <__lseek+0x28> nop 
+00405940 <__lseek+0x30> j 00401e10 <syscall_error>
+00405948 <__lseek+0x38> nop 
+00405950 <__close> addiu $2,$0,6
+00405958 <__close+0x8> syscall 
+00405960 <__close+0x10> bne $7,$0,00405940 <__lseek+0x30>
+00405968 <__close+0x18> nop 
+00405970 <__close+0x20> jr $31
+00405978 <__close+0x28> nop 
+00405980 <__close+0x30> j 00401e10 <syscall_error>
+00405988 <__close+0x38> nop 
+00405990 <__open> addiu $2,$0,5
+00405998 <__open+0x8> syscall 
+004059a0 <__open+0x10> bne $7,$0,00405980 <__close+0x30>
+004059a8 <__open+0x18> nop 
+004059b0 <__open+0x20> jr $31
+004059b8 <__open+0x28> nop 
+004059c0 <__open+0x30> j 00401e10 <syscall_error>
+004059c8 <__open+0x38> nop 
+004059d0 <__dup2> addiu $2,$0,90
+004059d8 <__dup2+0x8> syscall 
+004059e0 <__dup2+0x10> bne $7,$0,004059c0 <__open+0x30>
+004059e8 <__dup2+0x18> nop 
+004059f0 <__dup2+0x20> jr $31
+004059f8 <__dup2+0x28> nop 
+00405a00 <__brk> lw $2,-32668($28)
+00405a08 <__brk+0x8> sltu $1,$4,$2
+00405a10 <__brk+0x10> beq $1,$0,00405a20 <__brk+0x20>
+00405a18 <__brk+0x18> addu $4,$0,$2
+00405a20 <__brk+0x20> addiu $2,$0,17
+00405a28 <__brk+0x28> syscall 
+00405a30 <__brk+0x30> bne $7,$0,00405a50 <__brk+0x50>
+00405a38 <__brk+0x38> sw $4,-32672($28)
+00405a40 <__brk+0x40> addu $2,$0,$0
+00405a48 <__brk+0x48> jr $31
+00405a50 <__brk+0x50> j 00401e10 <syscall_error>
+00405a58 <__brk+0x58> nop 
+00405a60 <__brk+0x60> j 00401e10 <syscall_error>
+00405a68 <__brk+0x68> nop 
+00405a70 <__fstat> addiu $2,$0,62
+00405a78 <__fstat+0x8> syscall 
+00405a80 <__fstat+0x10> bne $7,$0,00405a60 <__brk+0x60>
+00405a88 <__fstat+0x18> nop 
+00405a90 <__fstat+0x20> jr $31
+00405a98 <__fstat+0x28> nop 
+__isatty():
+../sysdeps/unix/bsd/__isatty.c:27
+00405aa0 <__isatty> addiu $29,$29,-32
+../sysdeps/unix/bsd/__isatty.c:33
+00405aa8 <__isatty+0x8> lui $5,16390
+../sysdeps/unix/bsd/__isatty.c:27
+00405ab0 <__isatty+0x10> sw $16,24($29)
+../sysdeps/unix/bsd/__isatty.c:32
+00405ab8 <__isatty+0x18> lw $16,-32640($28)
+../sysdeps/unix/bsd/__isatty.c:33
+00405ac0 <__isatty+0x20> ori $5,$5,29704
+00405ac8 <__isatty+0x28> addiu $6,$29,16
+../sysdeps/unix/bsd/__isatty.c:27
+00405ad0 <__isatty+0x30> sw $31,28($29)
+../sysdeps/unix/bsd/__isatty.c:33
+00405ad8 <__isatty+0x38> jal 00405b20 <__ioctl>
+../sysdeps/unix/bsd/__isatty.c:36
+00405ae0 <__isatty+0x40> sltiu $2,$2,1
+../sysdeps/unix/bsd/__isatty.c:34
+00405ae8 <__isatty+0x48> sw $16,-32640($28)
+../sysdeps/unix/bsd/__isatty.c:37
+00405af0 <__isatty+0x50> lw $31,28($29)
+00405af8 <__isatty+0x58> lw $16,24($29)
+00405b00 <__isatty+0x60> addiu $29,$29,32
+00405b08 <__isatty+0x68> jr $31
+00405b10 <__isatty+0x70> j 00401e10 <syscall_error>
+00405b18 <__isatty+0x78> nop 
+00405b20 <__ioctl> addiu $2,$0,54
+00405b28 <__ioctl+0x8> syscall 
+00405b30 <__ioctl+0x10> bne $7,$0,00405b10 <__isatty+0x70>
+00405b38 <__ioctl+0x18> nop 
+00405b40 <__ioctl+0x20> jr $31
+00405b48 <__ioctl+0x28> nop 

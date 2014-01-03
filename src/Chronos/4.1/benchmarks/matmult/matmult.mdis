@@ -1,0 +1,383 @@
+
+../../Work/benchmarks/matmult/matmult:     file format ss-coff-little
+
+Disassembly of section .text:
+00400140 <__start> lw $16,0($29)
+00400148 <__start+0x8> lui $28,4097
+00400150 <__start+0x10> addiu $28,$28,-32032
+00400158 <__start+0x18> addiu $17,$29,4
+00400160 <__start+0x20> addiu $3,$17,4
+00400168 <__start+0x28> sll $2,$16,0x2
+00400170 <__start+0x30> addu $3,$3,$2
+00400178 <__start+0x38> addu $18,$0,$3
+00400180 <__start+0x40> sw $18,-32636($28)
+00400188 <__start+0x48> addiu $29,$29,-24
+00400190 <__start+0x50> addu $4,$0,$16
+00400198 <__start+0x58> addu $5,$0,$17
+004001a0 <__start+0x60> addu $6,$0,$18
+004001a8 <__start+0x68> jal 00400850 <__libc_init>
+004001b0 <__start+0x70> sw $0,-32640($28)
+004001b8 <__start+0x78> addu $4,$0,$16
+004001c0 <__start+0x80> addu $5,$0,$17
+004001c8 <__start+0x88> addu $6,$0,$18
+004001d0 <__start+0x90> jal 004001f0 <main>
+004001d8 <__start+0x98> addu $4,$0,$2
+004001e0 <__start+0xa0> jal 00400880 <exit>
+004001e8 <__start+0xa8> nop 
+main():
+../../Work/benchmarks/matmult/matmult.c:53
+int RandomInteger(void);
+#endif
+
+void main()
+{
+004001f0 <main> addiu $29,$29,-24
+004001f8 <main+0x8> sw $31,20($29)
+00400200 <main+0x10> sw $30,16($29)
+00400208 <main+0x18> addu $30,$0,$29
+../../Work/benchmarks/matmult/matmult.c:54
+   InitSeed();
+00400210 <main+0x20> jal 00400278 <InitSeed>
+../../Work/benchmarks/matmult/matmult.c:61
+/* ***UPPSALA WCET***:
+   no printing please! */
+#ifndef UPPSALAWCET
+   printf("\n   *** MATRIX MULTIPLICATION BENCHMARK TEST ***\n\n");
+   printf("RESULTS OF THE TEST:\n");
+#endif
+   Test(ArrayA, ArrayB, ResultArray);
+00400218 <main+0x28> lui $4,4096
+00400220 <main+0x30> addiu $4,$4,4160
+00400228 <main+0x38> lui $5,4096
+00400230 <main+0x40> addiu $5,$5,2560
+00400238 <main+0x48> lui $6,4096
+00400240 <main+0x50> addiu $6,$6,960
+00400248 <main+0x58> jal 004002b8 <Test>
+../../Work/benchmarks/matmult/matmult.c:62
+}
+00400250 <main+0x60> addu $29,$0,$30
+00400258 <main+0x68> lw $31,20($29)
+00400260 <main+0x70> lw $30,16($29)
+00400268 <main+0x78> addiu $29,$29,24
+00400270 <main+0x80> jr $31
+InitSeed():
+../../Work/benchmarks/matmult/matmult.c:69
+
+
+void InitSeed(void)
+/*
+ * Initializes the seed used in the random number generator.
+ */
+{
+00400278 <InitSeed> addiu $29,$29,-8
+00400280 <InitSeed+0x8> sw $30,0($29)
+00400288 <InitSeed+0x10> addu $30,$0,$29
+../../Work/benchmarks/matmult/matmult.c:73
+  /* ***UPPSALA WCET***:
+     changed Thomas Ls code to something simpler.
+   Seed = KNOWN_VALUE - 1; */
+  Seed = 0;
+00400290 <InitSeed+0x18> sw $0,-32624($28)
+../../Work/benchmarks/matmult/matmult.c:74
+}
+00400298 <InitSeed+0x20> addu $29,$0,$30
+004002a0 <InitSeed+0x28> lw $30,0($29)
+004002a8 <InitSeed+0x30> addiu $29,$29,8
+004002b0 <InitSeed+0x38> jr $31
+Test():
+../../Work/benchmarks/matmult/matmult.c:82
+
+
+void Test(matrix A, matrix B, matrix Res)
+/*
+ * Runs a multiplication test on an array.  Calculates and prints the
+ * time it takes to multiply the matrices.
+ */
+{
+004002b8 <Test> addiu $29,$29,-24
+004002c0 <Test+0x8> sw $31,20($29)
+004002c8 <Test+0x10> sw $30,16($29)
+004002d0 <Test+0x18> addu $30,$0,$29
+004002d8 <Test+0x20> sw $4,24($30)
+004002e0 <Test+0x28> sw $5,28($30)
+004002e8 <Test+0x30> sw $6,32($30)
+../../Work/benchmarks/matmult/matmult.c:88
+#ifndef UPPSALAWCET
+   long StartTime, StopTime;
+   float TotalTime;
+#endif
+
+   Initialize(A);
+004002f0 <Test+0x38> lw $4,24($30)
+004002f8 <Test+0x40> jal 00400358 <Initialize>
+../../Work/benchmarks/matmult/matmult.c:89
+   Initialize(B);
+00400300 <Test+0x48> lw $4,28($30)
+00400308 <Test+0x50> jal 00400358 <Initialize>
+../../Work/benchmarks/matmult/matmult.c:96
+
+   /* ***UPPSALA WCET***: don't print or time */
+#ifndef UPPSALAWCET
+   StartTime = ttime ();
+#endif
+
+   Multiply(A, B, Res);
+00400310 <Test+0x58> lw $4,24($30)
+00400318 <Test+0x60> lw $5,28($30)
+00400320 <Test+0x68> lw $6,32($30)
+00400328 <Test+0x70> jal 004005c8 <Multiply>
+../../Work/benchmarks/matmult/matmult.c:105
+
+   /* ***UPPSALA WCET***: don't print or time */
+#ifndef UPPSALAWCET
+   StopTime = ttime();
+   TotalTime = (StopTime - StartTime) / 1000.0;
+   printf("    - Size of array is %d\n", UPPERLIMIT);
+   printf("    - Total multiplication time is %3.3f seconds\n\n", TotalTime);
+#endif
+}
+00400330 <Test+0x78> addu $29,$0,$30
+00400338 <Test+0x80> lw $31,20($29)
+00400340 <Test+0x88> lw $30,16($29)
+00400348 <Test+0x90> addiu $29,$29,24
+00400350 <Test+0x98> jr $31
+Initialize():
+../../Work/benchmarks/matmult/matmult.c:112
+
+
+void Initialize(matrix Array)
+/*
+ * Intializes the given array with random integers.
+ */
+{
+00400358 <Initialize> addiu $29,$29,-32
+00400360 <Initialize+0x8> sw $31,28($29)
+00400368 <Initialize+0x10> sw $30,24($29)
+00400370 <Initialize+0x18> addu $30,$0,$29
+00400378 <Initialize+0x20> sw $4,32($30)
+../../Work/benchmarks/matmult/matmult.c:115
+   int OuterIndex, InnerIndex;
+
+   for (OuterIndex = 0; OuterIndex < UPPERLIMIT; OuterIndex++)
+00400380 <Initialize+0x28> sw $0,16($30)
+00400388 <Initialize+0x30> lw $2,16($30)
+00400390 <Initialize+0x38> slti $3,$2,20
+00400398 <Initialize+0x40> bne $3,$0,004003a8 <Initialize+0x50>
+004003a0 <Initialize+0x48> j 00400488 <Initialize+0x130>
+../../Work/benchmarks/matmult/matmult.c:116
+      for (InnerIndex = 0; InnerIndex < UPPERLIMIT; InnerIndex++)
+004003a8 <Initialize+0x50> sw $0,20($30)
+004003b0 <Initialize+0x58> lw $2,20($30)
+004003b8 <Initialize+0x60> slti $3,$2,20
+004003c0 <Initialize+0x68> bne $3,$0,004003d0 <Initialize+0x78>
+004003c8 <Initialize+0x70> j 00400460 <Initialize+0x108>
+../../Work/benchmarks/matmult/matmult.c:117
+         Array[OuterIndex][InnerIndex] = RandomInteger();
+004003d0 <Initialize+0x78> jal 004004b0 <RandomInteger>
+004003d8 <Initialize+0x80> lw $4,16($30)
+004003e0 <Initialize+0x88> lw $3,20($30)
+004003e8 <Initialize+0x90> addu $5,$0,$3
+004003f0 <Initialize+0x98> sll $3,$5,0x2
+004003f8 <Initialize+0xa0> addu $6,$0,$4
+00400400 <Initialize+0xa8> sll $5,$6,0x2
+00400408 <Initialize+0xb0> addu $5,$5,$4
+00400410 <Initialize+0xb8> sll $4,$5,0x4
+00400418 <Initialize+0xc0> lw $5,32($30)
+00400420 <Initialize+0xc8> addu $4,$4,$5
+00400428 <Initialize+0xd0> addu $3,$3,$4
+00400430 <Initialize+0xd8> sw $2,0($3)
+../../Work/benchmarks/matmult/matmult.c:116
+00400438 <Initialize+0xe0> lw $3,20($30)
+00400440 <Initialize+0xe8> addiu $2,$3,1
+00400448 <Initialize+0xf0> addu $3,$0,$2
+00400450 <Initialize+0xf8> sw $3,20($30)
+00400458 <Initialize+0x100> j 004003b0 <Initialize+0x58>
+../../Work/benchmarks/matmult/matmult.c:115
+00400460 <Initialize+0x108> lw $3,16($30)
+00400468 <Initialize+0x110> addiu $2,$3,1
+00400470 <Initialize+0x118> addu $3,$0,$2
+00400478 <Initialize+0x120> sw $3,16($30)
+00400480 <Initialize+0x128> j 00400388 <Initialize+0x30>
+../../Work/benchmarks/matmult/matmult.c:118
+}
+00400488 <Initialize+0x130> addu $29,$0,$30
+00400490 <Initialize+0x138> lw $31,28($29)
+00400498 <Initialize+0x140> lw $30,24($29)
+004004a0 <Initialize+0x148> addiu $29,$29,32
+004004a8 <Initialize+0x150> jr $31
+RandomInteger():
+../../Work/benchmarks/matmult/matmult.c:125
+
+
+int RandomInteger(void)
+/*
+ * Generates random integers between 0 and 8095
+ */
+{
+004004b0 <RandomInteger> addiu $29,$29,-8
+004004b8 <RandomInteger+0x8> sw $30,0($29)
+004004c0 <RandomInteger+0x10> addu $30,$0,$29
+../../Work/benchmarks/matmult/matmult.c:126
+   Seed = ((Seed * 133) + 81) % 8095;
+004004c8 <RandomInteger+0x18> lw $2,-32624($28)
+004004d0 <RandomInteger+0x20> addu $4,$0,$2
+004004d8 <RandomInteger+0x28> sll $3,$4,0x5
+004004e0 <RandomInteger+0x30> addu $3,$3,$2
+004004e8 <RandomInteger+0x38> sll $4,$3,0x2
+004004f0 <RandomInteger+0x40> addu $4,$4,$2
+004004f8 <RandomInteger+0x48> addiu $2,$4,81
+00400500 <RandomInteger+0x50> lui $6,4145
+00400508 <RandomInteger+0x58> ori $6,$6,5319
+00400510 <RandomInteger+0x60> mult $2,$6
+00400518 <RandomInteger+0x68> mfhi $5
+00400520 <RandomInteger+0x70> mflo $4
+00400528 <RandomInteger+0x78> srl $6,$5,0x0
+00400530 <RandomInteger+0x80> addu $7,$0,$0
+00400538 <RandomInteger+0x88> sra $3,$6,0x9
+00400540 <RandomInteger+0x90> sra $4,$2,0x1f
+00400548 <RandomInteger+0x98> subu $3,$3,$4
+00400550 <RandomInteger+0xa0> addu $5,$0,$3
+00400558 <RandomInteger+0xa8> sll $4,$5,0x6
+00400560 <RandomInteger+0xb0> subu $4,$4,$3
+00400568 <RandomInteger+0xb8> sll $5,$4,0x2
+00400570 <RandomInteger+0xc0> addu $5,$5,$3
+00400578 <RandomInteger+0xc8> sll $4,$5,0x5
+00400580 <RandomInteger+0xd0> subu $4,$4,$3
+00400588 <RandomInteger+0xd8> subu $2,$2,$4
+00400590 <RandomInteger+0xe0> sw $2,-32624($28)
+../../Work/benchmarks/matmult/matmult.c:127
+   return (Seed);
+00400598 <RandomInteger+0xe8> lw $2,-32624($28)
+004005a0 <RandomInteger+0xf0> j 004005a8 <RandomInteger+0xf8>
+../../Work/benchmarks/matmult/matmult.c:128
+}
+004005a8 <RandomInteger+0xf8> addu $29,$0,$30
+004005b0 <RandomInteger+0x100> lw $30,0($29)
+004005b8 <RandomInteger+0x108> addiu $29,$29,8
+004005c0 <RandomInteger+0x110> jr $31
+Multiply():
+../../Work/benchmarks/matmult/matmult.c:151
+
+
+#ifndef UPPSALAWCET
+int ttime()
+/*
+ * This function returns in milliseconds the amount of compiler time
+ * used prior to it being called.
+ */
+{
+   struct tms buffer;
+   int utime;
+
+   /*   times(&buffer);   times not implemented */
+   utime = (buffer.tms_utime / 60.0) * 1000.0;
+   return (utime);
+}
+#endif
+
+void Multiply(matrix A, matrix B, matrix Res)
+/*
+ * Multiplies arrays A and B and stores the result in ResultArray.
+ */
+{
+004005c8 <Multiply> addiu $29,$29,-8
+004005d0 <Multiply+0x8> sw $30,0($29)
+004005d8 <Multiply+0x10> addu $30,$0,$29
+004005e0 <Multiply+0x18> sw $4,8($30)
+004005e8 <Multiply+0x20> sw $5,12($30)
+004005f0 <Multiply+0x28> sw $6,16($30)
+../../Work/benchmarks/matmult/matmult.c:154
+   register int Outer, Inner, Index;
+
+   for (Outer = 0; Outer < UPPERLIMIT; Outer++)
+004005f8 <Multiply+0x30> addu $2,$0,$0
+00400600 <Multiply+0x38> slti $5,$2,20
+00400608 <Multiply+0x40> bne $5,$0,00400618 <Multiply+0x50>
+00400610 <Multiply+0x48> j 00400830 <Multiply+0x268>
+../../Work/benchmarks/matmult/matmult.c:155
+      for (Inner = 0; Inner < UPPERLIMIT; Inner++)
+00400618 <Multiply+0x50> addu $3,$0,$0
+00400620 <Multiply+0x58> slti $5,$3,20
+00400628 <Multiply+0x60> bne $5,$0,00400638 <Multiply+0x70>
+00400630 <Multiply+0x68> j 00400820 <Multiply+0x258>
+../../Work/benchmarks/matmult/matmult.c:157
+      {
+         Res [Outer][Inner] = 0;
+00400638 <Multiply+0x70> addu $6,$0,$3
+00400640 <Multiply+0x78> sll $5,$6,0x2
+00400648 <Multiply+0x80> addu $7,$0,$2
+00400650 <Multiply+0x88> sll $6,$7,0x2
+00400658 <Multiply+0x90> addu $6,$6,$2
+00400660 <Multiply+0x98> sll $7,$6,0x4
+00400668 <Multiply+0xa0> lw $8,16($30)
+00400670 <Multiply+0xa8> addu $6,$7,$8
+00400678 <Multiply+0xb0> addu $5,$5,$6
+00400680 <Multiply+0xb8> sw $0,0($5)
+../../Work/benchmarks/matmult/matmult.c:158
+         for (Index = 0; Index < UPPERLIMIT; Index++)
+00400688 <Multiply+0xc0> addu $4,$0,$0
+00400690 <Multiply+0xc8> slti $5,$4,20
+00400698 <Multiply+0xd0> bne $5,$0,004006a8 <Multiply+0xe0>
+004006a0 <Multiply+0xd8> j 00400810 <Multiply+0x248>
+../../Work/benchmarks/matmult/matmult.c:159
+            Res[Outer][Inner]  +=
+004006a8 <Multiply+0xe0> addu $6,$0,$3
+004006b0 <Multiply+0xe8> sll $5,$6,0x2
+004006b8 <Multiply+0xf0> addu $7,$0,$2
+004006c0 <Multiply+0xf8> sll $6,$7,0x2
+004006c8 <Multiply+0x100> addu $6,$6,$2
+004006d0 <Multiply+0x108> sll $7,$6,0x4
+004006d8 <Multiply+0x110> lw $8,16($30)
+004006e0 <Multiply+0x118> addu $6,$7,$8
+004006e8 <Multiply+0x120> addu $5,$5,$6
+004006f0 <Multiply+0x128> addu $7,$0,$3
+004006f8 <Multiply+0x130> sll $6,$7,0x2
+00400700 <Multiply+0x138> addu $8,$0,$2
+00400708 <Multiply+0x140> sll $7,$8,0x2
+00400710 <Multiply+0x148> addu $7,$7,$2
+00400718 <Multiply+0x150> sll $8,$7,0x4
+00400720 <Multiply+0x158> lw $9,16($30)
+00400728 <Multiply+0x160> addu $7,$8,$9
+00400730 <Multiply+0x168> addu $6,$6,$7
+00400738 <Multiply+0x170> addu $8,$0,$4
+00400740 <Multiply+0x178> sll $7,$8,0x2
+00400748 <Multiply+0x180> addu $9,$0,$2
+00400750 <Multiply+0x188> sll $8,$9,0x2
+00400758 <Multiply+0x190> addu $8,$8,$2
+00400760 <Multiply+0x198> sll $9,$8,0x4
+00400768 <Multiply+0x1a0> lw $10,8($30)
+00400770 <Multiply+0x1a8> addu $8,$9,$10
+00400778 <Multiply+0x1b0> addu $7,$7,$8
+00400780 <Multiply+0x1b8> addu $9,$0,$3
+00400788 <Multiply+0x1c0> sll $8,$9,0x2
+00400790 <Multiply+0x1c8> addu $10,$0,$4
+00400798 <Multiply+0x1d0> sll $9,$10,0x2
+004007a0 <Multiply+0x1d8> addu $9,$9,$4
+004007a8 <Multiply+0x1e0> sll $10,$9,0x4
+004007b0 <Multiply+0x1e8> lw $11,12($30)
+004007b8 <Multiply+0x1f0> addu $9,$10,$11
+004007c0 <Multiply+0x1f8> addu $8,$8,$9
+004007c8 <Multiply+0x200> lw $7,0($7)
+004007d0 <Multiply+0x208> lw $8,0($8)
+004007d8 <Multiply+0x210> mult $7,$8
+004007e0 <Multiply+0x218> mflo $7
+004007e8 <Multiply+0x220> lw $6,0($6)
+004007f0 <Multiply+0x228> addu $7,$6,$7
+004007f8 <Multiply+0x230> sw $7,0($5)
+../../Work/benchmarks/matmult/matmult.c:158
+00400800 <Multiply+0x238> addiu $4,$4,1
+00400808 <Multiply+0x240> j 00400690 <Multiply+0xc8>
+../../Work/benchmarks/matmult/matmult.c:155
+00400810 <Multiply+0x248> addiu $3,$3,1
+00400818 <Multiply+0x250> j 00400620 <Multiply+0x58>
+../../Work/benchmarks/matmult/matmult.c:154
+00400820 <Multiply+0x258> addiu $2,$2,1
+00400828 <Multiply+0x260> j 00400600 <Multiply+0x38>
+../../Work/benchmarks/matmult/matmult.c:162
+               A[Outer][Index] * B[Index][Inner];
+       }
+}
+00400830 <Multiply+0x268> addu $29,$0,$30
+00400838 <Multiply+0x270> lw $30,0($29)
+00400840 <Multiply+0x278> addiu $29,$29,8
+00400848 <Multiply+0x280> jr $31

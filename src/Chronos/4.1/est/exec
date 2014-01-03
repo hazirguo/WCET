@@ -1,0 +1,34 @@
+
+Symbolic execution
+====================
+
+For termination of address analysis and more precise result we shall perform symbolic execution of the code which is performed as follows:
+
+Function analyze
+
+for all nodes N in the transformed CFG do
+	if N has already been analyzed return;	  
+	if(N is a node in the loop)
+	{
+		repeat until the loop bounds end
+			for all nodes N1 in the loop do		  
+				for all predecessors P of node N1 do
+					 analyze(P);
+				end for
+				transfer(N1);
+				analyzed(N1);
+			end for	
+			clear analyzed flag of all nodes in this loop.
+		end repeat
+	}
+	else
+	{
+	   for all predecessors P of node N1 do
+		  analyze(P);
+		end for
+		transfer(N1);
+		analyzed(N1);
+	}
+end for
+
+end Function analyze

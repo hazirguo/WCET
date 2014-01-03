@@ -1,0 +1,1 @@
+ -cache:il1 il1:32:32:2:l -cache:il1lat 1 -cache:dl1 dl1:32:32:2:l -cache:dl1lat 1 -cache:il2 none -cache:dl2 none -mem:lat 6 2 -mem:width 32 -bpred perfect -issue:inorder true  -fetch:ifqsize 4 -ruu:size 8 -tlb:dtlb none
