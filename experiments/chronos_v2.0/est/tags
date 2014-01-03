@@ -1,0 +1,672 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5.4	//
+BAD_RANGE	common.h	32;"	d
+BETWEEN	common.h	49;"	d
+BHR	bpred.c	/^int		    BHR, BHR_PWR, BHR_MSK;$/;"	v
+BHR_MSK	bpred.c	/^int		    BHR, BHR_PWR, BHR_MSK;$/;"	v
+BHR_PWR	bpred.c	/^int		    BHR, BHR_PWR, BHR_MSK;$/;"	v
+BHT	bpred.c	/^int		    BHT_SIZE, BHT, BHT_MSK;$/;"	v
+BHT_MSK	bpred.c	/^int		    BHT_SIZE, BHT, BHT_MSK;$/;"	v
+BHT_SIZE	bpred.c	/^int		    BHT_SIZE, BHT, BHT_MSK;$/;"	v
+BI_DELAY	exegraph.h	/^enum { BI_DELAY, UNI_DELAY, NO_DELAY };$/;"	e
+BMP	ilp.c	81;"	d	file:
+BODY_CODE	pipeline.h	28;"	d
+BOTH_BRANCHES	cfg.h	32;"	d
+BPRED_H	bpred.h	27;"	d
+BP_CPRED	bpred.h	33;"	d
+BP_MPRED	bpred.h	34;"	d
+BP_NONE	bpred.h	32;"	d
+BP_UNCLEAR	bpred.h	35;"	d
+CACHE_H	cache.h	23;"	d
+CACHE_LINE	cache.h	35;"	d
+CC	Makefile	/^CC=gcc$/;"	m
+CFG_H	cfg.h	23;"	d
+CFLAGS	Makefile	/^CFLAGS=-g$/;"	m
+CHECK_MEM	common.h	41;"	d
+CLEAR_LSB	cache.h	43;"	d
+COMMON_H	common.h	23;"	d
+CTRL_CALL	cfg.h	/^typedef enum {CTRL_SEQ, CTRL_COND, CTRL_UNCOND, CTRL_CALL, CTRL_RET} bb_type_t;$/;"	e
+CTRL_COND	cfg.h	/^typedef enum {CTRL_SEQ, CTRL_COND, CTRL_UNCOND, CTRL_CALL, CTRL_RET} bb_type_t;$/;"	e
+CTRL_RET	cfg.h	/^typedef enum {CTRL_SEQ, CTRL_COND, CTRL_UNCOND, CTRL_CALL, CTRL_RET} bb_type_t;$/;"	e
+CTRL_SEQ	cfg.h	/^typedef enum {CTRL_SEQ, CTRL_COND, CTRL_UNCOND, CTRL_CALL, CTRL_RET} bb_type_t;$/;"	e
+CTRL_UNCOND	cfg.h	/^typedef enum {CTRL_SEQ, CTRL_COND, CTRL_UNCOND, CTRL_CALL, CTRL_RET} bb_type_t;$/;"	e
+EARLY	estimate.c	30;"	d	file:
+EG_COND_EDGE	exegraph.h	/^enum { EG_NORM_EDGE, EG_COND_EDGE };$/;"	e
+EG_DEP_COND	exegraph.h	/^enum { EG_DEP_NONE, EG_DEP_NORM, EG_DEP_COND };$/;"	e
+EG_DEP_NONE	exegraph.h	/^enum { EG_DEP_NONE, EG_DEP_NORM, EG_DEP_COND };$/;"	e
+EG_DEP_NORM	exegraph.h	/^enum { EG_DEP_NONE, EG_DEP_NORM, EG_DEP_COND };$/;"	e
+EG_NORM_EDGE	exegraph.h	/^enum { EG_NORM_EDGE, EG_COND_EDGE };$/;"	e
+ELOG_CODE	pipeline.h	30;"	d
+END_BBB_ID	bpred.h	38;"	d
+EXE_GRAPH_H	exegraph.h	23;"	d
+GAG	bpred.h	/^enum bpred_scheme_t	{ NO_BPRED, GAG, GSHARE, LOCAL };$/;"	e	enum:bpred_scheme_t
+GOOD_RANGE	common.h	33;"	d
+GSHARE	bpred.h	/^enum bpred_scheme_t	{ NO_BPRED, GAG, GSHARE, LOCAL };$/;"	e	enum:bpred_scheme_t
+HEAP_ELEMS	common.h	38;"	d
+IC_CATEGORIZE	cache.h	/^enum { IC_ILP, IC_CATEGORIZE };$/;"	e
+IC_HIT	cache.h	46;"	d
+IC_ILP	cache.h	/^enum { IC_ILP, IC_CATEGORIZE };$/;"	e
+IC_MISS	cache.h	47;"	d
+IC_NONE	ilp.c	83;"	d	file:
+IC_UNCLEAR	cache.h	48;"	d
+INFTY	common.h	39;"	d
+INSIDE	common.h	50;"	d
+INST_CALL	isa.h	/^    INST_CALL,$/;"	e	enum:inst_type_t
+INST_COND	isa.h	/^    INST_COND,$/;"	e	enum:inst_type_t
+INST_FCOMP	isa.h	/^    INST_FCOMP,	    \/\/ floating-point arithmetic instr.$/;"	e	enum:inst_type_t
+INST_ICOMP	isa.h	/^    INST_ICOMP,	    \/\/ integer arithmetic instr.$/;"	e	enum:inst_type_t
+INST_LOAD	isa.h	/^    INST_LOAD,$/;"	e	enum:inst_type_t
+INST_NOP	isa.h	/^    INST_NOP = 0,   \/\/ instr. doing nothing$/;"	e	enum:inst_type_t
+INST_RET	isa.h	/^    INST_RET,$/;"	e	enum:inst_type_t
+INST_STORE	isa.h	/^    INST_STORE,$/;"	e	enum:inst_type_t
+INST_TRAP	isa.h	/^    INST_TRAP$/;"	e	enum:inst_type_t
+INST_UNCOND	isa.h	/^    INST_UNCOND,$/;"	e	enum:inst_type_t
+ISA_H	isa.h	23;"	d
+LATE	estimate.c	29;"	d	file:
+LOCAL	bpred.h	/^enum bpred_scheme_t	{ NO_BPRED, GAG, GSHARE, LOCAL };$/;"	e	enum:bpred_scheme_t
+LOOPS_H	loops.h	25;"	d
+LOOP_ENTRY	loops.h	33;"	d
+LOOP_EXIT	loops.h	34;"	d
+LOOP_HEAD	cfg.h	33;"	d
+LOOP_TAIL	cfg.h	34;"	d
+LSB_OFF	cache.h	40;"	d
+LSB_ON	cache.h	41;"	d
+MAX_BB	common.h	35;"	d
+MAX_CACHE_SETS	cache.h	26;"	d
+MAX_EG_EDGES	exegraph.h	32;"	d
+MAX_EG_LEN	exegraph.h	31;"	d
+MAX_INST	common.h	34;"	d
+MAX_ITERS	estimate.c	33;"	d	file:
+MAX_LOOP_NEST	loops.h	31;"	d
+MAX_REGS	pipeline.c	101;"	d	file:
+MAX_SSCALAR	pipeline.h	32;"	d
+MAX_TAG_BITS	cache.h	32;"	d
+MBLK_ID	cache.h	44;"	d
+MC_INC_SIZE	cache.h	49;"	d
+MINUS	ilp.c	1422;"	d	file:
+MINUS	ilp.c	78;"	d	file:
+NOSIGN	ilp.c	76;"	d	file:
+NOT_TAKEN	cfg.h	30;"	d
+NO_BPRED	bpred.h	/^enum bpred_scheme_t	{ NO_BPRED, GAG, GSHARE, LOCAL };$/;"	e	enum:bpred_scheme_t
+NO_DELAY	exegraph.h	/^enum { BI_DELAY, UNI_DELAY, NO_DELAY };$/;"	e
+NO_PREFIX	ilp.c	79;"	d	file:
+NO_SUFFIX	ilp.c	80;"	d	file:
+NUM_VAR_GRP	ilp.c	119;"	d	file:
+OBJ	Makefile	/^OBJ=$(SRC:.c=.o)$/;"	m
+PEERS_WIN	estimate.c	202;"	d	file:
+PIPE_LINE_H	pipeline.h	23;"	d
+PLOG_CODE	pipeline.h	29;"	d
+PLUS	ilp.c	1421;"	d	file:
+PLUS	ilp.c	77;"	d	file:
+QUEUE	common.h	95;"	d
+QUEUE_ELEMS	common.h	37;"	d
+Queue	common.h	/^} Queue;$/;"	t
+RESET_FLAG	common.h	54;"	d
+ROOT_BBB_ID	bpred.h	37;"	d
+SET	cache.h	36;"	d
+SET_FLAG	common.h	53;"	d
+SHADED	estimate.c	34;"	d	file:
+SHOW_PROGRESS	common.h	30;"	d
+SRC	Makefile	/^SRC=main.c common.c isa.c readfile.c cfg.c tcfg.c loops.c options.c \\$/;"	m
+SS_SRC	Makefile	/^SS_SRC=$(wildcard ss\/*.c)$/;"	m
+STACK_ELEMS	common.h	36;"	d
+STEP_EST	estimate.c	32;"	d	file:
+STEP_SEP	estimate.c	31;"	d	file:
+Stack	common.h	/^} Stack;$/;"	t
+TAG	cache.h	37;"	d
+TAGSET	cache.h	38;"	d
+TAGSET2	cache.h	39;"	d
+TAKEN	cfg.h	31;"	d
+TARGET_SS	common.h	28;"	d
+TCFG_H	tcfg.h	26;"	d
+TEST_FLAG	common.h	55;"	d
+UNI_DELAY	exegraph.h	/^enum { BI_DELAY, UNI_DELAY, NO_DELAY };$/;"	e
+VAR_GRP_SIZE	ilp.c	120;"	d	file:
+V_END_ID	tcfg.h	34;"	d
+V_START_ID	tcfg.h	33;"	d
+add_tag	cache.c	/^add_tag(int lp_id, unsigned short set, unsigned short tag)$/;"	f	file:
+add_var	ilp.c	/^add_var(char *var)$/;"	f
+addr	isa.h	/^    addr_t  addr;$/;"	m
+addr_t	isa.h	/^typedef unsigned int	addr_t;$/;"	t
+adr	main.c	/^        addr_t adr;$/;"	m	struct:jptb	file:
+alloc_est_units	pipeline.c	/^alloc_est_units()$/;"	f	file:
+alloc_mem	exegraph.c	/^alloc_mem()$/;"	f	file:
+base	common.h	/^    void    *base;$/;"	m	struct:queue_t
+base	common.h	/^    void    *base;$/;"	m	struct:stack_t
+bb	tcfg.h	/^    cfg_node_t	*bb;	\/\/ pointer to the physical basic block$/;"	m
+bb_is_loop_head	cfg.c	/^bb_is_loop_head(cfg_node_t *bb)$/;"	f
+bb_is_loop_tail	cfg.c	/^bb_is_loop_tail(cfg_node_t *bb)$/;"	f
+bb_type_t	cfg.h	/^typedef enum {CTRL_SEQ, CTRL_COND, CTRL_UNCOND, CTRL_CALL, CTRL_RET} bb_type_t;$/;"	t
+bbi	bpred.h	/^    tcfg_node_t	*bbi;$/;"	m
+bbi	tcfg.h	/^    tcfg_node_t	    *bbi;$/;"	m	struct:tcfg_nlink_t
+bbi_backedge	tcfg.c	/^bbi_backedge(tcfg_edge_t *edge)$/;"	f
+bbi_bid	tcfg.c	/^bbi_bid(tcfg_node_t *bbi)$/;"	f
+bbi_categorize	cache.c	/^bbi_categorize(tcfg_node_t *bbi, loop_t **bbi_hit_loops, int len)$/;"	f	file:
+bbi_hm_list	cache.c	/^loop_t		***bbi_hm_list;$/;"	v
+bbi_id	pipeline.h	/^    short	bbi_id;$/;"	m
+bbi_is_loopback	tcfg.c	/^bbi_is_loopback(tcfg_edge_t *edge, int head, int tail)$/;"	f
+bbi_is_return	tcfg.c	/^bbi_is_return(tcfg_node_t *bbi)$/;"	f
+bbi_map	tcfg.c	/^tcfg_nlink_t	***bbi_map;$/;"	v
+bbi_pid	tcfg.c	/^bbi_pid(tcfg_node_t *bbi)$/;"	f
+bbi_type	tcfg.c	/^bbi_type(tcfg_node_t *bbi)$/;"	f
+bfg	bpred.c	/^bfg_node_t	    ***bfg;$/;"	v
+bfg_cons	ilp.c	/^bfg_cons()$/;"	f	file:
+bfg_edge_str	ilp.c	/^bfg_edge_str(bfg_edge_t *e, int bpred)$/;"	f	file:
+bfg_edge_t	bpred.h	/^struct bfg_edge_t {$/;"	s
+bfg_edge_t	bpred.h	/^typedef struct bfg_edge_t    bfg_edge_t;$/;"	t
+bfg_edge_term	ilp.c	/^bfg_edge_term(FILE *fp, bfg_edge_t *e, int bpred, char *prefix, char *suffix)$/;"	f	file:
+bfg_node_str	ilp.c	/^bfg_node_str(bfg_node_t *bbb)$/;"	f	file:
+bfg_node_t	bpred.h	/^} bfg_node_t;$/;"	t
+bfg_node_term	ilp.c	/^bfg_node_term(FILE *fp, bfg_node_t *bbb, char *prefix, char *suffix)$/;"	f	file:
+bhr	bpred.h	/^    short	bhr;	\/\/ BHR: branch history register$/;"	m
+bhr_to_pi	bpred.c	/^bhr_to_pi(tcfg_node_t *bbi, unsigned bhr)$/;"	f	file:
+bhr_update	bpred.c	/^bhr_update(unsigned bhr, int branch)$/;"	f	file:
+bits	common.c	/^bits(unsigned x)$/;"	f
+bjptb	main.c	/^int    bjptb = 0;$/;"	v
+bodies	pipeline.c	/^mas_inst_t	**bodies, *start_body;$/;"	v
+body_len	exegraph.c	/^int		eg_len = 0, plog_len = 0, elog_len = 0, body_len = 0;$/;"	v
+body_loop	exegraph.c	/^loop_t		*body_loop;$/;"	v
+bound_elog_len	pipeline.c	/^bound_elog_len()$/;"	f	file:
+bp_flag	pipeline.h	/^    short	bp_flag;$/;"	m
+bp_type	exegraph.h	/^    char	    bp_type;		\/\/ BP_CPRED, BP_MPRED, BP_UNCLEAR$/;"	m
+bpred_analysis	bpred.c	/^bpred_analysis()$/;"	f
+bpred_misses	ilp.c	/^bpred_misses()$/;"	f	file:
+bpred_scheme	main.c	/^int	    bpred_scheme;$/;"	v
+bpred_scheme_t	bpred.h	/^enum bpred_scheme_t	{ NO_BPRED, GAG, GSHARE, LOCAL };$/;"	g
+bpred_type	exegraph.c	/^int		bpred_type;$/;"	v
+branch	bpred.h	/^    int		branch;$/;"	m	struct:bfg_edge_t
+branch	bpred.h	/^    int		branch;$/;"	m	struct:btg_edge_t
+branch	tcfg.h	/^    int		branch;		\/\/ TAKEN or NOT_TAKEN$/;"	m	struct:tcfg_edge_t
+btg_cons	ilp.c	/^btg_cons()$/;"	f	file:
+btg_edge_str	ilp.c	/^btg_edge_str(btg_edge_t *e)$/;"	f	file:
+btg_edge_t	bpred.h	/^struct btg_edge_t {$/;"	s
+btg_edge_t	bpred.h	/^typedef struct btg_edge_t   btg_edge_t;$/;"	t
+btg_edge_term	ilp.c	/^btg_edge_term(FILE *fp, btg_edge_t *e, char *prefix, char *suffix)$/;"	f	file:
+btg_in	bpred.c	/^btg_edge_t	**btg_in, **btg_out;$/;"	v
+btg_out	bpred.c	/^btg_edge_t	**btg_in, **btg_out;$/;"	v
+build_bbi_map	tcfg.c	/^build_bbi_map()$/;"	f	file:
+build_bfg	bpred.c	/^build_bfg()$/;"	f	file:
+build_btg	bpred.c	/^build_btg()$/;"	f	file:
+build_cfgs	cfg.c	/^build_cfgs()$/;"	f
+cache	cache.c	/^cache_t		    cache;$/;"	v
+cache_analysis	cache.c	/^cache_analysis()$/;"	f
+cache_cons	ilp.c	/^cache_cons()$/;"	f	file:
+cache_misses	ilp.c	/^cache_misses()$/;"	f	file:
+cache_t	cache.h	/^} cache_t;$/;"	t
+calc_gen	cache.c	/^calc_gen()$/;"	f	file:
+calc_num_mblks	cache.c	/^calc_num_mblks()$/;"	f	file:
+callee	cfg.h	/^    proc_t	*callee;	\/\/ points to a callee if callee_addr not NULL$/;"	m
+capt	common.h	/^    int	    capt;	    \/* capacity *\/$/;"	m	struct:queue_t
+capt	common.h	/^    int	    capt;	\/* capacity *\/$/;"	m	struct:stack_t
+categorize	cache.c	/^categorize()$/;"	f	file:
+cfg	cfg.h	/^    cfg_node_t	*cfg;		\/\/ cfg nodes with num_bb nodes$/;"	m	struct:proc_t
+cfg_edge_t	cfg.h	/^struct cfg_edge_t {$/;"	s
+cfg_edge_t	cfg.h	/^typedef struct cfg_edge_t   cfg_edge_t;$/;"	t
+cfg_node_t	cfg.h	/^} cfg_node_t;$/;"	t
+changed	estimate.c	/^int		changed;$/;"	v
+check_fetch_times	estimate.c	/^check_fetch_times()$/;"	f
+clear_bbi_flags	tcfg.c	/^clear_bbi_flags()$/;"	f
+clear_queue	common.c	/^clear_queue(Queue *queue)$/;"	f
+clear_stack	common.c	/^clear_stack(Stack *stack)$/;"	f
+clear_tcfg_edge_flags	tcfg.c	/^clear_tcfg_edge_flags()$/;"	f
+cmp	cache.h	/^    int		cmp;    \/\/ cache miss penalty$/;"	m
+code	cfg.h	/^    de_inst_t	*code;		\/\/ decoded program text$/;"	m
+code	cfg.h	/^    de_inst_t   *code;		\/\/ instructions$/;"	m	struct:proc_t
+code	cfg.h	/^    de_inst_t   *code;		\/\/ pointer to the first instruction$/;"	m
+code	pipeline.h	/^    mas_inst_t	*code;$/;"	m	struct:code_link_t
+code_link_t	pipeline.h	/^struct code_link_t {$/;"	s
+code_link_t	pipeline.h	/^typedef struct code_link_t code_link_t;$/;"	t
+code_size	cfg.h	/^    int		code_size;	\/\/ code size (in bytes)$/;"	m
+code_size	est.sh	/^code_size()$/;"	f
+code_size	sim.sh	/^code_size()$/;"	f
+code_size	solve.sh	/^code_size()$/;"	f
+code_size	solve_time.sh	/^code_size()$/;"	f
+coexist	exegraph.c	/^range16_t	*coexist;$/;"	v
+collect_affected_sets	pipeline.c	/^collect_affected_sets()$/;"	f	file:
+collect_bfg_nodes	bpred.c	/^collect_bfg_nodes()$/;"	f	file:
+collect_bodies	pipeline.c	/^collect_bodies()$/;"	f	file:
+collect_epilogs	pipeline.c	/^collect_epilogs()$/;"	f	file:
+collect_mp_insts	bpred.c	/^collect_mp_insts()$/;"	f
+collect_prologs	pipeline.c	/^collect_prologs()$/;"	f	file:
+collect_reachables	bpred.c	/^collect_reachables(bfg_node_t *bbb, int branch)$/;"	f	file:
+collect_root_reachable	bpred.c	/^collect_root_reachable(int pi)$/;"	f	file:
+collect_tcfg_edges	tcfg.c	/^collect_tcfg_edges()$/;"	f	file:
+cond_bbi	tcfg.c	/^cond_bbi(tcfg_node_t *bbi)$/;"	f
+constraints	ilp.c	/^constraints()$/;"	f
+contd_type	exegraph.h	/^    char	    contd_type;$/;"	m	struct:egraph_edge_t
+copy_stack	common.c	/^copy_stack(Stack *y, Stack *x)$/;"	f
+cost_func	ilp.c	/^cost_func()$/;"	f	file:
+cost_term	ilp.c	/^cost_term(int edge_id, int bpred)$/;"	f	file:
+cpred_times	pipeline.c	/^int		**cpred_times, **mpred_times, start_time;$/;"	v
+create_cfg	cfg.c	/^create_cfg(proc_t *proc)$/;"	f	file:
+create_cfg_edges	cfg.c	/^create_cfg_edges(proc_t *proc)$/;"	f	file:
+create_egraph	exegraph.c	/^create_egraph(mas_inst_t *plog, int np, mas_inst_t *elog, int ne,$/;"	f
+ctx_mpmiss_time	pipeline.c	/^ctx_mpmiss_time(int edge_id, int hm_id, int set, int bp)$/;"	f	file:
+ctx_unit_time	pipeline.c	/^ctx_unit_time(int edge_id, int hm_id, int bp)$/;"	f	file:
+curr_grp	ilp.c	/^int	curr_grp = 0, curr_idx = 0;$/;"	v
+curr_idx	ilp.c	/^int	curr_grp = 0, curr_idx = 0;$/;"	v
+de_inst_t	isa.h	/^} de_inst_t;$/;"	t
+deal_exit_edge	loops.c	/^deal_exit_edge(tcfg_edge_t *e)$/;"	f	file:
+deal_other_edge	loops.c	/^deal_other_edge(tcfg_edge_t *e)$/;"	f	file:
+dep_regs	pipeline.c	/^int		    dep_regs[MAX_REGS];$/;"	v
+dequeue	common.c	/^dequeue(Queue *queue)$/;"	f
+distance	estimate.c	/^distance(egraph_node_t *v, egraph_node_t *u)$/;"	f	file:
+do_ilp	main.c	/^do_ilp(char *obj_file)$/;"	f	file:
+dst	bpred.h	/^    bfg_node_t	*src, *dst;	\/\/ block s -> t$/;"	m	struct:bfg_edge_t
+dst	bpred.h	/^    bfg_node_t	*src, *dst;$/;"	m	struct:btg_edge_t
+dst	cfg.h	/^    cfg_node_t  *src, *dst;	\/\/ src -> dst$/;"	m	struct:cfg_edge_t
+dst	exegraph.h	/^    egraph_node_t   *src, *dst;$/;"	m	struct:egraph_edge_t
+dst	tcfg.h	/^    tcfg_node_t	*src, *dst;$/;"	m	struct:tcfg_edge_t
+dump_bfg	bpred.c	/^dump_bfg()$/;"	f
+dump_btg	bpred.c	/^dump_btg()$/;"	f	file:
+dump_cfg	cfg.c	/^dump_cfg(FILE *fp, proc_t *proc)$/;"	f
+dump_code	readfile.c	/^dump_code()$/;"	f
+dump_context_stats	pipeline.c	/^dump_context_stats()$/;"	f
+dump_econtd	estimate.c	/^dump_econtd(egraph_node_t *v)$/;"	f	file:
+dump_edge_mp_times	pipeline.c	/^dump_edge_mp_times(int edge_id, int hm)$/;"	f
+dump_egraph	exegraph.c	/^dump_egraph()$/;"	f
+dump_egraph_contends	exegraph.c	/^dump_egraph_contends(int inst)$/;"	f	file:
+dump_egraph_depends	exegraph.c	/^dump_egraph_depends(int inst)$/;"	f	file:
+dump_egraph_earliest	estimate.c	/^dump_egraph_earliest(int start, int end)$/;"	f
+dump_egraph_times	estimate.c	/^dump_egraph_times(int start, int end)$/;"	f
+dump_elog_len	pipeline.c	/^dump_elog_len()$/;"	f
+dump_elog_stats	pipeline.c	/^dump_elog_stats()$/;"	f
+dump_gen	cache.c	/^dump_gen()$/;"	f
+dump_hm_list	cache.c	/^dump_hm_list()$/;"	f
+dump_isa	isa.c	/^dump_isa()$/;"	f
+dump_loop_comm_ances	loops.c	/^dump_loop_comm_ances()$/;"	f
+dump_loop_tags	cache.c	/^dump_loop_tags()$/;"	f
+dump_loops	loops.c	/^dump_loops()$/;"	f	file:
+dump_mblk_hitloop	cache.c	/^dump_mblk_hitloop()$/;"	f
+dump_mlat_mpinst	pipeline.c	/^dump_mlat_mpinst()$/;"	f
+dump_mp_times	pipeline.c	/^dump_mp_times()$/;"	f
+dump_plog_stats	pipeline.c	/^dump_plog_stats()$/;"	f
+dump_tcfg	tcfg.c	/^dump_tcfg(FILE *fp)$/;"	f
+dump_unit_time	pipeline.c	/^dump_unit_time(int edge_id, int hm, int bp)$/;"	f
+dump_units_times	pipeline.c	/^dump_units_times()$/;"	f
+dump_xlogs	pipeline.c	/^dump_xlogs(code_link_t **xlogs)$/;"	f	file:
+e_contd	exegraph.h	/^    egraph_edge_t   *e_contd, *l_contd;$/;"	m
+earliest_time	estimate.c	/^earliest_time(egraph_node_t *v)$/;"	f	file:
+econtd_delay	estimate.c	/^econtd_delay(egraph_node_t *v, int new_hi)$/;"	f	file:
+edge	tcfg.h	/^    tcfg_edge_t	    *edge;$/;"	m	struct:tcfg_elink_t
+edge_mpset_cons	ilp.c	/^edge_mpset_cons(int lp_id, tcfg_edge_t *edge)$/;"	f	file:
+eg_chain	exegraph.c	/^eg_chain_t	*eg_chain;$/;"	v
+eg_chain_t	exegraph.h	/^} eg_chain_t;$/;"	t
+eg_insts	exegraph.c	/^mas_inst_t	**eg_insts;$/;"	v
+eg_len	exegraph.c	/^int		eg_len = 0, plog_len = 0, elog_len = 0, body_len = 0;$/;"	v
+egraph	exegraph.c	/^egraph_node_t	**egraph;$/;"	v
+egraph_edge_t	exegraph.h	/^struct egraph_edge_t {$/;"	s
+egraph_edge_t	exegraph.h	/^typedef struct egraph_edge_t egraph_edge_t;$/;"	t
+egraph_edges	exegraph.c	/^egraph_edge_t	*egraph_edges = NULL;$/;"	v
+egraph_node_t	exegraph.h	/^} egraph_node_t;$/;"	t
+elog_len	exegraph.c	/^int		eg_len = 0, plog_len = 0, elog_len = 0, body_len = 0;$/;"	v
+enable_icache	main.c	/^int	    enable_icache;$/;"	v
+end_addr	cfg.h	/^    addr_t	start_addr, end_addr, main_addr;$/;"	m
+end_bbb	bpred.c	/^bfg_node_t	    root_bbb, end_bbb;$/;"	v
+end_bbb_id	bpred.c	/^int		    root_bbb_id, end_bbb_id;$/;"	v
+end_bbb_in	bpred.c	/^btg_edge_t	**end_bbb_in, **root_bbb_out;$/;"	v
+end_str	ilp.c	/^char	start_str[] = "Sta", end_str[] = "End";$/;"	v
+enqueue	common.c	/^enqueue(Queue *queue, void *x)$/;"	f
+epilogs	pipeline.c	/^code_link_t	**prologs, **epilogs;$/;"	v
+esize	common.h	/^    int	    esize;	    \/* element size *\/$/;"	m	struct:queue_t
+esize	common.h	/^    int	    esize;	\/* element size *\/$/;"	m	struct:stack_t
+est_egraph	estimate.c	/^est_egraph()$/;"	f
+est_mpmiss_times	pipeline.c	/^est_mpmiss_times()$/;"	f	file:
+est_start_unit	pipeline.c	/^est_start_unit()$/;"	f	file:
+est_unit_term	ilp.c	/^est_unit_term(FILE *fp, tcfg_edge_t *e, int bpred, int hm, char *prefix, char *suffix)$/;"	f	file:
+est_units	pipeline.c	/^est_units()$/;"	f	file:
+estunit_mpcost_func	ilp.c	/^estunit_mpcost_func(int bbi_id, int hm, int lp_id)$/;"	f	file:
+estunit_mpunit_cons	ilp.c	/^estunit_mpunit_cons(int bbi_id, int hm, int lp_id)$/;"	f	file:
+exit_loop	loops.c	/^exit_loop(tcfg_edge_t *e)$/;"	f	file:
+exits	loops.h	/^    tcfg_elink_t    *exits;$/;"	m	struct:loop_t
+fetch_dep	estimate.c	/^fetch_dep(egraph_edge_t *e)$/;"	f	file:
+filp	ilp.c	/^FILE	*filp, *fusr;$/;"	v
+fin	exegraph.h	/^    range_t	    rdy, str, fin;	\/\/ ready, start, finish$/;"	m
+find_cond_exit	ilp.c	/^find_cond_exit(int lp_id, tcfg_edge_t *edge)$/;"	f	file:
+find_cond_exit	pipeline.c	/^find_cond_exit(int lp_id, tcfg_edge_t *edge, int num_inst)$/;"	f	file:
+find_hitloop	cache.c	/^find_hitloop()$/;"	f	file:
+find_loops	loops.c	/^find_loops()$/;"	f	file:
+find_mlat_mpinst	pipeline.c	/^find_mlat_mpinst()$/;"	f	file:
+find_sep	estimate.c	/^find_sep()$/;"	f	file:
+first_b	estimate.c	/^int		last_p, last_np, first_b, last_b, first_e;$/;"	v
+first_e	estimate.c	/^int		last_p, last_np, first_b, last_b, first_e;$/;"	v
+flag	exegraph.h	/^    char	    flag;$/;"	m
+flags	bpred.h	/^    int		flags;$/;"	m
+flags	cfg.h	/^    int		flags;		\/\/ for traverse usage$/;"	m
+flags	cfg.h	/^    int		flags;$/;"	m	struct:proc_t
+flags	loops.h	/^    int		    flags;$/;"	m	struct:loop_t
+flags	tcfg.h	/^    int		flags;$/;"	m	struct:tcfg_edge_t
+flags	tcfg.h	/^    unsigned	flags;$/;"	m
+free_queue	common.c	/^free_queue(Queue *queue)$/;"	f
+free_stack	common.c	/^free_stack(Stack *stack)$/;"	f
+fu	exegraph.h	/^    char	    fu, num_fu;		\/\/ applicable to EX nodes$/;"	m
+fusr	ilp.c	/^FILE	*filp, *fusr;$/;"	v
+gen	cache.c	/^mem_blk_t	    **gen;$/;"	v
+get_loop_affected_sets	pipeline.c	/^get_loop_affected_sets(int lp_id, tcfg_edge_t *mp_edge, int num_inst)$/;"	f	file:
+get_loop_tags	cache.c	/^get_loop_tags()$/;"	f	file:
+get_mblk_hitmiss	cache.c	/^get_mblk_hitmiss(tcfg_node_t *bbi, int mblk_id, loop_t *lp)$/;"	f
+get_mblks	cache.c	/^get_mblks()$/;"	f
+get_mp_conflicts	cache.c	/^get_mp_conflicts(tcfg_node_t *bbi)$/;"	f	file:
+handle_first_mblk	cache.c	/^handle_first_mblk(int bbi_id)$/;"	f	file:
+handle_mpmiss	pipeline.c	/^handle_mpmiss()$/;"	f	file:
+handle_other_mblk	cache.c	/^handle_other_mblk(int bbi_id, int start_mb)$/;"	f	file:
+head	common.h	/^    void    *head, *tail;   \/* head points to oldest element *\/$/;"	m	struct:queue_t
+head	loops.h	/^    tcfg_node_t	    *head;	\/\/ [head, tail]$/;"	m	struct:loop_t
+hi	common.h	/^    char lo, hi;$/;"	m
+hi	common.h	/^    int	    lo, hi;$/;"	m
+hi	common.h	/^    short int	lo, hi;$/;"	m
+hm_str	ilp.c	/^hm_str(int edge_id, int hm)$/;"	f	file:
+hm_term	ilp.c	/^hm_term(FILE *fp, int edge_id, int hm, char *prefix, char *suffix)$/;"	f	file:
+ic_flag	pipeline.h	/^    short	ic_flag;$/;"	m
+id	bpred.h	/^    int		id;$/;"	m
+id	cfg.h	/^    int		id;		\/\/ basic block id (per procedure)$/;"	m
+id	cfg.h	/^    int		id;		\/\/ proc id$/;"	m	struct:proc_t
+id	loops.h	/^    int		    id;$/;"	m	struct:loop_t
+id	tcfg.h	/^    int		id;	\/\/ global id in tcfg (has nothing to do with its bb id)$/;"	m
+id	tcfg.h	/^    int		id;$/;"	m	struct:tcfg_edge_t
+identify_loops	cfg.c	/^identify_loops(proc_t *proc)$/;"	f	file:
+in	bpred.h	/^    bfg_edge_t	*in;	\/\/ in edges$/;"	m
+in	cfg.h	/^    cfg_edge_t	**in;		\/\/ incoming edges$/;"	m
+in	exegraph.h	/^    egraph_edge_t   *in, *out;$/;"	m
+in	isa.h	/^    int	    *in, *out;		\/\/ input\/output operands (registers)$/;"	m
+in	tcfg.h	/^    tcfg_edge_t	*in, *out;  \/\/ incoming and outgoing edges$/;"	m
+init_bfg	bpred.c	/^init_bfg()$/;"	f	file:
+init_end_bbb	bpred.c	/^init_end_bbb()$/;"	f	file:
+init_est	estimate.c	/^init_est()$/;"	f	file:
+init_est_body	estimate.c	/^init_est_body()$/;"	f	file:
+init_est_plog	estimate.c	/^init_est_plog()$/;"	f	file:
+init_isa	isa.c	/^init_isa()$/;"	f
+init_pa	pipeline.c	/^init_pa()$/;"	f	file:
+init_queue	common.c	/^init_queue(Queue *queue, int elem_size)$/;"	f
+init_root_bbb	bpred.c	/^init_root_bbb()$/;"	f	file:
+init_sep	estimate.c	/^init_sep()$/;"	f	file:
+init_shaded_pnode	estimate.c	/^init_shaded_pnode(egraph_edge_t *e)$/;"	f	file:
+init_stack	common.c	/^init_stack(Stack *stack, int elem_size)$/;"	f
+init_var_grps	ilp.c	/^init_var_grps()$/;"	f	file:
+inst	exegraph.h	/^    short	    inst, stage;   $/;"	m
+inst	pipeline.h	/^    de_inst_t	*inst;$/;"	m
+inst_num	common.h	47;"	d
+inst_size	common.h	48;"	d
+inst_type	isa.c	/^inst_type(de_inst_t *inst)$/;"	f
+inst_type_t	isa.h	/^enum inst_type_t {$/;"	g
+isa	isa.c	/^isa_t	*isa;		\/\/ info of the instruction types of the ISA$/;"	v
+isa_t	isa.h	/^} isa_t;$/;"	t
+jptb	main.c	/^typedef struct jptb{$/;"	s	file:
+jptb	main.c	/^}jptb;$/;"	t	file:
+l_contd	exegraph.h	/^    egraph_edge_t   *e_contd, *l_contd;$/;"	m
+l_msk	cache.h	/^    unsigned	l_msk;	\/\/ block mask$/;"	m
+last_b	estimate.c	/^int		last_p, last_np, first_b, last_b, first_e;$/;"	v
+last_np	estimate.c	/^int		last_p, last_np, first_b, last_b, first_e;$/;"	v
+last_p	estimate.c	/^int		last_p, last_np, first_b, last_b, first_e;$/;"	v
+lat	exegraph.h	/^    range16_t	    lat;		\/\/ execution latency of EX nodes$/;"	m
+lat	exegraph.h	/^    range16_t	    lat;	\/\/ max\/min latencies from src to dst$/;"	m	struct:egraph_edge_t
+latest_time	estimate.c	/^latest_time(egraph_node_t *v)$/;"	f	file:
+lcontd_delay	estimate.c	/^lcontd_delay(egraph_node_t *v)$/;"	f	file:
+lo	common.h	/^    char lo, hi;$/;"	m
+lo	common.h	/^    int	    lo, hi;$/;"	m
+lo	common.h	/^    short int	lo, hi;$/;"	m
+lookup_addr	cfg.c	/^lookup_addr(de_inst_t *code, int num, addr_t addr)$/;"	f	file:
+lookup_bb	cfg.c	/^lookup_bb(cfg_node_t *cfg, int num, addr_t addr)$/;"	f	file:
+lookup_jptable	main.c	/^int lookup_jptable(addr_t adr, addr_t * target){$/;"	f
+lookup_mlat	pipeline.c	/^lookup_mlat(int orig, int dist, tcfg_node_t *bbi, int no_mlat)$/;"	f	file:
+lookup_proc	cfg.c	/^lookup_proc(addr_t addr)$/;"	f	file:
+loop_bbb_idx	loops.c	31;"	d	file:
+loop_cache_tags	cache.c	/^tag_link_t	***loop_cache_tags;$/;"	v
+loop_check	cfg.c	/^loop_check(proc_t *proc, int start, int end)$/;"	f	file:
+loop_comm_ances	loops.c	/^loop_t	    ***loop_comm_ances;	\/\/ loop_comm_ances[lp1, lp2]$/;"	v
+loop_map	loops.c	/^loop_t	    **loop_map;		\/\/ bbi => loop$/;"	v
+loop_process	loops.c	/^loop_process()$/;"	f
+loop_relations	loops.c	/^loop_relations()$/;"	f	file:
+loop_role	cfg.h	/^    int		loop_role;	\/\/ whether it is a loop head, tail, or neither$/;"	m
+loop_t	loops.h	/^struct loop_t {$/;"	s
+loop_t	loops.h	/^typedef struct loop_t	loop_t;$/;"	t
+loops	loops.c	/^loop_t	    **loops;$/;"	v
+ls	cache.h	/^    int		ls;	\/\/ cache line size$/;"	m
+lsb	cache.h	/^    int		lsb;    \/\/ lsb = log(ls)$/;"	m
+main	main.c	/^main(int argc, char **argv)$/;"	f
+main_addr	cfg.h	/^    addr_t	start_addr, end_addr, main_addr;$/;"	m
+main_proc	cfg.h	/^    int		main_proc;	\/\/ index of the main proc$/;"	m
+make_est	estimate.c	/^make_est()$/;"	f	file:
+map_bb_bbi	ilp.c	/^map_bb_bbi(int proc, int bb, int first, int sign, int coeff)$/;"	f	file:
+map_bbi_loop	loops.c	/^map_bbi_loop()$/;"	f	file:
+mas_inst_t	pipeline.h	/^} mas_inst_t;$/;"	t
+max	common.h	51;"	d
+max_elog_len	pipeline.c	/^int		*max_elog_len;$/;"	v
+max_inst_lat	isa.c	/^max_inst_lat(de_inst_t *inst)$/;"	f
+mblk_hit_loop	cache.c	/^loop_t		***mblk_hit_loop;$/;"	v
+mblk_id	pipeline.h	/^    short	mblk_id;$/;"	m
+mblk_tag_t	cache.h	/^} mblk_tag_t;$/;"	t
+mem_blk_t	cache.h	/^} mem_blk_t;$/;"	t
+microarch_modeling	main.c	/^microarch_modeling()$/;"	f	file:
+min	common.h	52;"	d
+min_overlap	estimate.c	/^min_overlap(egraph_node_t *v, egraph_node_t *u)$/;"	f	file:
+mlat_bbi	pipeline.c	/^int		*mlat_bbi;$/;"	v
+mlat_mpinst	pipeline.c	/^int		*mlat_mpinst;$/;"	v
+mp_affected_sets	pipeline.c	/^tcfg_elink_t    ***mp_affected_sets;$/;"	v
+mp_cache_cons	ilp.c	/^mp_cache_cons()$/;"	f	file:
+mp_gen	cache.c	/^mem_blk_t	    **mp_gen;$/;"	v
+mp_insts	bpred.c	/^de_inst_t	***mp_insts;$/;"	v
+mp_set_body_hitmiss	pipeline.c	/^mp_set_body_hitmiss(int edge_id, int hm_id, int set)$/;"	f	file:
+mp_set_tags	pipeline.c	/^int		**mp_set_tags;$/;"	v
+mp_times	pipeline.c	/^int		    ***mp_times;$/;"	v
+mpcache_misses	ilp.c	/^mpcache_misses()$/;"	f	file:
+mpcost_func	ilp.c	/^mpcost_func()$/;"	f	file:
+mpred_times	pipeline.c	/^int		**cpred_times, **mpred_times, start_time;$/;"	v
+mpset_cons	ilp.c	/^mpset_cons()$/;"	f	file:
+mpset_str	ilp.c	/^mpset_str(tcfg_edge_t *edge, int lp_id, int set)$/;"	f	file:
+mpset_term	ilp.c	/^mpset_term(FILE *fp, tcfg_edge_t *edge, int lp_id, int set, char *prefix, char *suffix)$/;"	f	file:
+mpunit_cache_misses	ilp.c	/^mpunit_cache_misses(int bbi_id, int hm, int lp_id)$/;"	f	file:
+mpunit_cons	ilp.c	/^mpunit_cons()$/;"	f	file:
+mpunit_str	ilp.c	/^mpunit_str(tcfg_edge_t *edge, int hm, int set)$/;"	f	file:
+mpunit_term	ilp.c	/^mpunit_term(FILE *fp, tcfg_edge_t *edge, int hm, int set, char *prefix, char *suffix)$/;"	f	file:
+my_bsearch	common.c	/^my_bsearch(const void *key, const void *base, size_t n, size_t size,$/;"	f
+my_insert	common.c	/^my_insert(const void *x, void *base, void *y, int *nelem, int size)$/;"	f
+na	cache.h	/^    int		na;$/;"	m
+name	isa.h	/^    char    *name;	\/\/ inst name$/;"	m
+new_bbb	bpred.c	/^new_bbb(int bbi_id, int bhr)$/;"	f	file:
+new_bfg_edge	bpred.c	/^new_bfg_edge(bfg_node_t *x, bfg_node_t *y, int branch)$/;"	f	file:
+new_edge	cfg.c	/^new_edge(cfg_node_t *src, cfg_node_t *dst, int taken)$/;"	f	file:
+new_epilog	pipeline.c	/^new_epilog(int log_set, tcfg_edge_t **path, int path_len)$/;"	f	file:
+new_loop	loops.c	/^new_loop(tcfg_edge_t *e)$/;"	f	file:
+new_prolog	pipeline.c	/^new_prolog(int log_set, tcfg_edge_t **path, int path_len, int num_skip)$/;"	f	file:
+new_tcfg_edge	tcfg.c	/^new_tcfg_edge(tcfg_node_t *src, tcfg_node_t *dst, int branch)$/;"	f	file:
+new_tcfg_node	tcfg.c	/^new_tcfg_node(cfg_node_t *bb)$/;"	f	file:
+new_term	ilp.c	/^new_term(FILE *fp)$/;"	f
+next	cache.c	/^    tag_link_t	    *next;$/;"	m	struct:tag_link_t	file:
+next	pipeline.h	/^    code_link_t	*next;$/;"	m	struct:code_link_t
+next	tcfg.h	/^    tcfg_elink_t    *next;$/;"	m	struct:tcfg_elink_t
+next	tcfg.h	/^    tcfg_nlink_t    *next;$/;"	m	struct:tcfg_nlink_t
+next_cond_bbi	bpred.c	/^next_cond_bbi(tcfg_edge_t *e)$/;"	f	file:
+next_in	bpred.h	/^    bfg_edge_t  *prev_out, *next_out, *prev_in, *next_in;$/;"	m	struct:bfg_edge_t
+next_in	bpred.h	/^    btg_edge_t	*next_in, *next_out;$/;"	m	struct:btg_edge_t
+next_in	exegraph.h	/^    egraph_edge_t   *next_in, *next_out;$/;"	m	struct:egraph_edge_t
+next_in	tcfg.h	/^    tcfg_edge_t *next_in;	\/\/ next incoming edge of dst$/;"	m	struct:tcfg_edge_t
+next_out	bpred.h	/^    bfg_edge_t  *prev_out, *next_out, *prev_in, *next_in;$/;"	m	struct:bfg_edge_t
+next_out	bpred.h	/^    btg_edge_t	*next_in, *next_out;$/;"	m	struct:btg_edge_t
+next_out	exegraph.h	/^    egraph_edge_t   *next_in, *next_out;$/;"	m	struct:egraph_edge_t
+next_out	tcfg.h	/^    tcfg_edge_t *next_out;	\/\/ next outgoing edge of src$/;"	m	struct:tcfg_edge_t
+njp	main.c	/^int    njp;$/;"	v
+normal	exegraph.h	/^    char	    normal;$/;"	m	struct:egraph_edge_t
+ns	cache.h	/^    int		ns;	\/\/ #sets$/;"	m
+nsb	cache.h	/^    int		nsb;    \/\/ nsb = log(ns)$/;"	m
+nt	cache.h	/^    int		nt;	\/\/ #tags$/;"	m
+nt_s	cache.h	/^    int		nt_s;	\/\/ # of tag + set$/;"	m
+ntb	cache.h	/^    int		ntb;	\/\/ tag bits = log(nt)$/;"	m
+num_bb	cfg.h	/^    int		num_bb;		\/\/ number of basic blocks$/;"	m	struct:proc_t
+num_bfg_nodes	bpred.c	/^int		    num_bfg_nodes;$/;"	v
+num_eg_edges	exegraph.c	/^int		num_eg_edges = 0;$/;"	v
+num_elogs	pipeline.c	/^int		num_plogs, num_elogs;$/;"	v
+num_fu	exegraph.h	/^    char	    fu, num_fu;		\/\/ applicable to EX nodes$/;"	m
+num_hit_miss	cache.c	/^int		    *num_hit_miss;$/;"	v
+num_in	cfg.h	/^    int		num_in;		\/\/ number of incoming edges$/;"	m
+num_in	isa.h	/^    int	    num_in, num_out;	\/\/ number of input\/output operands$/;"	m
+num_inst	cfg.h	/^    int		num_inst;	\/\/ number of instructions$/;"	m
+num_inst	cfg.h	/^    int		num_inst;	\/\/ number of instructions$/;"	m	struct:proc_t
+num_inst	pipeline.h	/^    int		num_inst;$/;"	m	struct:code_link_t
+num_isa	isa.c	/^int	num_isa;	\/\/ number of instruction types of the ISA$/;"	v
+num_mblk_conflicts	cache.c	/^int		**num_mblk_conflicts;$/;"	v
+num_mblks	cache.c	/^int		    *num_mblks;$/;"	v
+num_mp_insts	bpred.c	/^int		*num_mp_insts;$/;"	v
+num_mp_set_tags	pipeline.c	/^int		*num_mp_set_tags;$/;"	v
+num_out	isa.h	/^    int	    num_in, num_out;	\/\/ number of input\/output operands$/;"	m
+num_plog_trunc	pipeline.c	/^int		*num_plog_trunc;$/;"	v
+num_plogs	pipeline.c	/^int		num_plogs, num_elogs;$/;"	v
+num_procs	cfg.h	/^    int		num_procs;	\/\/ number of procedures$/;"	m
+num_tcfg_edges	tcfg.c	/^int		num_tcfg_edges = 0;$/;"	v
+num_tcfg_loops	loops.c	/^int	    num_tcfg_loops;$/;"	v
+num_tcfg_nodes	tcfg.c	/^int		num_tcfg_nodes = 0, tcfg_size = 0;$/;"	v
+op_enum	isa.h	/^    int	    op_enum;	    \/\/ continuous numbered opcode (orginal non-contenuous)$/;"	m
+opcode	isa.h	/^    int	    opcode;	\/\/ inst opcode$/;"	m
+out	bpred.h	/^    bfg_edge_t	*out;	\/\/ out edges$/;"	m
+out	exegraph.h	/^    egraph_edge_t   *in, *out;$/;"	m
+out	isa.h	/^    int	    *in, *out;		\/\/ input\/output operands (registers)$/;"	m
+out	tcfg.h	/^    tcfg_edge_t	*in, *out;  \/\/ incoming and outgoing edges$/;"	m
+out_n	cfg.h	/^    cfg_edge_t	*out_n, *out_t;	\/\/ outgoing edges (non-taken\/taken) $/;"	m
+out_t	cfg.h	/^    cfg_edge_t	*out_n, *out_t;	\/\/ outgoing edges (non-taken\/taken) $/;"	m
+parent	loops.h	/^    loop_t	    *parent;$/;"	m	struct:loop_t
+path_analysis	main.c	/^path_analysis(char *obj_file)$/;"	f	file:
+pi	bpred.h	/^    short	pi;	\/\/ branch context (bhr manipulated with branch address)$/;"	m
+pi_table	bpred.c	/^int		    *pi_table;$/;"	v
+pipe_analysis	pipeline.c	/^pipe_analysis()$/;"	f
+pipe_ibuf_size	pipeline.c	/^int		pipe_ibuf_size;$/;"	v
+pipe_iwin_size	pipeline.c	/^int		pipe_iwin_size;$/;"	v
+pipe_iwin_size	pipeline.c	/^int		prolog_size, pipe_iwin_size;$/;"	v
+pipe_stages	pipeline.c	/^int		pipe_stages = 5;$/;"	v
+pjptb	main.c	/^jptb * pjptb;$/;"	v
+plog_backtrack	estimate.c	/^plog_backtrack(egraph_edge_t *e)$/;"	f	file:
+plog_len	exegraph.c	/^int		eg_len = 0, plog_len = 0, elog_len = 0, body_len = 0;$/;"	v
+pred	exegraph.h	/^    short   pred;$/;"	m
+prev_in	bpred.h	/^    bfg_edge_t  *prev_out, *next_out, *prev_in, *next_in;$/;"	m	struct:bfg_edge_t
+prev_out	bpred.h	/^    bfg_edge_t  *prev_out, *next_out, *prev_in, *next_in;$/;"	m	struct:bfg_edge_t
+proc	cfg.h	/^    proc_t  	*proc;		\/\/ up-link to the procedure containing it$/;"	m
+proc_inline	tcfg.c	/^proc_inline(proc_t *proc, tcfg_node_t *call_bbi, tcfg_node_t *ret_bbi)$/;"	f	file:
+proc_t	cfg.h	/^struct proc_t {$/;"	s
+proc_t	cfg.h	/^typedef struct proc_t	    proc_t;$/;"	t
+procs	cfg.h	/^    proc_t	*procs;		\/\/ procedures$/;"	m
+prog	main.c	/^prog_t	    prog;$/;"	v
+prog_name	est.sh	/^prog_name()$/;"	f
+prog_name	sim.sh	/^prog_name()$/;"	f
+prog_name	solve.sh	/^prog_name()$/;"	f
+prog_name	solve_time.sh	/^prog_name()$/;"	f
+prog_t	cfg.h	/^} prog_t;$/;"	t
+prog_tran	tcfg.c	/^prog_tran()$/;"	f
+prolog_size	pipeline.c	/^int		prolog_size, pipe_iwin_size;$/;"	v
+prologs	pipeline.c	/^code_link_t	**prologs, **epilogs;$/;"	v
+queue_empty	common.c	/^queue_empty(Queue *queue)$/;"	f
+queue_t	common.h	/^typedef struct queue_t {$/;"	s
+range16_t	common.h	/^} range16_t;$/;"	t
+range8_t	common.h	/^} range8_t;$/;"	t
+range_isect	common.c	/^range_isect(range_t *x, range_t *y)$/;"	f
+range_t	common.h	/^} range_t;$/;"	t
+range_union	common.c	/^range_union(range_t *x, range_t *y)$/;"	f
+rdy	exegraph.h	/^    range_t	    rdy, str, fin;	\/\/ ready, start, finish$/;"	m
+reach	bpred.c	/^reach(bfg_node_t *x, bfg_node_t *y, int branch)$/;"	f	file:
+reach_end	bpred.c	/^reach_end(bfg_node_t *x, int branch)$/;"	f	file:
+read_code	readfile.c	/^read_code(char *fname)$/;"	f
+read_injp	main.c	/^void read_injp(){$/;"	f
+read_opt	options.c	/^read_opt(int argc, char **argv)$/;"	f
+reg_loop_exit	loops.c	/^reg_loop_exit(tcfg_edge_t *e)$/;"	f	file:
+reset_nodes_flags	estimate.c	/^reset_nodes_flags(int first, int last)$/;"	f	file:
+root_bbb	bpred.c	/^bfg_node_t	    root_bbb, end_bbb;$/;"	v
+root_bbb_id	bpred.c	/^int		    root_bbb_id, end_bbb_id;$/;"	v
+root_bbb_out	bpred.c	/^btg_edge_t	**end_bbb_in, **root_bbb_out;$/;"	v
+root_reach	bpred.c	/^root_reach(bfg_node_t *target)$/;"	f	file:
+root_reach_end	bpred.c	/^root_reach_end(int pi)$/;"	f	file:
+run_cfg	main.c	/^run_cfg(char *obj_file)$/;"	f	file:
+run_est	main.c	/^run_est(char *obj_file)$/;"	f	file:
+run_prog	est.sh	/^run_prog()$/;"	f
+run_prog	sim.sh	/^run_prog()$/;"	f
+run_prog	solve.sh	/^run_prog()$/;"	f
+run_prog	solve_time.sh	/^run_prog()$/;"	f
+s_lb	cache.h	/^    int		s_lb;	\/\/ set + line bits$/;"	m
+s_msk	cache.h	/^    unsigned	s_msk;	\/\/ set mask$/;"	m
+sa	cfg.h	/^    addr_t	sa;		\/\/ block start addr$/;"	m
+sa	cfg.h	/^    addr_t	sa;		\/\/ proc start addr$/;"	m	struct:proc_t
+scalar_delay	estimate.c	/^scalar_delay(egraph_node_t *v, int new_hi)$/;"	f	file:
+scan_blocks	cfg.c	/^scan_blocks(int *bb_ent, proc_t *proc)$/;"	f	file:
+scan_procs	cfg.c	/^scan_procs(int *proc_ent)$/;"	f	file:
+search_common_ancestor	loops.c	/^search_common_ancestor(loop_t *x, loop_t *y)$/;"	f	file:
+search_tag	cache.c	/^search_tag(int lp_id, unsigned short set, unsigned short tag)$/;"	f	file:
+set	cache.h	/^    unsigned short  set;    \/\/ cache line$/;"	m
+set_body_hitmiss	pipeline.c	/^set_body_hitmiss(int edge_id, int hm_id)$/;"	f	file:
+set_cache	cache.c	/^set_cache()$/;"	f
+set_cache_basic	cache.c	/^set_cache_basic(int nsets, int assoc, int bsize, int miss_penalty)$/;"	f
+set_loop_flags	loops.c	/^set_loop_flags(int flag)$/;"	f
+set_mlat_bbi	pipeline.c	/^set_mlat_bbi()$/;"	f	file:
+set_mpunit_cons	ilp.c	/^set_mpunit_cons(int bbi_id, int hm, int lp_id)$/;"	f	file:
+size	cfg.h	/^    int		size;		\/\/ size (in bytes)$/;"	m
+size	cfg.h	/^    int		size;		\/\/ size (in bytes)$/;"	m	struct:proc_t
+size	isa.h	/^    int	    size;$/;"	m
+src	bpred.h	/^    bfg_node_t	*src, *dst;	\/\/ block s -> t$/;"	m	struct:bfg_edge_t
+src	bpred.h	/^    bfg_node_t	*src, *dst;$/;"	m	struct:btg_edge_t
+src	cfg.h	/^    cfg_node_t  *src, *dst;	\/\/ src -> dst$/;"	m	struct:cfg_edge_t
+src	exegraph.h	/^    egraph_node_t   *src, *dst;$/;"	m	struct:egraph_edge_t
+src	tcfg.h	/^    tcfg_node_t	*src, *dst;$/;"	m	struct:tcfg_edge_t
+stack_empty	common.c	/^stack_empty(Stack *stack)$/;"	f
+stack_pop	common.c	/^stack_pop(Stack *stack)$/;"	f
+stack_push	common.c	/^stack_push(Stack *stack, void *x)$/;"	f
+stack_t	common.h	/^typedef struct stack_t {$/;"	s
+stage	exegraph.h	/^    short	    inst, stage;   $/;"	m
+start_addr	cfg.h	/^    addr_t	start_addr, end_addr, main_addr;$/;"	m
+start_body	pipeline.c	/^mas_inst_t	**bodies, *start_body;$/;"	v
+start_str	ilp.c	/^char	start_str[] = "Sta", end_str[] = "End";$/;"	v
+start_time	pipeline.c	/^int		**cpred_times, **mpred_times, start_time;$/;"	v
+step	estimate.c	/^int		step = STEP_SEP;$/;"	v
+str	exegraph.h	/^    range_t	    rdy, str, fin;	\/\/ ready, start, finish$/;"	m
+str	ilp.c	/^char	str[32], term[32];$/;"	v
+succ	exegraph.h	/^    short   succ;$/;"	m
+t_msk	cache.h	/^    unsigned	t_msk;	\/\/ tag mask$/;"	m
+t_s_msk	cache.h	/^    unsigned	t_s_msk;\/\/ set+tag mask$/;"	m
+t_sb	cache.h	/^    int		t_sb;	\/\/ tag + set bits$/;"	m
+tag	cache.c	/^    unsigned short  tag;$/;"	m	struct:tag_link_t	file:
+tag	cache.h	/^    unsigned short  tag;    \/\/ memory block tag$/;"	m
+tag	cache.h	/^    unsigned short  tag;    \/\/ valid tag$/;"	m
+tag_link_t	cache.c	/^struct tag_link_t {$/;"	s	file:
+tag_link_t	cache.c	/^typedef struct tag_link_t   tag_link_t;$/;"	t	file:
+tail	common.h	/^    void    *head, *tail;   \/* head points to oldest element *\/$/;"	m	struct:queue_t
+tail	loops.h	/^    tcfg_node_t	    *tail;$/;"	m	struct:loop_t
+target	isa.h	/^    addr_t  target;		\/\/ target addr for control transfer inst$/;"	m
+target	main.c	/^        addr_t target;$/;"	m	struct:jptb	file:
+tcfg	tcfg.c	/^tcfg_node_t	**tcfg;$/;"	v
+tcfg_bfg_cons	ilp.c	/^tcfg_bfg_cons()$/;"	f	file:
+tcfg_cons	ilp.c	/^tcfg_cons()$/;"	f	file:
+tcfg_edge_mp_gen	cache.c	/^tcfg_edge_mp_gen(tcfg_edge_t *e)$/;"	f	file:
+tcfg_edge_str	ilp.c	/^tcfg_edge_str(tcfg_edge_t *e, int bpred)$/;"	f	file:
+tcfg_edge_t	tcfg.h	/^struct tcfg_edge_t {$/;"	s
+tcfg_edge_t	tcfg.h	/^typedef struct tcfg_edge_t tcfg_edge_t;$/;"	t
+tcfg_edge_term	ilp.c	/^tcfg_edge_term(FILE *fp, tcfg_edge_t *e, int bpred, char *prefix, char *suffix)$/;"	f	file:
+tcfg_edges	tcfg.c	/^tcfg_edge_t	**tcfg_edges;$/;"	v
+tcfg_elink_t	tcfg.h	/^struct tcfg_elink_t {$/;"	s
+tcfg_elink_t	tcfg.h	/^typedef struct tcfg_elink_t tcfg_elink_t;$/;"	t
+tcfg_estunit_cons	ilp.c	/^tcfg_estunit_cons()$/;"	f	file:
+tcfg_nlink_t	tcfg.h	/^struct tcfg_nlink_t {$/;"	s
+tcfg_nlink_t	tcfg.h	/^typedef struct tcfg_nlink_t tcfg_nlink_t;$/;"	t
+tcfg_node_cons	ilp.c	/^tcfg_node_cons(tcfg_node_t *bbi)$/;"	f	file:
+tcfg_node_gen	cache.c	/^tcfg_node_gen(tcfg_node_t *bbi)$/;"	f	file:
+tcfg_node_hm_term	ilp.c	/^tcfg_node_hm_term(FILE *fp, tcfg_node_t *bbi, int hm, char *prefix, char *suffix)$/;"	f	file:
+tcfg_node_str	ilp.c	/^tcfg_node_str(tcfg_node_t *bbi)$/;"	f	file:
+tcfg_node_t	tcfg.h	/^} tcfg_node_t;$/;"	t
+tcfg_node_term	ilp.c	/^tcfg_node_term(FILE *fp, tcfg_node_t *bbi, char *prefix, char *suffix)$/;"	f	file:
+tcfg_size	tcfg.c	/^int		num_tcfg_nodes = 0, tcfg_size = 0;$/;"	v
+term	ilp.c	/^char	str[32], term[32];$/;"	v
+tmp_cs	pipeline.c	/^mblk_tag_t	*tmp_cs;$/;"	v
+top	common.h	/^    void    *top;$/;"	m	struct:stack_t
+total_cons	ilp.c	/^int	total_cons = 0, total_vars = 0;$/;"	v
+total_vars	ilp.c	/^int	total_cons = 0, total_vars = 0;$/;"	v
+trav_backward	pipeline.c	/^trav_backward(int log_set, tcfg_edge_t **path, int path_len, int code_len)$/;"	f	file:
+trav_forward	pipeline.c	/^trav_forward(int log_set, tcfg_edge_t **path, int path_len, int code_len)$/;"	f	file:
+trav_tcfg	bpred.c	/^trav_tcfg()$/;"	f	file:
+type	cfg.h	/^    bb_type_t	type;		$/;"	m
+type	isa.h	/^    int	    type;	\/\/ inst type$/;"	m
+update_bbi_map	tcfg.c	/^update_bbi_map(tcfg_node_t *bbi)$/;"	f	file:
+update_contd	estimate.c	/^update_contd(egraph_node_t *v)$/;"	f	file:
+user_cons	ilp.c	/^user_cons()$/;"	f	file:
+valid	cache.h	/^    unsigned short  valid;  \/\/ valid == 0 means empty mempry block$/;"	m
+var_grps	ilp.c	/^char	**var_grps[256];$/;"	v
+vbbb	bpred.c	/^bfg_node_t	    **vbbb;$/;"	v
+vstart_cost_term	ilp.c	/^vstart_cost_term()$/;"	f	file:
+write_vars	ilp.c	/^write_vars()$/;"	f	file:

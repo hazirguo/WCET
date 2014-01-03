@@ -1,0 +1,84 @@
+QUICK START
+===========
+1. to formulate an ILP problem:
+   - command:
+     $ est <benchmark>
+   - example:
+     $ est ../benchmarks/matsum/matsum
+   - input files:
+     * <benchmark>
+     * <benchmark>.cons
+   - output files:
+     * <benchmark>.lp
+
+2. to generate CFG file:
+   - command:
+     $ est -run CFG <benchmark>
+   - example:
+     $ est -run CFG ../benchmarks/matsum/matsum
+   - input files:
+     * <benchmark>
+   - output files:
+     * <benchmark>.cfg
+
+3. to dump processor configurations (pipeline, branch prediction, cache)
+   - command:
+     $ est -run OPT <output_file>
+   - example:
+     $ est -run OPT processor.opt
+   - input files: NONE
+   - output files:
+     * <output_file>
+
+4. to invoke the ILP solver
+   - command:
+     $ solve <benchmark>.lp
+   - example:
+     $ solve ../benchmarks/matsum/matsum.lp
+   - input files:
+     * <benchmark>.ilp
+   - output files:
+     * wcet_result
+
+
+ESTIMTATE WITH NON-DEFAULT PROCESSOR OPTIONS
+============================================
+1. with a configuration file:
+   - command:
+     $ est -config <opt_file> <benchmark>
+   - example: 
+     $ est -config processor.opt ../benchmarks/matsum/matsum
+
+2. with commond-line options: consistent with SimpleScalar sim-outorder options
+   - example:
+   $ est -bpred perfect -cache:il1 none  ../benchmarks/matsum/matsum
+   (estimate assuming perfect branch prediction and no instruction cache)
+
+
+processor options file example (the content in processor.opt)
+==============================================================
+
+# instruction fetch queue size (in insts)
+-fetch:ifqsize      4 
+
+# branch predictor type {nottaken|taken|perfect|bimod|2lev|comb}
+#-bpred             perfect
+-bpred              2lev
+
+# bimodal predictor config (<table size>)
+-bpred:bimod        4 
+
+# 2-level predictor config (<l1size> <l2size> <hist_size> <xor>)
+-bpred:2lev         1 4 2 0 
+
+# combining predictor config (<meta_table_size>)
+-bpred:comb         4 
+
+# register update unit (RUU) size
+-ruu:size           8 
+
+# l1 inst cache config, i.e., {<config>|dl1|dl2|none}
+-cache:il1          il1:16:64:1:l 
+
+# memory access latency (<first_chunk> <inter_chunk>)
+-mem:lat            10 2 

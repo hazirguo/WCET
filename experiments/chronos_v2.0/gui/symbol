@@ -1,0 +1,3 @@
+start_addr 00400140 end_addr 004002f0 
+file 1  proc 0 check
+file 1  proc 1 main
