@@ -62,7 +62,7 @@ Chronos 是架设在 Unix-like 平台上，当前在 GNU/Linux 平台测试通�
 
 **SimpleScalar GCC 和相关的二进制工具**  首先我们需要安装二进制工具，用来编译 SimpleScalar 交叉编译器 GCC。之后，安装 SimpleScalar GCC。步骤如下：
 
-1. 编译 SimpleScalar 二进制工具：
+1.编译 SimpleScalar 二进制工具：
 
 	tar -xvzf simpleutils-990811.tar.gz
 	tar -xvzf simpletools-2v0.tar.gz
@@ -78,7 +78,7 @@ Chronos 是架设在 Unix-like 平台上，当前在 GNU/Linux 平台测试通�
 
 会生成二进制工具，安装在 $IDIR/sslittle-na-sstrix/bin 目录下。
 
-2. 编译 SimpleScalar GCC：
+2.编译 SimpleScalar GCC：
 
 	export PATH=$PATH:$IDIR/sslittle-na-sstrix/bin
 
